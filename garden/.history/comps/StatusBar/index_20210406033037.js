@@ -17,10 +17,11 @@ const StatusBarCont = styled.div`
 const BarBackground = styled.div`
   display:flex;
   align-items:center;
-  justify-content:flex-start;
-  background-color:#6AA151;
+  justify-content:flex-end;
+  background-color:white;
+  opacity:0.3;
   height:25px;
-  width: 70%;
+  width: 200px;
   border-radius:15px;
   border:none;
 `;
@@ -28,20 +29,19 @@ const BarBackground = styled.div`
 const Bar = styled.div`
   display:flex;
   height:25px;
-  width:${props=>props.width};
+  width:25px;
   border-radius:15px;
   border:none;
-  background-color:white;
+  background-color:#FFF;
+  opacity:1;
 `;
 
-
 const StatusBar = ({
-percent="10%",
-width="10%"
+percent="10%"
 }) => {
   return <StatusBarCont>
     <BarBackground>
-      <Bar width={width}></Bar>
+      <Bar></Bar>
     </BarBackground>
     <p>{percent}</p>
   </StatusBarCont>

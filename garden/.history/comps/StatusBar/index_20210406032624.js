@@ -5,43 +5,41 @@ import {useRouter} from 'next/router'
 const StatusBarCont = styled.div`
   display:flex;
   flex-direction: column;
-  justify-content:flex-end;
-  align-items:center;
+  justify-content:center;
+  align-items:flex-end;
   padding:20px;
   background-color:#367A17;
   width:100%;
   height:100px;
-  color:white;
 `;
 
 const BarBackground = styled.div`
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  background-color:#6AA151;
+  background-color:white;
+  opacity:0.3;
   height:25px;
   width: 70%;
   border-radius:15px;
   border:none;
+  color:white;
 `;
 
 const Bar = styled.div`
-  display:flex;
   height:25px;
-  width:${props=>props.width};
+  width:25px;
   border-radius:15px;
   border:none;
   background-color:white;
 `;
 
-
 const StatusBar = ({
-percent="10%",
-width="10%"
+percent="10%"
 }) => {
   return <StatusBarCont>
     <BarBackground>
-      <Bar width={width}></Bar>
+      <Bar></Bar>
     </BarBackground>
     <p>{percent}</p>
   </StatusBarCont>

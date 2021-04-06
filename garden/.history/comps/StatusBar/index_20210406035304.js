@@ -37,11 +37,11 @@ const Bar = styled.div`
 
 const StatusBar = ({
 percent="10%",
-width="10%"
+width="20%"
 }) => {
   return <StatusBarCont>
     <BarBackground>
-      <Bar width={width}></Bar>
+      <Bar></Bar>
     </BarBackground>
     <p>{percent}</p>
   </StatusBarCont>

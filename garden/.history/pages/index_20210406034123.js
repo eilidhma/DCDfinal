@@ -6,7 +6,7 @@ import PercentComplete from '../comps/PercentComplete'
 export default function Home() {
   return (
     <div>
-      <StatusBar percent="25%" width="30%"/>
+      <StatusBar percent="25%" width="40%"></StatusBar>
     </div>
   )
 }
