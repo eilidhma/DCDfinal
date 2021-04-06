@@ -6,4 +6,4 @@ export default {
   component: 
 }
 
-export const 
+export const

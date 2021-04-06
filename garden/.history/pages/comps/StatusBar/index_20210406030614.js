@@ -6,7 +6,7 @@ const StatusBarCont = styled.div`
   display:flex;
   flex-direction: column;
   justify-content:center;
-  align-items:flex-end;
+  align-items:center;
   padding:20px;
   background-color:#367A17;
   width:100%;
@@ -26,11 +26,7 @@ const BarBackground = styled.div`
 `;
 
 const Bar = styled.div`
-  height:25px;
-  width:25px;
-  border-radius:15px;
-  border:none;
-  background-color:white;
+
 `;
 
 const StatusBar = ({
@@ -38,7 +34,7 @@ percent="10%"
 }) => {
   <StatusBarCont>
     <BarBackground>
-      <Bar></Bar>
+      <div></div>
     </BarBackground>
     <p>{percent}</p>
   </StatusBarCont>

@@ -5,5 +5,3 @@ export default {
   title:"Status Bar"
   component: 
 }
-
-export const 

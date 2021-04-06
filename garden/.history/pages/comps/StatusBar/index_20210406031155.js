@@ -27,7 +27,7 @@ const BarBackground = styled.div`
 
 const Bar = styled.div`
   height:25px;
-  width:25px;
+  width: 70%;
   border-radius:15px;
   border:none;
   background-color:white;
@@ -38,7 +38,7 @@ percent="10%"
 }) => {
   <StatusBarCont>
     <BarBackground>
-      <Bar></Bar>
+      <Bar></div>
     </BarBackground>
     <p>{percent}</p>
   </StatusBarCont>

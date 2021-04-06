@@ -27,7 +27,7 @@ const BarBackground = styled.div`
 
 const Bar = styled.div`
   height:25px;
-  width:25px;
+  width: 25px;
   border-radius:15px;
   border:none;
   background-color:white;

@@ -6,40 +6,22 @@ const StatusBarCont = styled.div`
   display:flex;
   flex-direction: column;
   justify-content:center;
-  align-items:flex-end;
+  align-items:center;
   padding:20px;
   background-color:#367A17;
   width:100%;
   height:100px;
 `;
 
-const BarBackground = styled.div`
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  background-color:white;
-  opacity:0.3;
-  height:25px;
-  width: 70%;
-  border-radius:15px;
-  border:none;
-`;
-
-const Bar = styled.div`
-  height:25px;
-  width:25px;
-  border-radius:15px;
-  border:none;
-  background-color:white;
-`;
+const Bar = 
 
 const StatusBar = ({
 percent="10%"
 }) => {
   <StatusBarCont>
-    <BarBackground>
-      <Bar></Bar>
-    </BarBackground>
+    <div>
+      <div></div>
+    </div>
     <p>{percent}</p>
   </StatusBarCont>
 }
