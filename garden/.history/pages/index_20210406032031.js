@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styled from '../comps/Card'
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
