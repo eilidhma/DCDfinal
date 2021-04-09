@@ -34,9 +34,7 @@ const Bar = styled.div`
   background-color:white;
 `;
 
-const Percent = styled.p`
-  font-size: 20px;
-`;
+const Percent
 
 
 const StatusBar = ({
@@ -47,7 +45,7 @@ width="10%"
     <BarBackground>
       <Bar width={width}></Bar>
     </BarBackground>
-    <Percent>{percent}</Percent>
+    <p>{percent}</p>
   </StatusBarCont>
 }
 
