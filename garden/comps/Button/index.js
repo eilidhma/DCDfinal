@@ -5,6 +5,7 @@ function ButtonUI({
     margin20=20,
     backgroundColorButton="rgb(148,212,108,1)",
     border="2px solid rgb(148,212,108)",
+    borderRadius="15px",
     value="Next question",
     fontSize="36px",
     fontWeight="regular",
@@ -18,9 +19,10 @@ function ButtonUI({
             margin:margin20,
             backgroundColor:backgroundColorButton,
             border:border,
+            borderRadius:borderRadius,
             fontSize:fontSize,
             fontWeight:fontWeight,
-            fontColor:fontColor
+            color:fontColor
         }}/>
     )
 }
