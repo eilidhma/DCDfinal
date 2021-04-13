@@ -6,7 +6,9 @@ function ButtonUI({
     backgroundColorButton="rgb(148,212,108)",
     border="2px solid rgb(148,212,108)",
     value="Next question",
-    fontSize="36px"
+    fontSize="36px",
+    fontWeight="regular",
+    fontColor="white"
 }){
     return(
         <input type="button" value={value} style={{
@@ -16,7 +18,9 @@ function ButtonUI({
             margin:margin20,
             backgroundColor:backgroundColorButton,
             border:border,
-            fontSize:fontSize
+            fontSize:fontSize,
+            fontWeight:fontWeight,
+            fontColor:fontColor
         }}/>
     )
 }
