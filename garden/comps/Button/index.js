@@ -3,7 +3,7 @@ function ButtonUI({
     buttonHeight=60,
     alignSelf="center",
     margin20=20,
-    backgroundColorButton="rgb(148,212,108)",
+    backgroundColorButton="rgb(148,212,108,1)",
     border="2px solid rgb(148,212,108)",
     value="Next question",
     fontSize="36px",
