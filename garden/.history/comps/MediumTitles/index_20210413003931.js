@@ -7,7 +7,6 @@ const MediumTitles = styled.h1`
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  text-align:center;
   color:#367A17;
   -webkit-text-stroke-width:1px;
   -webkit-text-stroke-color: #FFF;

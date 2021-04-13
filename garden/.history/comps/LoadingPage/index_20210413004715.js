@@ -6,7 +6,6 @@ const LoadingCont = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
 `;
 
 const Spinner = styled.div`
@@ -30,15 +29,14 @@ const LoadingImg = styled.img`
   object-fit:contain;
   width:170px;
   height:200px;
-  position:relative;
-  bottom:225px;
 `;
 
 
 const Loading = ({}) => {
   return <LoadingCont>
-    <Spinner></Spinner>
-    <LoadingImg src="logo.png"></LoadingImg>
+    <Spinner>
+      <LoadingImg src="logo.png"></LoadingImg>
+      </Spinner>
   </LoadingCont>
 }
 

@@ -30,8 +30,6 @@ const LoadingImg = styled.img`
   object-fit:contain;
   width:170px;
   height:200px;
-  position:relative;
-  bottom:225px;
 `;
 
 

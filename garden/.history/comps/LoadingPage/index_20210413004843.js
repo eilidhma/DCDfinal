@@ -31,7 +31,7 @@ const LoadingImg = styled.img`
   width:170px;
   height:200px;
   position:relative;
-  bottom:225px;
+  top:50%;
 `;
 
 

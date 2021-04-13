@@ -14,7 +14,7 @@ export default function Home() {
       <PlantDetailsLarge src="sun.png" text="Requires moderate sunlight"/>
       <PlantDetailsLarge src="water.png" text="Water every 3 days"/>
       <PlantDetailsLarge src="globe.png" text="Strong air purifier"/>
-      <Loading />
+      <Loading
     </div>
   )
 }

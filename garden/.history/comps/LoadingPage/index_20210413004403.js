@@ -2,14 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router'
 
-const LoadingCont = styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-`;
 
-const Spinner = styled.div`
+
+const LoadingCont = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -30,14 +25,11 @@ const LoadingImg = styled.img`
   object-fit:contain;
   width:170px;
   height:200px;
-  position:relative;
-  bottom:225px;
 `;
 
 
 const Loading = ({}) => {
   return <LoadingCont>
-    <Spinner></Spinner>
     <LoadingImg src="logo.png"></LoadingImg>
   </LoadingCont>
 }
