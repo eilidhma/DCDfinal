@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Permanent+Marker&display=swap');
 html,
 body {
   padding: 0;
@@ -7,8 +7,6 @@ body {
   font-family: 'Bebas Neue', cursive;
   background-color: #C5E6ED;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {

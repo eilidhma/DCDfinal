@@ -15,7 +15,7 @@ export default function Home() {
       <MedTitles text="Calculating your results.." />
       <MedTitles text="Question #1" />
       <Loading />
-      <LandingInfo titleText="Our topic for this app:" bodyText="We want to bring more awareness towards growing your own plants, vegetables and herbs to prevent more food waste and/or packaging waste caused by the sales of plants."/>
+      <LandingInfo titleText="Our topic for this app:" />
       <PlantDetailsLarge src="sun.png" text="Requires moderate sunlight"/>
       <PlantDetailsLarge src="water.png" text="Water every 3 days"/>
       <PlantDetailsLarge src="globe.png" text="Strong air purifier"/>
