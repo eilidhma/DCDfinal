@@ -5,10 +5,6 @@ import {useRouter} from 'next/router'
 const Cont = styled.div`
   display:flex;
   flex-direction:row;
-  justify-content:space-between;
-  align-items:center;
-  padding-left:50px;
-  padding-right:50px;
 `;
 
 const TextContent = styled.h3`
@@ -16,28 +12,25 @@ const TextContent = styled.h3`
   text-align:left;
   color:#FFF;
   font-size: 20px;
-  flex:3;
 `;
 
 const IconCont = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
+  object0-fit:cover;
   width:50px;
   height:50px;
-  flex:1
 `;
 
 const Icon = styled.img`
-  display:flex;
-  width:50px;
-  height:50px;
-  object-fit:contain;
+  width:50;
+  height:50;
 `;
 
 const PlantDetailsLarge = ({
   text="placeholder",
-  src="../public/sun.png"
+  src="../../public/sun.png"
 }) => {
   return <Cont>
     <IconCont>

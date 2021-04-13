@@ -16,7 +16,6 @@ const TextContent = styled.h3`
   text-align:left;
   color:#FFF;
   font-size: 20px;
-  flex:3;
 `;
 
 const IconCont = styled.div`
@@ -25,7 +24,6 @@ const IconCont = styled.div`
   align-items:center;
   width:50px;
   height:50px;
-  flex:1
 `;
 
 const Icon = styled.img`

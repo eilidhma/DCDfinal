@@ -11,8 +11,7 @@ export default function Home() {
       <StatusBar percent="25%" width="30%"/>
       <MedTitles text="Calculating your results.." />
       <PlantDetailsLarge src="sun.png" text="Requires moderate sunlight"/>
-      <PlantDetailsLarge src="water.png" text="Water every 3 days"/>
-      <PlantDetailsLarge src="globe.png" text="Strong air purifier"/>
+      <PlantDetailsLarge src="sun.png" text="Water every "/>
     </div>
   )
 }
