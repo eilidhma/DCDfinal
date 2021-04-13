@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <StatusBar percent="25%" width="30%"/>
-      <MedTitles text="Calculating your results.." />
+      <MediumTitles text="Calculating your results.." />
     </div>
   )
 }

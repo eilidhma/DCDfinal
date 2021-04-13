@@ -39,7 +39,7 @@ const Percent = styled.p`
 `;
 
 
-const Loading = ({
+const StatusBar = ({
 percent="10%",
 width="10%"
 }) => {
@@ -51,4 +51,4 @@ width="10%"
   </StatusBarCont>
 }
 
-export default Loading;
+export default StatusBar;

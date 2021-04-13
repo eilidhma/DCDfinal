@@ -51,4 +51,4 @@ width="10%"
   </StatusBarCont>
 }
 
-export default Loading;
+export default StatusBar;
