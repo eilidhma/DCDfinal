@@ -1,0 +1,35 @@
+export const subtexts = {
+  apple:{
+    sub:"yummy apple",
+    big:"Eat one everyday to keep the doctors away"
+  },
+  pine:{
+    sub:"pineapple pen",
+    big:"I got a pen"
+  }
+}
+
+export const questions = {
+  first:{
+    Q:"What climate are you living in right now?",
+    Temperate:"Temperate",
+    Tropical:"Tropical",
+    Arid:"Arid"
+  },
+  second:{
+    Q:"What kind of plants interest you in terms of maintenance required?",
+    Low:"Low maintenance",
+    Med:"Medium maintenance",
+    High:"Low maintenance",
+  },
+  third:{
+    Q:"Where would you be growing your plants?",
+    Pots:"Pots/Planters",
+    Ground:"In the ground (garden)"
+  },
+  fourth:{
+    Q:"What are you interested in growing?",
+    Pots:"Vegetables/Fruits/Herbs",
+    Ground:"Flowers/Plants"
+  }
+}
