@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Permanent+Marker&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+  background-color: #C5E6ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main {
+  width:500px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  padding-bottom: 50px;
+}
+
+.quiz {
+  width:500px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(45deg, #5AA2D7, #9fbdd3);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  padding-bottom: 50px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
