@@ -126,6 +126,7 @@ export default function Quiz() {
           onClick={()=>{setButtonState(3),setBorderState(3)}}
           background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
           borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>}
+          
       </div>
       <MainButton text="Next Question" onClick={HandleChange}/>
     </div>

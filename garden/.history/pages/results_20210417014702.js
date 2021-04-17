@@ -4,15 +4,14 @@ import MainButton from '../comps/MainButton';
 import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
 import Options from '../comps/Results';
-// import {reactLocalStorage} from 'reactjs-localstorage';
-// import ls from 'local-storage'
+import {reactLocalStorage} from 'reactjs-localstorage';
 
 export default function Results() {
   
-  // var climate = reactLocalStorage.getObject('climate');
-  // var goodIn = reactLocalStorage.getObject('goodIn');
-  // var category = reactLocalStorage.getObject('category');
-  // var maintenance = reactLocalStorage.getObject('maintenance');
+  var climate = reactLocalStorage.getObject('climate');
+  var goodIn = reactLocalStorage.getObject('goodIn');
+  var category = reactLocalStorage.getObject('category');
+  var maintenance = reactLocalStorage.getObject('maintenance');
 
   return (
     <div className="results">

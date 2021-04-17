@@ -15,8 +15,10 @@ import {reactLocalStorage} from 'reactjs-localstorage';
 export default function Quiz() {
   const [buttonstate, setButtonState] = useState(0);
   const [borderstate, setBorderState] = useState(0);
-  const [hidestate, setHideState] = useState(true);
-
+  const [hidestate, setHideState] = useState(false);
+  if(hidestate === true){
+    setHideState(false)
+  }
   const[percent, setPercent] = useState(questions.percent.zero)
   
   const[width, setWidth] = useState(questions.width.ten)
@@ -44,7 +46,6 @@ export default function Quiz() {
       setButton1State(questions.second.Low);
       setButton2State(questions.second.Med);
       setButton3State(questions.second.High);
-  
 
       // if(buttonstate === 1){
       //   reactLocalStorage.setObject('climate',{'climate':'temperate'})
@@ -65,8 +66,17 @@ export default function Quiz() {
       setQuestionState(questions.third.Q)
       setButton1State(questions.third.Pots);
       setButton2State(questions.third.Ground);
-      setHideState(false);
+      setButton3State("remove");
 
+      // if(buttonstate === 1){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'low'});
+      // }
+      // if(buttonstate === 2){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'medium'});
+      // }
+      // if(buttonstate === 3){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'high'});
+      // }
     }
     if(question === questions.third.Q){
       setPercent(questions.percent.seventyfive)
@@ -76,7 +86,7 @@ export default function Quiz() {
       setQuestionState(questions.fourth.Q)
       setButton1State(questions.fourth.Veg);
       setButton2State(questions.fourth.Flower);
-      setHideState(false);
+      setButton3State("remove");
 
       // if(buttonstate === 1){
       //   reactLocalStorage.setObject('goodIn',{'Good in':'pots/planters'})
@@ -94,7 +104,7 @@ export default function Quiz() {
       // if(buttonstate === 2){
       //   reactLocalStorage.setObject('category',{'Category':'Flowers/Plants'})
       // }
-      setHideState(false);
+
       router.push('/loading')
     }
     
@@ -120,12 +130,13 @@ export default function Quiz() {
           onClick={()=>{setButtonState(2),setBorderState(2)}}
           background = {buttonstate === 2 ? "#367A17" : "#FFFFFF33"}
           borderColor = {borderstate === 2 ? "#367A17" : "#FFFFFF"}/>
-        {hidestate === true && <QuestionButton 
+        <div><QuestionButton 
           className="questbutton"
           text={button3} 
           onClick={()=>{setButtonState(3),setBorderState(3)}}
           background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
-          borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>}
+          borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>
+          </div>
       </div>
       <MainButton text="Next Question" onClick={HandleChange}/>
     </div>

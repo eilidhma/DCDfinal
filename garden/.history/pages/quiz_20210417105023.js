@@ -15,7 +15,7 @@ import {reactLocalStorage} from 'reactjs-localstorage';
 export default function Quiz() {
   const [buttonstate, setButtonState] = useState(0);
   const [borderstate, setBorderState] = useState(0);
-  const [hidestate, setHideState] = useState(true);
+  const [hidestate, setHideState] = useState()
 
   const[percent, setPercent] = useState(questions.percent.zero)
   
@@ -44,7 +44,6 @@ export default function Quiz() {
       setButton1State(questions.second.Low);
       setButton2State(questions.second.Med);
       setButton3State(questions.second.High);
-  
 
       // if(buttonstate === 1){
       //   reactLocalStorage.setObject('climate',{'climate':'temperate'})
@@ -65,8 +64,17 @@ export default function Quiz() {
       setQuestionState(questions.third.Q)
       setButton1State(questions.third.Pots);
       setButton2State(questions.third.Ground);
-      setHideState(false);
+      setButton3State("remove");
 
+      // if(buttonstate === 1){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'low'});
+      // }
+      // if(buttonstate === 2){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'medium'});
+      // }
+      // if(buttonstate === 3){
+      //   reactLocalStorage.setObject('maintenance',{'maintenance':'high'});
+      // }
     }
     if(question === questions.third.Q){
       setPercent(questions.percent.seventyfive)
@@ -76,25 +84,25 @@ export default function Quiz() {
       setQuestionState(questions.fourth.Q)
       setButton1State(questions.fourth.Veg);
       setButton2State(questions.fourth.Flower);
-      setHideState(false);
+      setButton3State("remove");
 
-      // if(buttonstate === 1){
-      //   reactLocalStorage.setObject('goodIn',{'Good in':'pots/planters'})
-      // }
-      // if(buttonstate === 2){
-      //   reactLocalStorage.setObject('goodIn',{'Good in':'ground'})
-      // }
+      if(buttonstate === 1){
+        reactLocalStorage.setObject('goodIn',{'Good in':'pots/planters'})
+      }
+      if(buttonstate === 2){
+        reactLocalStorage.setObject('googIn',{'Good in':'ground'})
+      }
   
     }
     if(question === questions.fourth.Q){
       
-      // if(buttonstate === 1){
-      //   reactLocalStorage.setObject('category',{'Category':'Vegetables/Fruits/Herbs'})
-      // }
-      // if(buttonstate === 2){
-      //   reactLocalStorage.setObject('category',{'Category':'Flowers/Plants'})
-      // }
-      setHideState(false);
+      if(buttonstate === 1){
+        reactLocalStorage.setObject('category',{'Category':'Vegetables/Fruits/Herbs'})
+      }
+      if(buttonstate === 2){
+        reactLocalStorage.setObject('category',{'Category':'Flowers/Plants'})
+      }
+
       router.push('/loading')
     }
     
@@ -120,12 +128,12 @@ export default function Quiz() {
           onClick={()=>{setButtonState(2),setBorderState(2)}}
           background = {buttonstate === 2 ? "#367A17" : "#FFFFFF33"}
           borderColor = {borderstate === 2 ? "#367A17" : "#FFFFFF"}/>
-        {hidestate === true && <QuestionButton 
+        <QuestionButton 
           className="questbutton"
           text={button3} 
           onClick={()=>{setButtonState(3),setBorderState(3)}}
           background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
-          borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>}
+          borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>
       </div>
       <MainButton text="Next Question" onClick={HandleChange}/>
     </div>
