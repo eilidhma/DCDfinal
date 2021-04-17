@@ -10,7 +10,6 @@ import QuestionButton from '../comps/QuestionButtons';
 
 
 
-
 export default function Quiz() {
   const [buttonstate, setButtonState] = useState(0);
   const [borderstate, setBorderState] = useState(0);
@@ -67,10 +66,11 @@ export default function Quiz() {
     }
     
   }
+
   const router = useRouter()
 
   return (
-    <div className="quiz">
+    <B
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
       <MainImg src={image} width="80"/>
@@ -95,6 +95,7 @@ export default function Quiz() {
           background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
           borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>
       </div>
+      
       <MainButton text="Next Question" onClick={HandleChange}/>
     </div>
   )

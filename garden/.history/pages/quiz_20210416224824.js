@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 import {questions} from '../data/text';
 import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
-
+import Background from '../comps/Background';
 
 
 
@@ -67,10 +67,11 @@ export default function Quiz() {
     }
     
   }
+
   const router = useRouter()
 
   return (
-    <div className="quiz">
+    <div>
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
       <MainImg src={image} width="80"/>

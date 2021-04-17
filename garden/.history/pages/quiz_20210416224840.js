@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 import {questions} from '../data/text';
 import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
-
+import Background from '../comps/Background';
 
 
 
@@ -67,6 +67,7 @@ export default function Quiz() {
     }
     
   }
+
   const router = useRouter()
 
   return (

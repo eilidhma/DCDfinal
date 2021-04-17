@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 import {questions} from '../data/text';
 import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
-
+import Background from '../comps/Background';
 
 
 
@@ -67,10 +67,11 @@ export default function Quiz() {
     }
     
   }
+
   const router = useRouter()
 
   return (
-    <div className="quiz">
+    <Background>
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
       <MainImg src={image} width="80"/>
@@ -95,7 +96,8 @@ export default function Quiz() {
           background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
           borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>
       </div>
+      
       <MainButton text="Next Question" onClick={HandleChange}/>
-    </div>
+    
   )
 }

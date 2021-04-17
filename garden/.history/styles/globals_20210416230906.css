@@ -38,8 +38,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(#377B18, #8CB281, #8CB281, #FFCF00);
-  padding:20px;
+  background: linear-gradient(#377B18, #9fbdd3, #FFCF00);
 }
 
 .loading {

@@ -8,9 +8,6 @@ import {questions} from '../data/text';
 import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
 
-
-
-
 export default function Quiz() {
   const [buttonstate, setButtonState] = useState(0);
   const [borderstate, setBorderState] = useState(0);

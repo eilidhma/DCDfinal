@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Bebas Neue', cursive;
+  background-color: #C5E6ED;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,17 +30,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(#5AA2D7, #9fbdd3, #FFCF00);
-}
-
-.results {
-  width:100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: linear-gradient(#377B18, #8CB281, #8CB281, #FFCF00);
-  padding:20px;
+  background: linear-gradient() #5AA2D7, #9fbdd3, #FFCF00);
 }
 
 .loading {
