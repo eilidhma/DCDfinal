@@ -1,0 +1,26 @@
+import { useRouter } from 'next/router';
+import StatusBar from '../comps/StatusBar'
+import MedTitles from '../comps/MediumTitles'
+import React, {useState} from 'react';
+import {questions} from '../data/text';
+import Loading from '../comps/LoadingPage';
+
+
+export default function Quiz() {
+  const[percent, setPercent] = useState(questions.percent.hundred)
+  
+  const[width, setWidth] = useState(questions.width.hundred)
+
+  const[title, setTitle] = useState(questions.title.loading)
+
+
+  const router = useRouter()
+
+  return (
+    <div className="quiz">
+      <StatusBar percent="100" width={width}/>
+      <MedTitles text={title}/>
+      <Loading />
+    </div>
+  )
+}
