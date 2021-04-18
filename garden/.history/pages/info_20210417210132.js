@@ -10,6 +10,7 @@ import Wrap from '../comps/Wrap';
 import Herbs from '../comps/Herbs';
 import MainButton from '../comps/MainButton';
 import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
+import YoutubeEmbed from '../comps/Video';
 import ReactPlayer from "react-player"
 
 
@@ -124,7 +125,7 @@ export default function Home() {
               <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
               <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
             </div>
-            <Description text="How YOU can help:"/>
+            <Description text="How YOU can help:"/
             <ReactPlayer url="https://www.youtube.com/watch?v=FqClEkOyHbw"/>
 
           </div>

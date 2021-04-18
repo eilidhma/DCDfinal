@@ -10,7 +10,6 @@ import Wrap from '../comps/Wrap';
 import Herbs from '../comps/Herbs';
 import MainButton from '../comps/MainButton';
 import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
-import ReactPlayer from "react-player"
 
 
 
@@ -57,8 +56,7 @@ export default function Home() {
 
           {/* START OF SUSTAINABILITY */}
           <div className="infoContent">
-            <LargeTitles text="Environmental Benefits"/>
-            <MainImg src="city.png"/>
+            <LargeTitles />
             <Description text="How does gardening help the environment?"/>
             <SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/>
             <Description text="Control what goes on and in what you grow"/>
@@ -98,36 +96,16 @@ export default function Home() {
           
 
           {/* END OF SUSTAINABILITY */}
+          
+
+
 
           {/* START OF WELLNESS */}
-          <div className="infoContent">
-            <LargeTitles text="Wellness Benefits"/>
-            <MainImg src="brain.png"/>
-            <Description text="Gardening improves mental health"/>
-            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind"/>
-            <MainImg src="girl.png"/>
-            <Description text="Feeling of accomplishment"/>
-            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year."/>
-            <MainImg src="girlgardener.png"/>
-            <Description text="Physical activity"/>
-            <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart."/>
-          </div>
+          
           {/* END OF WELLNESS */}
 
           {/* START OF BEES */}
-          <div className="infoContent">
-            <LargeTitles text="Gardening can help save the bees"/>
-            <MainImg src="bee.png"/>
-            <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees."/>
-            <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. "/>
-            <div className="BlankBox">
-              <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
-              <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
-            </div>
-            <Description text="How YOU can help:"/>
-            <ReactPlayer url="https://www.youtube.com/watch?v=FqClEkOyHbw"/>
-
-          </div>
+          
           {/* END OF BEES */}
 
 
@@ -136,13 +114,6 @@ export default function Home() {
         <MainButton onClick={HandleChange} text={<>Saving the Bees<VscArrowRight/></>}/>
         
         <MainButton onClick={HandleChange} text={<>Wellness Benefits<VscArrowRight/></>}/>
-
-        {/*Start of quiz intro*/}
-        <div className="infoContent">
-
-        </div>
-        {/*Start of quiz intro*/}
-
         </div>
       </body>
     </html>

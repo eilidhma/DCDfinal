@@ -10,7 +10,6 @@ import Wrap from '../comps/Wrap';
 import Herbs from '../comps/Herbs';
 import MainButton from '../comps/MainButton';
 import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
-import ReactPlayer from "react-player"
 
 
 
@@ -121,12 +120,10 @@ export default function Home() {
             <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees."/>
             <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. "/>
             <div className="BlankBox">
-              <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
-              <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
-            </div>
-            <Description text="How YOU can help:"/>
-            <ReactPlayer url="https://www.youtube.com/watch?v=FqClEkOyHbw"/>
-
+              <PlantDetailsLarge src="globeicon.png" text="Reduce the use of gasoline-power yard tools" />
+              <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
+              <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency"/>
+            </div>  
           </div>
           {/* END OF BEES */}
 
@@ -136,13 +133,6 @@ export default function Home() {
         <MainButton onClick={HandleChange} text={<>Saving the Bees<VscArrowRight/></>}/>
         
         <MainButton onClick={HandleChange} text={<>Wellness Benefits<VscArrowRight/></>}/>
-
-        {/*Start of quiz intro*/}
-        <div className="infoContent">
-
-        </div>
-        {/*Start of quiz intro*/}
-
         </div>
       </body>
     </html>

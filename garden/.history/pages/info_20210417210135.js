@@ -10,6 +10,7 @@ import Wrap from '../comps/Wrap';
 import Herbs from '../comps/Herbs';
 import MainButton from '../comps/MainButton';
 import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
+import YoutubeEmbed from '../comps/Video';
 import ReactPlayer from "react-player"
 
 
