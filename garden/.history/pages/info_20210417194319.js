@@ -9,6 +9,7 @@ import PlantDetailsLarge from '../comps/PlantDetailsLarge';
 import Wrap from '../comps/Wrap';
 import Herbs from '../comps/Herbs';
 import MainButton from '../comps/MainButton';
+import {useRouter} from 'next/router';
 import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
 
 
@@ -78,7 +79,7 @@ export default function Home() {
             <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
             <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency"/>
           </div>
-        <MainButton text={<>Wellness Benefits<VscArrowRight></VscArrowRight></>}/>
+        <MainButton text={<><VscArrowRight></VscArrowRight>Wellness Benefitsn</>}/>
         </div>
       </body>
     </html>

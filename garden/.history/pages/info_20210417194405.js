@@ -78,7 +78,7 @@ export default function Home() {
             <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
             <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency"/>
           </div>
-        <MainButton text={<>Wellness Benefits<VscArrowRight></VscArrowRight></>}/>
+        <MainButton text={<><VscArrowRight></VscArrowRight>Wellness Benefits</>}/>
         </div>
       </body>
     </html>

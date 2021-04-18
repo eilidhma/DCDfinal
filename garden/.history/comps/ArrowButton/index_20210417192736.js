@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
-import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc'
 
 const Button = styled.button`
   display:flex;
@@ -23,6 +21,9 @@ const Button = styled.button`
   color:${props=>props.color};
   margin:20px;
 `;
+ const Icon = styled.img`
+ 
+ `;
 
 
 const MainButton = ({
