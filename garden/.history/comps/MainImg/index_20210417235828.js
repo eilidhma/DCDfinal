@@ -7,7 +7,7 @@ const ImgCont = styled.div`
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  width:${props=>props.width};
+  width:${props=>props.width}%;
   max-width:500px;
   object-fit:cover;
 `;

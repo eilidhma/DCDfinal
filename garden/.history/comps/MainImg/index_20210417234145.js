@@ -24,7 +24,7 @@ src="../../logo-white.png",
 width=40,
 opacity=1
 }) => {
-  return <ImgCont opacity={opacity} width={width}>
+  return <ImgCont opacity={} width={width}>
     <Img src={src}/>
   </ImgCont>
 }
