@@ -1,0 +1,26 @@
+import HeroImg from '../comps/HeroImg'
+import LargeTitles from '../comps/LargeTitles'
+import MainImg from '../comps/MainImg'
+import LandingInfo from '../comps/LandingBio'
+import Description from '../comps/DescriptiveText'
+import ButtonUI from '../comps/MainButton'
+import { useRouter } from 'next/router';
+
+
+export default function Home() {
+
+  const router = useRouter()
+
+  return (
+    <html>
+      <body>
+        <div className="info">
+          <LargeTitles text="Why Grow Food at Home?"/>
+          <MainImg src="couple.png" width="30%"/>
+          <ButtonUI text="Sustainability" routeTo="/info" onClick={() => router.push('/info')}/>
+          <ButtonUI text="Wellness Benefits" routeTo="/quiz" onClick={() => router.push('/quiz')}/>
+        </div>
+      </body>
+    </html>
+  )
+}
