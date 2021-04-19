@@ -23,14 +23,14 @@ export default function Results() {
 
       <Options />
       <Plant />
-      <PlantDetailsLarge />
 
 
       {/* <Options/>
       <Options/>
       <Options/>
       <Options/> */}
-      <MainButton text="See how you will make a difference!" />
+
+      {/* <MainButton text="See how you will make a difference!" /> */}
     </div>
   )
 }
