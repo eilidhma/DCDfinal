@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    text-align: center;
+}
+div{
+    margin: 25px;
+}
+#temperate {
+    animation: temp-glow 1s ease-in-out infinite alternate
+}
+#arid {
+    animation: arid-glow 1.5s ease-in-out infinite alternate;
+}
+#tropical {
+    animation: trop-glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes temp-glow{
+    from{
+        filter: drop-shadow(0 0 1px rgba(255, 88, 99, 1));
+    }
+    to{
+        filter: drop-shadow(0 0 8px rgba(255, 88, 99, 1));
+    }
+}
+@keyframes arid-glow{
+    from{
+        filter: drop-shadow(0 0 1px rgba(54, 138, 15, 1));
+    }
+    to{
+        filter: drop-shadow(0 0 8px rgba(54, 138, 15, 1));
+    }
+}
+@keyframes trop-glow{
+    from{
+        filter: drop-shadow(0 0 1px rgba(255, 224, 50, 1));
+    }
+    to{
+        filter: drop-shadow(0 0 8px rgba(255, 224, 50, 1));
+    }
+}

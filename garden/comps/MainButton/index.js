@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc';
 
 const Button = styled.button`
   display:flex;
