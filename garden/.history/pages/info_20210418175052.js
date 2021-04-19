@@ -2,7 +2,7 @@ import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
 import ButtonUI from '../comps/MainButton'
 import { useRouter } from 'next/router';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Description from '../comps/DescriptiveText';
 import SmallDescription from '../comps/SmallDescriptive';
 import PlantDetailsLarge from '../comps/PlantDetailsLarge';
@@ -15,13 +15,12 @@ import NameInput from '../comps/NameInput';
 import {titles} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 
-const Info = () => {
+const Home = () => {
 
   useEffect(() => {
-    AOS.init({duration:2000});
+    AOS.init({});
   }, []);
   const router = useRouter()
 
@@ -66,10 +65,10 @@ const Info = () => {
           {/* START OF Directory */}
           <div className="infoContent">
           {mainstate === 0 && <MainImg src="couple.png" width="30%"/>}
-            <div data-aos="slide-up" className="ButtonCont">
+            <div className="ButtonCont">
               <ButtonUI text="Sustainability" onClick={Sust}/>
               <ButtonUI text="Wellness Benefits" onClick={Well}/>
-              <ButtonUI text="Saving the Bees" onClick={Bees}/>
+              <ButtonUI text="Saving the Bees" onClick={Bees}/> 
             </div>
             
           </div>
@@ -80,9 +79,9 @@ const Info = () => {
           {/* START OF SUSTAINABILITY */}
           {mainstate === 1 && <div className="infoContent">
 
-            <div data-aos="fade"><MainImg src="city.png"/></div>
+            <MainImg src="city.png"/>
             <Description text="How does gardening help the environment?"/>
-            <div data-aos="slide-left"><SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/></div>
+            <SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/>
             <Description text="Control what goes on and in what you grow"/>
             <SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides."/>
             <div className="BlankBox">
@@ -173,4 +172,4 @@ const Info = () => {
   )
 }
 
-export default Info
+export default 

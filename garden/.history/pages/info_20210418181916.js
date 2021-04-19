@@ -15,7 +15,6 @@ import NameInput from '../comps/NameInput';
 import {titles} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 const Info = () => {

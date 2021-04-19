@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 const Results = () => {
-  useEffect(() => {
+  useEffect(() = > {
     AOS.init({});
   }, []);
   // var climate = reactLocalStorage.getObject('climate');
@@ -26,9 +26,8 @@ const Results = () => {
       <Options/>
       <Options/>
       <Options/>
-      <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000"><MainButton text="Finish"/></div>
+      <div data-aos="fade-in" data-aos-duration="4000"><MainButton text="Finish"/></div>
     </div>
   )
 }
 
-export default Results

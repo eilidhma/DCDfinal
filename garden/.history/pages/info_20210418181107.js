@@ -15,13 +15,12 @@ import NameInput from '../comps/NameInput';
 import {titles} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 const Info = () => {
 
   useEffect(() => {
-    AOS.init({duration:2000});
+    AOS.init({});
   }, []);
   const router = useRouter()
 
@@ -66,7 +65,7 @@ const Info = () => {
           {/* START OF Directory */}
           <div className="infoContent">
           {mainstate === 0 && <MainImg src="couple.png" width="30%"/>}
-            <div data-aos="slide-up" className="ButtonCont">
+            <div data-aos="slide-up" data-aos-duration="4000" className="ButtonCont">
               <ButtonUI text="Sustainability" onClick={Sust}/>
               <ButtonUI text="Wellness Benefits" onClick={Well}/>
               <ButtonUI text="Saving the Bees" onClick={Bees}/>
@@ -80,7 +79,7 @@ const Info = () => {
           {/* START OF SUSTAINABILITY */}
           {mainstate === 1 && <div className="infoContent">
 
-            <div data-aos="fade"><MainImg src="city.png"/></div>
+            <MainImg src="city.png"/>
             <Description text="How does gardening help the environment?"/>
             <div data-aos="slide-left"><SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/></div>
             <Description text="Control what goes on and in what you grow"/>
