@@ -10,7 +10,6 @@ import QuestionButton from '../comps/QuestionButtons';
 import {reactLocalStorage} from 'reactjs-localstorage';
 import Clock from '../comps/Clock';
 import Map from '../comps/WorldMap';
-import Plant from '../comps/Plant-grow';
 
 
 
@@ -109,9 +108,8 @@ export default function Quiz() {
     <div className="quiz">
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
-      {graphic === 0 && <Map/>}
-      {graphic === 1 && <Clock/>}
-      {graphic === 2 && <Plant/>}
+      {<Map/>}
+      <Clock/>
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 

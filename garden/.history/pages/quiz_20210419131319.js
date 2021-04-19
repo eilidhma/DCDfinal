@@ -9,8 +9,6 @@ import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
 import {reactLocalStorage} from 'reactjs-localstorage';
 import Clock from '../comps/Clock';
-import Map from '../comps/WorldMap';
-import Plant from '../comps/Plant-grow';
 
 
 
@@ -43,6 +41,7 @@ export default function Quiz() {
       setPercent(questions.percent.twentyfive)
       setWidth(questions.width.twentyfive)
       setTitle(questions.title.two)
+      setImage(questions.image.two)
       setQuestionState(questions.second.Q)
       setButton1State(questions.second.Low);
       setButton2State(questions.second.Med);
@@ -65,6 +64,7 @@ export default function Quiz() {
       setPercent(questions.percent.fifty)
       setWidth(questions.width.fifty)
       setTitle(questions.title.three)
+      setImage(questions.image.three)
       setQuestionState(questions.third.Q)
       setButton1State(questions.third.Pots);
       setButton2State(questions.third.Ground);
@@ -76,6 +76,7 @@ export default function Quiz() {
       setPercent(questions.percent.seventyfive)
       setWidth(questions.width.seventyfive)
       setTitle(questions.title.four)
+      setImage(questions.image.four)
       setQuestionState(questions.fourth.Q)
       setButton1State(questions.fourth.Veg);
       setButton2State(questions.fourth.Flower);
@@ -109,9 +110,7 @@ export default function Quiz() {
     <div className="quiz">
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
-      {graphic === 0 && <Map/>}
-      {graphic === 1 && <Clock/>}
-      {graphic === 2 && <Plant/>}
+      <Clock/>
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 
