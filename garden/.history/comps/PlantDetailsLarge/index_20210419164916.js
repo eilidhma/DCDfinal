@@ -38,13 +38,12 @@ const Icon = styled.img`
 
 const PlantDetailsLarge = ({
   text = "placeholder",
-  src = "../../public/sun.png",
-  width = 50,
+  src = "../../public/sun.png"
 
 }) => {
   return <Cont>
     <IconCont>
-      <Icon src={src} width={width}></Icon>
+      <Icon src={src}></Icon>
     </IconCont>
     <TextContent>{text}</TextContent>
   </Cont>
