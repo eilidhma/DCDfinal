@@ -25,8 +25,9 @@ const IconCont = styled.div`
   align-items:center;
   width:50px;
   height:50px;
-  flex:1;
-  margin-right: 10px;
+  flex:1
+  padding-right: 10px;
+  border: 2px solid red;
 `;
 
 const Icon = styled.img`
@@ -38,7 +39,7 @@ const Icon = styled.img`
 
 const PlantDetailsLarge = ({
   text = "placeholder",
-  src = "../../public/sun.png"
+  src = "../public/sun.png"
 }) => {
   return <Cont>
     <IconCont>

@@ -96,7 +96,6 @@ const Button = styled.button`
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
-  position:relative;
   top:75px;
   border: 2px solid pink;
 `;

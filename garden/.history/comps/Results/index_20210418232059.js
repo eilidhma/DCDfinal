@@ -73,8 +73,6 @@ const Item = styled.p`
 
 const Button = styled.button`
   display:flex;
-  position:relative;
-  top: 75px;
   justify-content:center;
   align-items:center;
   width:60%;
@@ -91,14 +89,6 @@ const Button = styled.button`
   text-align:center;
   color:white;
   margin:10px;
-`;
-
-const DetailsCont = styled.div`
-  display:flex;
-  flex-direction:column;
-  position:relative;
-  top:75px;
-  border: 2px solid pink;
 `;
 
 function Details() {
@@ -137,12 +127,9 @@ const Options = ({
       </Points>
     </DescriptionCont>
     <Button onClick={Details}>{learn}</Button>
-    <DetailsCont>
-      <PlantDetailsLarge text={sun + " moderate sunlight"} />
-      <PlantDetailsLarge text={water + "3 days"} />
-      <PlantDetailsLarge text={fact} />
-    </DetailsCont>
-
+    <PlantDetailsLarge text={sun + " moderate sunlight"} />
+    <PlantDetailsLarge text={water + "3 days"} />
+    <PlantDetailsLarge text={fact} />
   </Cont>
 }
 

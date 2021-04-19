@@ -4,7 +4,6 @@ import PlantDetailsLarge from '../PlantDetailsLarge';
 
 
 const Cont = styled.div`
-  position:relative;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -21,14 +20,11 @@ const Cont = styled.div`
 
 const DescriptionCont = styled.div`
   display:flex;
-  position:relative;
-  top:75px;
   flex-direction:row;
   justify-content:center;
   align-items:center;
   width:100%;
   height: 250px;
-  border: 2px solid blue;
 `;
 
 const ImgCont = styled.div`
@@ -73,8 +69,6 @@ const Item = styled.p`
 
 const Button = styled.button`
   display:flex;
-  position:relative;
-  top: 75px;
   justify-content:center;
   align-items:center;
   width:60%;
@@ -93,17 +87,8 @@ const Button = styled.button`
   margin:10px;
 `;
 
-const DetailsCont = styled.div`
-  display:flex;
-  flex-direction:column;
-  position:relative;
-  top:75px;
-  border: 2px solid pink;
-`;
-
 function Details() {
-  height = 1000 + "px";
-  text = "Hide"
+  height = 1000 + "px"
 };
 
 
@@ -113,17 +98,12 @@ const Options = ({
   height = 350 + "px",
   title = "English Lavender",
   src = "lavendar.png",
-  // text = "placeholder",
+  text = "placeholder",
   climate = "arid",
   goodIn = "pots/planters",
   category = "flowers",
   maintenance = " moderate",
-  learn = " Learn more",
-  sun = "Requires",
-  // sunIcon = "../../public/sun.png",
-  water = "Water every",
-  fact = "Fun fact!",
-
+  learn = " Learn more"
 }) => {
   return <Cont height={height}>
     <DescriptionCont>
@@ -137,12 +117,7 @@ const Options = ({
       </Points>
     </DescriptionCont>
     <Button onClick={Details}>{learn}</Button>
-    <DetailsCont>
-      <PlantDetailsLarge text={sun + " moderate sunlight"} />
-      <PlantDetailsLarge text={water + "3 days"} />
-      <PlantDetailsLarge text={fact} />
-    </DetailsCont>
-
+    <PlantDetailsLarge />
   </Cont>
 }
 

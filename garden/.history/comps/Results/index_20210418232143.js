@@ -93,14 +93,6 @@ const Button = styled.button`
   margin:10px;
 `;
 
-const DetailsCont = styled.div`
-  display:flex;
-  flex-direction:column;
-  position:relative;
-  top:75px;
-  border: 2px solid pink;
-`;
-
 function Details() {
   height = 1000 + "px";
   text = "Hide"
@@ -137,12 +129,9 @@ const Options = ({
       </Points>
     </DescriptionCont>
     <Button onClick={Details}>{learn}</Button>
-    <DetailsCont>
-      <PlantDetailsLarge text={sun + " moderate sunlight"} />
-      <PlantDetailsLarge text={water + "3 days"} />
-      <PlantDetailsLarge text={fact} />
-    </DetailsCont>
-
+    <PlantDetailsLarge text={sun + " moderate sunlight"} />
+    <PlantDetailsLarge text={water + "3 days"} />
+    <PlantDetailsLarge text={fact} />
   </Cont>
 }
 
