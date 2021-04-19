@@ -21,7 +21,6 @@ export default function Results() {
       <MainImg src="logo-flat.png" />
       <LargeTitles text="Our recommendations" />
 
-      <Options />
       <Plant />
       <PlantDetailsLarge />
 
