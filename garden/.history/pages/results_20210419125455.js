@@ -21,7 +21,7 @@ export default function Results() {
       <LargeTitles text="Our recommendations" />
 
       <Options />
-      <Options />
+      <Options src />
       <Options />
       <Options />
       <Options />

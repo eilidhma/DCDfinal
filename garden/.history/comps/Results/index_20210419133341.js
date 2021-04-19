@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 import PlantDetailsLarge from '../PlantDetailsLarge';
 import React, { useState } from 'react';
-import { CgBee } from 'react-icons/cg';
 
 const Cont = styled.div`
   position:relative;
@@ -77,6 +76,7 @@ const Button = styled.button`
   justify-content:center;
   align-items:center;
   width:300px;
+  height:50px;
   background:#FFFFFF33;
   border:4px solid #FFFFFF;
   border-radius:15px;
@@ -84,7 +84,7 @@ const Button = styled.button`
   font-style:normal;
   font-weight:bold;
   font-size:18px;
-  display:flex;
+  display:static;
   align-items:center;
   text-align:center;
   color:white;
@@ -95,23 +95,6 @@ const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
-`;
-
-const BeeCont = styled.div`
-  // so bee badge doesn't get cut off from overflow hidden :)
-`;
-
-const BeeBadge = styled.div`
-  display: flex;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background-color: white;
-  position: relative;
-  top:60px;
-  z-index:2;
-  left: 89%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50)
 `;
 
 
@@ -137,28 +120,25 @@ const Options = ({
     text = "Hide";
   }
 
-  return <BeeCont>
-    <BeeBadge><CgBee className="BeeBadge" /></BeeBadge>
-    <Cont height={height}>
-      <DescriptionCont>
-        <ImgCont><Img src={src} /></ImgCont>
-        <Points>
-          <Title>{title}</Title>
-          <Item><strong>Climate:</strong> {climate}</Item>
-          <Item><strong>Good in:</strong> {goodIn}</Item>
-          <Item><strong>Category:</strong> {category}</Item>
-          <Item><strong>Maintenance:</strong> {maintenance}</Item>
-        </Points>
-      </DescriptionCont>
-      <Button onClick={() => setOpen(!open)}>{text}</Button>
-      <DetailsCont>
-        <PlantDetailsLarge src='sun.png' text={sun + "moderate sunlight"} />
-        <PlantDetailsLarge src='water.png' text={water + "3 days"} />
-        <PlantDetailsLarge src='globe.png' text={fact} />
-      </DetailsCont>
+  return <Cont height={height}>
+    <DescriptionCont>
+      <ImgCont><Img src={src} /></ImgCont>
+      <Points>
+        <Title>{title}</Title>
+        <Item><strong>Climate:</strong> {climate}</Item>
+        <Item><strong>Good in:</strong> {goodIn}</Item>
+        <Item><strong>Category:</strong> {category}</Item>
+        <Item><strong>Maintenance:</strong> {maintenance}</Item>
+      </Points>
+    </DescriptionCont>
+    <Button onClick={() => setOpen(!open)}>{text}</Button>
+    <DetailsCont>
+      <PlantDetailsLarge src='sun.png' text={sun + "moderate sunlight"} />
+      <PlantDetailsLarge src='water.png' text={water + "3 days"} />
+      <PlantDetailsLarge src='globe.png' text={fact} />
+    </DetailsCont>
 
-    </Cont>
-  </BeeCont>
+  </Cont>
 }
 
 export default Options;

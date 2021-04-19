@@ -97,13 +97,11 @@ button:hover{
 }
 
 .BeeBadge{
-  color:#FFB101;
+  color:white;
   margin-right: auto;
   margin-left: auto;
   align-self: center;
-  width: 40px;
-  height: 40px;
+  flex-basis:2;
 }
-
 
 

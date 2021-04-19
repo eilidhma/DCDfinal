@@ -1,34 +1,34 @@
-// import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PlantDetailsLarge from '../PlantDetailsLarge';
-import React, { useState } from 'react';
-import { CgBee } from 'react-icons/cg';
+import 
 
 const Cont = styled.div`
   position:relative;
   display:flex;
   flex-direction:column;
+  justify-content:center;
   align-items:center;
-  height: ${props => props.height}px;
   width:40%;
-  min-width: 450px;
+  height: ${props => props.height};
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
   padding:20px;
   margin:30px;
-  overflow:hidden;
-  transition: height 0.5s;
+  object-fit:cover;
 `;
 
 const DescriptionCont = styled.div`
   display:flex;
   position:relative;
+  top:75px;
   flex-direction:row;
   justify-content:center;
   align-items:center;
   width:100%;
   height: 250px;
+  border: 2px solid blue;
 `;
 
 const ImgCont = styled.div`
@@ -74,9 +74,11 @@ const Item = styled.p`
 const Button = styled.button`
   display:flex;
   position:relative;
+  top: 75px;
   justify-content:center;
   align-items:center;
-  width:300px;
+  width:60%;
+  height:50px;
   background:#FFFFFF33;
   border:4px solid #FFFFFF;
   border-radius:15px;
@@ -88,36 +90,28 @@ const Button = styled.button`
   align-items:center;
   text-align:center;
   color:white;
-  margin: 0px 0px 20px 0px;
+  margin:10px;
 `;
 
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
+  top:75px;
+  border: 2px solid pink;
 `;
 
-const BeeCont = styled.div`
-  // so bee badge doesn't get cut off from overflow hidden :)
-`;
-
-const BeeBadge = styled.div`
-  display: flex;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background-color: white;
-  position: relative;
-  top:60px;
-  z-index:2;
-  left: 89%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50)
-`;
+//this needs to be made into states
+function Details() {
+  { props => props.height = 1000 + "px" }
+};
 
 
 const Options = ({
+  height = 350 + "px",
   title = "English Lavender",
   src = "lavendar.png",
+  // text = "placeholder",
   climate = " arid",
   goodIn = " pots/planters",
   category = " flowers",
@@ -129,36 +123,25 @@ const Options = ({
   fact = "Fun fact!",
 
 }) => {
-  const [open, setOpen] = useState(false);
+  return <Cont height={height}>
+    <DescriptionCont>
+      <ImgCont><Img src={src} /></ImgCont>
+      <Points>
+        <Title>{title}</Title>
+        <Item><strong>Climate:</strong> {climate}</Item>
+        <Item><strong>Good in:</strong> {goodIn}</Item>
+        <Item><strong>Category:</strong> {category}</Item>
+        <Item><strong>Maintenance:</strong> {maintenance}</Item>
+      </Points>
+    </DescriptionCont>
+    <Button onClick={Details}>{learn}</Button>
+    <DetailsCont>
+      <PlantDetailsLarge text={sun + "moderate sunlight"} />
+      <PlantDetailsLarge text={water + "3 days"} />
+      <PlantDetailsLarge text={fact} />
+    </DetailsCont>
 
-  var height = 300, text = "Learn more"
-  if (open) {
-    height = 540;
-    text = "Hide";
-  }
-
-  return <BeeCont>
-    <BeeBadge><CgBee className="BeeBadge" /></BeeBadge>
-    <Cont height={height}>
-      <DescriptionCont>
-        <ImgCont><Img src={src} /></ImgCont>
-        <Points>
-          <Title>{title}</Title>
-          <Item><strong>Climate:</strong> {climate}</Item>
-          <Item><strong>Good in:</strong> {goodIn}</Item>
-          <Item><strong>Category:</strong> {category}</Item>
-          <Item><strong>Maintenance:</strong> {maintenance}</Item>
-        </Points>
-      </DescriptionCont>
-      <Button onClick={() => setOpen(!open)}>{text}</Button>
-      <DetailsCont>
-        <PlantDetailsLarge src='sun.png' text={sun + "moderate sunlight"} />
-        <PlantDetailsLarge src='water.png' text={water + "3 days"} />
-        <PlantDetailsLarge src='globe.png' text={fact} />
-      </DetailsCont>
-
-    </Cont>
-  </BeeCont>
+  </Cont>
 }
 
 export default Options;

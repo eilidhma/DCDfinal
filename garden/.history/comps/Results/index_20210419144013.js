@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 import PlantDetailsLarge from '../PlantDetailsLarge';
 import React, { useState } from 'react';
-import { CgBee } from 'react-icons/cg';
 
 const Cont = styled.div`
   position:relative;
@@ -102,16 +101,12 @@ const BeeCont = styled.div`
 `;
 
 const BeeBadge = styled.div`
-  display: flex;
   width:50px;
   height:50px;
   border-radius:50%;
-  background-color: white;
+  background-color: red;
   position: relative;
-  top:60px;
-  z-index:2;
-  left: 89%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50)
+  top:-30px;
 `;
 
 
@@ -138,7 +133,7 @@ const Options = ({
   }
 
   return <BeeCont>
-    <BeeBadge><CgBee className="BeeBadge" /></BeeBadge>
+    <BeeBadge />
     <Cont height={height}>
       <DescriptionCont>
         <ImgCont><Img src={src} /></ImgCont>

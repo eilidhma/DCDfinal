@@ -1,4 +1,4 @@
-export const PlantCatalogue = {
+export const plants = {
     //temperate
     blackberries: {
         climate: "temperate",

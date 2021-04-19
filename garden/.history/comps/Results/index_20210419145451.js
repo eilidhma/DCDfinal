@@ -111,7 +111,6 @@ const BeeBadge = styled.div`
   top:60px;
   z-index:2;
   left: 89%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50)
 `;
 
 

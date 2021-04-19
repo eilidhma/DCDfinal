@@ -1,11 +1,11 @@
-export const PlantCatalogue = {
+export const plants = {
     //temperate
     blackberries: {
         climate: "temperate",
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "low",
-        src: "blackberries.png",
+        src: "../public/blackberries.png",
         bee: true
     },
 
@@ -14,7 +14,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "medium",
-        src: "raspberries.png",
+        src: "../public/raspberries.png",
         bee: true
     },
 
@@ -23,7 +23,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "high",
-        src: "blueberries.png",
+        src: "../public/blueberries.png",
         bee: true
     },
 
@@ -32,7 +32,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "low",
-        src: "milkweed.png",
+        src: "../public/milkweed.png",
         bee: true
     },
 
@@ -41,7 +41,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "daisies.png",
+        src: "../public/daisies.png",
         bee: true
     },
 
@@ -50,7 +50,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "coneflowers.png",
+        src: "../public/coneflowers.png",
         bee: true
     },
 
@@ -59,7 +59,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "VernalWitchHazel.png",
+        src: "../public/VernalWitchHazel.png",
         bee: true
     },
 
@@ -68,7 +68,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "lungswort.png",
+        src: "../public/lungswort.png",
         bee: true
     },
 
@@ -77,7 +77,7 @@ export const PlantCatalogue = {
         goodIn: "pots/garden",
         category: "flowers",
         maintenance: "high",
-        src: "sunflower.png",
+        src: "../public/sunflower.png",
         bee: false
     },
 
@@ -86,7 +86,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "carrot.png",
+        src: "../public/carrot.png",
         bee: true
     },
 
@@ -95,7 +95,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "weatt.png",
+        src: "../public/weatt.png",
         bee: false
     },
 
@@ -104,7 +104,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: " high",
-        src: "sweetcorn.png",
+        src: "../public/sweetcorn.png",
         bee: false
     },
 
@@ -115,7 +115,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "low",
-        src: "bokchoy.png",
+        src: "../public/bokchoy.png",
         bee: false
     },
 
@@ -124,7 +124,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "medium",
-        src: "eggplant.png",
+        src: "../public/eggplant.png",
         bee: false
     },
 
@@ -133,7 +133,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "high",
-        src: "rice.png",
+        src: "../public/rice.png",
         bee: false
     },
 
@@ -142,7 +142,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "low",
-        src: "anthurium.png",
+        src: "../public/anthurium.png",
         bee: false
     },
 
@@ -151,7 +151,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "canna.png",
+        src: "../public/canna.png",
         bee: true
     },
 
@@ -160,7 +160,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "hibiscus.png",
+        src: "../public/hibiscus.png",
         bee: true
     },
 
@@ -169,7 +169,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "cosmos.png",
+        src: "../public/cosmos.png",
         bee: true
     },
 
@@ -178,7 +178,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "chrysanthemummorifolium.png",
+        src: "../public/chrysanthemummorifolium.png",
         bee: false
     },
 
@@ -187,7 +187,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "high",
-        src: "angelstrumpet.png",
+        src: "../public/angelstrumpet.png",
         bee: false
     },
 
@@ -196,7 +196,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "chinesecabbage.png",
+        src: "../public/chinesecabbage.png",
         bee: false
     },
 
@@ -205,7 +205,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "medium",
-        src: "pumpkin.png",
+        src: "../public/pumpkin.png",
         bee: false
     },
 
@@ -261,7 +261,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "moderate",
-        src: "englishlavender.png",
+        src: "../public/englishlavender.png",
         bee: true
     },
 
@@ -270,7 +270,7 @@ export const PlantCatalogue = {
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "yucca.png",
+        src: "../public/yucca.png",
         bee: true
     },
 
@@ -279,7 +279,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "firecrackerplant.png",
+        src: "../public/firecrackerplant.png",
         bee: true
     },
 
@@ -288,7 +288,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "purslane.png",
+        src: "../public/purslane.png",
         bee: true
     },
 
@@ -297,7 +297,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "flowers",
         maintenance: "high",
-        src: "phlox.png",
+        src: "../public/phlox.png",
         bee: true
     },
 
@@ -306,7 +306,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "agave.png",
+        src: "../public/agave.png",
         bee: false
     },
 
@@ -315,7 +315,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "medium",
-        src: "pricklypear.png",
+        src: "../public/pricklypear.png",
         bee: false
     },
 
@@ -324,7 +324,7 @@ export const PlantCatalogue = {
         goodIn: "ground",
         category: "produce",
         maintenance: "high",
-        src: "pometranate.png",
+        src: "../public/pometranate.png",
         bee: false
     }
 

@@ -4,7 +4,7 @@ import MainButton from '../comps/MainButton';
 import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
 import Options from '../comps/Results';
-import PlantCatalogue from '../data/plants';
+import PlantDetailsLarge from '../comps/PlantDetailsLarge';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 
@@ -21,12 +21,14 @@ export default function Results() {
       <LargeTitles text="Our recommendations" />
 
       <Options />
-      <Options />
-      <Options />
-      <Options />
-      <Options />
 
-      <MainButton text="See how you will make a difference!" />
+
+      {/* <Options/>
+      <Options/>
+      <Options/>
+      <Options/> */}
+
+      {/* <MainButton text="See how you will make a difference!" /> */}
     </div>
   )
 }
