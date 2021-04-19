@@ -26,7 +26,7 @@ const Results = () => {
       <Options/>
       <Options/>
       <Options/>
-      <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000"><MainButton text="Finish"/></div>
+      <div data-aos="fade-in" data-aos-duration="4000"><MainButton text="Finish"/></div>
     </div>
   )
 }
