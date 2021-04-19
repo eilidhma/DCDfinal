@@ -31,8 +31,7 @@ const IconCont = styled.div`
 
 const Icon = styled.img`
   display:flex;
-  width:50px;
-  height:50px;
+  width:${props=>props.width}px;
   object-fit:contain;
 `;
 
@@ -40,10 +39,11 @@ const Icon = styled.img`
 const PlantDetailsLarge = ({
   text = "placeholder",
   src = "../../public/sun.png"
+
 }) => {
   return <Cont>
     <IconCont>
-      <Icon src={src}></Icon>
+      <Icon src={src} width={width}></Icon>
     </IconCont>
     <TextContent>{text}</TextContent>
   </Cont>
