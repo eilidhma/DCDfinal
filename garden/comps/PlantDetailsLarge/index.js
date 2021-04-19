@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 const Cont = styled.div`
   display:flex;
@@ -25,7 +25,8 @@ const IconCont = styled.div`
   align-items:center;
   width:50px;
   height:50px;
-  flex:1
+  flex:1;
+  margin-right: 10px;
 `;
 
 const Icon = styled.img`
@@ -34,10 +35,11 @@ const Icon = styled.img`
   object-fit:contain;
 `;
 
+
 const PlantDetailsLarge = ({
-  text="placeholder",
-  src="../public/sun.png",
-  width="50",
+  text = "placeholder",
+  src = "../../public/sun.png"
+
 }) => {
   return <Cont>
     <IconCont>
