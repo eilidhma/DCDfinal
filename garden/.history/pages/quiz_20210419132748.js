@@ -111,7 +111,7 @@ export default function Quiz() {
       <MedTitles text={title}/>
       {graphic === 0 && <Map/>}
       {graphic === 1 && <Clock/>}
-      {graphic === 2 && <Plant/>}
+      {graphic === 2 && Plant}
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 

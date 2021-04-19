@@ -9,8 +9,6 @@ import MainButton from '../comps/MainButton';
 import QuestionButton from '../comps/QuestionButtons';
 import {reactLocalStorage} from 'reactjs-localstorage';
 import Clock from '../comps/Clock';
-import Map from '../comps/WorldMap';
-import Plant from '../comps/Plant-grow';
 
 
 
@@ -26,7 +24,7 @@ export default function Quiz() {
 
   const[title, setTitle] = useState(questions.title.one)
 
-  const[graphic, setGraphic] = useState(0)
+  const[image, setImage] = useState(questions.image.one)
 
   const [question, setQuestionState] = useState(questions.first.Q);
 
@@ -38,16 +36,15 @@ export default function Quiz() {
   const HandleChange = () =>{
     setButtonState(0);
     setBorderState(0)
-    setGraphic(0)
     if(question === questions.first.Q){
       setPercent(questions.percent.twentyfive)
       setWidth(questions.width.twentyfive)
       setTitle(questions.title.two)
+      setImage(questions.image.two)
       setQuestionState(questions.second.Q)
       setButton1State(questions.second.Low);
       setButton2State(questions.second.Med);
       setButton3State(questions.second.High);
-      setGraphic(1);
   
 
       // if(buttonstate === 1){
@@ -65,22 +62,22 @@ export default function Quiz() {
       setPercent(questions.percent.fifty)
       setWidth(questions.width.fifty)
       setTitle(questions.title.three)
+      setImage(questions.image.three)
       setQuestionState(questions.third.Q)
       setButton1State(questions.third.Pots);
       setButton2State(questions.third.Ground);
       setHideState(false);
-      setGraphic(2);
 
     }
     if(question === questions.third.Q){
       setPercent(questions.percent.seventyfive)
       setWidth(questions.width.seventyfive)
       setTitle(questions.title.four)
+      setImage(questions.image.four)
       setQuestionState(questions.fourth.Q)
       setButton1State(questions.fourth.Veg);
       setButton2State(questions.fourth.Flower);
       setHideState(false);
-      setGraphic(3);
 
       // if(buttonstate === 1){
       //   reactLocalStorage.setObject('goodIn',{'Good in':'pots/planters'})
@@ -109,9 +106,8 @@ export default function Quiz() {
     <div className="quiz">
       <StatusBar percent={percent} width={width}/>
       <MedTitles text={title}/>
-      {graphic === 0 && <Map/>}
-      {graphic === 1 && <Clock/>}
-      {graphic === 2 && <Plant/>}
+      <MainImg src={image} width="80"/>
+      <Clock/>
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 

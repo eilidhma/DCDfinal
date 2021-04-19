@@ -10,7 +10,6 @@ import QuestionButton from '../comps/QuestionButtons';
 import {reactLocalStorage} from 'reactjs-localstorage';
 import Clock from '../comps/Clock';
 import Map from '../comps/WorldMap';
-import Plant from '../comps/Plant-grow';
 
 
 
@@ -111,7 +110,7 @@ export default function Quiz() {
       <MedTitles text={title}/>
       {graphic === 0 && <Map/>}
       {graphic === 1 && <Clock/>}
-      {graphic === 2 && <Plant/>}
+      {}
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 

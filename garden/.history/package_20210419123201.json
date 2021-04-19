@@ -10,6 +10,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+eilidh
+>>>>>>> 6024eb74aeadf0e2c760b68d46389adda8c62a33
     "aos": "^3.0.0-beta.6",
     "next": "10.1.3",
     "react": "17.0.2",
