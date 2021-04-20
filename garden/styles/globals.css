@@ -321,3 +321,51 @@ button:hover{
       transform: rotateZ(-1deg);
   }
 }
+
+/* ecology animation */
+#ecology{
+  width: 650px;
+  height: auto;
+  margin-bottom: 15px;
+}
+#big-wheel{
+  animation: turn-wheel 2s infinite linear;
+  transform-origin: 48.5% 65%;
+  transform-box: fill-box;
+}
+#wheel{
+  animation: turn-wheel 4s infinite linear;
+  transform-origin: 48.5% 65%;
+  transform-box: fill-box;
+}
+#cloud{
+  animation: move-cloud 10s infinite linear;
+}
+#cloud2{
+  animation: move-cloud2 15s infinite linear;
+}
+
+@keyframes turn-wheel{
+  from{
+      transform: rotateZ(0deg);
+  }
+  to{
+      transform: rotateZ(360deg);
+  }
+}
+@keyframes move-cloud{
+  from{
+      transform: translateX(-900px)
+  }
+  to{
+      transform: translateX(1400px)
+  }
+}
+@keyframes move-cloud2{
+  from{
+      transform: translateX(-1400px)
+  }
+  to{
+      transform: translateX(1400px)
+  }
+}
