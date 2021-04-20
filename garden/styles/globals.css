@@ -177,6 +177,7 @@ button:hover{
   position: absolute;
 }
 
+/* clock animation */
 #hours {
   animation: hour 20s infinite linear;
   transform-box: fill-box;
@@ -204,6 +205,7 @@ button:hover{
   }
 }
 
+/* map animation */
 #temperate {
   animation: temp-glow 1s ease-in-out infinite alternate
 }
@@ -239,6 +241,7 @@ button:hover{
   }
 }
 
+/* plant growing animation */
 #stem{
   animation: stem-grow 5s ease-in-out infinite;
   transform-origin: bottom;
@@ -275,4 +278,46 @@ button:hover{
   }
 }
 
+/* bouquet animation */
+#bouquet{
+  max-height: 350px;
+}
+#rose-center{
+  animation: swing 5s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-bottom, #rose-right{
+  animation: move 5s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-left{
+  animation: move 7s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-top{
+  animation: swing 7s ease-in-out infinite;
+  transform-origin: bottom;
+}
+@keyframes swing{
+  0%{
+      transform: rotateZ(-3deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-3deg);
+  }
+}
 
+@keyframes move{
+  0%{
+      transform: rotateZ(-1deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-1deg);
+  }
+}

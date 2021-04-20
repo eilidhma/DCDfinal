@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bouquet moving</title>
-</head>
-<body>
-    <div>
-        <svg width="444" height="531" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+import React from 'react';
+import styled from 'styled-components';
+
+const Cont = styled.div`
+display:flex;
+`;
+
+
+const Bouquet = () => {
+    return <Cont>
+        <svg width="444" height="531" id="bouquet" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="bouquet 1">
             <g id="rose-top">
             <g id="stem_1">
@@ -250,7 +249,8 @@
             <path id="Vector_206" d="M194.6 521.3C202.5 524.2 213 522.8 216.8 519.4C219.3 517.2 209.8 473.6 213.7 463.8C207 474.1 207.3 499.9 208.8 505.9C206 492.6 203.1 480.6 197.2 475.4C199.8 487.5 202.4 497.6 201.9 501.5C195.3 492.6 183.4 487.8 183.4 487.8C183.4 487.8 195.6 505 194.6 521.3Z" fill="#4C8000"/>
             </g>
             </g>
-            </svg>
-    </div>
-</body>
-</html>
+        </svg>
+    </Cont>
+}
+
+export default Bouquet;
