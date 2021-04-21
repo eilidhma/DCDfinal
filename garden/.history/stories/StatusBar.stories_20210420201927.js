@@ -6,4 +6,4 @@ export default {
   component: <StatusBar />
 }
 
-export const Status = () => <StatusBar />
+export const StatusBar = () => <StatusBar />

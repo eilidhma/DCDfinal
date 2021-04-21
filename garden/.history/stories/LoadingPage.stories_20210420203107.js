@@ -2,8 +2,8 @@ import React from 'react';
 import Loading from '../comps/LoadingPage';
 
 export default {
-  title:"Loading page",
+  title:"Loading",
   component: <Loading />
 }
 
-export const Loading = () => <Loading />
+export const Status = () => <Loading />

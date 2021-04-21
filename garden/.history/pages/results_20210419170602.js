@@ -10,6 +10,7 @@ import PlantCatalogue from '../data/plants';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 
+const router = useRouter()
 
 const Results = () => {
   useEffect(() => {

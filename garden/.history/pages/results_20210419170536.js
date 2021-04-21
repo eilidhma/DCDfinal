@@ -10,6 +10,7 @@ import PlantCatalogue from '../data/plants';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 
+const router = useRouter()
 
 const Results = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Results = () => {
   // var goodIn = reactLocalStorage.getObject('goodIn');
   // var category = reactLocalStorage.getObject('category');
   // var maintenance = reactLocalStorage.getObject('maintenance');
-  const router = useRouter()
+
   return (
     <div className="results">
       <MainImg src="logo-flat.png"/>

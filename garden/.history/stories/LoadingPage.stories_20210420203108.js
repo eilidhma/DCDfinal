@@ -6,4 +6,4 @@ export default {
   component: <Loading />
 }
 
-export const Loading = () => <Loading />
+export const Status = () => <Loading />

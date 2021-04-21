@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StatusBar from '../comps/StatusBar'
 
@@ -6,4 +7,4 @@ export default {
   component: <StatusBar />
 }
 
-export const Status = () => <StatusBar />
+export const StatusBar = () => <StatusBar />
