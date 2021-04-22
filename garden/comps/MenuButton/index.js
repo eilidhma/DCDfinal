@@ -7,9 +7,10 @@ const Button = styled.button`
   display:flex;
   justify-content:center;
   align-items:center;
-  height:50px;
+  max-width:225px;
+  height:60px;
   background:${props=>props.background};
-  border:2px solid #FAD;
+  border:2px solid #FFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;
@@ -26,12 +27,12 @@ const Button = styled.button`
 
 const MenuButton = ({
 text="placeholder",
-// background="#FFFFFF33",
+background="#FFFFFF33",
 color="white",
 onClick=()=>{},
 onHover=()=>{}
 }) => {
-  return <Button onHover={onHover} onClick={onClick} color={color} background="blue">{text}</Button>
+  return <Button onHover={onHover} onClick={onClick} color={color} background={background}>{text}</Button>
 }
 
 export default MenuButton;
