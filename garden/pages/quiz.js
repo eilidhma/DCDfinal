@@ -11,6 +11,7 @@ import {reactLocalStorage} from 'reactjs-localstorage';
 import Clock from '../comps/Clock';
 import Map from '../comps/WorldMap';
 import Plant from '../comps/Plant-grow';
+import Bouquet from '../comps/Bouquet';
 
 
 
@@ -112,7 +113,7 @@ export default function Quiz() {
       {graphic === 0 && <Map/>}
       {graphic === 1 && <Clock/>}
       {graphic === 2 && <Plant/>}
-      {graphic === 3 && <MainImg src="roses.png" width="25%"/>}
+      {graphic === 3 && <Bouquet/>}
       <Question text={question}/>
       <div className="questionCont">
         <QuestionButton 

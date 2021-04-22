@@ -24,7 +24,8 @@ const Results = () => {
   return (
     <div className="results">
       <Logo/>
-      <MainImg src="watermark.png" width="40%"/>
+      <MainImg src="watermark.png" width="40%"/>     
+
       <LargeTitles text="Our recommendations"/>
 
       <Options/>

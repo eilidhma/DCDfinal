@@ -178,6 +178,7 @@ button:hover{
   position: absolute;
 }
 
+/* clock animation */
 #hours {
   animation: hour 20s infinite linear;
   transform-box: fill-box;
@@ -205,6 +206,7 @@ button:hover{
   }
 }
 
+/* map animation */
 #temperate {
   animation: temp-glow 1s ease-in-out infinite alternate
 }
@@ -240,6 +242,7 @@ button:hover{
   }
 }
 
+/* plant growing animation */
 #stem{
   animation: stem-grow 5s ease-in-out infinite;
   transform-origin: bottom;
@@ -275,6 +278,7 @@ button:hover{
       transform: scale(1, 1);
   }
 }
+
 
 #big-wheel{
   animation: turn-wheel 2s infinite linear;
@@ -318,4 +322,96 @@ button:hover{
   }
 }
 
+=======
+/* bouquet animation */
+#bouquet{
+  max-height: 350px;
+}
+#rose-center{
+  animation: swing 5s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-bottom, #rose-right{
+  animation: move 5s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-left{
+  animation: move 7s ease-in-out infinite;
+  transform-origin: bottom;
+}
+#rose-top{
+  animation: swing 7s ease-in-out infinite;
+  transform-origin: bottom;
+}
+@keyframes swing{
+  0%{
+      transform: rotateZ(-3deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-3deg);
+  }
+}
 
+
+@keyframes move{
+  0%{
+      transform: rotateZ(-1deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-1deg);
+  }
+}
+
+/* ecology animation */
+#ecology{
+  width: 650px;
+  height: auto;
+  margin-bottom: 15px;
+}
+#big-wheel{
+  animation: turn-wheel 2s infinite linear;
+  transform-origin: 48.5% 65%;
+  transform-box: fill-box;
+}
+#wheel{
+  animation: turn-wheel 4s infinite linear;
+  transform-origin: 48.5% 65%;
+  transform-box: fill-box;
+}
+#cloud{
+  animation: move-cloud 10s infinite linear;
+}
+#cloud2{
+  animation: move-cloud2 15s infinite linear;
+}
+
+@keyframes turn-wheel{
+  from{
+      transform: rotateZ(0deg);
+  }
+  to{
+      transform: rotateZ(360deg);
+  }
+}
+@keyframes move-cloud{
+  from{
+      transform: translateX(-900px)
+  }
+  to{
+      transform: translateX(1400px)
+  }
+}
+@keyframes move-cloud2{
+  from{
+      transform: translateX(-1400px)
+  }
+  to{
+      transform: translateX(1400px)
+  }
+}

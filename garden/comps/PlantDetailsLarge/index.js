@@ -40,6 +40,7 @@ const PlantDetailsLarge = ({
   text = "placeholder",
   src = "../../public/sun.png",
   width = 50
+
 }) => {
   return <Cont>
     <IconCont>
