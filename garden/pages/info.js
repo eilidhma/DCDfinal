@@ -18,8 +18,6 @@ import 'aos/dist/aos.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import SustGraphic from '../comps/Sustainability';
 import Logo from '../comps/Logo';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
 
