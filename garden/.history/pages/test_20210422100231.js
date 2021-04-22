@@ -4,6 +4,7 @@ import StatusBar from '../comps/StatusBar'
 import MedTitles from '../comps/MediumTitles'
 
 import Clock from '../comps/Clock'
+import ImageSlider from '../comps/Carousel'
 import VegSlider from '../comps/VegSlider'
 
 
