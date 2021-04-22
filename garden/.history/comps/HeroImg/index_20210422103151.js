@@ -6,15 +6,15 @@ const ImgCont = styled.div`
   display:flex;
   flex-direction:column;
   width:100%;
-  margin-bottom:-100px;
+  height:10%;
   object-fit:contain;
 `;
 
 const Img = styled.img`
   display:flex;
   width:100%;
+  
   object-fit:contain;
-  margin-bottom:0;
 `;
 
 

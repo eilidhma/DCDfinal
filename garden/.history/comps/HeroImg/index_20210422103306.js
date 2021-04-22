@@ -6,7 +6,7 @@ const ImgCont = styled.div`
   display:flex;
   flex-direction:column;
   width:100%;
-  margin-bottom:-100px;
+  height:10%;
   object-fit:contain;
 `;
 

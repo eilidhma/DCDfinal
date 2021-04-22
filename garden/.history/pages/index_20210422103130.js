@@ -15,7 +15,7 @@ export default function Home() {
     <html>
       <body>
         <div className="main">
-          <HeroImg src="clouds.png" height="50%"/>
+          <HeroImg src="clouds.png" height=""/>
           <LargeTitles text="Welcome to"/>
           <MainImg src="logo-white.png" width="20%"/>
           <LandingInfo titleText="Creators:" bodyText="Eilidh, Zoë, Ash and Alex"/>
