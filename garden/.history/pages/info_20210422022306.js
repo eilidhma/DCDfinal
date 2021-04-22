@@ -16,6 +16,8 @@ import {titles,veg,fact} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../comps/Logo';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
 
@@ -124,8 +126,8 @@ const Info = () => {
             <div data-aos="flip-up"><Description text="Control what goes on and in what you grow"/></div>
             <div data-aos="slide-right"><SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides."/></div>
             <div className="BlankBox" data-aos="zoom-in">
-              <PlantDetailsLarge src="strawberry.png" text="Strawberries may contain up to 40 different pesticides" width="65"/>
-              <PlantDetailsLarge src="celery.png" text="Celery may contain more than 60 different pesticides" width="70"/>
+              <PlantDetailsLarge src="strawberry.png" text="Strawberries may contain up to 40 different pesticides" width="70"/>
+              <PlantDetailsLarge src="celery.png" text="Celery may contain more than 60 different pesticides" width="80"/>
               <PlantDetailsLarge src="cucumber.png" text="Cucumber skin may contain more than 80 different pesticides" width="70"/>
             </div>
             <div data-aos="slide-left"><Description text="Prevent more food waste by gardening at home"/></div>
