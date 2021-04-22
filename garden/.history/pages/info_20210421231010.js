@@ -16,7 +16,6 @@ import {titles} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import SustGraphic from '../comps/Sustainability';
 
 
 const Info = () => {
@@ -84,7 +83,8 @@ const Info = () => {
 
           {/* START OF SUSTAINABILITY */}
           {mainstate === 1 && <div className="infoContent">
-            <div data-aos="fade"><SustGraphic /></div>
+
+            <div data-aos="fade"><MainImg src="city.png"/></div>
             <div data-aos="flip-up"><Description text="How does gardening help the environment?"/></div>
             <div data-aos="slide-left"><SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/></div>
             <div data-aos="flip-up"><Description text="Control what goes on and in what you grow"/></div>
