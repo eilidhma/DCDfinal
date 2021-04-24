@@ -132,7 +132,7 @@ const Options = ({
 }) => {
   const [open, setOpen] = useState(false);
 
-  var height = 250, text = "Learn more"
+  var height = 300, text = "Learn more"
   if (open) {
     height = 540;
     text = "Hide";
