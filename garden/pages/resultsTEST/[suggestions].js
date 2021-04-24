@@ -1,3 +1,15 @@
+import { useRouter } from 'next/router';
+import React, { useDebugValue, useEffect, useState } from 'react';
+//for garden
+import MainButton from '../../comps/MainButton';
+import LargeTitles from '../../comps/LargeTitles';
+import MainImg from '../../comps/MainImg';
+import Options from '../../comps/Results';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+//for test
+import Menu from '../../comps/TestMenu';
+
 
 const TempPotsProduce = [
     {
@@ -394,3 +406,108 @@ const AridGroundProduce = [
         bee: false
     }
 ];
+
+export default function ResultsTEST() {
+    useEffect(() => {
+        AOS.init({});
+    }, []);
+    const router = useRouter();
+    const { suggestions } = router.query;
+
+    var cards = [];
+    if (suggestions === "one") {
+        cards = TempPotsProduce;
+    }
+
+    if (suggestions === "two") {
+        cards = TempPotsFlowers;
+    }
+
+    if (suggestions === "three") {
+        cards = TempGroundFlowers;
+    }
+
+    if (suggestions === "four") {
+        cards = TempGroundProduce;
+    }
+
+    if (suggestions === "five") {
+        cards = TropPotsProduce;
+    }
+
+    if (suggestions === "six") {
+        cards = TropGroundFlowers;
+    }
+
+    if (suggestions === "seven") {
+        cards = TropGroundProduce;
+    }
+
+    if (suggestions === "eight") {
+        cards = TropGroundProduce;
+    }
+
+    if (suggestions === "nine") {
+        cards = AridPotsProduce;
+    }
+
+    if (suggestions === "ten") {
+        cards = AridPotsFlowers;
+    }
+
+    if (suggestions === "eleven") {
+        cards = AridGroundFlowers;
+    }
+
+    if (suggestions === "tweleve") {
+        cards = AridGroundProduce;
+    }
+
+
+
+    return <div className="results">
+        <MainImg src="logo-flat.png" />
+        <LargeTitles text="Our recommendations" />
+
+        {suggestions === "one" && cards.map((value, index) => {
+            return (
+
+                < Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "two" && cards.map((value, index) => {
+            return (
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+        <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+    </div>
+}
+

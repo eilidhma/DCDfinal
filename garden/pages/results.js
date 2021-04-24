@@ -11,9 +11,6 @@ import Logo from '../comps/Logo';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 
-
-// import {reactLocalStorage} from 'reactjs-localstorage';
-// import ls from 'local-storage'
 const Results = () => {
   useEffect(() => {
     AOS.init({});
@@ -26,13 +23,14 @@ const Results = () => {
   return (
     <div className="results">
       <Logo/>
+
       <MainImg src="watermark.png" width="40%"/>     
 
       <LargeTitles text="*Name*, Garden recommends"/>
       <Options/>
       <Options/>
       <Options/>
-      <Options/>
+
       <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
   )
