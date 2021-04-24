@@ -6,8 +6,11 @@ import MainImg from '../comps/MainImg';
 import Options from '../comps/Results';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PlantCatalogue from '../data/plants';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
+
+
 const Results = () => {
   useEffect(() => {
     AOS.init({});
@@ -16,7 +19,7 @@ const Results = () => {
   // var goodIn = reactLocalStorage.getObject('goodIn');
   // var category = reactLocalStorage.getObject('category');
   // var maintenance = reactLocalStorage.getObject('maintenance');
-
+  const router = useRouter()
   return (
     <div className="results">
       <MainImg src="logo-flat.png" />
@@ -26,7 +29,7 @@ const Results = () => {
       <Options />
       <Options />
       <Options />
-      <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000"><MainButton text="Finish" /></div>
+      <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
   )
 }
