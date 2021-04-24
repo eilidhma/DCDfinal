@@ -467,14 +467,14 @@ export default function ResultsTEST() {
 
 
     return <div className="results">
-        <Logo src="../logo-hands.png"/>
+        <Logo src="../logo-hands.png" />
         <MainImg src="../watermark.png" />
         <LargeTitles text="Our recommendations" />
 
         {suggestions === "one" && cards.map((value, index) => {
-            return ( 
-            
-            <Options
+            return (
+
+                <Options
                     key={index}
                     title={value.title}
                     src={value.src}
@@ -493,6 +493,206 @@ export default function ResultsTEST() {
 
         {suggestions === "two" && cards.map((value, index) => {
             return (
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "three" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "four" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "five" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "six" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "seven" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "eight" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "nine" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "ten" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "eleven" && cards.map((value, index) => {
+            return (
+
+                <Options
+                    key={index}
+                    title={value.title}
+                    src={value.src}
+                    climate={value.climate}
+                    goodIn={value.goodIn}
+                    category={value.category}
+                    maintenance={value.maintenance}
+                    maintenance={value.maintenance}
+                    sun={value.sun}
+                    water={value.water}
+                    fact={value.fact}
+                //still need bee
+                />
+            )
+        })}
+
+        {suggestions === "twelve" && cards.map((value, index) => {
+            return (
+
                 <Options
                     key={index}
                     title={value.title}

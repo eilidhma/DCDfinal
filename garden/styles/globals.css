@@ -61,7 +61,7 @@ body {
   width:100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(#377B18, #8CB281, #8CB281, #FFCF00);
   padding:20px;
@@ -138,6 +138,7 @@ button:hover{
   align-self: center;
   width: 40px;
   height: 40px;
+  z-index:2;
 }
 
 .BlankBox {
