@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MainButton from '../comps/MainButton';
 import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
@@ -23,7 +23,9 @@ const Results = () => {
   const router = useRouter()
   return (
     <div className="results">
-      <Logo/>
+
+      <MainImg src="logo-flat.png" />
+
       <MainImg src="watermark.png" width="40%"/>     
 
       <LargeTitles text="*Name*, Garden recommends"/>
@@ -31,7 +33,7 @@ const Results = () => {
       <Options/>
       <Options/>
       <Options/>
-      <Options/>
+
       <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
   )

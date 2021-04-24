@@ -32,7 +32,7 @@ const IconCont = styled.div`
 
 const Icon = styled.img`
   display:flex;
-  width:${props=>props.width}px;
+  width:${props => props.width}px;
   object-fit:contain;
 `;
 
