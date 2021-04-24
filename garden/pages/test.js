@@ -4,7 +4,9 @@ import StatusBar from '../comps/StatusBar'
 import MedTitles from '../comps/MediumTitles'
 
 import Clock from '../comps/Clock'
-// import PercentComplete from '../comps/PercentComplete'
+import VegSlider from '../comps/VegSlider'
+
+
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <StatusBar percent="25%" width="30%"/>
       <MedTitles text="Calculating your results.." />
       <Clock />
-    
+      
+      <VegSlider/>
     </div>
   )
 }
+

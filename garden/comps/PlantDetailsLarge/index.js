@@ -9,6 +9,7 @@ const Cont = styled.div`
   align-items:center;
   padding-left:50px;
   padding-right:50px;
+  margin:5px;
 `;
 
 const TextContent = styled.h3`
