@@ -9,6 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 //for test
 import Menu from '../../comps/TestMenu';
+import Logo from '../../comps/Logo';
 
 
 const TempPotsProduce = [
@@ -18,7 +19,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "low",
-        src: "blackberries.png",
+        src: "../blackberries.png",
         fact: "High in antioxidants!",
         bee: true
     },
@@ -28,7 +29,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "medium",
-        src: "raspberries.png",
+        src: "../raspberries.png",
         fact: "Can symbolize kindness!",
         bee: true
     },
@@ -38,7 +39,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "high",
-        src: "blueberries.png",
+        src: "../blueberries.png",
         fact: "One of the only naturally blue foods!",
         bee: true
     }
@@ -51,7 +52,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "low",
-        src: "milkweed.png",
+        src: "../milkweed.png",
         fact: "Poisonous- Caution!",
         bee: true
     },
@@ -61,7 +62,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "daisies.png",
+        src: "../daisies.png",
         fact: "Found everywhere on eath but Antarctica!",
         bee: true
     },
@@ -71,7 +72,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "coneflowers.png",
+        src: "../coneflowers.png",
         fact: "Produce chemicals to prevent growth in competing plants!",
         bee: true
     }
@@ -84,7 +85,7 @@ const TempGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "WitchHazel.png",
+        src: "../WitchHazel.png",
         fact: "Deer resistant!",
         bee: true
     },
@@ -94,7 +95,7 @@ const TempGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "lungswort.png",
+        src: "../lungswort.png",
         fact: "Gets its namesake from its unique leaf structure!",
         bee: true
     },
@@ -104,7 +105,7 @@ const TempGroundFlowers = [
         goodIn: "pots/garden",
         category: "flowers",
         maintenance: "high",
-        src: "sunflower.png",
+        src: "../sunflower.png",
         fact: "Tallest sunflower recorded was over 30 feet tall!",
         bee: false
     },
@@ -117,7 +118,7 @@ const TempGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "carrot.png",
+        src: "../carrot.png",
         fact: "People have been growing carrots for over 5,000 years!",
         bee: true
     },
@@ -127,7 +128,7 @@ const TempGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "wheat.png",
+        src: "../wheat.png",
         fact: "Was first planted in 1777 as a hobby crop!",
         bee: false
     },
@@ -137,7 +138,7 @@ const TempGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: " high",
-        src: "sweetcorn.png",
+        src: "../sweetcorn.png",
         fact: "Leaves have been used as chewing gum!",
         bee: false
     }
@@ -150,7 +151,7 @@ const TropPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "low",
-        src: "bokchoy.png",
+        src: "../bokchoy.png",
         fact: "Has been grown in China for over 5,000 years!",
         bee: false
     },
@@ -160,7 +161,7 @@ const TropPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "medium",
-        src: "eggplant.png",
+        src: "../eggplant.png",
         fact: "Eggplants aren't really veggies- they're berries!",
         bee: false
     },
@@ -170,7 +171,7 @@ const TropPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "high",
-        src: "rice.png",
+        src: "../rice.png",
         fact: "The oldest known food that is still widely consumed today!",
         bee: false
     }
@@ -183,7 +184,7 @@ const TropPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "low",
-        src: "anthurium.png",
+        src: "../anthurium.png",
         fact: "Symbolizes hospitality!",
         bee: false
     },
@@ -193,7 +194,7 @@ const TropPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "cannabis.png",
+        src: "../cannabis.png",
         fact: "Great chronic pain reliever!",
         bee: true
     },
@@ -203,7 +204,7 @@ const TropPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "hibiscus.png",
+        src: "../hibiscus.png",
         fact: "Both its buds and flowers are edible!",
         bee: true
     }
@@ -216,7 +217,7 @@ const TropGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "cosmos.png",
+        src: "../cosmos.png",
         fact: "Can grow up to 3-6 feet tall!",
         bee: true
     },
@@ -226,7 +227,7 @@ const TropGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "Chrysanthemum.png",
+        src: "../Chrysanthemum.png",
         fact: "Chrysanthemum tea has anti-viral properties!",
         bee: false
     },
@@ -236,7 +237,7 @@ const TropGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "high",
-        src: "angelstrumpet.png",
+        src: "../angelstrumpet.png",
         fact: "Grows in the form of a bush or small tree up to 36 feet!",
         bee: false
     }
@@ -249,7 +250,7 @@ const TropGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "chinesecabbage.png",
+        src: "../chinesecabbage.png",
         fact: "Cousins with bok choy!",
         bee: false
     },
@@ -259,7 +260,7 @@ const TropGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "medium",
-        src: "pumpkin.png",
+        src: "../pumpkin.png",
         fact: "The word pumpkin first showed up in Cinderella!",
         bee: false
     },
@@ -325,7 +326,7 @@ const AridPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "moderate",
-        src: "englishlavender.png",
+        src: "../englishlavender.png",
         fact: "Used for perfume before baths were common practice!",
         bee: true
     },
@@ -335,7 +336,7 @@ const AridPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "yucca.png",
+        src: "../yucca.png",
         fact: "Can bear edible fruit!",
         bee: true
     }
@@ -348,7 +349,7 @@ const AridGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "firecracker.png",
+        src: "../firecracker.png",
         fact: "A favourite amung hummingbirds!",
         bee: true
     },
@@ -358,7 +359,7 @@ const AridGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "purslane.png",
+        src: "../purslane.png",
         fact: "Can bloom year round!",
         bee: true
     },
@@ -368,7 +369,7 @@ const AridGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "high",
-        src: "phlox.png",
+        src: "../phlox.png",
         fact: "Can be used to help with indigestion!",
         bee: true
     }
@@ -381,7 +382,7 @@ const AridGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "low",
-        src: "agave.png",
+        src: "../agave.png",
         fact: "Lives 10-25 years, but only flowers once!",
         bee: false
     },
@@ -391,7 +392,7 @@ const AridGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "medium",
-        src: "pricklypear.png",
+        src: "../pricklypear.png",
         fact: "Also known as tuna!",
         bee: false
     },
@@ -401,7 +402,7 @@ const AridGroundProduce = [
         goodIn: "ground",
         category: "produce",
         maintenance: "high",
-        src: "pometranate.png",
+        src: "../pometranate.png",
         fact: "A super healthy, super fruit!",
         bee: false
     }
@@ -459,20 +460,21 @@ export default function ResultsTEST() {
         cards = AridGroundFlowers;
     }
 
-    if (suggestions === "tweleve") {
+    if (suggestions === "twelve") {
         cards = AridGroundProduce;
     }
 
 
 
     return <div className="results">
-        <MainImg src="logo-flat.png" />
+        <Logo src="../logo-hands.png"/>
+        <MainImg src="../watermark.png" />
         <LargeTitles text="Our recommendations" />
 
         {suggestions === "one" && cards.map((value, index) => {
-            return (
-
-                < Options
+            return ( 
+            
+            <Options
                     key={index}
                     title={value.title}
                     src={value.src}
