@@ -18,6 +18,7 @@ import 'aos/dist/aos.css';
 import Logo from '../comps/Logo';
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
+import Menu from '../comps/HambMenu';
 
 
 const Info = () => {
@@ -96,8 +97,11 @@ const Info = () => {
         <div className="info" >
           
           {/* START OF REUSABLE -- add in back button and hamburger menu */}
-          <Logo/>
-          <LargeTitles text={titlestate}/>
+            <Logo/>
+            <LargeTitles text={titlestate}/>
+            {/* <Menu/> */}
+          
+          
           {/* END OF REUSABLE */}
           
           {/* START OF Directory */}

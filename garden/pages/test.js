@@ -5,6 +5,8 @@ import MedTitles from '../comps/MediumTitles'
 
 import Clock from '../comps/Clock'
 import VegSlider from '../comps/VegSlider'
+import Menu from '../comps/HambMenu'
+import { render } from 'react-dom';
 
 
 
@@ -15,6 +17,7 @@ export default function Home() {
       <MedTitles text="Calculating your results.." />
       <Clock />
       
+      <Menu color="black"/>
       <VegSlider/>
     </div>
   )

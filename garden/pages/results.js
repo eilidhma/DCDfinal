@@ -29,7 +29,6 @@ const Results = () => {
       <MainImg src="watermark.png" width="40%"/>     
 
       <LargeTitles text="*Name*, Garden recommends"/>
-
       <Options/>
       <Options/>
       <Options/>
