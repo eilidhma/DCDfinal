@@ -8,6 +8,9 @@ html {
     overflow:hidden;
     background-color:rgb(163,211,238);
 }
+.clouds{
+    z-index:0;
+}
 
 .cloud1.big {
     position:absolute;

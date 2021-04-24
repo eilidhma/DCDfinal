@@ -7,6 +7,26 @@ const Clouds = () => {
 
     return(
         <Cont>
+            <div class="marvel-device iphone-x">
+                <div class="notch">
+                    <div class="camera"></div>
+                    <div class="speaker"></div>
+                </div>
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="bottom-bar"></div>
+                <div class="volume"></div>
+                <div class="overflow">
+                    <div class="shadow shadow--tr"></div>
+                    <div class="shadow shadow--tl"></div>
+                    <div class="shadow shadow--br"></div>
+                    <div class="shadow shadow--bl"></div>
+                </div>
+                <div class="inner-shadow"></div>
+                <div class="screen">
+                    ** CONTENT GOES HERE **
+                </div>
+            </div>
             <svg class="cloud1 big" width="195" height="60" viewBox="0 0 195 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="cloud1">
                 <path id="Vector 1" d="M66 33.4204C50.5 26.9204 6.5 30.9204 0 50.9204C2.5 60.4204 190 62.9204 194 50.9204C198 38.9204 167.5 16.9204 144.5 25.9204C144.5 18.4204 139.5 3.92039 116 0.420393C92.5 -3.07961 66 15.9204 66 33.4204Z" fill="#F5F6F6"/>
