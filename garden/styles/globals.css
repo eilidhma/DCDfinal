@@ -10,7 +10,11 @@ body {
   align-items: center;
   overflow-x: hidden;
 }
-
+/* need to add this into the code for the clouds animation
+  text-align: center;
+  overflow:hidden;
+  background-color:rgb(163,211,238);
+*/
 
 .main {
   width:100vw;
@@ -414,3 +418,121 @@ button:hover{
       transform: translateX(1400px)
   }
 }
+
+/* clouds animation */
+.cloud1.big {
+  position:absolute;
+  margin-top:100px;
+  width:500px;
+  height:auto;
+  animation: cloud-clear 30s linear infinite;
+}
+.cloud1.med {
+  position:absolute;
+  margin-top:325px;
+  width:350px;
+  height:auto;
+  animation: cloud-opaque 38s linear infinite;
+}
+.cloud1.small{
+  position:absolute;
+  margin-top:800px;
+  width:200px;
+  height:auto;
+  animation: cloud-semi 35s linear infinite;
+}
+
+.cloud2.big{
+  position:absolute;
+  margin-top:750px;
+  width:400px;
+  height:auto;
+  animation: cloud-semi 20s linear infinite;
+}
+.cloud2.med{
+  position:absolute;
+  margin-top:425px;
+  width:225px;
+  height:auto;
+  animation: cloud-clear 28s linear infinite;
+}
+.cloud2.small{
+  position:absolute;
+  margin-top:250px;
+  width:150px;
+  height:auto;
+  animation: cloud-opaque 32s linear infinite;
+}
+
+.cloud3.big{
+  position:absolute;
+  margin-top:150px;
+  width:425px;
+  height:auto;
+  animation: cloud-opaque 40s linear infinite;
+}
+.cloud3.med{
+  position:absolute;
+  margin-top:650px;
+  width:200px;
+  height:auto;
+  animation: cloud-semi 25s linear infinite;
+}
+.cloud3.small{
+  position:absolute;
+  margin-top:500px;
+  width:125px;
+  height:auto;
+  animation: cloud-clear 20s linear infinite;
+}
+
+
+@keyframes cloud-opaque{
+  0%{
+      transform: translateX(1100px);
+      opacity:0;
+  }
+  20%{
+      opacity:1;
+  }
+  80%{
+      opacity:1;
+  }
+  100%{
+      transform: translateX(-1100px);
+      opacity:0;
+  }
+}
+@keyframes cloud-semi{
+  0%{
+      transform: translateX(950px);
+      opacity:0;
+  }
+  15%{
+      opacity:0.75;
+  }
+  85%{
+      opacity:0.75;
+  }
+  100%{
+      transform: translateX(-750px);
+      opacity:0;
+  }
+}
+@keyframes cloud-clear{
+  0%{
+      transform: translateX(600px);
+      opacity:0;
+  }
+  10%{
+      opacity:0.5;
+  }
+  90%{
+      opacity:0.5;
+  }
+  100%{
+      transform: translateX(-650px);
+      opacity:0;
+  }
+}
+ /* */
