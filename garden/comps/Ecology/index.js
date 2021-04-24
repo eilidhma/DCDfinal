@@ -5,7 +5,7 @@ const Cont = styled.div`
 display:flex;
 `;
 
-const Clock = () => {
+const Ecology = () => {
     return <Cont>
         <svg width="1682" height="943" id="ecology" viewBox="0 0 1682 943" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="environment-sus 1">
@@ -1143,4 +1143,4 @@ const Clock = () => {
     </Cont>
 }
 
-export default Clock;
+export default Ecology;

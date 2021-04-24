@@ -8,85 +8,122 @@ html {
     overflow:hidden;
     background-color:rgb(163,211,238);
 }
+div{
+    background-color: crimson;
+}
 
 .cloud1.big {
     position:absolute;
     margin-top:100px;
     width:500px;
     height:auto;
-    opacity: 0.5;
-    animation: cloud-moving 30s 2s linear infinite;
+    animation: cloud-clear 30s linear infinite;
 }
 .cloud1.med {
     position:absolute;
-    margin-top:800px;
+    margin-top:325px;
     width:350px;
     height:auto;
-    animation: cloud-moving 38s linear infinite;
+    animation: cloud-opaque 38s linear infinite;
 }
 .cloud1.small{
     position:absolute;
-    margin-top:325px;
+    margin-top:800px;
     width:200px;
     height:auto;
-    opacity: 0.8;
-    animation: cloud-moving 25s linear infinite;
+    animation: cloud-semi 35s linear infinite;
 }
 
 .cloud2.big{
     position:absolute;
-    margin-top:250px;
+    margin-top:750px;
     width:400px;
     height:auto;
-    opacity:0.8;
-    animation: cloud-moving 20s linear infinite;
+    animation: cloud-semi 20s linear infinite;
 }
 .cloud2.med{
     position:absolute;
     margin-top:425px;
     width:225px;
     height:auto;
-    opacity:0.5;
-    animation: cloud-moving 42s 3s linear infinite;
+    animation: cloud-clear 28s linear infinite;
 }
 .cloud2.small{
     position:absolute;
-    margin-top:750px;
+    margin-top:250px;
     width:150px;
     height:auto;
-    animation: cloud-moving 32s linear infinite;
+    animation: cloud-opaque 32s linear infinite;
 }
 
 .cloud3.big{
     position:absolute;
-    margin-top:550px;
+    margin-top:150px;
     width:425px;
     height:auto;
-    opacity:0.7;
-    animation: cloud-moving 40s 2s linear infinite;
+    animation: cloud-opaque 40s linear infinite;
 }
 .cloud3.med{
     position:absolute;
-    margin-top:50px;
+    margin-top:650px;
     width:200px;
     height:auto;
-    opacity:0.5;
-    animation: cloud-moving 25s linear infinite;
+    animation: cloud-semi 25s linear infinite;
 }
 .cloud3.small{
     position:absolute;
     margin-top:500px;
     width:125px;
     height:auto;
-    animation: cloud-moving 35s linear infinite;
+    animation: cloud-clear 20s linear infinite;
 }
 
 
-@keyframes cloud-moving{
-    from{
-        transform: translateX(1250px);
+@keyframes cloud-opaque{
+    0%{
+        transform: translateX(1100px);
+        opacity:0;
     }
-    to{
-        transform: translateX(-1250px);
+    20%{
+        opacity:1;
+    }
+    80%{
+        opacity:1;
+    }
+    100%{
+        transform: translateX(-1100px);
+        opacity:0;
+    }
+}
+@keyframes cloud-semi{
+    0%{
+        transform: translateX(950px);
+        opacity:0;
+    }
+    15%{
+        opacity:0.75;
+    }
+    85%{
+        opacity:0.75;
+    }
+    100%{
+        transform: translateX(-750px);
+        opacity:0;
+    }
+}
+@keyframes cloud-clear{
+    0%{
+        transform: translateX(600px);
+        opacity:0;
+    }
+    10%{
+        opacity:0.5;
+    }
+    90%{
+        opacity:0.5;
+    }
+    100%{
+        transform: translateX(-650px);
+        opacity:0;
     }
 }
