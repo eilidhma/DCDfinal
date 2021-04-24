@@ -10,7 +10,7 @@ const Cont = styled.div`
   flex-direction:column;
   align-items:center;
   height: ${props => props.height}px;
-  width:40%;
+  width:5em;
   min-width: 450px;
   border-radius:15px;
   border:3px solid white;
@@ -29,6 +29,7 @@ const DescriptionCont = styled.div`
   align-items:center;
   width:100%;
   height: 250px;
+  padding-bottom: 10px;
 `;
 
 const ImgCont = styled.div`
@@ -131,7 +132,7 @@ const Options = ({
 }) => {
   const [open, setOpen] = useState(false);
 
-  var height = 300, text = "Learn more"
+  var height = 250, text = "Learn more"
   if (open) {
     height = 540;
     text = "Hide";
