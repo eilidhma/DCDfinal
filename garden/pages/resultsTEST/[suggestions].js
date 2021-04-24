@@ -468,13 +468,6 @@ export default function ResultsTEST() {
     return <div className="results">
         <MainImg src="logo-flat.png" />
         <LargeTitles text="Our recommendations" />
-        {/* <button onClick={() => router.push("/resultsTEST/home")}>Home</button>
-        <Menu
-            onStrawClick={() => router.push("/resultsTEST/one")}
-            onPineClick={() => router.push("/resultsTEST/two")}
-        />
-        {cards.length === 0 ? <h3>Start by navigating</h3> : <h3>Welcome to {suggestions}</h3>} */}
-
 
         {suggestions === "one" && cards.map((value, index) => {
             return (
@@ -514,7 +507,7 @@ export default function ResultsTEST() {
                 />
             )
         })}
-
+        <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
 }
 
