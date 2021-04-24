@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    text-align: center;
+    background-color:rgb(163,211,238);
+}
+
+.cloud1{
+    margin-top:500px;
+    width:500px;
+    height:auto;
+    opacity: 0.5;
+    animation: cloud-moving 20s linear infinite;
+}
+
+
+@keyframes cloud-moving{
+    from{
+        transform: translateX(750px);
+    }
+    to{
+        transform: translateX(-500px);
+    }
+}
