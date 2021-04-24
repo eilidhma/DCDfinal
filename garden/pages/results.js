@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MainButton from '../comps/MainButton';
 import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
@@ -12,6 +12,8 @@ import Logo from '../comps/Logo';
 // import ls from 'local-storage'
 
 
+// import {reactLocalStorage} from 'reactjs-localstorage';
+// import ls from 'local-storage'
 const Results = () => {
   useEffect(() => {
     AOS.init({});
