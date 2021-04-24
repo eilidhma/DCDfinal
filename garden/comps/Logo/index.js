@@ -24,10 +24,11 @@ const Img = styled.img`
 
 const Logo = ({
   router = useRouter(),
+  src="logo-hands.png",
   onClick=()=>{router.push('/')},
 }) => {
   return <ImgCont onClick={onClick}>
-    <Img src="logo-hands.png"/>
+    <Img src={src}/>
   </ImgCont>
 }
 

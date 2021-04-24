@@ -11,7 +11,6 @@ import Logo from '../comps/Logo';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
 
-
 const Results = () => {
   useEffect(() => {
     AOS.init({});
@@ -23,8 +22,7 @@ const Results = () => {
   const router = useRouter()
   return (
     <div className="results">
-
-      <MainImg src="logo-flat.png" />
+      <Logo/>
 
       <MainImg src="watermark.png" width="40%"/>     
 
