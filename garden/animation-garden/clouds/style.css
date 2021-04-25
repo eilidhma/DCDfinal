@@ -113,7 +113,7 @@ html {
 }
 @keyframes cloud-clear{
     0%{
-        transform: translateX(600px);
+        transform: translateX(-250px);
         opacity:0;
     }
     10%{
@@ -123,7 +123,7 @@ html {
         opacity:0.5;
     }
     100%{
-        transform: translateX(-650px);
+        transform: translateX(-1050px);
         opacity:0;
     }
 }
