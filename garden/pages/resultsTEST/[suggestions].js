@@ -62,7 +62,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "../daisies.png",
+        src: "../daisy.png",
         fact: "Found everywhere on eath but Antarctica!",
         bee: true
     },
@@ -72,7 +72,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "../coneflowers.png",
+        src: "../coneflower.png",
         fact: "Produce chemicals to prevent growth in competing plants!",
         bee: true
     }
@@ -90,7 +90,7 @@ const TempGroundFlowers = [
         bee: true
     },
     {
-        title: "Lungswort",
+        title: "Lungswort", // NEED
         climate: "temperate",
         goodIn: "ground",
         category: "flowers",
@@ -209,6 +209,8 @@ const TropPotsFlowers = [
         bee: true
     }
 ];
+
+//found images up to here
 
 const TropGroundFlowers = [
     {
