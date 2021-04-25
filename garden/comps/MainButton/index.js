@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
-import {VscArrowRight, VscArrowLeft} from 'react-icons/vsc';
+import { useRouter } from 'next/router';
+import { VscArrowRight, VscArrowLeft } from 'react-icons/vsc';
+
 
 const Button = styled.button`
   display:flex;
@@ -9,7 +10,7 @@ const Button = styled.button`
   align-items:center;
   width:70%;
   height:70px;
-  background:${props=>props.background};
+  background:${props => props.background};
   border:6px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
@@ -20,17 +21,17 @@ const Button = styled.button`
   display:flex;
   align-items:center;
   text-align:center;
-  color:${props=>props.color};
+  color:${props => props.color};
   margin:20px;
 `;
 
 
 const MainButton = ({
-text="placeholder",
-background="#FFFFFF33",
-color="white",
-onClick=()=>{},
-onHover=()=>{}
+  text = "placeholder",
+  background = "#FFFFFF33",
+  color = "white",
+  onClick = () => { },
+  onHover = () => { }
 }) => {
   return <Button onHover={onHover} onClick={onClick} color={color} background={background}>{text}</Button>
 }

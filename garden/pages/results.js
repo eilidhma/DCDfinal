@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MainButton from '../comps/MainButton';
 import LargeTitles from '../comps/LargeTitles';
 import MainImg from '../comps/MainImg';
@@ -10,7 +10,6 @@ import PlantCatalogue from '../data/plants';
 import Logo from '../comps/Logo';
 // import {reactLocalStorage} from 'reactjs-localstorage';
 // import ls from 'local-storage'
-
 
 const Results = () => {
   useEffect(() => {
@@ -24,14 +23,14 @@ const Results = () => {
   return (
     <div className="results">
       <Logo/>
+
       <MainImg src="watermark.png" width="40%"/>     
 
-      <LargeTitles text="Our recommendations"/>
+      <LargeTitles text="*Name*, Garden recommends"/>
+      <Options/>
+      <Options/>
+      <Options/>
 
-      <Options/>
-      <Options/>
-      <Options/>
-      <Options/>
       <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
   )

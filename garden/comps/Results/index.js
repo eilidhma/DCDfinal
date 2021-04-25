@@ -10,7 +10,7 @@ const Cont = styled.div`
   flex-direction:column;
   align-items:center;
   height: ${props => props.height}px;
-  width:40%;
+  width:5em;
   min-width: 450px;
   border-radius:15px;
   border:3px solid white;
@@ -29,6 +29,7 @@ const DescriptionCont = styled.div`
   align-items:center;
   width:100%;
   height: 250px;
+  padding-bottom: 10px;
 `;
 
 const ImgCont = styled.div`
@@ -111,7 +112,7 @@ const BeeBadge = styled.div`
   top:60px;
   z-index:2;
   left: 89%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50)
+  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 
 
@@ -152,9 +153,9 @@ const Options = ({
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>
       <DetailsCont>
-        <PlantDetailsLarge src='sun.png' text={sun + "moderate sunlight"} />
-        <PlantDetailsLarge src='water.png' text={water + "3 days"} />
-        <PlantDetailsLarge src='globe.png' text={fact} />
+        <PlantDetailsLarge src='../sun.png' text={sun + "moderate sunlight"} />
+        <PlantDetailsLarge src='../water.png' text={water + "3 days"} />
+        <PlantDetailsLarge src='../globe.png' text={fact} />
       </DetailsCont>
 
     </Cont>

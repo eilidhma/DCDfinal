@@ -9,6 +9,7 @@ const Cont = styled.div`
   align-items:center;
   padding-left:50px;
   padding-right:50px;
+  margin:5px;
 `;
 
 const TextContent = styled.h3`
@@ -31,14 +32,14 @@ const IconCont = styled.div`
 
 const Icon = styled.img`
   display:flex;
-  width:${props=>props.width}px;
+  width:${props => props.width}px;
   object-fit:contain;
 `;
 
 
 const PlantDetailsLarge = ({
   text = "placeholder",
-  src = "../../public/sun.png",
+  src = "../public/sun.png",
   width = 50
 
 }) => {

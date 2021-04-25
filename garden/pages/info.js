@@ -15,11 +15,10 @@ import NameInput from '../comps/NameInput';
 import {titles,veg,fact} from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import SustGraphic from '../comps/Sustainability';
 import Logo from '../comps/Logo';
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
+import Menu from '../comps/HambMenu';
 
 
 const Info = () => {
@@ -98,8 +97,11 @@ const Info = () => {
         <div className="info" >
           
           {/* START OF REUSABLE -- add in back button and hamburger menu */}
-          <Logo/>
-          <LargeTitles text={titlestate}/>
+            <Logo/>
+            <LargeTitles text={titlestate}/>
+            {/* <Menu/> */}
+          
+          
           {/* END OF REUSABLE */}
           
           {/* START OF Directory */}
@@ -126,8 +128,8 @@ const Info = () => {
             <div data-aos="flip-up"><Description text="Control what goes on and in what you grow"/></div>
             <div data-aos="slide-right"><SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides."/></div>
             <div className="BlankBox" data-aos="zoom-in">
-              <PlantDetailsLarge src="strawberry.png" text="Strawberries may contain up to 40 different pesticides" width="70"/>
-              <PlantDetailsLarge src="celery.png" text="Celery may contain more than 60 different pesticides" width="80"/>
+              <PlantDetailsLarge src="strawberry.png" text="Strawberries may contain up to 40 different pesticides" width="65"/>
+              <PlantDetailsLarge src="celery.png" text="Celery may contain more than 60 different pesticides" width="70"/>
               <PlantDetailsLarge src="cucumber.png" text="Cucumber skin may contain more than 80 different pesticides" width="70"/>
             </div>
             <div data-aos="slide-left"><Description text="Prevent more food waste by gardening at home"/></div>

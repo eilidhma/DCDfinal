@@ -10,9 +10,9 @@ const ImgCont = styled.div`
   width:100px;
   max-width:200px;
   object-fit:cover;
-  position:fixed;
+  position:absolute;
   top:20px;
-  left:20px;
+  left:50px;
 `;
 
 const Img = styled.img`
@@ -24,10 +24,11 @@ const Img = styled.img`
 
 const Logo = ({
   router = useRouter(),
+  src="logo-hands.png",
   onClick=()=>{router.push('/')},
 }) => {
   return <ImgCont onClick={onClick}>
-    <Img src="logo-hands.png"/>
+    <Img src={src}/>
   </ImgCont>
 }
 
