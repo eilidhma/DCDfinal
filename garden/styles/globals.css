@@ -34,7 +34,7 @@ body {
   border-radius: 15px;
   width:25vw;
   z-index: 1;
-  margin-top: 5em;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -469,21 +469,21 @@ button:hover{
   animation: cloud-semi 35s linear infinite;
 }
 
-.cloud2.big{
+.cloud2-big{
   position:absolute;
   margin-top:750px;
   width:400px;
   height:auto;
   animation: cloud-semi 20s linear infinite;
 }
-.cloud2.med{
+.cloud2-med{
   position:absolute;
   margin-top:425px;
   width:225px;
   height:auto;
   animation: cloud-clear 12s linear infinite;
 }
-.cloud2.small{
+.cloud2-small{
   position:absolute;
   margin-top:250px;
   width:150px;
@@ -536,10 +536,10 @@ button:hover{
       opacity:0;
   }
   15%{
-      opacity:0.75;
+      opacity:0.8;
   }
   85%{
-      opacity:0.75;
+      opacity:0.8;
   }
   100%{
       transform: translateX(-750px);
