@@ -32,7 +32,7 @@ body {
   position:absolute;
   border: 15px solid black;
   border-radius: 15px;
-  width:25vw;
+  width:414px;
   z-index: 1;
   margin-top: 3em;
   display: flex;
@@ -459,14 +459,14 @@ button:hover{
   margin-top:325px;
   width:350px;
   height:auto;
-  animation: cloud-opaque 38s linear infinite;
+  animation: cloud-semi 38s linear infinite;
 }
 .cloud1.small{
   position:absolute;
   margin-top:800px;
   width:200px;
   height:auto;
-  animation: cloud-semi 35s linear infinite;
+  animation: cloud-opaque 35s linear infinite;
 }
 
 .cloud2-big{
