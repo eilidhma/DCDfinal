@@ -5,16 +5,36 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Bebas Neue', cursive;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  
+  background-color:rgb(163,211,238);
+}
+/* need to add this into the code for the clouds animation
+*/
+.background{
+  width:100vw;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.garden{
+  width:100vw;
+}
+.app{
+  display: flex;
+  justify-content: center;
 }
 
-
 .main {
-  width:100vw;
+  position:absolute;
+  border: 15px solid black;
+  border-radius: 15px;
+  width:414px;
+  z-index: 1;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,7 +45,6 @@ body {
 }
 
 .info {
-  width:100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -421,5 +440,125 @@ button:hover{
   }
   to{
       transform: translateX(1400px)
+  }
+}
+
+/* clouds animation */
+.clouds{
+  z-index:0;
+}
+.cloud1.big {
+  position:absolute;
+  margin-top:100px;
+  width:500px;
+  height:auto;
+  animation: cloud-clear 18s linear infinite;
+}
+.cloud1.med {
+  position:absolute;
+  margin-top:325px;
+  width:350px;
+  height:auto;
+  animation: cloud-semi 38s linear infinite;
+}
+.cloud1.small{
+  position:absolute;
+  margin-top:800px;
+  width:200px;
+  height:auto;
+  animation: cloud-opaque 35s linear infinite;
+}
+
+.cloud2-big{
+  position:absolute;
+  margin-top:750px;
+  width:400px;
+  height:auto;
+  animation: cloud-semi 20s linear infinite;
+}
+.cloud2-med{
+  position:absolute;
+  margin-top:425px;
+  width:225px;
+  height:auto;
+  animation: cloud-clear 12s linear infinite;
+}
+.cloud2-small{
+  position:absolute;
+  margin-top:250px;
+  width:150px;
+  height:auto;
+  animation: cloud-opaque 32s linear infinite;
+}
+
+.cloud3.big{
+  position:absolute;
+  margin-top:150px;
+  width:425px;
+  height:auto;
+  animation: cloud-opaque 40s linear infinite;
+}
+.cloud3.med{
+  position:absolute;
+  margin-top:650px;
+  width:200px;
+  height:auto;
+  animation: cloud-semi 25s linear infinite;
+}
+.cloud3.small{
+  position:absolute;
+  margin-top:500px;
+  width:125px;
+  height:auto;
+  animation: cloud-clear 15s linear infinite;
+}
+
+
+@keyframes cloud-opaque{
+  0%{
+      transform: translateX(1100px);
+      opacity:0;
+  }
+  20%{
+      opacity:1;
+  }
+  80%{
+      opacity:1;
+  }
+  100%{
+      transform: translateX(-1100px);
+      opacity:0;
+  }
+}
+@keyframes cloud-semi{
+  0%{
+      transform: translateX(950px);
+      opacity:0;
+  }
+  15%{
+      opacity:0.8;
+  }
+  85%{
+      opacity:0.8;
+  }
+  100%{
+      transform: translateX(-750px);
+      opacity:0;
+  }
+}
+@keyframes cloud-clear{
+  0%{
+      transform: translateX(-250px);
+      opacity:0;
+  }
+  10%{
+      opacity:0.5;
+  }
+  90%{
+      opacity:0.5;
+  }
+  100%{
+      transform: translateX(-1050px);
+      opacity:0;
   }
 }
