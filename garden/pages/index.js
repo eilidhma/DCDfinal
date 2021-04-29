@@ -23,7 +23,7 @@ export default function Home() {
           <LandingInfo titleText="Creators:" bodyText="Eilidh, Zoë, and Alex"/>
           <Description text="Let’s learn the benefits of growing your own food and how you can start yourself!"/>
           <ButtonUI text="Why Grow Food at Home" routeTo="/info" onClick={() => router.push('/info')}/>
-          <ButtonUI text="What You Should Grow" routeTo="/quiz" onClick={() => router.push('/quiz')}/>
+          <ButtonUI text="What You Should Grow" routeTo="/quiz/question1" onClick={() => router.push('/quiz/question1')}/>
         </div>
       </div>
     </div>
