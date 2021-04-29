@@ -562,3 +562,35 @@ button:hover{
       opacity:0;
   }
 }
+
+/* brain animation */
+#lines{
+  animation: moving-lines 5s linear infinite;
+  transform-origin: center;
+}
+#arm, #brain{
+  animation: brain-moving 2s linear infinite;
+}
+
+@keyframes moving-lines{
+  0%{
+      transform: scale(0.8);
+  }
+  50%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(0.8);
+  }
+}
+@keyframes brain-moving {
+  0%{
+      transform: translateY(0px);
+  }
+  50%{
+      transform: translateY(10px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+}
