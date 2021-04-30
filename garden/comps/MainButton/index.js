@@ -30,8 +30,8 @@ const MainButton = ({
   text = "placeholder",
   background = "#FFFFFF33",
   color = "white",
-  onClick = () => { },
-  onHover = () => { }
+  onClick = () => {},
+  onHover = () => {}
 }) => {
   return <Button onHover={onHover} onClick={onClick} color={color} background={background}>{text}</Button>
 }

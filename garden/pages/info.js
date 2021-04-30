@@ -213,7 +213,7 @@ const Info = () => {
             <SmallDescription text="Before we get to the first question,"/>
             <Description text="What is your name?"/>
             <NameInput />
-            <MainButton text="Let's Start!" onClick={() => router.push('/quiz')}/>
+            <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')}/>
           </div>}
         </div>
 

@@ -23,7 +23,7 @@ export default function Home() {
           <MenuText text="With Garden, you will learn more about some benefits that growing at home have for our planet, the bees and yourself."/>
           <MenuText text="Then, through a 3-questions questionnaire, Garden will be able to find perfect recommendations for plants that fit your needs."/>
           <ButtonUI text="Why Grow Food at Home" routeTo="/info" onClick={() => router.push('/info')}/>
-          <ButtonUI text="What You Should Grow" routeTo="/quiz" onClick={() => router.push('/quiz')}/>
+          <ButtonUI text="What You Should Grow" routeTo="/quiz/question1" onClick={() => router.push('/quiz/question1')}/>
         </div>
       </div>
     </div>

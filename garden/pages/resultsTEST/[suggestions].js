@@ -19,7 +19,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "low",
-        src: "../blackberries.png",
+        src: "../blackberry.svg",
         fact: "High in antioxidants!",
         bee: true
     },
@@ -29,7 +29,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "medium",
-        src: "../raspberries.png",
+        src: "../raspberry.png",
         fact: "Can symbolize kindness!",
         bee: true
     },
@@ -39,7 +39,7 @@ const TempPotsProduce = [
         goodIn: "pots/planters",
         category: "produce",
         maintenance: "high",
-        src: "../blueberries.png",
+        src: "../blueberry.png",
         fact: "One of the only naturally blue foods!",
         bee: true
     }
@@ -410,7 +410,47 @@ const AridGroundProduce = [
     }
 ];
 
+
+
 export default function ResultsTEST() {
+
+    const[choices, setChoices] = useState({
+        climate:null,
+        maintenance:null,
+        location:null,
+        type:null
+    })
+    const [name, setName] = useState(null)
+
+    // const [title1, setTitle1] = useState(null)
+    // const [title2, setTitle2] = useState(null)
+    // const [title3, setTitle3] = useState(null)
+    // const [src1, setSrc1] = useState(null)
+    // const [src2, setSrc2] = useState(null)
+    // const [src3, setSrc3] = useState(null)
+    // const [climate1, setClimate1] = useState(null)
+    // const [climate2, setClimate2] = useState(null)
+    // const [climate3, setClimate3] = useState(null)
+    // const [goodin1, setGoodIn1] = useState(null)
+    // const [goodin2, setGoodIn2] = useState(null)
+    // const [goodin3, setGoodIn3] = useState(null)
+    // const [category1, setCategory1] = useState(null)
+    // const [category2, setCategory2] = useState(null)
+    // const [category3, setCategory3] = useState(null)
+    // const [maintenance1, setMaintenance1] = useState(null)
+    // const [maintenance2, setMaintenance2] = useState(null)
+    // const [maintenance3, setMaintenance3] = useState(null)
+    // const [sun1, setSun1] = useState(null)
+    // const [sun2, setSun2] = useState(null)
+    // const [sun3, setSun3] = useState(null)
+    // const [water1, setWater1] = useState(null)
+    // const [water2, setWater2] = useState(null)
+    // const [water3, setWater3] = useState(null)
+    // const [fact1, setFact1] = useState(null)
+    // const [fact2, setFact2] = useState(null)
+    // const [fact3, setFact3] = useState(null)
+    
+
     useEffect(() => {
         AOS.init({});
     }, []);
@@ -439,7 +479,7 @@ export default function ResultsTEST() {
     }
 
     if (suggestions === "six") {
-        cards = TropGroundFlowers;
+        cards = TropPotsFlowers;
     }
 
     if (suggestions === "seven") {
@@ -447,7 +487,7 @@ export default function ResultsTEST() {
     }
 
     if (suggestions === "eight") {
-        cards = TropGroundProduce;
+        cards = TropGroundFlowers;
     }
 
     if (suggestions === "nine") {
@@ -468,10 +508,39 @@ export default function ResultsTEST() {
 
 
 
+    useEffect(()=>{
+        if(process.browser){
+            var results = sessionStorage.getItem("choices");
+            var obj = JSON.parse(results)
+            var name = sessionStorage.getItem("name")
+            var nameobj = JSON.parse(name)
+            var key = obj.climate+obj.location+obj.type
+            console.log(obj)
+            console.log(obj.climate)
+            console.log(obj.location)
+            console.log(obj.type)
+            // console.log(nameobj)
+            setName("Our results for " + nameobj)
+
+            if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
+                setTitle1()
+                setSrc1()
+                setClimate1()
+                setGoodIn1()
+                setCategory1()
+                setMaintenance1()
+                setSun1()
+                setWater1()
+                setFact1()
+            }
+        }
+    },[])
+
     return <div className="results">
         <Logo src="../logo-hands.png" />
         <MainImg src="../watermark.png" />
-        <LargeTitles text="Our recommendations" />
+        <LargeTitles text={name} />
+        <p>{choices.climate}</p>
 
         {suggestions === "one" && cards.map((value, index) => {
             return (
@@ -490,6 +559,7 @@ export default function ResultsTEST() {
                     fact={value.fact}
                 //still need bee
                 />
+                
             )
         })}
 

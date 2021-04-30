@@ -28,10 +28,10 @@ text="placeholder",
 background="#FFFFFF33",
 color="white",
 onClick=()=>{},
-onHover=()=>{},
+onChange=()=>{},
 value=value
 }) => {
-  return <Input onHover={onHover} onClick={onClick} color={color} background={background} placeholder="Type your name here..." type="text">{value}</Input>
+  return <Input onChange={onChange} onClick={onClick} color={color} background={background} placeholder="Type your name here..." type="text">{value}</Input>
 }
 
 export default NameInput;
