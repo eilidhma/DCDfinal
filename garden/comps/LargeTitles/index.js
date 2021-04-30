@@ -8,7 +8,7 @@ const TitleCont = styled.div`
   justify-content:center;
   align-items:center;
   width:80%;
-  padding-top:50px;
+  padding-top:30px;
 `
 
 const Title = styled.h1`
