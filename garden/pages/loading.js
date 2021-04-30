@@ -12,11 +12,6 @@ export default function Quiz() {
         var results = sessionStorage.getItem("choices");
         var obj = JSON.parse(results)
         var key = obj.climate+obj.location+obj.type
-        console.log(obj.climate)
-        console.log(obj.location)
-        console.log(obj.type)
-        // console.log(nameobj)
-        
 
         if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
@@ -81,21 +76,10 @@ export default function Quiz() {
     }
 },[])
 
-
-  const [choices, setChoices] = useState({
-    climate:null,
-    maintenance:null,
-    location:null,
-    type:null
-  })
   
   const router = useRouter()
 
   return (
-    
-    // setTimeout(() => { 
-    //   router.push('/resultsTEST/one')
-    // }, 3000),
         <div className="loading">
           <StatusBar percent="100%" width="100"/>
           <MedTitles text="Calculating your results..."/>
