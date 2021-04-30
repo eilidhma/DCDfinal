@@ -10,10 +10,11 @@ import Map from '../../comps/WorldMap';
 import Plant from '../../comps/Plant-grow';
 import Bouquet from '../../comps/Bouquet';
 import 'aos/dist/aos.css';
+import NameInput from '../../comps/NameInput';
 
 var choices = {
+  name:null,
   climate:null,
-  maintenance:null,
   location:null,
   type:null
 }
@@ -49,21 +50,18 @@ export default function Quiz(){
     percent = "0%";
     width = 10;
     title = "Question #1";
-    graphic = <Map/>;
-    Q = "What climate are you living in right now?"
-    buttontexts.option1 = "Temperate"
-    buttontexts.option2 = "Tropical"
-    buttontexts.option3 = "Arid"
+    graphic = <Clock/>;
+    Q = "What is your name?"
   }
   if(questions === "question2"){
     percent = "25%";
     width = 25;
     title = "Question #2";
-    graphic = <Clock/>;
-    Q = "What kind of plants interest you in terms of maintenance required?"
-    buttontexts.option1 = "Low maintenance"
-    buttontexts.option2 = "Medium maintenance"
-    buttontexts.option3 = "High maintenance"
+    graphic = <Map/>;
+    Q = "What climate are you living in right now?"
+    buttontexts.option1 = "Temperate"
+    buttontexts.option2 = "Tropical"
+    buttontexts.option3 = "Arid"
   }
   if(questions === "question3"){
     percent = "50%";
@@ -122,12 +120,12 @@ export default function Quiz(){
     }
 
     if(questions === "question1"){
-      choices.climate = text
-      sessionStorage.setItem("climate", JSON.stringify(choices.climate))
+      choices.name = NameInput
+      sessionStorage.setItem("name", JSON.stringify(choices.name))
     }
     if(questions === "question2"){
-      choices.maintenance = text
-      sessionStorage.setItem("maintenance", JSON.stringify(choices.maintenance))
+      choices.climate = text
+      sessionStorage.setItem("maintenance", JSON.stringify(choices.climate))
     }
     if(questions === "question3"){
       choices.location = text
@@ -141,6 +139,7 @@ export default function Quiz(){
 
   const HandleChange = () => {
     if(questions === "question1"){
+      
       router.push("/quiz/question2")
     }
     if(questions === "question2"){
@@ -158,27 +157,35 @@ export default function Quiz(){
     router.push("/loading")
   }
 
+  const getData = (val) => {
+    sessionStorage.setItem("name", JSON.stringify(val.target.value))
+    console.log(val.target.value)
+  }
+  
+
   return (
     <div>
       <div className="quiz">
         <StatusBar percent={percent} width={width}/>
         <MedTitles text={title}/>
-        <div>{graphic}</div>
+        {questions !== "question1" && <div>{graphic}</div>}
         <Question text={Q}/>
         <div className="questionCont">
-          <QuestionButton 
+          {questions === "question1" && <NameInput onChange={getData}/>}
+          {/* <input type="text" onChange={getData}></input> */}
+          {questions !== "question1" && <QuestionButton
             className="questbutton"
             text={buttontexts.option1} 
             onClick={()=>{setButtonState(1),setBorderState(1),HandleClick(buttontexts.option1)}}
             background = {buttonstate === 1 ? "#367A17" : "#FFFFFF33"}
-            borderColor = {borderstate === 1 ? "#367A17" : "#FFFFFF"}/>
-          <QuestionButton 
+            borderColor = {borderstate === 1 ? "#367A17" : "#FFFFFF"}/>}
+          {questions !== "question1" && <QuestionButton
             className="questbutton"
             text={buttontexts.option2} 
             onClick={()=>{setButtonState(2),setBorderState(2),HandleClick(buttontexts.option2)}}
             background = {buttonstate === 2 ? "#367A17" : "#FFFFFF33"}
-            borderColor = {borderstate === 2 ? "#367A17" : "#FFFFFF"}/>
-          {(questions === "question1" || questions === "question2") && <QuestionButton 
+            borderColor = {borderstate === 2 ? "#367A17" : "#FFFFFF"}/>}
+          {questions === "question2" && <QuestionButton 
             className="questbutton"
             text={buttontexts.option3} 
             onClick={()=>{setButtonState(3),setBorderState(3),HandleClick(buttontexts.option3)}}

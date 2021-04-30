@@ -15,17 +15,39 @@ const Results = () => {
   useEffect(() => {
     AOS.init({});
   }, []);
+  useEffect(()=>{
+    if(process.browser){
+        var choices = sessionStorage.getItem("choices");
+        var obj = JSON.parse(results)
+        var key = obj.climate+obj.maintenance+obj.location+obj.type
+        console.log(choices)
+
+        if(obj.climate === "Temperate" && obj.maintenance === "Low maintenance" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
+            setTitle()
+            setSrc()
+            setClimate()
+            setGoodIn()
+            setCategory()
+            setMaintenance()
+            setSun()
+            setWater()
+            setFact()
+        }
+    }
+})
   // var climate = reactLocalStorage.getObject('climate');
   // var goodIn = reactLocalStorage.getObject('goodIn');
   // var category = reactLocalStorage.getObject('category');
   // var maintenance = reactLocalStorage.getObject('maintenance');
   const router = useRouter()
+  
   return (
     <div className="results">
       <Logo/>
 
       <MainImg src="watermark.png" width="40%"/>     
-
+      
+      
       <LargeTitles text="*Name*, Garden recommends"/>
       <Options/>
       <Options/>
