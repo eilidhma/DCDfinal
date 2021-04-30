@@ -20,6 +20,8 @@ import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
 import Brain from '../comps/Brain';
 import Menu from '../comps/HambMenu';
+import MenuText from '../comps/MenuText';
+import Clouds from '../comps/Clouds';
 
 
 const Info = () => {
@@ -95,8 +97,11 @@ const Info = () => {
   return (
     
       
-        <div className="info" >
-          
+  <div className="garden">
+    <div className="background"><Clouds/></div>
+      <div className="app">
+        <div className="main">
+        
           {/* START OF REUSABLE -- add in back button and hamburger menu */}
             <Logo/>
             <LargeTitles text={titlestate}/>
@@ -106,17 +111,26 @@ const Info = () => {
           {/* END OF REUSABLE */}
           
           {/* START OF Directory */}
-          <div className="infoContent">
-          {mainstate === 0 && <MainImg src="couple.png" width="30%"/>}
+              <div className="infoContent">
+                {mainstate === 0 && <MainImg src="couple.png" width="50%"/>}
+                <Description text="this is a small description of this page."/>
+                <div data-aos="slide-up" className="directory">
+                  <div className="ButtonCont">
+                    <ButtonUI text="Sustainability" onClick={Sust}/>
+                    <MenuText text="this is a small description of the sust page"/>
+                  </div>
+                  <div className="ButtonCont">
+                    <ButtonUI text="Wellness Benefits" onClick={Well}/>
+                    <MenuText text="this is a small description of the well page"/>
+                  </div>
+                  <div className="ButtonCont">
+                    <ButtonUI text="Saving the Bees" onClick={Bees}/>
+                    <MenuText text="this is a small description of the bees page"/>
+                  </div>
+                </div>
+              
+              </div>
             
-            <div data-aos="slide-up" className="ButtonCont">
-              <ButtonUI text="Sustainability" onClick={Sust}/>
-              <ButtonUI text="Wellness Benefits" onClick={Well}/>
-              <ButtonUI text="Saving the Bees" onClick={Bees}/>
-            </div>
-            
-          </div>
-          
 
           {/* END OF Directory */}
 
@@ -215,7 +229,10 @@ const Info = () => {
             <NameInput />
             <MainButton text="Let's Start!" onClick={() => router.push('/quiz')}/>
           </div>}
-        </div>
+      </div>
+    </div>
+  </div>
+        
 
   )
 }

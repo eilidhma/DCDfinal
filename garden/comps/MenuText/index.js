@@ -12,7 +12,7 @@ const Cont = styled.h3`
   color:#FFF;
   padding-left:40px;
   padding-right:40px;
-  margin:15px;
+  margin:10px;
 `;
 
 
