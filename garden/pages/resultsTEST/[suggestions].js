@@ -210,7 +210,6 @@ const TropPotsFlowers = [
     }
 ];
 
-//found images up to here
 
 const TropGroundFlowers = [
     {
@@ -229,7 +228,7 @@ const TropGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "../Chrysanthemum.png",
+        src: "../chrysanthemum.png",
         fact: "Chrysanthemum tea has anti-viral properties!",
         bee: false
     },
@@ -272,7 +271,7 @@ const TropGroundProduce = [
         goodIn: "garden",
         category: "produce",
         maintenance: "high",
-        src: "../banana.png",
+        src: "../bananas.png",
         fact: "The worlds largest herb!",
         bee: false
     }
@@ -295,7 +294,7 @@ const AridPotsProduce = [
         goodIn: "pots/garden",
         category: "produce",
         maintenance: "moderate",
-        src: "../tomato.png",
+        src: "../tomatoplant.png",
         fact: "The worlds most popular fruit!",
         bee: false
     },
@@ -313,7 +312,7 @@ const AridPotsProduce = [
 
 const AridPotsFlowers = [
     {
-        title: "Sedum",
+        title: "Sedum", //NEED
         climate: "arid",
         goodIn: "pots/garden",
         category: "flowers",
@@ -328,7 +327,7 @@ const AridPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "moderate",
-        src: "../englishlavender.png",
+        src: "../lavendar.png",
         fact: "Used for perfume before baths were common practice!",
         bee: true
     },
@@ -399,12 +398,12 @@ const AridGroundProduce = [
         bee: false
     },
     {
-        title: "Pomegrante",
+        title: "Pomegranate",
         climate: "arid",
         goodIn: "ground",
         category: "produce",
         maintenance: "high",
-        src: "../pometranate.png",
+        src: "../pomegranate.png",
         fact: "A super healthy, super fruit!",
         bee: false
     }
