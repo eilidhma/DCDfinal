@@ -18,6 +18,7 @@ import 'aos/dist/aos.css';
 import Logo from '../comps/Logo';
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
+import Brain from '../comps/Brain';
 import Menu from '../comps/HambMenu';
 
 
@@ -170,7 +171,7 @@ const Info = () => {
           {/* START OF WELLNESS */}
           {mainstate === 2 && <div className="infoContent">
             
-          <div data-aos="fade"><MainImg src="brain.png"/></div>
+          <div data-aos="fade"><Brain/></div>
           <div data-aos="flip-up"><Description text="Gardening improves mental health"/></div>
           <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind"/></div>
           <div data-aos="zoom-in"><MainImg src="girl.png"/></div>
