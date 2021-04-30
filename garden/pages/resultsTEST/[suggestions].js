@@ -210,7 +210,6 @@ const TropPotsFlowers = [
     }
 ];
 
-//found images up to here
 
 const TropGroundFlowers = [
     {
@@ -328,7 +327,7 @@ const AridPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "moderate",
-        src: "../englishlavender.png",
+        src: "../lavendar.png",
         fact: "Used for perfume before baths were common practice!",
         bee: true
     },
@@ -399,12 +398,12 @@ const AridGroundProduce = [
         bee: false
     },
     {
-        title: "Pomegrante",
+        title: "Pomegranate",
         climate: "arid",
         goodIn: "ground",
         category: "produce",
         maintenance: "high",
-        src: "../pometranate.png",
+        src: "../pomegranate.png",
         fact: "A super healthy, super fruit!",
         bee: false
     }
