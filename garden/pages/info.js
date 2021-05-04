@@ -22,6 +22,7 @@ import Brain from '../comps/Brain';
 import Menu from '../comps/HambMenu';
 import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
+import Watercan from '../comps/Watercan';
 
 
 const Info = () => {
@@ -191,7 +192,7 @@ const Info = () => {
           <div data-aos="zoom-in"><MainImg src="girl.png"/></div>
           <div data-aos="flip-up"><Description text="Feeling of accomplishment"/></div>
           <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year."/></div>
-          <div data-aos="zoom-in"><MainImg src="girlgardener.png"/></div>
+          <div data-aos="zoom-in"><Watercan/></div>
           <div data-aos="flip-up"><Description text="Physical activity"/></div>
           <div data-aos="slide-left"><SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart."/></div>
           </div>}
