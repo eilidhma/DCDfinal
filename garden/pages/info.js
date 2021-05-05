@@ -23,6 +23,7 @@ import Menu from '../comps/HambMenu';
 import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
+import GardeningGirl from '../comps/GardeningGirl';
 
 
 const Info = () => {
@@ -189,7 +190,7 @@ const Info = () => {
           <div data-aos="fade"><Brain/></div>
           <div data-aos="flip-up"><Description text="Gardening improves mental health"/></div>
           <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind"/></div>
-          <div data-aos="zoom-in"><MainImg src="girl.png"/></div>
+          <div data-aos="zoom-in"><GardeningGirl/></div>
           <div data-aos="flip-up"><Description text="Feeling of accomplishment"/></div>
           <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year."/></div>
           <div data-aos="zoom-in"><Watercan/></div>
