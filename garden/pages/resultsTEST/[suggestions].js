@@ -316,7 +316,7 @@ const AridPotsFlowers = [
         climate: "arid",
         goodIn: "pots/garden",
         category: "flowers",
-        maintenance: "high",
+        maintenance: "low",
         src: "../sedum.png",
         fact: "Produce star-shaped flowers!",
         bee: true
