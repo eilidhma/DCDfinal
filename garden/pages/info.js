@@ -20,6 +20,10 @@ import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
 import Brain from '../comps/Brain';
 import Menu from '../comps/HambMenu';
+import MenuText from '../comps/MenuText';
+import Clouds from '../comps/Clouds';
+import Watercan from '../comps/Watercan';
+import GardeningGirl from '../comps/GardeningGirl';
 
 
 const Info = () => {
@@ -95,8 +99,11 @@ const Info = () => {
   return (
     
       
-        <div className="info" >
-          
+  <div className="garden">
+    <div className="background"><Clouds/></div>
+      <div className="app">
+        <div className="main">
+        
           {/* START OF REUSABLE -- add in back button and hamburger menu */}
             <Logo/>
             <LargeTitles text={titlestate}/>
@@ -106,17 +113,26 @@ const Info = () => {
           {/* END OF REUSABLE */}
           
           {/* START OF Directory */}
-          <div className="infoContent">
-          {mainstate === 0 && <MainImg src="couple.png" width="30%"/>}
+              <div className="infoContent">
+                {mainstate === 0 && <MainImg src="couple.png" width="50%"/>}
+                <Description text="this is a small description of this page."/>
+                <div data-aos="slide-up" className="directory">
+                  <div className="ButtonCont">
+                    <ButtonUI text="Sustainability" onClick={Sust}/>
+                    <MenuText text="this is a small description of the sust page"/>
+                  </div>
+                  <div className="ButtonCont">
+                    <ButtonUI text="Wellness Benefits" onClick={Well}/>
+                    <MenuText text="this is a small description of the well page"/>
+                  </div>
+                  <div className="ButtonCont">
+                    <ButtonUI text="Saving the Bees" onClick={Bees}/>
+                    <MenuText text="this is a small description of the bees page"/>
+                  </div>
+                </div>
+              
+              </div>
             
-            <div data-aos="slide-up" className="ButtonCont">
-              <ButtonUI text="Sustainability" onClick={Sust}/>
-              <ButtonUI text="Wellness Benefits" onClick={Well}/>
-              <ButtonUI text="Saving the Bees" onClick={Bees}/>
-            </div>
-            
-          </div>
-          
 
           {/* END OF Directory */}
 
@@ -174,10 +190,10 @@ const Info = () => {
           <div data-aos="fade"><Brain/></div>
           <div data-aos="flip-up"><Description text="Gardening improves mental health"/></div>
           <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind"/></div>
-          <div data-aos="zoom-in"><MainImg src="girl.png"/></div>
+          <div data-aos="zoom-in"><GardeningGirl/></div>
           <div data-aos="flip-up"><Description text="Feeling of accomplishment"/></div>
           <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year."/></div>
-          <div data-aos="zoom-in"><MainImg src="girlgardener.png"/></div>
+          <div data-aos="zoom-in"><Watercan/></div>
           <div data-aos="flip-up"><Description text="Physical activity"/></div>
           <div data-aos="slide-left"><SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart."/></div>
           </div>}
@@ -215,7 +231,10 @@ const Info = () => {
             <NameInput />
             <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')}/>
           </div>}
-        </div>
+      </div>
+    </div>
+  </div>
+        
 
   )
 }

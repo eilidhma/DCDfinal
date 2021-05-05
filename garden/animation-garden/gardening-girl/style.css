@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    text-align: center;
+}
+div{
+    margin: 25px;
+}
+#hair-left{
+    animation: hair-left 2s linear infinite;
+    transform-box: fill-box;
+    transform-origin: top right;
+}
+#hair-right{
+    animation: hair-right 3s linear infinite;
+    transform-box: fill-box;
+    transform-origin: top left;
+}
+#plant-center, #plant-back{
+    animation: plant-swing 5s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+#plant-far-left, #plant-right{
+    animation: plant-move 4s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+#plant-far-right, #plant-left{
+    animation: plant-move 6s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+#gardening-girl{
+    animation: girl-moving 8s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+    overflow: visible;
+}
+
+@keyframes hair-left{
+    0%{
+        transform:rotateZ(0deg);
+    }
+    50%{
+        transform:rotateZ(-5deg);
+    }
+    100%{
+        transform:rotateZ(0deg);
+    }
+}
+@keyframes hair-right{
+    0%{
+        transform:rotateZ(0deg);
+    }
+    50%{
+        transform:rotateZ(4deg);
+    }
+    100%{
+        transform:rotateZ(0deg);
+    }
+}
+@keyframes plant-swing{
+    0%{
+        transform: rotateZ(-1deg);
+    }
+    50%{
+        transform: rotateZ(1deg);
+    }
+    100%{
+        transform: rotateZ(-1deg);
+    }
+}
+@keyframes plant-move{
+    0%{
+        transform: rotateZ(-2deg);
+    }
+    50%{
+        transform: rotateZ(1deg);
+    }
+    100%{
+        transform: rotateZ(-2deg);
+    }
+}
+@keyframes girl-moving{
+    0%{
+        transform:rotateZ(-1deg);
+    }
+    50%{
+        transform:rotateZ(1deg);
+    }
+    100%{
+        transform:rotateZ(-1deg);
+    }
+}
