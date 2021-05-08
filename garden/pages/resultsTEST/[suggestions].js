@@ -90,12 +90,12 @@ const TempGroundFlowers = [
         bee: true
     },
     {
-        title: "Lungswort", // NEED
+        title: "Lungwort", 
         climate: "temperate",
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
-        src: "../lungswort.png",
+        src: "../lungwort.png",
         fact: "Gets its namesake from its unique leaf structure!",
         bee: true
     },

@@ -11,6 +11,8 @@ import Plant from '../../comps/Plant-grow';
 import Bouquet from '../../comps/Bouquet';
 import 'aos/dist/aos.css';
 import NameInput from '../../comps/NameInput';
+import {BsCircleFill} from 'react-icons/bs';
+
 
 var choices = {
   name:null,
@@ -18,6 +20,7 @@ var choices = {
   location:null,
   type:null
 }
+
 
 var percent = "0%"
 
@@ -59,9 +62,9 @@ export default function Quiz(){
     title = "Question #2";
     graphic = <Map/>;
     Q = "What climate are you living in right now?"
-    buttontexts.option1 = "Temperate"
-    buttontexts.option2 = "Tropical"
-    buttontexts.option3 = "Arid"
+    buttontexts.option1 = <span><BsCircleFill fill="#FF6C6C"/>Temperate</span>
+    buttontexts.option2 = <span><BsCircleFill fill="#FFE266"/>Tropical</span>
+    buttontexts.option3 = <span><BsCircleFill fill="#367A17"/>Arid</span>
   }
   if(questions === "question3"){
     percent = "50%";

@@ -138,6 +138,14 @@ h4 {
   font-family: 'Bebas Neue', cursive;
 }
 
+span {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
