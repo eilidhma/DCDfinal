@@ -30,18 +30,19 @@ body {
 
 .main {
   position:absolute;
-  border: 15px solid black;
+  border: 10px solid white;
   border-radius: 15px;
-  width:414px;
+  width:600px;
   z-index: 1;
-  margin-top: 3em;
+  margin-top: 2em;
+  padding-bottom:30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: -webkit-linear-gradient(45deg,#d08372,#b3586b,#57a0d6,#438028,#ffcf00);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: -webkit-linear-gradient(45deg,rgba(208,131,114,0.85),rgba(179,88,107,0.85),rgba(87,160,214,0.85),rgba(67,128,40,0.85),rgba(255,207,0,0.85));
+	background-size: 400% 250%;
+	animation: gradient 15s ease-in-out infinite;
 }
 
 .info {
@@ -49,7 +50,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(45deg, #D08372, #B3586B, #57A0D6,#438028,#FFCF00);
+  background: linear-gradient(45deg,rgba(208,131,114,0.85),rgba(179,88,107,0.85),rgba(87,160,214,0.85),rgba(67,128,40,0.85),rgba(255,207,0,0.85));
 	background-size: 200% 200%;
 	animation: gradient 15s ease infinite;
 }
@@ -182,7 +183,7 @@ button:hover{
 }
 
 .infoContent {
-  width:100vw;
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -190,13 +191,18 @@ button:hover{
 }
 
 .ButtonCont{
-  width:100vw;
+  
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
-  padding-top:20px;
+  padding: 10px;
+}
+.directory{
+  
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
 }
 
 .video-responsive {
@@ -315,7 +321,7 @@ button:hover{
   }
 }
 
-
+/* ecology animation */
 #big-wheel{
   animation: turn-wheel 2s infinite linear;
   transform-origin: 48.5% 65%;
@@ -389,8 +395,6 @@ button:hover{
       transform: rotateZ(-3deg);
   }
 }
-
-
 @keyframes move{
   0%{
       transform: rotateZ(-1deg);
@@ -405,7 +409,7 @@ button:hover{
 
 /* ecology animation */
 #ecology{
-  width: 650px;
+  width: 500px;
   height: auto;
   margin-bottom: 15px;
 }
@@ -568,5 +572,214 @@ button:hover{
   100%{
       transform: translateX(-1050px);
       opacity:0;
+  }
+}
+
+/* brain animation */
+#lines{
+  animation: moving-lines 5s linear infinite;
+  transform-origin: center;
+}
+#arm, #brain{
+  animation: brain-moving 2s linear infinite;
+}
+
+@keyframes moving-lines{
+  0%{
+      transform: scale(0.8);
+  }
+  50%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(0.8);
+  }
+}
+@keyframes brain-moving {
+  0%{
+      transform: translateY(0px);
+  }
+  50%{
+      transform: translateY(10px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+}
+/* watercan animation */
+#water{
+  fill: url(#water-gradient) white;
+  animation: water-fill 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: right;
+}
+#hat{
+  animation: hat-moving 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#front-arm{
+  animation: arms-moving 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+#back-arm{
+  animation: arms-moving 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: right;
+}
+#fingers{
+  animation: fingers-moving 5s linear infinite;
+  transform-box: fill-box;
+}
+#watercan{
+  animation: arms-moving 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: top right;
+}
+
+@keyframes water-fill{
+  0%{
+      opacity: 0;
+      transform: rotateZ(0deg);
+  }
+  20%{
+    opacity: 0.1;
+  }
+  50%{
+      opacity: 1;
+      transform: rotateZ(-2deg);
+      transform: translateY(5px);
+  }
+  70%{
+      opacity: 1;
+  }
+  90%{
+      opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotateZ(0deg);
+}
+}
+@keyframes hat-moving{
+  0%{
+      transform: rotateZ(-1deg);
+  }
+  50%{
+      transform: rotateZ(3deg);
+  }
+  100%{
+      transform: rotateZ(-1deg);
+  }
+}
+@keyframes arms-moving{
+  0%{
+      transform: rotateZ(0deg);
+  }
+  50%{
+      transform: rotateZ(-3deg);
+  }
+  100%{
+      transform: rotateZ(0deg);
+  }
+}
+@keyframes fingers-moving{
+  0%{
+      transform:translate(0px, 0px);
+  }
+  50%{
+      transform:translate(3px, 3px);
+  }
+  100%{
+      transform:translate(0px, 0px);
+  }
+}
+/* gardening girl animation */
+#hair-left{
+  animation: hair-left 2s linear infinite;
+  transform-box: fill-box;
+  transform-origin: top right;
+}
+#hair-right{
+  animation: hair-right 3s linear infinite;
+  transform-box: fill-box;
+  transform-origin: top left;
+}
+#plant-center, #plant-back{
+  animation: plant-swing 5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#plant-far-left, #plant-right{
+  animation: plant-move 4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#plant-far-right, #plant-left{
+  animation: plant-move 6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#gardening-girl{
+  animation: girl-moving 8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+  overflow: visible;
+}
+
+@keyframes hair-left{
+  0%{
+      transform:rotateZ(0deg);
+  }
+  50%{
+      transform:rotateZ(-5deg);
+  }
+  100%{
+      transform:rotateZ(0deg);
+  }
+}
+@keyframes hair-right{
+  0%{
+      transform:rotateZ(0deg);
+  }
+  50%{
+      transform:rotateZ(4deg);
+  }
+  100%{
+      transform:rotateZ(0deg);
+  }
+}
+@keyframes plant-swing{
+  0%{
+      transform: rotateZ(-1deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-1deg);
+  }
+}
+@keyframes plant-move{
+  0%{
+      transform: rotateZ(-2deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-2deg);
+  }
+}
+@keyframes girl-moving{
+  0%{
+      transform:rotateZ(-0.5deg);
+  }
+  50%{
+      transform:rotateZ(0.5deg);
+  }
+  100%{
+      transform:rotateZ(-0.5deg);
   }
 }
