@@ -7,7 +7,6 @@ const Button = styled.button`
   justify-content:center;
   align-items:center;
   width:100%;
-  height:70px;
   background:${props=>props.background};
   border-width:2px;
   border-style:solid;

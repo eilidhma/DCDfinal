@@ -7,7 +7,7 @@ const Cont = styled.div`
   flex-direction: row;
   justify-content:flex-start;
   align-items:center;
-  padding:20px;
+  padding:5%;
   background:#FFFFFF33;
   width:60%;
   border-radius:15px;
@@ -39,20 +39,20 @@ const Img = styled.img`
 `;
 
 const Number = styled.h3`
-  font-size:24px;
+  font-size:1.6rem;
   color:white;
   text-shadow: 0px 4px 4px rgba(31, 71, 30, 0.75);
   font-family: 'Montserrat', sans-serif;
-  margin-left:20px;
+  margin-left:10%;
   margin-bottom:5px;
 `;
 
 const Text = styled.h4`
-  font-size:20px;
+  font-size:1.3rem;
   color:white;
   text-shadow: 0px 4px 4px rgba(31, 71, 30, 0.75);
   font-family: 'Montserrat', sans-serif;
-  margin-left:20px;
+  margin-left:10%;
   margin-top:5px;
 `;
 
@@ -60,20 +60,19 @@ const Next = styled.button`
 display:flex;
 justify-content:center;
 align-items:center;
-width:20%;
-height:50px;
+width:30%;
 background:#FFFFFF33;
-border:6px solid #FFFFFF;
+border:4px solid #FFFFFF;
 border-radius:15px;
 font-family:Montserrat;
 font-style:normal;
 font-weight:bold;
-font-size:24px;
+font-size:1.2rem;
 display:flex;
 align-items:center;
 text-align:center;
 color:white;
-margin-right:50px;
+margin-left:5px;
 `;
 
 
@@ -91,7 +90,7 @@ onClick = () => {}
       <Number>{number}</Number>
       <Text>{text}</Text>
     </TextCont>
-    <Next onClick={onClick}>Next</Next>
+    <Next onClick={onClick}>and...</Next>
   </Cont>
 }
 

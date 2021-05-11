@@ -26,7 +26,7 @@ const ClickMe = styled.p`
 `;
 
 
-const Wrap = ({
+const Can = ({
 src="wrap_closed.svg",
 text="Click the wrap!",
 onClick={},
@@ -37,5 +37,4 @@ opacity=1
   </Cont>
 }
 
-export default Wrap;
-
+export default Can;

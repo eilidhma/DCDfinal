@@ -5,15 +5,14 @@ const Input = styled.input`
   display:flex;
   justify-content:center;
   align-items:center;
-  width:68%;
-  height:60px;
+  width:100%;
   background:${props=>props.background};
   border:6px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;
   font-weight:bold;
-  font-size:24px;
+  font-size:1rem;
   line-height:29px;
   display:flex;
   align-items:center;
@@ -28,10 +27,11 @@ text="placeholder",
 background="#FFFFFF33",
 color="white",
 onClick=()=>{},
+onKeyUp=()=>{},
 onChange=()=>{},
 value=value
 }) => {
-  return <Input onChange={onChange} onClick={onClick} color={color} background={background} placeholder="Type your name here..." type="text">{value}</Input>
+  return <Input onChange={onChange} onKeyUp={onKeyUp} color={color} background={background} placeholder="Type your name here..." type="text">{value}</Input>
 }
 
 export default NameInput;

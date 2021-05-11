@@ -12,7 +12,7 @@ const MediumTitles = styled.h1`
   -webkit-text-stroke-width:1px;
   -webkit-text-stroke-color: #FFF;
   text-shadow: 2px 2px 2px #367A17;
-  font-size: 46px;
+  font-size: 40px;
 `;
 
 const MedTitles = ({

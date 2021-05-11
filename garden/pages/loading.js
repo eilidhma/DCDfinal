@@ -15,63 +15,63 @@ export default function Quiz() {
 
         if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/one')
-            }, 3000)
+              router.push('/results/one')
+            }, 1000)
         }
         if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/two')
-            }, 3000)
+              router.push('/results/two')
+            }, 1000)
         }
         if(obj.climate === "Temperate" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/three')
-            }, 3000)
+              router.push('/results/three')
+            }, 1000)
         }
         if(obj.climate === "Temperate" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/four')
-            }, 3000)
+              router.push('/results/four')
+            }, 1000)
         }
         if(obj.climate === "Tropical" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/five')
-            }, 3000)
+              router.push('/results/five')
+            }, 1000)
         }
         if(obj.climate === "Tropical" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/six')
-            }, 3000)
+              router.push('/results/six')
+            }, 1000)
         }
         if(obj.climate === "Tropical" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/seven')
-            }, 3000)
+              router.push('/results/seven')
+            }, 1000)
         }
         if(obj.climate === "Tropical" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/eight')
-            }, 3000)
+              router.push('/results/eight')
+            }, 1000)
         }
         if(obj.climate === "Arid" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/nine')
-            }, 3000)
+              router.push('/results/nine')
+            }, 1000)
         }
         if(obj.climate === "Arid" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/ten')
-            }, 3000)
+              router.push('/results/ten')
+            }, 1000)
         }
         if(obj.climate === "Arid" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
-              router.push('/resultsTEST/eleven')
-            }, 3000)
+              router.push('/results/eleven')
+            }, 1000)
         }
         if(obj.climate === "Arid" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
-              router.push('/resultsTEST/twelve')
-            }, 3000)
+              router.push('/results/twelve')
+            }, 1000)
         }
     }
 },[])
