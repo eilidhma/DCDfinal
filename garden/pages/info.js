@@ -115,19 +115,19 @@ const Info = () => {
           {/* START OF Directory */}
           <div className="infoContent">
             {mainstate === 0 && <MainImg src="couple.png" width="50%" />}
-            <Description text="this is a small description of this page." />
+            <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />
             <div data-aos="slide-up" className="directory">
               <div className="ButtonCont">
                 <ButtonUI text="Sustainability" onClick={Sust} />
-                <MenuText text="this is a small description of the sust page" />
+                <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" />
               </div>
               <div className="ButtonCont">
                 <ButtonUI text="Wellness Benefits" onClick={Well} />
-                <MenuText text="this is a small description of the well page" />
+                <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" />
               </div>
               <div className="ButtonCont">
                 <ButtonUI text="Saving the Bees" onClick={Bees} />
-                <MenuText text="this is a small description of the bees page" />
+                <MenuText text="All about bees- why do we need them, and how can we help support them" />
               </div>
             </div>
 
