@@ -298,7 +298,7 @@ const Info = () => {
         </div>
       </div>
     </div>
-
+    </div>
 
   )
 }
