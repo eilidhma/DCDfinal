@@ -28,6 +28,7 @@ import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
 import PestBee from '../comps/PesticideBee';
+import HandsPlanet from '../comps/HandsPlanet';
 
 
 const Info = () => {
@@ -147,7 +148,7 @@ const Info = () => {
 
           {/* START OF Directory */}
           <div className="infoContent">
-            {mainstate === 0 && <MainImg src="couple.png" width="50%" />}
+            {mainstate === 0 && <HandsPlanet/>}
             <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />
             <div data-aos="slide-up" className="directory">
               <div className="ButtonCont">
