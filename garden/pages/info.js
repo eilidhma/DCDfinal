@@ -268,7 +268,7 @@ const Info = () => {
 
             <Description text="How YOU can help:"/>
             <div className="pesticide">
-              <Bee left="0" top="50"/>
+              <PestBee left="0" top="50"/>
               <img className="can" src="pesticide.png" width="50%"/>
               <MainImg src="tulip.svg"/>
             </div>
