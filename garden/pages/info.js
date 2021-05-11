@@ -24,9 +24,11 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
-import Bee from '../comps/PesticideBee';
+import PestBee from '../comps/PesticideBee';
+import HandsPlanet from '../comps/HandsPlanet';
 
 
 const Info = () => {
@@ -146,7 +148,7 @@ const Info = () => {
 
           {/* START OF Directory */}
           <div className="infoContent">
-            {mainstate === 0 && <MainImg src="couple.png" width="50%" />}
+            {mainstate === 0 && <HandsPlanet/>}
             <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />
             <div data-aos="slide-up" className="directory">
               <div className="ButtonCont">
@@ -256,10 +258,10 @@ const Info = () => {
 
           {/* START OF BEES */}
           {mainstate === 3 && <div className="infoContent">
-
-            <div data-aos="fade"><MainImg src="bee.png" /></div>
-            <div data-aos="flip-up"><Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." /></div>
-            <div data-aos="slide-left"><SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. " /></div>
+           
+            <div data-aos="fade"><Bee/></div>
+            <div data-aos="flip-up"><Description text="By creating a bee-friendly garden, you can do your part to help save our important bees."/></div>
+            <div data-aos="slide-left"><SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. "/></div>
             <div data-aos="zoom-in" className="BlankBox">
               <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
               <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
@@ -267,7 +269,7 @@ const Info = () => {
 
             <Description text="How YOU can help:"/>
             <div className="pesticide">
-              <Bee left="0" top="50"/>
+              <PestBee left="0" top="50"/>
               <img className="can" src="pesticide.png" width="50%"/>
               <MainImg src="tulip.svg"/>
             </div>
@@ -298,7 +300,10 @@ const Info = () => {
         </div>
       </div>
     </div>
-    </div>
+
+  </div>
+
+
 
   )
 }
