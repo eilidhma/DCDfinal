@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cont = styled.div``;
+const Cont = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+`;
 
 const Brain = () => {
     return <Cont>
-        <svg width="526" height="468" viewBox="0 0 526 468" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg preserveAspectRatio="slice" width="70%" height="100%" viewBox="0 0 526 468" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="brain-anim 1">
             <g id="Brain anim">
             <g id="lines">

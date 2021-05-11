@@ -8,12 +8,9 @@ const Cont = styled.h3`
   text-align:center;
   flex-direction:column;
   justify-content:center;
-  font-size:24px;
+  font-size:1.3rem;
   font-weight:600;
   color:#FFF;
-  padding-left:40px;
-  padding-right:40px;
-  margin:30px;
 `;
 
 

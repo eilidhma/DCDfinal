@@ -7,12 +7,12 @@ const ImgCont = styled.div`
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  width:100px;
-  max-width:200px;
+  width:50px;
+  max-width:100px;
   object-fit:cover;
   position:absolute;
-  top:20px;
-  left:50px;
+  top:5px;
+  right:5px;
 `;
 
 const Img = styled.img`

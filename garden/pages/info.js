@@ -24,6 +24,9 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import Cart from '../comps/ShoppingCart';
+import Groceries from '../comps/Groceries';
+import Bee from '../comps/PesticideBee';
 
 
 const Info = () => {
@@ -41,6 +44,12 @@ const Info = () => {
   const [vegimg, setImg] = useState(veg.lettuce)
   const [vegnumber, setNumber] = useState(fact.number.lettuce)
   const [vegfact, setFact] = useState(fact.veg.lettuce)
+  const [strawberrystate, setStraw] = useState(false)
+  const [celerystate, setCel] = useState(false)
+  const [cucumberstate, setCuc] = useState(false)
+  const [strawfact, setStrawFact] = useState(false)
+  const [celeryfact, setCelFact] = useState(false)
+  const [cucumberfact, setCucFact] = useState(false)
  
 
   const HandleWrap = () => {
@@ -96,6 +105,25 @@ const Info = () => {
     window.scrollTo(0, 0);
   }
 
+  const HandleStraw = () =>{
+    setStraw(true)
+    setCucFact(false)
+    setCelFact(false)
+    setStrawFact(true)
+  }
+  const HandleCel = () =>{
+    setCel(true)
+    setStrawFact(false)
+    setCucFact(false)
+    setCelFact(true)
+  }
+  const HandleCuc = () =>{
+    setCuc(true)
+    setStrawFact(false)
+    setCelFact(false)
+    setCucFact(true)
+  }
+
   return (
     
       
@@ -103,9 +131,12 @@ const Info = () => {
     <div className="background"><Clouds/></div>
       <div className="app">
         <div className="main">
+          <div className="content">
         
           {/* START OF REUSABLE -- add in back button and hamburger menu */}
+
             <Logo/>
+            <Menu/>
             <LargeTitles text={titlestate}/>
             {/* <Menu/> */}
           
@@ -144,11 +175,31 @@ const Info = () => {
             <div data-aos="slide-left"><SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket."/></div>
             <div data-aos="flip-up"><Description text="Control what goes on and in what you grow"/></div>
             <div data-aos="slide-right"><SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides."/></div>
-            <div className="BlankBox" data-aos="zoom-in">
-              <PlantDetailsLarge src="strawberry.png" text="Strawberries may contain up to 40 different pesticides" width="65"/>
-              <PlantDetailsLarge src="celery.png" text="Celery may contain more than 60 different pesticides" width="70"/>
-              <PlantDetailsLarge src="cucumber.png" text="Cucumber skin may contain more than 80 different pesticides" width="70"/>
+            <div className="cart">
+              <div className="groceries">
+                <Groceries 
+                  left={strawberrystate ? 80 : 0}
+                  top={strawberrystate ? 290 : 0}
+                  onClick={HandleStraw}/>
+                <Groceries 
+                  src="celery.png" 
+                  left={celerystate ? 10 : 0}
+                  top={celerystate ? 290 : 0}
+                  onClick={HandleCel}/>
+                <Groceries 
+                  src="cucumber1.png"
+                  left={cucumberstate ? -60 : 0}
+                  top={cucumberstate ? 290 : 0}
+                  onClick={HandleCuc}/>
+              </div>
+              {strawfact === false && celeryfact === false && cucumberfact === false && <Description text="Learn about these grocery items by clicking to add them to your cart"/>}
+              {strawfact === true && <Description text="Strawberries may contain up to 40 different pesticides"/>}
+              {celeryfact === true && <Description text="Celery may contain more than 60 different pesticides"/>}
+              {cucumberfact === true && <Description text="Cucumber skin may contain more than 80 different pesticides"/>}
+              <Cart />
             </div>
+            
+
             <div data-aos="slide-left"><Description text="Prevent more food waste by gardening at home"/></div>
             <div data-aos="slide-right"><SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/></div>
             <Description text="This means, daily:"/>
@@ -158,7 +209,7 @@ const Info = () => {
             src={vegimg}
             />
             <Description text="are thrown out..."/>
-            <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consume can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
+            <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
             <MainImg src="garbage.png" width="20%"/>
             <LargeTitles text="And what about food packaging?"/>
             <Description text="Consider this..."/>
@@ -210,6 +261,13 @@ const Info = () => {
               <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
             </div>
             <Description text="How YOU can help:"/>
+            <div className="pesticide">
+              <Bee left="0" top="50"/>
+              <img className="can" src="pesticide.png" width="50%"/>
+              <MainImg src="tulip.svg"/>
+            </div>
+
+
             <div data-aos="fade"><ReactPlayer url="https://www.youtube.com/watch?v=FqClEkOyHbw"/></div>
 
           </div>}
@@ -226,11 +284,9 @@ const Info = () => {
             <Description text="Now, it’s time to find out what plants are best for you!"/>
             <SmallDescription text="Through a 4-questions questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and time available to take care of your new friend."/>
             <MainImg src="veggarden.png"/>
-            <SmallDescription text="Before we get to the first question,"/>
-            <Description text="What is your name?"/>
-            <NameInput />
             <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')}/>
           </div>}
+        </div>
       </div>
     </div>
   </div>

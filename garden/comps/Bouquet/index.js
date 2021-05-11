@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 const Cont = styled.div`
 display:flex;
+justify-content:center;
+align-items:center;
 `;
 
 
 const Bouquet = () => {
     return <Cont>
-        <svg width="444" height="531" id="bouquet" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg preserveAspectRatio="slice" width="70%" height="100%" id="bouquet" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="bouquet 1">
             <g id="rose-top">
             <g id="stem_1">

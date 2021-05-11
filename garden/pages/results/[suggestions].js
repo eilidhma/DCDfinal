@@ -8,7 +8,7 @@ import Options from '../../comps/Results';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 //for test
-import Menu from '../../comps/TestMenu';
+import Menu from '../../comps/HambMenu';
 import Logo from '../../comps/Logo';
 
 
@@ -421,33 +421,6 @@ export default function ResultsTEST() {
     })
     const [name, setName] = useState(null)
 
-    // const [title1, setTitle1] = useState(null)
-    // const [title2, setTitle2] = useState(null)
-    // const [title3, setTitle3] = useState(null)
-    // const [src1, setSrc1] = useState(null)
-    // const [src2, setSrc2] = useState(null)
-    // const [src3, setSrc3] = useState(null)
-    // const [climate1, setClimate1] = useState(null)
-    // const [climate2, setClimate2] = useState(null)
-    // const [climate3, setClimate3] = useState(null)
-    // const [goodin1, setGoodIn1] = useState(null)
-    // const [goodin2, setGoodIn2] = useState(null)
-    // const [goodin3, setGoodIn3] = useState(null)
-    // const [category1, setCategory1] = useState(null)
-    // const [category2, setCategory2] = useState(null)
-    // const [category3, setCategory3] = useState(null)
-    // const [maintenance1, setMaintenance1] = useState(null)
-    // const [maintenance2, setMaintenance2] = useState(null)
-    // const [maintenance3, setMaintenance3] = useState(null)
-    // const [sun1, setSun1] = useState(null)
-    // const [sun2, setSun2] = useState(null)
-    // const [sun3, setSun3] = useState(null)
-    // const [water1, setWater1] = useState(null)
-    // const [water2, setWater2] = useState(null)
-    // const [water3, setWater3] = useState(null)
-    // const [fact1, setFact1] = useState(null)
-    // const [fact2, setFact2] = useState(null)
-    // const [fact3, setFact3] = useState(null)
     
 
     useEffect(() => {
@@ -521,23 +494,13 @@ export default function ResultsTEST() {
             // console.log(nameobj)
             setName("Our results for " + nameobj)
 
-            if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
-                setTitle1()
-                setSrc1()
-                setClimate1()
-                setGoodIn1()
-                setCategory1()
-                setMaintenance1()
-                setSun1()
-                setWater1()
-                setFact1()
-            }
         }
     },[])
 
     return <div className="results">
-        <Logo src="../logo-hands.png" />
-        <MainImg src="../watermark.png" />
+        <Logo src="../logo-hands.png"/>
+        <Menu/>
+        <MainImg src="../watermark.png" width="20%"/>
         <LargeTitles text={name} />
         <p>{choices.climate}</p>
 
@@ -781,6 +744,7 @@ export default function ResultsTEST() {
             )
         })}
         <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+       
     </div>
 }
 
