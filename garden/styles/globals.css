@@ -8,11 +8,19 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+
   background-color:rgb(163,211,238); 
   width: 100vw;
+  cursor: url("../public/bee-cursor.png"), auto;
 }
 /* need to add this into the code for the clouds animation
 */
+
+button:hover{
+  cursor:  url("../public/bee-cursor.png"), auto;
+}
+
+
 .background{
   width:100vw;
   position: absolute;

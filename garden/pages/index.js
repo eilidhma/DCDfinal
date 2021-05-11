@@ -16,9 +16,10 @@ export default function Home() {
 
   return (
     <div className="garden">
-      <div className="background"><Clouds/></div>
+      <div className="background"><Clouds /></div>
       <div className="app">
         <div className="main">
+
           <Menu/>
           <Logo/>
           <div className="content">
@@ -30,7 +31,6 @@ export default function Home() {
             <ButtonUI text="Why Grow Food at Home" routeTo="/info" onClick={() => router.push('/info')}/>
             <ButtonUI text="What You Should Grow" routeTo="/quiz/question1" onClick={() => router.push('/quiz/question1')}/>
           </div>
-          
         </div>
       </div>
     </div>

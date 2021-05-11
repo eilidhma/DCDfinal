@@ -13,40 +13,42 @@ const Results = () => {
   useEffect(() => {
     AOS.init({});
   }, []);
-  useEffect(()=>{
-    if(process.browser){
-        var choices = sessionStorage.getItem("choices");
-        var obj = JSON.parse(results)
-        var key = obj.climate+obj.maintenance+obj.location+obj.type
-        console.log(choices)
+  useEffect(() => {
+    if (process.browser) {
+      var choices = sessionStorage.getItem("choices");
+      var obj = JSON.parse(Results)
+      var key = obj.climate + obj.maintenance + obj.location + obj.type
+      console.log(choices)
 
-        if(obj.climate === "Temperate" && obj.maintenance === "Low maintenance" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
-            setTitle()
-            setSrc()
-            setClimate()
-            setGoodIn()
-            setCategory()
-            setMaintenance()
-            setSun()
-            setWater()
-            setFact()
-        }
+      if (obj.climate === "Temperate" && obj.maintenance === "Low maintenance" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs") {
+        setTitle()
+        setSrc()
+        setClimate()
+        setGoodIn()
+        setCategory()
+        setMaintenance()
+        setSun()
+        setWater()
+        setFact()
+      }
     }
+
 })
 
+
   const router = useRouter()
-  
+
   return (
     <div className="results">
-      <Logo/>
+      <Logo />
 
-      <MainImg src="watermark.png" width="40%"/>     
-      
-      
-      <LargeTitles text="*Name*, Garden recommends"/>
-      <Options/>
-      <Options/>
-      <Options/>
+      <MainImg src="watermark.png" width="40%" />
+
+
+      <LargeTitles text="*Name*, Garden recommends" />
+      <Options />
+      <Options />
+      <Options />
 
       <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
     </div>
