@@ -24,6 +24,7 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import Bee from '../comps/Bee';
 
 
 const Info = () => {
@@ -202,7 +203,7 @@ const Info = () => {
           {/* START OF BEES */}
           {mainstate === 3 && <div className="infoContent">
            
-            <div data-aos="fade"><MainImg src="bee.png"/></div>
+            <div data-aos="fade"><Bee/></div>
             <div data-aos="flip-up"><Description text="By creating a bee-friendly garden, you can do your part to help save our important bees."/></div>
             <div data-aos="slide-left"><SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. "/></div>
             <div data-aos="zoom-in" className="BlankBox">

@@ -775,3 +775,59 @@ button:hover{
       transform:rotateZ(-0.5deg);
   }
 }
+/* bee animation */
+#bee{
+  overflow: visible;
+}
+#wing-left{
+  animation: flying-l 0.25s linear infinite;
+  transform-origin: bottom;
+}
+#wing-right{
+  animation: flying-r 0.2s linear infinite;
+  transform-origin: bottom;
+}
+#body, #back-antenna, #front-antenna{
+  animation: flying-up 3s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes flying-up{
+  0%{
+      transform: rotate(0deg);
+  }
+  20%{
+      transform: rotate(2deg)
+  }
+  50%{
+      transform: rotate(5deg);
+  }
+  80%{
+      transform: rotate(2deg);
+  }
+  100%{
+      transform: rotate(0deg);
+  }
+}
+@keyframes flying-l{
+  0%{
+      transform: rotateZ(-5deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-5deg);
+  }
+}
+@keyframes flying-r{
+  0%{
+      transform: rotateZ(-4deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-5deg);
+  }
+}
