@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Hands holding planet animation</title>
-</head>
-<body>
-    <div>
+import React from 'react';
+import styled from 'styled-components';
+
+const Cont = styled.div``;
+
+const HandsPlanet = () => {
+    return <Cont>
         <svg width="360" height="440" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="hands-planet 1" clip-path="url(#clip0)">
             <g id="hands-planet">
@@ -193,6 +189,7 @@
             </linearGradient>
             </defs>
             </svg>
-    </div>
-</body>
-</html>
+    </Cont>
+}
+
+export default HandsPlanet;
