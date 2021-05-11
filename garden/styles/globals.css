@@ -859,7 +859,141 @@ button:hover{
       transform:rotateZ(-0.5deg);
   }
 }
+/* bee animation */
+#bee{
+  overflow: visible;
+}
+#wing-left{
+  animation: flying-l 0.25s linear infinite;
+  transform-origin: bottom;
+}
+#wing-right{
+  animation: flying-r 0.2s linear infinite;
+  transform-origin: bottom;
+}
+#body, #back-antenna, #front-antenna{
+  animation: flying-up 3s linear infinite;
+  transform-origin: center;
+}
 
+@keyframes flying-up{
+  0%{
+      transform: rotate(0deg);
+  }
+  20%{
+      transform: rotate(2deg)
+  }
+  50%{
+      transform: rotate(5deg);
+  }
+  80%{
+      transform: rotate(2deg);
+  }
+  100%{
+      transform: rotate(0deg);
+  }
+}
+@keyframes flying-l{
+  0%{
+      transform: rotateZ(-5deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-5deg);
+  }
+}
+@keyframes flying-r{
+  0%{
+      transform: rotateZ(-4deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-5deg);
+  }
+}
+/* hands planet animation */
+#hands-planet{
+  overflow: visible;
+}
+#rays{
+  animation: rotate-rays 20s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#orange-rays{
+  animation: scale-rays 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#yellow-rays{
+  animation: scale-rays 5s 1s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#cloud-22, #cloud-21, #cloud-23{
+  animation: rotate-clouds 10s linear infinite;
+  transform-origin: 48% 50%;
+}
+#left-fleur, #bottom-fleur, #right-fleur{
+  animation: scale-flowers 6s 1s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#top-fleur, #center-fleur{
+  animation: scale-flowers 4s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes scale-rays{
+  0%{
+      transform: scale(1);
+  }
+  25%{
+      transform: scale(1.25);
+  }
+  50%{
+      transform: scale(1);
+  }
+  75%{
+      transform: scale(0.75);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+@keyframes rotate-rays{
+  0%{
+      transform: rotateZ(0deg);
+  }
+  100%{
+      transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate-clouds{
+  0%{
+      transform: rotateZ(-4deg);
+  }
+  50%{
+      transform: rotateZ(4deg);
+  }
+  100%{
+      transform: rotateZ(-4deg);
+  }
+}
+@keyframes scale-flowers{
+  0%{
+      transform: scale(0, 0);
+  }
+  50%{
+      transform: scale(1 ,1);
+  }
+}
+/* other animations */
 .cart {
   display:flex;
   flex-direction: column;

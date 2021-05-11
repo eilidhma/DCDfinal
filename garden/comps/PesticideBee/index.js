@@ -20,7 +20,7 @@ const Img = styled.img`
 
 
 
-const Bee = ({
+const PestBee = ({
 left=0,
 top=0,
 onClick=()=>{},
@@ -30,4 +30,4 @@ onClick=()=>{},
   </Cont>
 }
 
-export default Bee;
+export default PestBee;
