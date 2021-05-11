@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 const Cont = styled.div`
 display:flex;
-width:650px;
+align-items:center;
+justify-content:center;
 `;
 
 
 const SustGraphic = () => {
   return <Cont>
-    <svg width="1682" viewBox="0 0 1682 943" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="60%" viewBox="0 0 1682 943" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="environment-sus 1">
             <g id="buildings">
             <path id="building9" fill-rule="evenodd" clip-rule="evenodd" d="M1457.8 817H1234.2V476.7H1261.2V381.7H1457.8V817Z" fill="#4EABB5"/>

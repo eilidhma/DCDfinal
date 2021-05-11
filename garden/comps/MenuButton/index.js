@@ -8,7 +8,6 @@ const Button = styled.button`
   justify-content:center;
   align-items:center;
   max-width:225px;
-  height:60px;
   background:${props=>props.background};
   border:2px solid #FFF;
   border-radius:15px;

@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import MenuButton from '../MenuButton';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import React, {useState} from 'react';
+import {Router, useRouter} from 'next/router'
 
 const Cont = styled.div`
-    position: relative;
-    right:50px;
+    position: absolute;
+    left:5px;
+    top:5px;
 `;
 const MenuIcon = styled.div`
     color:${props=>props.color};
@@ -17,18 +19,25 @@ const MenuItems = styled.div`
     max-height:${props=>props.height};
     overflow:hidden;
     transition:max-width 0.5s, max-height 0.5s;
+    position:absolute;
 `;
 
 
+
 const Menu = ({
-    color="#FFF"
+    router = useRouter(),
+    color="#FFF",
+    onClick1=()=>{router.push('/')},
+    onClick2=()=>{router.push('/info')},
+    onClick3=()=>{router.push('/quiz/question1')},
 
 }) => {
+    
     const [open, setOpen] = useState(false);
 
     var width=0, height=0;
     if(open){
-        width=225;
+        width=400;
         height=100;
     }
     return <Cont>
@@ -36,9 +45,9 @@ const Menu = ({
             <GiHamburgerMenu size={40}/>
         </MenuIcon>
         <MenuItems width={width} height={height}>
-            <MenuButton text="Home"></MenuButton>
-            <MenuButton text="Why grow food at home?"></MenuButton>
-            <MenuButton text="What plants should you grow?"></MenuButton>
+            <MenuButton onClick={onClick1} text="Home"></MenuButton>
+            <MenuButton onClick={onClick2} text="Learn"></MenuButton>
+            <MenuButton onClick={onClick3} text="Quiz"></MenuButton>
         </MenuItems>
     </Cont>
 }

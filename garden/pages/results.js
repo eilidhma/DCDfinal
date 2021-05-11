@@ -6,10 +6,8 @@ import MainImg from '../comps/MainImg';
 import Options from '../comps/Results';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PlantCatalogue from '../data/plants';
 import Logo from '../comps/Logo';
-// import {reactLocalStorage} from 'reactjs-localstorage';
-// import ls from 'local-storage'
+
 
 const Results = () => {
   useEffect(() => {
@@ -34,11 +32,10 @@ const Results = () => {
         setFact()
       }
     }
-  })
-  // var climate = reactLocalStorage.getObject('climate');
-  // var goodIn = reactLocalStorage.getObject('goodIn');
-  // var category = reactLocalStorage.getObject('category');
-  // var maintenance = reactLocalStorage.getObject('maintenance');
+
+})
+
+
   const router = useRouter()
 
   return (
@@ -59,3 +56,7 @@ const Results = () => {
 }
 
 export default Results
+
+// no pesticides - use bee friendly natural alternatives - like the natural alternatives including chrysanthemums and lavender 
+// plant a variety of plants, including herbs and flowers, to attract bees - echinacea is great during the summer
+// lower intake of meat and dairy, causing reduction in biodiversity 
