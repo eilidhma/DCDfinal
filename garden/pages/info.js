@@ -27,7 +27,7 @@ import GardeningGirl from '../comps/GardeningGirl';
 import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
-import Bee from '../comps/PesticideBee';
+import PestBee from '../comps/PesticideBee';
 
 
 const Info = () => {
@@ -299,9 +299,10 @@ const Info = () => {
         </div>
       </div>
     </div>
+  </div>
 
 
   )
 }
 
-export default Info;
+export default Info
