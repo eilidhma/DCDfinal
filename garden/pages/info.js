@@ -26,7 +26,10 @@ import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
 import PestBee from '../comps/PesticideBee';
+import PestCan from '../comps/PesticideCan';
 import HandsPlanet from '../comps/HandsPlanet';
+import Watering from '../comps/Watering';
+
 
 
 const Info = () => {
@@ -51,7 +54,10 @@ const Info = () => {
   const [strawfact, setStrawFact] = useState(false)
   const [celeryfact, setCelFact] = useState(false)
   const [cucumberfact, setCucFact] = useState(false)
- 
+  const [bee, setBee] = useState(false)
+  const [can, setCan] = useState(true)
+  const [grow, setGrow] = useState(false)
+  const [rotate, setRotate] = useState(false)
 
   const HandleWrap = () => {
     setWrap(!wrapstate)
@@ -124,6 +130,22 @@ const Info = () => {
     setCelFact(false)
     setCucFact(true)
   }
+
+  const Can = () => {
+    setBee(true)
+    setCan(false)
+  }
+
+  const Water = () => {
+    setGrow(true)
+    setRotate(true)
+  }
+
+  const Rotate = () => {
+    setRotate(false)
+  }
+
+
 
   return (
 
@@ -265,11 +287,49 @@ const Info = () => {
               <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
             </div>
 
-            <Description text="How YOU can help:"/>
+            <LargeTitles text="How YOU can help:"/>
+            <Description text="1: By growing plants! No garden is too small to help our favourite pollinators. One of the best plants to incorporate into your garden to support bees is Echinacea, aka cone flower" />
+            <SmallDescription text="Click the watering can to make the flowers grow!"/>
+            <div className="watering">
+              <PestBee 
+                width="10%"
+                left="60"
+                top={grow ? "60" : "0"}
+                opacity={grow ? "1" : "0"}
+                transitionDelay="2"
+              />
+              <Watering 
+              onClick={Water}
+              opacitySmall={grow ? 0 : 1}
+              opacityBig={grow ? 1 : 0}
+              opacityDrop={rotate ? 1 : 0}
+              rotate={rotate ? 70 : 0}
+              onMouseLeave={Rotate}
+              />
+            </div>
+            
+            <Description text="2: When gardening, don't use harsh pesticides. Opt for natural alternatives instead, which can include certain varieties of plants" />
+            <SmallDescription text="Click the pesticide bottle to remove!"/>
             <div className="pesticide">
-              <PestBee left="0" top="50"/>
-              <img className="can" src="pesticide.png" width="50%"/>
-              <MainImg src="tulip.svg"/>
+              <PestBee 
+              left={bee ? "30" : "0"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              <PestBee 
+              left={bee ? "60" : "30"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              <PestBee 
+              left={bee ? "30" : "60"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              
+              <PestCan className="can" src="pesticide.png" width="30%" onClick={Can} 
+              opacity={can ? "1" : "0"} />
+              <img src="tulip.svg" width="100%"/>
             </div>
 
 

@@ -7,11 +7,9 @@ const Cont = styled.h3`
   text-align:center;
   flex-direction:column;
   justify-content:center;
-  font-size:18px;
+  font-size:1rem;
   font-weight:200;
   color:#FFF;
-  padding-left:40px;
-  padding-right:40px;
   margin:30px;
 `;
 

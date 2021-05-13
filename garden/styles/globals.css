@@ -169,7 +169,11 @@ button:hover{
 }
 
 .navContent {
-  width:70vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:80vw;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1014,9 +1018,22 @@ button:hover{
 }
 
 .pesticide {
+  margin-top: -30%;
   display:flex;
+  justify-content: center;
+  align-items: left;
   flex-direction: column;
   overflow-x: hidden;
+  width:70vw;
+}
+
+.watering {
+  display:flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  overflow-x: hidden;
+  width:70vw;
 }
 
 .smallbee {
