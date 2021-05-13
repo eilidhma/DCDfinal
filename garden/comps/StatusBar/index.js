@@ -8,7 +8,6 @@ const StatusBarCont = styled.div`
   justify-content:flex-end;
   align-items:center;
   padding-top:20px;
-  background-color:#367A17;
   width:100%;
   height:100px;
   color:white;
@@ -18,11 +17,10 @@ const BarBackground = styled.div`
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  background-color:#6AA151;
   height:25px;
   width: 70%;
   border-radius:15px;
-  border:none;
+  border:0.5px solid white;
 `;
 
 const Bar = styled.div`

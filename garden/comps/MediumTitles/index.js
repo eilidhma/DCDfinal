@@ -8,10 +8,8 @@ const MediumTitles = styled.h1`
   justify-content:center;
   align-items:center;
   text-align:center;
-  color:#367A17;
-  -webkit-text-stroke-width:1px;
-  -webkit-text-stroke-color: #FFF;
-  text-shadow: 2px 2px 2px #367A17;
+  color:#FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-size: 40px;
 `;
 
