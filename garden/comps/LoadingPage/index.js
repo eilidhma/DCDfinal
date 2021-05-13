@@ -7,6 +7,7 @@ const LoadingCont = styled.div`
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  margin-top:5vw;
 `;
 
 const Spinner = styled.div`
@@ -14,13 +15,12 @@ const Spinner = styled.div`
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:20px;
   background-clip: padding-box;
-  width:300px;
-  height:300px;
-  border:5px solid rgba(54,122,23,0.2);
-  border-top:5px solid rgba(54,122,23,1);
-  border-right:5px solid rgba(54,122,23,1);
+  width:30vw;
+  height:30vw;
+  border:5px solid rgba(255,255,255,0.2);
+  border-top:5px solid rgba(255,255,255,1);
+  border-right:5px solid rgba(255,255,255,1);
   border-radius: 50%;
   animation: spin 2s linear infinite;
 `;
@@ -28,17 +28,16 @@ const Spinner = styled.div`
 const LoadingImg = styled.img`
   display:flex;
   object-fit:contain;
-  width:255px;
-  height:300px;
+  width:20vw;
   position:relative;
-  bottom: 320px;
+  bottom: 50%;
 `;
 
 
 const Loading = ({}) => {
   return <LoadingCont>
     <Spinner></Spinner>
-    <LoadingImg src="logo.png"></LoadingImg>
+    <LoadingImg src="logo-hands.png"></LoadingImg>
   </LoadingCont>
 }
 

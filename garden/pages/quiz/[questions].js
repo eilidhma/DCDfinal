@@ -12,7 +12,9 @@ import Bouquet from '../../comps/Bouquet';
 import 'aos/dist/aos.css';
 import NameInput from '../../comps/NameInput';
 import {BsCircleFill} from 'react-icons/bs';
-
+import Clouds from '../../comps/Clouds';
+import Logo from '../../comps/Logo'
+import Menu from '../../comps/HambMenu'
 
 var choices = {
   name:null,
@@ -182,54 +184,62 @@ export default function Quiz(){
   
 
   return (
-    <div className="quiz">
-      <StatusBar percent={percent} width={width}/>
-      <div className="content">
-        <MedTitles text={title}/>
-        {questions !== "question1" && <div>{graphic}</div>}
-        {questions === "question2" && <div>
-          <div className="legendCont">
-            <div className="legend">
-              <span><BsCircleFill fill="#FF6C6C"/></span>
-              <span className="legendTitles">Temperate</span>
-            </div>
-            <div className="legend">
-              <span><BsCircleFill fill="#FFE266"/></span>
-              <span className="legendTitles">Tropical</span>
-            </div>
-            <div className="legend">
-              <span><BsCircleFill fill="#367A17"/></span>
-              <span className="legendTitles">Arid</span>
+    <div className="garden">
+      <div className="background"><Clouds/></div>
+      <div className="app">
+        <div className="main">
+          <div className="quiz">
+            <StatusBar percent={percent} width={width}/>
+            <div className="content">
+              <MedTitles text={title}/>
+              {questions !== "question1" && <div>{graphic}</div>}
+              {questions === "question2" && <div>
+                <div className="legendCont">
+                  <div className="legend">
+                    <span><BsCircleFill fill="#FF6C6C"/></span>
+                    <span className="legendTitles">Temperate</span>
+                  </div>
+                  <div className="legend">
+                    <span><BsCircleFill fill="#FFE266"/></span>
+                    <span className="legendTitles">Tropical</span>
+                  </div>
+                  <div className="legend">
+                    <span><BsCircleFill fill="#367A17"/></span>
+                    <span className="legendTitles">Arid</span>
+                  </div>
+                </div>
+                
+              </div>}
+              <Question text={Q}/>
+              <div className="questionCont">
+                {questions === "question1" && <NameInput onKeyUp={Next} onChange={getData}/>}
+                {questions !== "question1" && <QuestionButton
+                  className="questbutton"
+                  text={buttontexts.option1} 
+                  onClick={()=>{setButtonState(1),setBorderState(1),setNext(true),Results(),HandleClick(buttontexts.option1)}}
+                  background = {buttonstate === 1 ? "#00000033" : "#FFFFFF33"}
+                  borderColor = {borderstate === 1 ? "#00000022" : "#FFFFFF"}/>}
+                {questions !== "question1" && <QuestionButton
+                  className="questbutton"
+                  text={buttontexts.option2} 
+                  onClick={()=>{setButtonState(2),setBorderState(2),setNext(true),Results(),HandleClick(buttontexts.option2)}}
+                  background = {buttonstate === 2 ? "#00000033" : "#FFFFFF33"}
+                  borderColor = {borderstate === 2 ? "#00000022" : "#FFFFFF"}/>}
+                {questions === "question2" && <QuestionButton 
+                  className="questbutton"
+                  text={buttontexts.option3} 
+                  onClick={()=>{setButtonState(3),setBorderState(3),setNext(true),Results(),HandleClick(buttontexts.option3)}}
+                  background = {buttonstate === 3 ? "#00000033" : "#FFFFFF33"}
+                  borderColor = {borderstate === 3 ? "#00000022" : "#FFFFFF"}/>}
+              </div>
+              {quiz === true && nextstate === true && <MainButton text="Next Question" onClick={HandleChange}/>}
+              {resultsstate === true && end === true && <MainButton text="Results" onClick={HandleEnd}/>}
             </div>
           </div>
-          
-        </div>}
-        <Question text={Q}/>
-        <div className="questionCont">
-          {questions === "question1" && <NameInput onKeyUp={Next} onChange={getData}/>}
-          {questions !== "question1" && <QuestionButton
-            className="questbutton"
-            text={buttontexts.option1} 
-            onClick={()=>{setButtonState(1),setBorderState(1),setNext(true),Results(),HandleClick(buttontexts.option1)}}
-            background = {buttonstate === 1 ? "#367A17" : "#FFFFFF33"}
-            borderColor = {borderstate === 1 ? "#367A17" : "#FFFFFF"}/>}
-          {questions !== "question1" && <QuestionButton
-            className="questbutton"
-            text={buttontexts.option2} 
-            onClick={()=>{setButtonState(2),setBorderState(2),setNext(true),Results(),HandleClick(buttontexts.option2)}}
-            background = {buttonstate === 2 ? "#367A17" : "#FFFFFF33"}
-            borderColor = {borderstate === 2 ? "#367A17" : "#FFFFFF"}/>}
-          {questions === "question2" && <QuestionButton 
-            className="questbutton"
-            text={buttontexts.option3} 
-            onClick={()=>{setButtonState(3),setBorderState(3),setNext(true),Results(),HandleClick(buttontexts.option3)}}
-            background = {buttonstate === 3 ? "#367A17" : "#FFFFFF33"}
-            borderColor = {borderstate === 3 ? "#367A17" : "#FFFFFF"}/>}
         </div>
-        {quiz === true && nextstate === true && <MainButton text="Next Question" onClick={HandleChange}/>}
-        {resultsstate === true && end === true && <MainButton text="Results" onClick={HandleEnd}/>}
       </div>
     </div>
+    
       
     
     
