@@ -170,6 +170,7 @@ button:hover{
 
 .navContent {
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width:80vw;
@@ -1018,6 +1019,15 @@ button:hover{
 
 .pesticide {
   margin-top: -30%;
+  display:flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  overflow-x: hidden;
+  width:70vw;
+}
+
+.watering {
   display:flex;
   justify-content: center;
   align-items: left;
