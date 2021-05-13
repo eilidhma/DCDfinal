@@ -3,8 +3,8 @@ import LargeTitles from '../comps/LargeTitles'
 import MainImg from '../comps/MainImg'
 import { useRouter } from 'next/router';
 import Description from '../comps/DescriptiveText';
-// import SmallDescription from '../comps/SmallDescriptive';
-// import Watering from '../comps/Watering';
+import SmallDescription from '../comps/SmallDescriptive';
+import Watering from '../comps/Watering';
 import { useState } from 'react';
 import Logo from '../comps/Logo';
 import Clouds from '../comps/Clouds';

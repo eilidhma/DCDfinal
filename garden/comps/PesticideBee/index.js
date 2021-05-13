@@ -11,11 +11,14 @@ const Cont = styled.div`
   top:${props=>props.top}%;
   animation: smallbee 0.7s infinite alternate;
   position:relative;
+  transition: left 2s, top 2s;
 `;
 const Img = styled.img`
   display:flex;
   object-fit:cover;
   width:100%;
+  opacity:${props=>props.opacity};
+  transition: opacity 2s;
 `;
 
 
@@ -24,9 +27,10 @@ const PestBee = ({
 left=0,
 top=0,
 onClick=()=>{},
+opacity="0.2"
 }) => {
   return <Cont left={left} top={top} className="smallbee">
-    <Img src="smallbee.png"></Img>
+    <Img opacity={opacity} src="smallbee.png"></Img>
   </Cont>
 }
 

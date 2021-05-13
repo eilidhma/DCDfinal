@@ -17,6 +17,7 @@ const Img = styled.img`
   left:${props=>props.left}%;
   top:${props=>props.top}px;
   z-index:1;
+  transition: top 2s, left 2s;
 `;
 
 const Facts = styled.p`

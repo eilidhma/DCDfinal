@@ -7,29 +7,23 @@ const Cont = styled.div`
   align-items: center;
   justify-content: center;
   object-fit:cover;
-  width:40%;
+  width:40vw;
+  animation: can 3s infinite ease-out alternate;
+  margin-bottom: 10%;
 `;
 const Img = styled.img`
   display:flex;
   object-fit:cover;
   width:100%;
-  opacity:${props=>props.opacity}
-`;
-const ClickMe = styled.p`
-  display:flex;
-  font-family: 'Montserrat', sans-serif;
-  font-size:20px;
-  color:white;
-  font-weight:600;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   opacity:${props=>props.opacity};
+  transition: opacity 2s;
 `;
 
 
-const Can = ({
+
+const PestCan = ({
 src="wrap_closed.svg",
-text="Click the wrap!",
-onClick={},
+onClick=()=>{},
 opacity=1
 }) => {
   return <Cont onClick={onClick}>
@@ -37,4 +31,4 @@ opacity=1
   </Cont>
 }
 
-export default Can;
+export default PestCan;

@@ -26,7 +26,9 @@ import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
 import PestBee from '../comps/PesticideBee';
+import PestCan from '../comps/PesticideCan';
 import HandsPlanet from '../comps/HandsPlanet';
+
 
 
 const Info = () => {
@@ -51,7 +53,8 @@ const Info = () => {
   const [strawfact, setStrawFact] = useState(false)
   const [celeryfact, setCelFact] = useState(false)
   const [cucumberfact, setCucFact] = useState(false)
- 
+  const [bee, setBee] = useState(false)
+  const [can, setCan] = useState(true)
 
   const HandleWrap = () => {
     setWrap(!wrapstate)
@@ -123,6 +126,11 @@ const Info = () => {
     setStrawFact(false)
     setCelFact(false)
     setCucFact(true)
+  }
+
+  const Can = () => {
+    setBee(true)
+    setCan(false)
   }
 
   return (
@@ -266,10 +274,28 @@ const Info = () => {
             </div>
 
             <Description text="How YOU can help:"/>
+            <Description text="1. When gardening, don't use harsh pesticides" />
+            <SmallDescription text="Click the pesticide bottle to remove!"/>
             <div className="pesticide">
-              <PestBee left="0" top="50"/>
-              <img className="can" src="pesticide.png" width="50%"/>
-              <MainImg src="tulip.svg"/>
+              <PestBee 
+              left={bee ? "30" : "0"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              <PestBee 
+              left={bee ? "60" : "30"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              <PestBee 
+              left={bee ? "30" : "60"}
+              top="50"
+              opacity={bee ? "1" : "0"}
+              />
+              
+              <PestCan className="can" src="pesticide.png" width="30%" onClick={Can} 
+              opacity={can ? "1" : "0"} />
+              <img src="tulip.svg" width="100%"/>
             </div>
 
 
