@@ -38,7 +38,7 @@ const ImgCont = styled.div`
   align-items: center;
   justify-content: center;
   object-fit:cover;
-  width:10vw;
+  width:8vw;
   
 `;
 const Img = styled.img`
@@ -49,7 +49,7 @@ const Img = styled.img`
 `;
 
 const Title = styled.h3`
-  font-size:0.85rem;
+  font-size:0.7rem;
   margin:0;
   color:${props=>props.color};
 `;

@@ -208,20 +208,20 @@ const Info = () => {
 
           {/* START OF Directory */}
           
-            {mainstate === 0 && <HandsPlanet/>}
             {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
+            {mainstate === 0 && <HandsPlanet/>}
             {mainstate === 0 && <div className="directory">
               <div className="ButtonCont">
-                <ButtonUI text="Sustainability" onClick={Sust} />
-                <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" />
+                <ButtonUI text="1. Sustainability" onClick={Sust} />
+                {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
               </div>
               <div className="ButtonCont">
-                <ButtonUI text="Wellness Benefits" onClick={Well} />
-                <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" />
+                <ButtonUI text="2. Health & Wellness" onClick={Well} />
+                {/* <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" /> */}
               </div>
               <div className="ButtonCont">
-                <ButtonUI text="Saving the Bees" onClick={Bees} />
-                <MenuText text="All about bees- why do we need them, and how can we help support them" />
+                <ButtonUI text="3. Saving the Bees" onClick={Bees} />
+                {/* <MenuText text="All about bees- why do we need them, and how can we help support them" /> */}
               </div>
             </div>}
 
@@ -333,16 +333,16 @@ const Info = () => {
               <PestBee 
                 width="10%"
                 left="60"
-                top={grow ? "60" : "0"}
+                top={grow ? "20" : "0"}
                 opacity={grow ? "1" : "0"}
                 transitionDelay="2"
               />
               <Watering 
               onClick={Water}
-              opacitySmall={grow ? 0 : 1}
-              opacityBig={grow ? 1 : 0}
-              opacityDrop={rotate ? 1 : 0}
-              rotate={rotate ? 70 : 0}
+              opacitySmall={grow ? "0" : "1"}
+              opacityBig={grow ? "1" : "0"}
+              opacityDrop={rotate ? "1" : "0"}
+              rotate={rotate ? "70" : "0"}
               onMouseLeave={Rotate}
               />
             </div>
@@ -352,17 +352,17 @@ const Info = () => {
             <div className="pesticide">
               <PestBee 
               left={bee ? "30" : "0"}
-              top="50"
+              top="25"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "60" : "30"}
-              top="50"
+              top="25"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "30" : "60"}
-              top="50"
+              top="25"
               opacity={bee ? "1" : "0"}
               />
               

@@ -8,6 +8,7 @@ const Cont = styled.div`
   justify-content: center;
   object-fit:cover;
   width:40vw;
+  max-width:250px;
   animation: can 3s infinite ease-out alternate;
   margin-bottom: 10%;
 `;
