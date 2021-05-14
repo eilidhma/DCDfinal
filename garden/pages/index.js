@@ -20,7 +20,6 @@ export default function Home() {
       <div className="app">
         <div className="main">
           <Menu/>
-          <Logo/>
           <div className="content">
             <LargeTitles text="Welcome to"/>
             <MainImg src="logo-white.png" width="43vw"/>

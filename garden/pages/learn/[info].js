@@ -1,180 +1,206 @@
-import LargeTitles from '../comps/LargeTitles';
-import MainImg from '../comps/MainImg';
-import ButtonUI from '../comps/MainButton'
+import LargeTitles from '../../comps/LargeTitles';
+import MainImg from '../../comps/MainImg';
+import ButtonUI from '../../comps/MainButton'
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import Description from '../comps/DescriptiveText';
-import SmallDescription from '../comps/SmallDescriptive';
-import PlantDetailsLarge from '../comps/PlantDetailsLarge';
-import Wrap from '../comps/Wrap';
-import Herbs from '../comps/Herbs';
-import MainButton from '../comps/MainButton';
+import Description from '../../comps/DescriptiveText';
+import SmallDescription from '../../comps/SmallDescriptive';
+import PlantDetailsLarge from '../../comps/PlantDetailsLarge';
+import Wrap from '../../comps/Wrap';
+import Herbs from '../../comps/Herbs';
+import MainButton from '../../comps/MainButton';
 import { VscArrowRight, VscArrowLeft } from 'react-icons/vsc'
-import { titles, veg, fact } from '../data/text';
+import { titles, veg, fact } from '../../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../comps/Logo';
-import VegSlider from '../comps/VegSlider';
-import Ecology from '../comps/Ecology';
-import Brain from '../comps/Brain';
-import Menu from '../comps/HambMenu';
-import MenuText from '../comps/MenuText';
-import Clouds from '../comps/Clouds';
-import Watercan from '../comps/Watercan';
-import GardeningGirl from '../comps/GardeningGirl';
-import Bee from '../comps/Bee';
-import Cart from '../comps/ShoppingCart';
-import Groceries from '../comps/Groceries';
-import PestBee from '../comps/PesticideBee';
-import PestCan from '../comps/PesticideCan';
-import HandsPlanet from '../comps/HandsPlanet';
-import Watering from '../comps/Watering';
-import Back from '../comps/Back';
-import Tabs from '../comps/Tabs';
+import Logo from '../../comps/Logo';
+import VegSlider from '../../comps/VegSlider';
+import Ecology from '../../comps/Ecology';
+import Brain from '../../comps/Brain';
+import Menu from '../../comps/HambMenu';
+import MenuText from '../../comps/MenuText';
+import Clouds from '../../comps/Clouds';
+import Watercan from '../../comps/Watercan';
+import GardeningGirl from '../../comps/GardeningGirl';
+import Bee from '../../comps/Bee';
+import Cart from '../../comps/ShoppingCart';
+import Groceries from '../../comps/Groceries';
+import PestBee from '../../comps/PesticideBee';
+import PestCan from '../../comps/PesticideCan';
+import HandsPlanet from '../../comps/HandsPlanet';
+import Watering from '../../comps/Watering';
+import Tabs from '../../comps/Tabs';
 
 
 
-const Info = () => {
 
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+const [mainstate, setMainState] = useState(0);
+
+// const [navstate, setNavState] = useState(0)
+// const [hover1, setNav1Hover] = useState(false)
+// const [hover2, setNav2Hover] = useState(false)
+// const [hover3, setNav3Hover] = useState(false)
+
+// const [wrapstate, setWrap] = useState(false)
+// const [herbsstate, setHerbs] = useState(false)
+// const [titlestate, setTitle] = useState(titles.info)
+// const [vegimg, setImg] = useState(veg.lettuce)
+// const [vegnumber, setNumber] = useState(fact.number.lettuce)
+// const [vegfact, setFact] = useState(fact.veg.lettuce)
+
+// const [strawberrystate, setStraw] = useState(false)
+// const [celerystate, setCel] = useState(false)
+// const [cucumberstate, setCuc] = useState(false)
+// const [strawfact, setStrawFact] = useState(false)
+// const [celeryfact, setCelFact] = useState(false)
+// const [cucumberfact, setCucFact] = useState(false)
+// const [bee, setBee] = useState(false)
+// const [can, setCan] = useState(true)
+// const [grow, setGrow] = useState(false)
+// const [rotate, setRotate] = useState(false)
+
+
+// const Nav1 = () => {
+//   setNav1Hover(true)
+// }
+// const Nav2 = () => {
+//   setNav2Hover(true)
+// }
+// const Nav3 = () => {
+//   setNav3Hover(true)
+// }
+
+// const HandleWrap = () => {
+//   setWrap(!wrapstate)
+// }
+// const HandleHerbs = () => {
+//   setHerbs(!herbsstate)
+// }
+
+// const HandleVeg = () => {
+//   if (vegimg === veg.lettuce) {
+//     setImg(veg.tomato)
+//     setNumber(fact.number.tomato)
+//     setFact(fact.veg.tomato)
+//   }
+//   if (vegimg === veg.tomato) {
+//     setImg(veg.potato)
+//     setNumber(fact.number.potato)
+//     setFact(fact.veg.potato)
+//   }
+//   if (vegimg === veg.potato) {
+//     setImg(veg.apple)
+//     setNumber(fact.number.apple)
+//     setFact(fact.veg.apple)
+//   }
+//   if (vegimg === veg.apple) {
+//     setImg(veg.banana)
+//     setNumber(fact.number.banana)
+//     setFact(fact.veg.banana)
+//   }
+//   if (vegimg === veg.banana) {
+//     setImg(veg.lettuce)
+//     setNumber(fact.number.lettuce)
+//     setFact(fact.veg.lettuce)
+//   }
+// }
+
+const Sust = () => {
+  setMainState(1)
+  setTitle(titles.sust)
+  window.scrollTo(0, 0);
+}
+
+const Well = () => {
+  setMainState(2)
+  setTitle(titles.well)
+  window.scrollTo(0, 0);
+}
+
+const Bees = () => {
+  setMainState(3)
+  setTitle(titles.bees)
+  window.scrollTo(0, 0);
+}
+
+// const HandleStraw = () =>{
+//   setStraw(true)
+//   setCucFact(false)
+//   setCelFact(false)
+//   setStrawFact(true)
+// }
+// const HandleCel = () =>{
+//   setCel(true)
+//   setStrawFact(false)
+//   setCucFact(false)
+//   setCelFact(true)
+// }
+// const HandleCuc = () =>{
+//   setCuc(true)
+//   setStrawFact(false)
+//   setCelFact(false)
+//   setCucFact(true)
+// }
+
+// const Can = () => {
+//   setBee(true)
+//   setCan(false)
+// }
+
+// const Water = () => {
+//   setGrow(true)
+//   setRotate(true)
+// }
+
+// const Rotate = () => {
+//   setRotate(false)
+// }
+
+const directory = [{
+  title:"Why Grow Food at Home?",
+
+}]
+
+const sust = [{
+  title:"Sustainability",
+}]
+
+const sust = [{
+  title:"Sustainability",
+}]
+
+const title = [{
+  directory:"Why Grow Food at Home?",
+  sust:"Sustainability",
+  well:"Wellness Benefits",
+  bees:"Saving the bees"
+}]
+
+export default function Learn() {
+  
+  const {info} = router.query;
   const router = useRouter()
 
-  const [mainstate, setMainState] = useState(0);
+  if(info === "directory"){
 
-  const [navstate, setNavState] = useState(0)
-  const [hover1, setNav1Hover] = useState(false)
-  const [hover2, setNav2Hover] = useState(false)
-  const [hover3, setNav3Hover] = useState(false)
-
-  const [wrapstate, setWrap] = useState(false)
-  const [herbsstate, setHerbs] = useState(false)
-  const [titlestate, setTitle] = useState(titles.info)
-  const [vegimg, setImg] = useState(veg.lettuce)
-  const [vegnumber, setNumber] = useState(fact.number.lettuce)
-  const [vegfact, setFact] = useState(fact.veg.lettuce)
-
-  const [strawberrystate, setStraw] = useState(false)
-  const [celerystate, setCel] = useState(false)
-  const [cucumberstate, setCuc] = useState(false)
-  const [strawfact, setStrawFact] = useState(false)
-  const [celeryfact, setCelFact] = useState(false)
-  const [cucumberfact, setCucFact] = useState(false)
-  const [bee, setBee] = useState(false)
-  const [can, setCan] = useState(true)
-  const [grow, setGrow] = useState(false)
-  const [rotate, setRotate] = useState(false)
+  }
 
 
-  const Nav1 = () => {
-    setNav1Hover(true)
-  }
-  const Nav2 = () => {
-    setNav2Hover(true)
-  }
-  const Nav3 = () => {
-    setNav3Hover(true)
-  }
-
-  const HandleWrap = () => {
-    setWrap(!wrapstate)
-  }
-  const HandleHerbs = () => {
-    setHerbs(!herbsstate)
-  }
-
-  const HandleVeg = () => {
-    if (vegimg === veg.lettuce) {
-      setImg(veg.tomato)
-      setNumber(fact.number.tomato)
-      setFact(fact.veg.tomato)
-    }
-    if (vegimg === veg.tomato) {
-      setImg(veg.potato)
-      setNumber(fact.number.potato)
-      setFact(fact.veg.potato)
-    }
-    if (vegimg === veg.potato) {
-      setImg(veg.apple)
-      setNumber(fact.number.apple)
-      setFact(fact.veg.apple)
-    }
-    if (vegimg === veg.apple) {
-      setImg(veg.banana)
-      setNumber(fact.number.banana)
-      setFact(fact.veg.banana)
-    }
-    if (vegimg === veg.banana) {
-      setImg(veg.lettuce)
-      setNumber(fact.number.lettuce)
-      setFact(fact.veg.lettuce)
-    }
-  }
-
-  const Sust = () => {
-    setMainState(1)
-    setTitle(titles.sust)
-    window.scrollTo(0, 0);
-  }
-
-  const Well = () => {
-    setMainState(2)
-    setTitle(titles.well)
-    window.scrollTo(0, 0);
-  }
-
-  const Bees = () => {
-    setMainState(3)
-    setTitle(titles.bees)
-    window.scrollTo(0, 0);
-  }
-
-  const HandleStraw = () =>{
-    setStraw(true)
-    setCucFact(false)
-    setCelFact(false)
-    setStrawFact(true)
-  }
-  const HandleCel = () =>{
-    setCel(true)
-    setStrawFact(false)
-    setCucFact(false)
-    setCelFact(true)
-  }
-  const HandleCuc = () =>{
-    setCuc(true)
-    setStrawFact(false)
-    setCelFact(false)
-    setCucFact(true)
-  }
-
-  const Can = () => {
-    setBee(true)
-    setCan(false)
-  }
-
-  const Water = () => {
-    setGrow(true)
-    setRotate(true)
-  }
-
-  const Rotate = () => {
-    setRotate(false)
-  }
 
 
   return (
 
 
-    <div className="infoWrap">
-      <div className="infoBackground"><Clouds /></div>
-      <div className="infoApp">
-        <div className="infoMain">
+    <div className="garden">
+      <div className="background"><Clouds /></div>
+      <div className="app">
+        <div className="main">
           
           <Menu/>
 
-          <div className="infoContent">
+          
+
+          <div className="content">
         
           {/* START OF REUSABLE */}
           {mainstate !== 0 && <div>
@@ -208,20 +234,20 @@ const Info = () => {
 
           {/* START OF Directory */}
           
-            {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
             {mainstate === 0 && <HandsPlanet/>}
+            {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
             {mainstate === 0 && <div className="directory">
               <div className="ButtonCont">
-                <ButtonUI text="1. Sustainability" onClick={Sust} />
-                {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
+                <ButtonUI text="Sustainability" onClick={Sust} />
+                <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" />
               </div>
               <div className="ButtonCont">
-                <ButtonUI text="2. Health & Wellness" onClick={Well} />
-                {/* <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" /> */}
+                <ButtonUI text="Wellness Benefits" onClick={Well} />
+                <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" />
               </div>
               <div className="ButtonCont">
-                <ButtonUI text="3. Saving the Bees" onClick={Bees} />
-                {/* <MenuText text="All about bees- why do we need them, and how can we help support them" /> */}
+                <ButtonUI text="Saving the Bees" onClick={Bees} />
+                <MenuText text="All about bees- why do we need them, and how can we help support them" />
               </div>
             </div>}
 
@@ -333,16 +359,16 @@ const Info = () => {
               <PestBee 
                 width="10%"
                 left="60"
-                top={grow ? "20" : "0"}
+                top={grow ? "60" : "0"}
                 opacity={grow ? "1" : "0"}
                 transitionDelay="2"
               />
               <Watering 
               onClick={Water}
-              opacitySmall={grow ? "0" : "1"}
-              opacityBig={grow ? "1" : "0"}
-              opacityDrop={rotate ? "1" : "0"}
-              rotate={rotate ? "70" : "0"}
+              opacitySmall={grow ? 0 : 1}
+              opacityBig={grow ? 1 : 0}
+              opacityDrop={rotate ? 1 : 0}
+              rotate={rotate ? 70 : 0}
               onMouseLeave={Rotate}
               />
             </div>
@@ -352,17 +378,17 @@ const Info = () => {
             <div className="pesticide">
               <PestBee 
               left={bee ? "30" : "0"}
-              top="25"
+              top="50"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "60" : "30"}
-              top="25"
+              top="50"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "30" : "60"}
-              top="25"
+              top="50"
               opacity={bee ? "1" : "0"}
               />
               
@@ -401,4 +427,4 @@ const Info = () => {
   )
 }
 
-export default Info
+

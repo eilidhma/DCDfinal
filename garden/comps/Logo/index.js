@@ -12,7 +12,7 @@ const ImgCont = styled.div`
   object-fit:cover;
   position:absolute;
   top:5px;
-  right:5px;
+  right:20px;
 `;
 
 const Img = styled.img`

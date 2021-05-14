@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cont = styled.div``;
+const Cont = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60vw;
+    max-width:200px;
+`;
 
 const Bee = () => {
     return <Cont>
-        <svg width="476" height="431" id="bee" viewBox="0 0 476 431" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" id="bee" viewBox="0 0 476 431" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="bee-anim 1" clip-path="url(#clip0)">
             <g id="bee">
             <g id="wing-right">

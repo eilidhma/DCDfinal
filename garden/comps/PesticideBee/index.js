@@ -8,7 +8,7 @@ const Cont = styled.div`
   object-fit:cover;
   width:${props=>props.width};
   left:${props=>props.left}%;
-  top:${props=>props.top}%;
+  top:${props=>props.top}vh;
   animation: smallbee 0.7s infinite alternate;
   position:relative;
   transition: left 2s, top 2s;
@@ -16,6 +16,7 @@ const Cont = styled.div`
 `;
 const Img = styled.img`
   display:flex;
+  position:relative;
   object-fit:cover;
   width:100%;
   opacity:${props=>props.opacity};

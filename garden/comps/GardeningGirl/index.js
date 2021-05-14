@@ -5,11 +5,12 @@ const Cont = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
+max-width:200px;
 `;
 
 const GardeningGirl = () => {
     return <Cont>
-        <svg id="gardening-girl" width="50%" height="100%" viewBox="0 0 251 486" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="gardening-girl" width="60%" height="100%" viewBox="0 0 251 486" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="gardening-girl">
             <g id="girl">
             <g id="bandana-back">
