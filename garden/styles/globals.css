@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Permanent+Marker&display=swap');
+
 html,
 body {
   padding: 0;
@@ -10,7 +11,6 @@ body {
   overflow-x: hidden;
   background-color:rgb(163,211,238); 
   width: 100vw;
-  height:100vh;
   cursor: url("../public/leaf.png"), auto;
 }
 /* need to add this into the code for the clouds animation
@@ -29,25 +29,63 @@ button:hover{
   box-sizing: border-box;
   text-align: center;
 }
+
+.infoBackground{
+  width:100vw;
+  height:100%;
+  position: fixed;
+  z-index: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .garden{
   width:100vw;
   height: 100vh;
+  z-index:1;
 }
+
+.infoWrap{
+  width:100vw;
+  height: 100%;
+  z-index:1;
+}
+
 .app{
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  z-index:2;
+  box-sizing: border-box;
+}
+.infoApp{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  z-index:2;
   box-sizing: border-box;
 }
 
 .main {
-  /* border: 10px solid white;
-  border-radius: 15px; */
   width: 100vw;
   height: 100%;
-  z-index: 1;
-  /* margin-top: 2em; */
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: -webkit-linear-gradient(45deg,rgba(208,131,114,0.75),rgba(179,88,107,0.75),rgba(87,160,214,0.75),rgba(67,128,40,0.75),rgba(255,207,0,0.75));
+	background-size: 400% 250%;
+	animation: gradient 15s ease-in-out infinite;
+  overflow-x: hidden;
+}
+
+.infoMain {
+  width: 100vw;
+  height: 100%;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -61,7 +99,18 @@ button:hover{
 .content {
   width: 90vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 4;
+  /* padding-bottom:5%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoContent {
+  width: 90vw;
+  height: 100%;
+  z-index: 4;
   /* padding-bottom:5%; */
   display: flex;
   flex-direction: column;
@@ -176,7 +225,7 @@ button:hover{
 
 .loading {
   width:100vw;
-  height:100vw;
+  height:100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

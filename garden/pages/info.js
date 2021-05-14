@@ -115,7 +115,6 @@ const Info = () => {
   const Sust = () => {
     setMainState(1)
     setTitle(titles.sust)
-    console.log(scrollY)
     window.scrollTo(0, 0);
   }
 
@@ -123,14 +122,12 @@ const Info = () => {
     setMainState(2)
     setTitle(titles.well)
     window.scrollTo(0, 0);
-    console.log(scrollY)
   }
 
   const Bees = () => {
     setMainState(3)
     setTitle(titles.bees)
     window.scrollTo(0, 0);
-    console.log(scrollY)
   }
 
   const HandleStraw = () =>{
@@ -170,14 +167,14 @@ const Info = () => {
   return (
 
 
-    <div className="garden">
-      <div className="background"><Clouds /></div>
-      <div className="app">
-        <div className="main">
+    <div className="infoWrap">
+      <div className="infoBackground"><Clouds /></div>
+      <div className="infoApp">
+        <div className="infoMain">
           
           <Menu/>
 
-          <div className="content">
+          <div className="infoContent">
         
           {/* START OF REUSABLE */}
           {mainstate !== 0 && <div>

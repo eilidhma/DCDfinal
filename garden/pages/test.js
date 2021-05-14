@@ -18,7 +18,6 @@ export default function Home() {
       <StatusBar percent="25%" width="30%"/>
       <MedTitles text="Calculating your results.." />
       <Clock />
-      
       <Menu color="black"/>
       <VegSlider/>
     </div>

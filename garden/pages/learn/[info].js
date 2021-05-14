@@ -1,166 +1,191 @@
-import LargeTitles from '../comps/LargeTitles';
-import MainImg from '../comps/MainImg';
-import ButtonUI from '../comps/MainButton'
+import LargeTitles from '../../comps/LargeTitles';
+import MainImg from '../../comps/MainImg';
+import ButtonUI from '../../comps/MainButton'
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import Description from '../comps/DescriptiveText';
-import SmallDescription from '../comps/SmallDescriptive';
-import PlantDetailsLarge from '../comps/PlantDetailsLarge';
-import Wrap from '../comps/Wrap';
-import Herbs from '../comps/Herbs';
-import MainButton from '../comps/MainButton';
+import Description from '../../comps/DescriptiveText';
+import SmallDescription from '../../comps/SmallDescriptive';
+import PlantDetailsLarge from '../../comps/PlantDetailsLarge';
+import Wrap from '../../comps/Wrap';
+import Herbs from '../../comps/Herbs';
+import MainButton from '../../comps/MainButton';
 import { VscArrowRight, VscArrowLeft } from 'react-icons/vsc'
-import { titles, veg, fact } from '../data/text';
+import { titles, veg, fact } from '../../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../comps/Logo';
-import VegSlider from '../comps/VegSlider';
-import Ecology from '../comps/Ecology';
-import Brain from '../comps/Brain';
-import Menu from '../comps/HambMenu';
-import MenuText from '../comps/MenuText';
-import Clouds from '../comps/Clouds';
-import Watercan from '../comps/Watercan';
-import GardeningGirl from '../comps/GardeningGirl';
-import Bee from '../comps/Bee';
-import Cart from '../comps/ShoppingCart';
-import Groceries from '../comps/Groceries';
-import PestBee from '../comps/PesticideBee';
-import PestCan from '../comps/PesticideCan';
-import HandsPlanet from '../comps/HandsPlanet';
-import Watering from '../comps/Watering';
-import Tabs from '../comps/Tabs';
+import Logo from '../../comps/Logo';
+import VegSlider from '../../comps/VegSlider';
+import Ecology from '../../comps/Ecology';
+import Brain from '../../comps/Brain';
+import Menu from '../../comps/HambMenu';
+import MenuText from '../../comps/MenuText';
+import Clouds from '../../comps/Clouds';
+import Watercan from '../../comps/Watercan';
+import GardeningGirl from '../../comps/GardeningGirl';
+import Bee from '../../comps/Bee';
+import Cart from '../../comps/ShoppingCart';
+import Groceries from '../../comps/Groceries';
+import PestBee from '../../comps/PesticideBee';
+import PestCan from '../../comps/PesticideCan';
+import HandsPlanet from '../../comps/HandsPlanet';
+import Watering from '../../comps/Watering';
+import Tabs from '../../comps/Tabs';
 
 
+
+
+const [mainstate, setMainState] = useState(0);
+
+// const [navstate, setNavState] = useState(0)
+// const [hover1, setNav1Hover] = useState(false)
+// const [hover2, setNav2Hover] = useState(false)
+// const [hover3, setNav3Hover] = useState(false)
+
+// const [wrapstate, setWrap] = useState(false)
+// const [herbsstate, setHerbs] = useState(false)
+// const [titlestate, setTitle] = useState(titles.info)
+// const [vegimg, setImg] = useState(veg.lettuce)
+// const [vegnumber, setNumber] = useState(fact.number.lettuce)
+// const [vegfact, setFact] = useState(fact.veg.lettuce)
+
+// const [strawberrystate, setStraw] = useState(false)
+// const [celerystate, setCel] = useState(false)
+// const [cucumberstate, setCuc] = useState(false)
+// const [strawfact, setStrawFact] = useState(false)
+// const [celeryfact, setCelFact] = useState(false)
+// const [cucumberfact, setCucFact] = useState(false)
+// const [bee, setBee] = useState(false)
+// const [can, setCan] = useState(true)
+// const [grow, setGrow] = useState(false)
+// const [rotate, setRotate] = useState(false)
+
+
+// const Nav1 = () => {
+//   setNav1Hover(true)
+// }
+// const Nav2 = () => {
+//   setNav2Hover(true)
+// }
+// const Nav3 = () => {
+//   setNav3Hover(true)
+// }
+
+// const HandleWrap = () => {
+//   setWrap(!wrapstate)
+// }
+// const HandleHerbs = () => {
+//   setHerbs(!herbsstate)
+// }
+
+// const HandleVeg = () => {
+//   if (vegimg === veg.lettuce) {
+//     setImg(veg.tomato)
+//     setNumber(fact.number.tomato)
+//     setFact(fact.veg.tomato)
+//   }
+//   if (vegimg === veg.tomato) {
+//     setImg(veg.potato)
+//     setNumber(fact.number.potato)
+//     setFact(fact.veg.potato)
+//   }
+//   if (vegimg === veg.potato) {
+//     setImg(veg.apple)
+//     setNumber(fact.number.apple)
+//     setFact(fact.veg.apple)
+//   }
+//   if (vegimg === veg.apple) {
+//     setImg(veg.banana)
+//     setNumber(fact.number.banana)
+//     setFact(fact.veg.banana)
+//   }
+//   if (vegimg === veg.banana) {
+//     setImg(veg.lettuce)
+//     setNumber(fact.number.lettuce)
+//     setFact(fact.veg.lettuce)
+//   }
+// }
+
+const Sust = () => {
+  setMainState(1)
+  setTitle(titles.sust)
+  window.scrollTo(0, 0);
+}
+
+const Well = () => {
+  setMainState(2)
+  setTitle(titles.well)
+  window.scrollTo(0, 0);
+}
+
+const Bees = () => {
+  setMainState(3)
+  setTitle(titles.bees)
+  window.scrollTo(0, 0);
+}
+
+// const HandleStraw = () =>{
+//   setStraw(true)
+//   setCucFact(false)
+//   setCelFact(false)
+//   setStrawFact(true)
+// }
+// const HandleCel = () =>{
+//   setCel(true)
+//   setStrawFact(false)
+//   setCucFact(false)
+//   setCelFact(true)
+// }
+// const HandleCuc = () =>{
+//   setCuc(true)
+//   setStrawFact(false)
+//   setCelFact(false)
+//   setCucFact(true)
+// }
+
+// const Can = () => {
+//   setBee(true)
+//   setCan(false)
+// }
+
+// const Water = () => {
+//   setGrow(true)
+//   setRotate(true)
+// }
+
+// const Rotate = () => {
+//   setRotate(false)
+// }
+
+const directory = [{
+  title:"Why Grow Food at Home?",
+
+}]
+
+const sust = [{
+  title:"Sustainability",
+}]
+
+const sust = [{
+  title:"Sustainability",
+}]
+
+const title = [{
+  directory:"Why Grow Food at Home?",
+  sust:"Sustainability",
+  well:"Wellness Benefits",
+  bees:"Saving the bees"
+}]
 
 export default function Learn() {
-
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+  
+  const {info} = router.query;
   const router = useRouter()
 
-  const [mainstate, setMainState] = useState(0);
+  if(info === "directory"){
 
-  const [navstate, setNavState] = useState(0)
-  const [hover1, setNav1Hover] = useState(false)
-  const [hover2, setNav2Hover] = useState(false)
-  const [hover3, setNav3Hover] = useState(false)
-
-  const [wrapstate, setWrap] = useState(false)
-  const [herbsstate, setHerbs] = useState(false)
-  const [titlestate, setTitle] = useState(titles.info)
-  const [vegimg, setImg] = useState(veg.lettuce)
-  const [vegnumber, setNumber] = useState(fact.number.lettuce)
-  const [vegfact, setFact] = useState(fact.veg.lettuce)
-
-  const [strawberrystate, setStraw] = useState(false)
-  const [celerystate, setCel] = useState(false)
-  const [cucumberstate, setCuc] = useState(false)
-  const [strawfact, setStrawFact] = useState(false)
-  const [celeryfact, setCelFact] = useState(false)
-  const [cucumberfact, setCucFact] = useState(false)
-  const [bee, setBee] = useState(false)
-  const [can, setCan] = useState(true)
-  const [grow, setGrow] = useState(false)
-  const [rotate, setRotate] = useState(false)
+  }
 
 
-  const Nav1 = () => {
-    setNav1Hover(true)
-  }
-  const Nav2 = () => {
-    setNav2Hover(true)
-  }
-  const Nav3 = () => {
-    setNav3Hover(true)
-  }
-
-  const HandleWrap = () => {
-    setWrap(!wrapstate)
-  }
-  const HandleHerbs = () => {
-    setHerbs(!herbsstate)
-  }
-
-  const HandleVeg = () => {
-    if (vegimg === veg.lettuce) {
-      setImg(veg.tomato)
-      setNumber(fact.number.tomato)
-      setFact(fact.veg.tomato)
-    }
-    if (vegimg === veg.tomato) {
-      setImg(veg.potato)
-      setNumber(fact.number.potato)
-      setFact(fact.veg.potato)
-    }
-    if (vegimg === veg.potato) {
-      setImg(veg.apple)
-      setNumber(fact.number.apple)
-      setFact(fact.veg.apple)
-    }
-    if (vegimg === veg.apple) {
-      setImg(veg.banana)
-      setNumber(fact.number.banana)
-      setFact(fact.veg.banana)
-    }
-    if (vegimg === veg.banana) {
-      setImg(veg.lettuce)
-      setNumber(fact.number.lettuce)
-      setFact(fact.veg.lettuce)
-    }
-  }
-
-  const Sust = () => {
-    setMainState(1)
-    setTitle(titles.sust)
-    window.scrollTo(0, 0);
-  }
-
-  const Well = () => {
-    setMainState(2)
-    setTitle(titles.well)
-    window.scrollTo(0, 0);
-  }
-
-  const Bees = () => {
-    setMainState(3)
-    setTitle(titles.bees)
-    window.scrollTo(0, 0);
-  }
-
-  const HandleStraw = () =>{
-    setStraw(true)
-    setCucFact(false)
-    setCelFact(false)
-    setStrawFact(true)
-  }
-  const HandleCel = () =>{
-    setCel(true)
-    setStrawFact(false)
-    setCucFact(false)
-    setCelFact(true)
-  }
-  const HandleCuc = () =>{
-    setCuc(true)
-    setStrawFact(false)
-    setCelFact(false)
-    setCucFact(true)
-  }
-
-  const Can = () => {
-    setBee(true)
-    setCan(false)
-  }
-
-  const Water = () => {
-    setGrow(true)
-    setRotate(true)
-  }
-
-  const Rotate = () => {
-    setRotate(false)
-  }
 
 
   return (

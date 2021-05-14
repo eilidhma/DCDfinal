@@ -11,7 +11,7 @@ max-width:200px;
 
 const HandsPlanet = () => {
     return <Cont>
-        <svg width="65vw" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="25vw" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="hands-planet 1" clip-path="url(#clip0)">
             <g id="hands-planet">
             <g id="rays">
