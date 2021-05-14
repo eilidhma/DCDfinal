@@ -1091,6 +1091,13 @@ button:hover{
   width:70vw;
 }
 
+.tulips {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:40vw;
+}
+
 .watering {
   display:flex;
   justify-content: center;

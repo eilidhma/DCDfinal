@@ -352,23 +352,23 @@ const Info = () => {
             <div className="pesticide">
               <PestBee 
               left={bee ? "30" : "0"}
-              top="25"
+              top="30"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "60" : "30"}
-              top="25"
+              top="30"
               opacity={bee ? "1" : "0"}
               />
               <PestBee 
               left={bee ? "30" : "60"}
-              top="25"
+              top="30"
               opacity={bee ? "1" : "0"}
               />
               
               <PestCan className="can" src="pesticide.png" width="30%" onClick={Can} 
               opacity={can ? "1" : "0"} />
-              <img src="tulip.svg" width="100%"/>
+                <img src="tulip.svg" width="100%"/>
             </div>
 
 
