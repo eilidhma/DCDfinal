@@ -8,6 +8,7 @@ const Cont = styled.div`
     position: absolute;
     left:5px;
     top:5px;
+    z-index:2;
 `;
 const MenuIcon = styled.div`
     color:${props=>props.color};

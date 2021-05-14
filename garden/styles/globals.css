@@ -8,7 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-
   background-color:rgb(163,211,238); 
   width: 100vw;
   height:100vh;
@@ -97,10 +96,26 @@ button:hover{
   align-items: center;
 }
 
-.backButton{
-  position:fixed;
-  top:20px;
-  left:50px;
+/* @media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+} */
+
+.infoNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:70vw;
+  margin-top: 5vh;
 }
 
 .quiz {
@@ -226,8 +241,8 @@ span {
 button:focus, input:focus { outline: none; }
 
 button:hover{
-  color:black;
-  border-color:black;
+  color:#000000;
+  border-color:#000000;
 }
 
 

@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cont = styled.div``;
+const Cont = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+width:65vw;
+max-width:200px;
+`;
 
 const HandsPlanet = () => {
     return <Cont>
-        <svg width="360" height="440" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="65vw" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="hands-planet 1" clip-path="url(#clip0)">
             <g id="hands-planet">
             <g id="rays">

@@ -29,12 +29,11 @@ import PestBee from '../comps/PesticideBee';
 import PestCan from '../comps/PesticideCan';
 import HandsPlanet from '../comps/HandsPlanet';
 import Watering from '../comps/Watering';
-import Back from '../comps/Back';
 import Tabs from '../comps/Tabs';
 
 
 
-const Info = () => {
+export default function Learn() {
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -115,7 +114,6 @@ const Info = () => {
   const Sust = () => {
     setMainState(1)
     setTitle(titles.sust)
-    console.log(scrollY)
     window.scrollTo(0, 0);
   }
 
@@ -123,14 +121,12 @@ const Info = () => {
     setMainState(2)
     setTitle(titles.well)
     window.scrollTo(0, 0);
-    console.log(scrollY)
   }
 
   const Bees = () => {
     setMainState(3)
     setTitle(titles.bees)
     window.scrollTo(0, 0);
-    console.log(scrollY)
   }
 
   const HandleStraw = () =>{
@@ -176,6 +172,8 @@ const Info = () => {
         <div className="main">
           
           <Menu/>
+
+          
 
           <div className="content">
         
@@ -404,4 +402,4 @@ const Info = () => {
   )
 }
 
-export default Info
+

@@ -7,12 +7,14 @@ import Clock from '../comps/Clock'
 import VegSlider from '../comps/VegSlider'
 import Menu from '../comps/HambMenu'
 import { render } from 'react-dom';
+import Tabs from '../comps/Tabs'
 
 
 
 export default function Home() {
   return (
     <div>
+      <Tabs/>
       <StatusBar percent="25%" width="30%"/>
       <MedTitles text="Calculating your results.." />
       <Clock />
