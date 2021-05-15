@@ -15,6 +15,7 @@ import Garden from '../../comps/Garden';
 import Description from '../../comps/DescriptiveText';
 import Back from '../../comps/Back';
 
+//wanna make this state change ideally
 
 var key=""
 var title=""
