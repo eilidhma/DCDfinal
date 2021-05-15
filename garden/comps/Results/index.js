@@ -10,7 +10,7 @@ const Cont = styled.div`
   flex-direction:column;
   align-items:center;
   height: ${props => props.height}px;
-  width:5em;
+  width:20%;
   min-width: 450px;
   border-radius:15px;
   border:3px solid white;
@@ -115,7 +115,7 @@ const BeeBadge = styled.div`
   position: relative;
   top:60px;
   z-index:2;
-  left: 89%;
+  left: 87%;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 
@@ -136,9 +136,9 @@ const Options = ({
 }) => {
   const [open, setOpen] = useState(false);
 
-  var height = 300, text = "Learn more"
+  var height = 290, text = "Learn more"
   if (open) {
-    height = 600;
+    height = 550;
     text = "Hide";
   }
 
