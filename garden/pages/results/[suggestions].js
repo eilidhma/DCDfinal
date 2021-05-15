@@ -25,6 +25,9 @@ const TempPotsProduce = [
         src: "../blackberry.svg",
         fact: "High in antioxidants!",
         bee: true,
+
+        sun: "Prefers full sun",
+        water: "Keep moist"
     },
     {
         title: "Raspberries",
@@ -34,7 +37,9 @@ const TempPotsProduce = [
         maintenance: "medium",
         src: "../raspberry.png",
         fact: "Can symbolize kindness!",
-        bee: true
+        bee: true,
+        sun: "Prefers full sun",
+        water: "Keep moist"
     },
     {
         title: "Blueberries",
@@ -44,7 +49,9 @@ const TempPotsProduce = [
         maintenance: "high",
         src: "../blueberry.png",
         fact: "One of the only naturally blue foods!",
-        bee: true
+        bee: true,
+        sun: "Prefers full sun",
+        water: "Keep moist"
     }
 ];
 
@@ -57,7 +64,9 @@ const TempPotsFlowers = [
         maintenance: "low",
         src: "../milkweed.png",
         fact: "Poisonous- Caution!",
-        bee: true
+        bee: true,
+        sun: "Needs full sun",
+        water: 'When top inch of soil is dry'
     },
     {
         title: "Daisies",
@@ -67,7 +76,9 @@ const TempPotsFlowers = [
         maintenance: "medium",
         src: "../daisy.svg",
         fact: "Found everywhere on eath but Antarctica!",
-        bee: true
+        bee: true,
+        sun: "Needs full sun",
+        water: "One to two inches a week"
     },
     {
         title: "Coneflowers",
@@ -77,7 +88,9 @@ const TempPotsFlowers = [
         maintenance: "high",
         src: "../coneflower.svg",
         fact: "Produce chemicals to prevent growth in competing plants!",
-        bee: true
+        bee: true,
+        sun: "Needs full to partial sun",
+        water: "Drought tolerant! But will thrive with the occasional water"
     }
 ];
 
@@ -90,17 +103,21 @@ const TempGroundFlowers = [
         maintenance: "low",
         src: "../witchhazel.png",
         fact: "Deer resistant!",
-        bee: true
+        bee: true,
+        sun: "Needs full to partial sun",
+        water: "Can survive on rainfall alone!"
     },
     {
-        title: "Lungwort", 
+        title: "Lungwort",
         climate: "temperate",
         goodIn: "ground",
         category: "flowers",
         maintenance: "medium",
         src: "../lungwort.png",
         fact: "Gets its namesake from its unique leaf structure!",
-        bee: true
+        bee: true,
+        sun: "Needs full to partial sun",
+        water: "When soil is completly dry"
     },
     {
         title: "Sunflower",
@@ -110,7 +127,9 @@ const TempGroundFlowers = [
         maintenance: "high",
         src: "../sunflower.svg",
         fact: "Tallest sunflower recorded was over 30 feet tall!",
-        bee: false
+        bee: false,
+        sun: "Needs full sun",
+        water: "Throughly water once a week"
     },
 ];
 
@@ -123,7 +142,9 @@ const TempGroundProduce = [
         maintenance: "low",
         src: "../carrot.png",
         fact: "People have been growing carrots for over 5,000 years!",
-        bee: true
+        bee: true,
+        sun: "Prefers full sun but can manage with partial",
+        water: "Throughly water once a week"
     },
     {
         title: "Wheat",
@@ -133,7 +154,9 @@ const TempGroundProduce = [
         maintenance: "low",
         src: "../wheat.png",
         fact: "Was first planted in 1777 as a hobby crop!",
-        bee: false
+        bee: false,
+        sun: "For best results, full sun is required",
+        water: "Water once a week, mist on hot days"
     },
     {
         title: "Sweet corn",
@@ -143,7 +166,9 @@ const TempGroundProduce = [
         maintenance: " high",
         src: "../sweetcorn.png",
         fact: "Leaves have been used as chewing gum!",
-        bee: false
+        bee: false,
+        sun: "Needs full sun",
+        water: "Alternate between a small water and a big water every week"
     }
 ];
 
@@ -156,7 +181,9 @@ const TropPotsProduce = [
         maintenance: "low",
         src: "../bokchoy.png",
         fact: "Has been grown in China for over 5,000 years!",
-        bee: false
+        bee: false,
+        sun: "Grows best in partial shade",
+        water: "Once a week, monitor to ensure soil remains moist"
     },
     {
         title: "Eggplant",
@@ -166,7 +193,9 @@ const TropPotsProduce = [
         maintenance: "medium",
         src: "../eggplant.png",
         fact: "Eggplants aren't really veggies- they're berries!",
-        bee: false
+        bee: false,
+        sun: "Prefers full sun, can manage with partial sun",
+        water: "Throughly water once a week"
     },
     {
         title: "Rice",
@@ -176,7 +205,9 @@ const TropPotsProduce = [
         maintenance: "high",
         src: "../rice.png",
         fact: "The oldest known food that is still widely consumed today!",
-        bee: false
+        bee: false,
+        sun: "Needs full sun",
+        water: "Give lots of water- soil should always be moist"
     }
 ];
 
@@ -189,7 +220,9 @@ const TropPotsFlowers = [
         maintenance: "low",
         src: "../anthurium.png",
         fact: "Symbolizes hospitality!",
-        bee: false
+        bee: false,
+        sun: "Prefers partial sun, can survive low light",
+        water: "Once a week, mist occasionally"
     },
     {
         title: "Cannabis",
@@ -199,7 +232,9 @@ const TropPotsFlowers = [
         maintenance: "medium",
         src: "../cannabis.png",
         fact: "Great chronic pain reliever!",
-        bee: true
+        bee: true,
+        sun: "Prefers full sun",
+        water: "When top inch of soil feels dry"
     },
     {
         title: "Hibiscus",
@@ -209,7 +244,9 @@ const TropPotsFlowers = [
         maintenance: "high",
         src: "../hibiscus.png",
         fact: "Both its buds and flowers are edible!",
-        bee: true
+        bee: true,
+        sun: "Needs full sun",
+        water: "Keep moist"
     }
 ];
 
@@ -223,7 +260,9 @@ const TropGroundFlowers = [
         maintenance: "low",
         src: "../cosmos.png",
         fact: "Can grow up to 3-6 feet tall!",
-        bee: true
+        bee: true,
+        sun: "Prefers full sun",
+        water: "Let soil dry before watering"
     },
     {
         title: "Chrysanthemum",
@@ -233,7 +272,10 @@ const TropGroundFlowers = [
         maintenance: "medium",
         src: "../chrysanthemum.png",
         fact: "Chrysanthemum tea has anti-viral properties!",
-        bee: false
+        bee: false,
+        sun: "Prefers full sun",
+        water: "Once a week, mist occasionally"
+
     },
     {
         title: "Angels Trumpet",
@@ -243,7 +285,9 @@ const TropGroundFlowers = [
         maintenance: "high",
         src: "../angelstrumpet.png",
         fact: "Grows in the form of a bush or small tree up to 36 feet!",
-        bee: false
+        bee: false,
+        sun: "Prefers partial sun to low light",
+        water: "Throughly water once a week"
     }
 ];
 
@@ -256,7 +300,9 @@ const TropGroundProduce = [
         maintenance: "low",
         src: "../chinesecabbage.png",
         fact: "Cousins with bok choy!",
-        bee: false
+        bee: false,
+        sun: "Grows best in partial shade",
+        water: "Once a week, monitor to ensure soil remains moist"
     },
     {
         title: "Pumpkin",
@@ -266,7 +312,9 @@ const TropGroundProduce = [
         maintenance: "medium",
         src: "../pumpkin.png",
         fact: "The word pumpkin first showed up in Cinderella!",
-        bee: false
+        bee: false,
+        sun: "Can thrive in any light",
+        water: "Keep moist"
     },
     {
         title: "Banana Tree",
@@ -276,7 +324,9 @@ const TropGroundProduce = [
         maintenance: "high",
         src: "../bananas.png",
         fact: "The worlds largest herb!",
-        bee: false
+        bee: false,
+        sun: "Prefers full sun",
+        water: "One inch of water weekly"
     }
 ];
 
@@ -289,7 +339,9 @@ const AridPotsProduce = [
         maintenance: "low",
         src: "../greenbeans.png",
         fact: "Can also be yellow, purple, or even speckled red!",
-        bee: false
+        bee: false,
+        sun: "Prefers full sun, can manage with partial sun",
+        water: "Give a half inch of water daily"
     },
     {
         title: "Tomatoe",
@@ -299,7 +351,9 @@ const AridPotsProduce = [
         maintenance: "moderate",
         src: "../tomatoplant.png",
         fact: "The worlds most popular fruit!",
-        bee: false
+        bee: false,
+        sun: "Grows best in partial shade",
+        water: "Once a week, water between one to two inches"
     },
     {
         title: "Basil",
@@ -309,7 +363,9 @@ const AridPotsProduce = [
         maintenance: "high",
         src: "../basil.png",
         fact: "Belongs to the mint family!",
-        bee: false
+        bee: false,
+        sun: "Grows best in all day partial shade",
+        water: "Once a week, mist daily to ensure soil remains moist"
     }
 ];
 
@@ -322,7 +378,9 @@ const AridPotsFlowers = [
         maintenance: "low",
         src: "../sedum.png",
         fact: "Produce star-shaped flowers!",
-        bee: true
+        bee: true,
+        sun: "Can tolerate any level of sun but will thrive in full sun",
+        water: "Drought tolerant! Water when soil is fully dry"
     },
     {
         title: "English Lavender",
@@ -332,7 +390,9 @@ const AridPotsFlowers = [
         maintenance: "moderate",
         src: "../lavendar.png",
         fact: "Used for perfume before baths were common practice!",
-        bee: true
+        bee: true,
+        sun: "Needs full sun",
+        water: "Drought tolerant! Water when soil is fully dry"
     },
     {
         title: "Yucca",
@@ -342,7 +402,9 @@ const AridPotsFlowers = [
         maintenance: "high",
         src: "../yuccaR.svg",
         fact: "Can bear edible fruit!",
-        bee: true
+        bee: true,
+        sun: "Thrives in full sun or bright, indirect sun",
+        water: "Drought tolerant! Water when top half of soil is fully dry"
     }
 ];
 
@@ -355,7 +417,9 @@ const AridGroundFlowers = [
         maintenance: "low",
         src: "../firecracker.png",
         fact: "A favourite amung hummingbirds!",
-        bee: true
+        bee: true,
+        sun: "Can tolerate any level of sun but will thrive in full sun",
+        water: "When top half of soil is fully dry"
     },
     {
         title: "Purslane",
@@ -365,7 +429,9 @@ const AridGroundFlowers = [
         maintenance: "medium",
         src: "../purslane.png",
         fact: "Can bloom year round!",
-        bee: true
+        bee: true,
+        sun: "Needs full sun",
+        water: "Water thoroughly once a week"
     },
     {
         title: "Phlox",
@@ -375,7 +441,9 @@ const AridGroundFlowers = [
         maintenance: "high",
         src: "../phlox.png",
         fact: "Can be used to help with indigestion!",
-        bee: true
+        bee: true,
+        sun: "Can tolerate any level of sun but will thrive in partial sun",
+        water: "Keep soil moist"
     }
 ];
 
@@ -388,7 +456,9 @@ const AridGroundProduce = [
         maintenance: "low",
         src: "../agave.png",
         fact: "Lives 10-25 years, but only flowers once!",
-        bee: false
+        bee: false,
+        sun: "Can tolerate partial sun but will thrive in full sun",
+        water: "Drought tolerant! Water two to three times per month"
     },
     {
         title: "Prickly Pear",
@@ -398,7 +468,9 @@ const AridGroundProduce = [
         maintenance: "medium",
         src: "../pricklypear.png",
         fact: "Also known as tuna!",
-        bee: false
+        bee: false,
+        sun: "Needs full sun",
+        water: "Drought tolerant! Water one to two times per month"
     },
     {
         title: "Pomegranate",
@@ -408,7 +480,9 @@ const AridGroundProduce = [
         maintenance: "high",
         src: "../pomegranate.png",
         fact: "A super healthy, super fruit!",
-        bee: false
+        bee: false,
+        sun: "Prefers full sun, can tolerate partial sun",
+        water: "Can survive on rainwater alone!"
     }
 ];
 
@@ -416,16 +490,18 @@ const AridGroundProduce = [
 
 export default function ResultsTEST() {
 
-    const[choices, setChoices] = useState({
-        climate:null,
-        maintenance:null,
-        location:null,
-        type:null
+    const [choices, setChoices] = useState({
+        climate: null,
+        maintenance: null,
+        location: null,
+        type: null
     })
     const [name, setName] = useState(null)
 
+
     const [cardstate, setCardState] = useState(false)
     
+
 
     useEffect(() => {
         AOS.init({});
@@ -484,13 +560,13 @@ export default function ResultsTEST() {
 
 
 
-    useEffect(()=>{
-        if(process.browser){
+    useEffect(() => {
+        if (process.browser) {
             var results = sessionStorage.getItem("choices");
             var obj = JSON.parse(results)
             var name = sessionStorage.getItem("name")
             var nameobj = JSON.parse(name)
-            var key = obj.climate+obj.location+obj.type
+            var key = obj.climate + obj.location + obj.type
             console.log(obj)
             console.log(obj.climate)
             console.log(obj.location)
@@ -499,18 +575,19 @@ export default function ResultsTEST() {
             setName(nameobj + ", here's what you should plant!")
 
         }
-    },[])
+    }, [])
 
     return <div className="garden">
-        <div className="background"><Clouds/></div>
+        <div className="background"><Clouds /></div>
         <div className="app">
             <div className="main">
+
                 <Menu/>
+
                 <div className="content">
                     <LargeTitles text={name} />
                     <Description text="click each plant for details!"/>
                     <p>{choices.climate}</p>
-
                     {suggestions === "one" && cards.map((value, index) => {
                         return (
 
@@ -528,6 +605,7 @@ export default function ResultsTEST() {
                                 fact={value.fact}
                             //still need bee
                             />
+
                         )
                     })}
 
@@ -746,6 +824,7 @@ export default function ResultsTEST() {
                                 water={value.water}
                                 fact={value.fact}
                             //still need bee
+
                                     />
                                 )
                             })}
@@ -849,8 +928,7 @@ export default function ResultsTEST() {
             </div>
         </div>
     </div>
-</div>
-    
-    
+
+
 }
 

@@ -98,6 +98,10 @@ const DetailsCont = styled.div`
   position:relative;
 `;
 
+const BeeImg = styled.img`
+  
+`;
+
 const BeeCont = styled.div`
   // so bee badge doesn't get cut off from overflow hidden :)
 `;
@@ -139,7 +143,7 @@ const Options = ({
   }
 
   return <BeeCont>
-    <BeeBadge><CgBee className="BeeBadge" /></BeeBadge>
+    <BeeBadge><BeeImg src='../bee.png' className="BeeBadge" /></BeeBadge>
     <Cont height={height}>
       <DescriptionCont>
         <ImgCont><Img src={src} /></ImgCont>
@@ -153,8 +157,8 @@ const Options = ({
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>
       <DetailsCont>
-        <PlantDetailsLarge src='../sun.png' text={sun + "moderate sunlight"} />
-        <PlantDetailsLarge src='../water.png' text={water + "3 days"} />
+        <PlantDetailsLarge src='../sun.png' text={sun} />
+        <PlantDetailsLarge src='../water.png' text={water} />
         <PlantDetailsLarge src='../globe.png' text={fact} />
       </DetailsCont>
 
