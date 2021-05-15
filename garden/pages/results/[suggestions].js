@@ -91,7 +91,7 @@ const TempGroundFlowers = [
         bee: true
     },
     {
-        title: "Lungwort", 
+        title: "Lungwort",
         climate: "temperate",
         goodIn: "ground",
         category: "flowers",
@@ -414,15 +414,15 @@ const AridGroundProduce = [
 
 export default function ResultsTEST() {
 
-    const[choices, setChoices] = useState({
-        climate:null,
-        maintenance:null,
-        location:null,
-        type:null
+    const [choices, setChoices] = useState({
+        climate: null,
+        maintenance: null,
+        location: null,
+        type: null
     })
     const [name, setName] = useState(null)
 
-    
+
 
     useEffect(() => {
         AOS.init({});
@@ -481,13 +481,13 @@ export default function ResultsTEST() {
 
 
 
-    useEffect(()=>{
-        if(process.browser){
+    useEffect(() => {
+        if (process.browser) {
             var results = sessionStorage.getItem("choices");
             var obj = JSON.parse(results)
             var name = sessionStorage.getItem("name")
             var nameobj = JSON.parse(name)
-            var key = obj.climate+obj.location+obj.type
+            var key = obj.climate + obj.location + obj.type
             console.log(obj)
             console.log(obj.climate)
             console.log(obj.location)
@@ -496,18 +496,17 @@ export default function ResultsTEST() {
             setName(nameobj + ", here's what you should plant!")
 
         }
-    },[])
+    }, [])
 
     return <div className="garden">
-        <div className="background"><Clouds/></div>
+        <div className="background"><Clouds /></div>
         <div className="app">
             <div className="main">
-                <Logo src="../logo-hands.png"/>
-                <Menu/>
+                <Logo src="../logo-hands.png" />
+                <Menu />
                 <div className="content">
                     <LargeTitles text={name} />
                     <p>{choices.climate}</p>
-
                     {suggestions === "one" && cards.map((value, index) => {
                         return (
 
@@ -525,7 +524,7 @@ export default function ResultsTEST() {
                                 fact={value.fact}
                             //still need bee
                             />
-                            
+
                         )
                     })}
 
@@ -744,15 +743,15 @@ export default function ResultsTEST() {
                                 water={value.water}
                                 fact={value.fact}
                             //still need bee
-                                    />
-                                )
-                            })}
-                <div className="resultsButton" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+                            />
+                        )
+                    })}
+                    <div className="resultsButton" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    
-    
+
+
 }
 
