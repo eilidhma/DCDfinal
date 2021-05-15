@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../comps/Logo';
 
+import Flip from '../comps/Flip';
 
 const Results = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const Results = () => {
       }
     }
 
-})
+  })
 
 
   const router = useRouter()
@@ -46,6 +47,7 @@ const Results = () => {
 
 
       <LargeTitles text="*Name*, Garden recommends" />
+      <Flip />
       <Options />
       <Options />
       <Options />
