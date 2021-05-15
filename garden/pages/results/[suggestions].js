@@ -924,7 +924,7 @@ export default function ResultsTEST() {
                 onClick2={() => router.push('/details/pricklypear')}
                 onClick3={() => router.push('/details/pomegranate')}
                 />}
-                <div className="resultsButton" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+                <div className="finish" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
             </div>
         </div>
     </div>
