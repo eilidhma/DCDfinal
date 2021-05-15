@@ -19,14 +19,14 @@ export default function Home() {
       <div className="background"><Clouds /></div>
       <div className="app">
         <div className="main">
-          <Menu/>
+          <Menu />
           <div className="content">
-            <LargeTitles text="Welcome to"/>
-            <MainImg src="logo-white.png" width="43vw"/>
-            <MenuText text="With Garden, you will learn more about some benefits that growing plants offer for our planet, the bees and yourself. Then, we will recommend plants for you to grow based on your individual needs!"/>
-            <ButtonUI text="Why Grow Food at Home" routeTo="/info" onClick={() => router.push('/info')}/>
-            <ButtonUI text="What You Should Grow" routeTo="/quiz/question1" onClick={() => router.push('/quiz/question1')}/>
-            <LandingInfo titleText="Creators:" bodyText="Eilidh, Zoë, and Alex"/>
+            <LargeTitles text="Welcome to" />
+            <MainImg src="logo-white.png" width="43vw" />
+            <MenuText text="With Garden, you will learn more about some benefits that growing plants offer for our planet, the bees and yourself. Then, we will recommend plants for you to grow based on your individual needs!" />
+            <ButtonUI text="Start" routeTo="/info" onClick={() => router.push('/info')} />
+            {/* <ButtonUI text="What You Should Grow" routeTo="/quiz/question1" onClick={() => router.push('/quiz/question1')}/> */}
+            <LandingInfo titleText="Creators:" bodyText="Eilidh, Zoë, and Alex" />
           </div>
         </div>
       </div>
