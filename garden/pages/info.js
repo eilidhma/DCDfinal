@@ -13,7 +13,6 @@ import { VscArrowRight, VscArrowLeft } from 'react-icons/vsc'
 import { titles, veg, fact } from '../data/text';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../comps/Logo';
 import VegSlider from '../comps/VegSlider';
 import Ecology from '../comps/Ecology';
 import Brain from '../comps/Brain';
@@ -321,10 +320,10 @@ const Info = () => {
             <Bee/>
             <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees."/>
             <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. "/>
-            <div className="BlankBox">
+            {/* <div className="BlankBox">
               <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
               <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
-            </div>
+            </div> */}
 
             <LargeTitles text="How YOU can help:"/>
             <Description text="1: By growing plants! No garden is too small to help our favourite pollinators. One of the best plants to incorporate into your garden to support bees is Echinacea, aka cone flower" />
@@ -388,7 +387,7 @@ const Info = () => {
         {/*Start of quiz intro*/}
         {mainstate === 3 && <div className="infoContent">
             <Description text="Now, it’s time to find out what plants are best for you!"/>
-            <SmallDescription text="Through a 4-questions questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and time available to take care of your new friend."/>
+            <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources."/>
             <MainImg src="veggarden.png"/>
             <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')}/>
 
