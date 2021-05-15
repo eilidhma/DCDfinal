@@ -9,8 +9,8 @@ align-items:center;
 flex-direction:column;
 width:100vw;
 max-width:500px;
-position:relative;
-// top:10vh;
+position:absolute;
+bottom:0;
 padding-top:5vh;
 `;
 
@@ -22,6 +22,9 @@ flex-direction:row;
 width:100vw;
 max-width:600px;
 object-fit:cover;
+position:relative;
+top:10vh;
+z-index:2;
 `;
 
 const ImgCont = styled.div`
@@ -43,13 +46,12 @@ const Img = styled.img`
 const Dirt = styled.div`
   display:flex;
   width:100vw;
-  height:5vh;
-  z-index:2;
+  height:30vh;
+  z-index:1;
   justify-content:center;
   align-items:center;
   position:relative;
-  top:-3vh;
-  background-color:#864019;
+  background: linear-gradient(180deg, #8A583C 0%, #4F2B16 113.94%);
 `;
 
 const Garden = ({

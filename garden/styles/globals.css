@@ -1246,3 +1246,13 @@ a {
     font-feature-settings: 18px;
     line-height: 1.5;
 }
+
+.finish {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  bottom:5vh;
+  z-index:2;
+  width:90vw;
+}
