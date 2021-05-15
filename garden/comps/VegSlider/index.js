@@ -9,7 +9,7 @@ const Cont = styled.div`
   align-items:center;
   padding:5%;
   background:#FFFFFF33;
-  width:60%;
+  width:70vw;
   border-radius:15px;
 `;
 
@@ -20,6 +20,7 @@ const ImgCont = styled.div`
   align-items:center;
   text-align:left;
   flex:1;
+  min-width:20px;
 `;
 
 const TextCont = styled.div`
@@ -35,11 +36,11 @@ const Img = styled.img`
   display:flex;
   width:100%;
   object-fit:cover;
-
+  min-width:20px;
 `;
 
 const Number = styled.h3`
-  font-size:1.6rem;
+  font-size:1.2rem;
   color:white;
   text-shadow: 0px 4px 4px rgba(31, 71, 30, 0.75);
   font-family: 'Montserrat', sans-serif;
@@ -48,7 +49,7 @@ const Number = styled.h3`
 `;
 
 const Text = styled.h4`
-  font-size:1.3rem;
+  font-size:1rem;
   color:white;
   text-shadow: 0px 4px 4px rgba(31, 71, 30, 0.75);
   font-family: 'Montserrat', sans-serif;
@@ -67,7 +68,7 @@ border-radius:15px;
 font-family:Montserrat;
 font-style:normal;
 font-weight:bold;
-font-size:1.2rem;
+font-size:1rem;
 display:flex;
 align-items:center;
 text-align:center;

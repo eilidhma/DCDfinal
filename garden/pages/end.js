@@ -79,7 +79,6 @@ export default function Home() {
       <div className="background"><Clouds/></div>
       <div className="app">
         <div className="main">
-          <Logo/>
           <Menu/>
           <div className="content">
   

@@ -11,6 +11,8 @@ import 'aos/dist/aos.css';
 import Menu from '../../comps/HambMenu';
 import Logo from '../../comps/Logo';
 import Clouds from '../../comps/Clouds';
+import Garden from '../../comps/Garden';
+import Description from '../../comps/DescriptiveText';
 
 
 const TempPotsProduce = [
@@ -22,7 +24,7 @@ const TempPotsProduce = [
         maintenance: "low",
         src: "../blackberry.svg",
         fact: "High in antioxidants!",
-        bee: true
+        bee: true,
     },
     {
         title: "Raspberries",
@@ -63,7 +65,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "medium",
-        src: "../daisy.png",
+        src: "../daisy.svg",
         fact: "Found everywhere on eath but Antarctica!",
         bee: true
     },
@@ -73,7 +75,7 @@ const TempPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "../coneflower.png",
+        src: "../coneflower.svg",
         fact: "Produce chemicals to prevent growth in competing plants!",
         bee: true
     }
@@ -86,7 +88,7 @@ const TempGroundFlowers = [
         goodIn: "ground",
         category: "flowers",
         maintenance: "low",
-        src: "../WitchHazel.png",
+        src: "../witchhazel.png",
         fact: "Deer resistant!",
         bee: true
     },
@@ -106,7 +108,7 @@ const TempGroundFlowers = [
         goodIn: "pots/garden",
         category: "flowers",
         maintenance: "high",
-        src: "../sunflower.png",
+        src: "../sunflower.svg",
         fact: "Tallest sunflower recorded was over 30 feet tall!",
         bee: false
     },
@@ -338,7 +340,7 @@ const AridPotsFlowers = [
         goodIn: "pots/planters",
         category: "flowers",
         maintenance: "high",
-        src: "../yucca.png",
+        src: "../yuccaR.svg",
         fact: "Can bear edible fruit!",
         bee: true
     }
@@ -422,6 +424,7 @@ export default function ResultsTEST() {
     })
     const [name, setName] = useState(null)
 
+    const [cardstate, setCardState] = useState(false)
     
 
     useEffect(() => {
@@ -502,16 +505,16 @@ export default function ResultsTEST() {
         <div className="background"><Clouds/></div>
         <div className="app">
             <div className="main">
-                <Logo src="../logo-hands.png"/>
                 <Menu/>
                 <div className="content">
                     <LargeTitles text={name} />
+                    <Description text="click each plant for details!"/>
                     <p>{choices.climate}</p>
 
                     {suggestions === "one" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -525,13 +528,12 @@ export default function ResultsTEST() {
                                 fact={value.fact}
                             //still need bee
                             />
-                            
                         )
                     })}
 
                     {suggestions === "two" && cards.map((value, index) => {
                         return (
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -551,7 +553,7 @@ export default function ResultsTEST() {
                     {suggestions === "three" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -571,7 +573,7 @@ export default function ResultsTEST() {
                     {suggestions === "four" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -591,7 +593,7 @@ export default function ResultsTEST() {
                     {suggestions === "five" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -611,7 +613,7 @@ export default function ResultsTEST() {
                     {suggestions === "six" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -631,7 +633,7 @@ export default function ResultsTEST() {
                     {suggestions === "seven" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -651,7 +653,7 @@ export default function ResultsTEST() {
                     {suggestions === "eight" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -671,7 +673,7 @@ export default function ResultsTEST() {
                     {suggestions === "nine" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -691,7 +693,7 @@ export default function ResultsTEST() {
                     {suggestions === "ten" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -711,7 +713,7 @@ export default function ResultsTEST() {
                     {suggestions === "eleven" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -731,7 +733,7 @@ export default function ResultsTEST() {
                     {suggestions === "twelve" && cards.map((value, index) => {
                         return (
 
-                            <Options
+                            cardstate === true && <Options
                                 key={index}
                                 title={value.title}
                                 src={value.src}
@@ -747,6 +749,102 @@ export default function ResultsTEST() {
                                     />
                                 )
                             })}
+                {suggestions === "one" && <Garden
+                src1="../blackberryR.svg"
+                src2="../raspberryR.svg"
+                src3="../blueberryR.svg"
+                onClick1={() => router.push('/details/blackberry')}
+                onClick2={() => router.push('/details/raspberry')}
+                onClick3={() => router.push('/details/blueberry')}
+                />}
+                {suggestions === "two" && <Garden
+                src1="../milkweedR.svg"
+                src2="../daisyR.svg"
+                src3="../coneflowerR.svg"
+                onClick1={() => router.push('/details/milkweed')}
+                onClick2={() => router.push('/details/daisy')}
+                onClick3={() => router.push('/details/coneflower')}
+                />}
+                {suggestions === "three" && <Garden
+                src1="../witchhazelR.svg"
+                src2="../lungwortR.svg"
+                src3="../sunflowerR.svg"
+                onClick1={() => router.push('/details/witchhazel')}
+                onClick2={() => router.push('/details/lungwort')}
+                onClick3={() => router.push('/details/sunflower')}
+                />}
+                {suggestions === "four" && <Garden
+                src1="../carrotR.svg"
+                src2="../wheatR.svg"
+                src3="../sweetcornR.svg"
+                onClick1={() => router.push('/details/carrot')}
+                onClick2={() => router.push('/details/wheat')}
+                onClick3={() => router.push('/details/sweetcorn')}
+                />}
+                {suggestions === "five" && <Garden
+                src1="../bokchoyR.svg"
+                src2="../eggplantR.svg"
+                src3="../riceR.svg"
+                onClick1={() => router.push('/details/bokchoy')}
+                onClick2={() => router.push('/details/eggplant')}
+                onClick3={() => router.push('/details/rice')}
+                />}
+                {suggestions === "six" && <Garden
+                src1="../anthurium.png"
+                src2="../cannabis.png"
+                src3="../hibiscusR.svg"
+                onClick1={() => router.push('/details/anthurium')}
+                onClick2={() => router.push('/details/cannabis')}
+                onClick3={() => router.push('/details/hibiscus')}
+                />}
+                {suggestions === "seven" && <Garden
+                src1="../chinesecabbageR.svg"
+                src2="../pumpkin.png"
+                src3="../bananaR.svg"
+                onClick1={() => router.push('/details/chinesecabbage')}
+                onClick2={() => router.push('/details/pumpkin')}
+                onClick3={() => router.push('/details/banana')}
+                />}
+                {suggestions === "eight" && <Garden
+                src1="../cosmosR.svg"
+                src2="../chrysanthemum.png"
+                src3="../angelstrumpetR.svg"
+                onClick1={() => router.push('/details/cosmos')}
+                onClick2={() => router.push('/details/chrysanthemum')}
+                onClick3={() => router.push('/details/angelstrumpet')}
+                />}
+                {suggestions === "nine" && <Garden
+                src1="../greenbeansR.svg"
+                src2="../tomatoplant.png"
+                src3="../basilR.svg"
+                onClick1={() => router.push('/details/greenbeans')}
+                onClick2={() => router.push('/details/tomatoplant')}
+                onClick3={() => router.push('/details/basil')}
+                />}
+                {suggestions === "ten" && <Garden
+                src1="../sedum.png"
+                src2="../lavendar.png"
+                src3="../yuccaR.svg"
+                onClick1={() => router.push('/details/sedum')}
+                onClick2={() => router.push('/details/lavender')}
+                onClick3={() => router.push('/details/yucca')}
+                />}
+                {suggestions === "eleven" && <Garden
+                src1="../firecrackerR.svg"
+                src2="../purslane.png"
+                src3="../phloxR.svg"
+                onClick1={() => router.push('/details/firecracker')}
+                onClick2={() => router.push('/details/purslane')}
+                onClick3={() => router.push('/details/phlox')}
+                />}
+                {suggestions === "twelve" && <Garden
+                src1="../agave.png"
+                src2="../pricklypear.png"
+                src3="../pomegranateR.svg"
+                onClick1={() => router.push('/details/agave')}
+                onClick2={() => router.push('/details/pricklypear')}
+                onClick3={() => router.push('/details/pomegranate')}
+                />}
                 <div className="resultsButton" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
             </div>
         </div>
