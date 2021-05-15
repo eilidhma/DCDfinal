@@ -153,8 +153,8 @@ const Options = ({
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>
       <DetailsCont>
-        <PlantDetailsLarge src='../sun.png' text={sun + "moderate sunlight"} />
-        <PlantDetailsLarge src='../water.png' text={water + "3 days"} />
+        <PlantDetailsLarge src='../sun.png' text={sun} />
+        <PlantDetailsLarge src='../water.png' text={water} />
         <PlantDetailsLarge src='../globe.png' text={fact} />
       </DetailsCont>
 
