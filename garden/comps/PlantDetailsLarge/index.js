@@ -16,7 +16,7 @@ const TextContent = styled.h3`
   display:flex;
   text-align:left;
   color:#FFF;
-  font-size: 1rem;
+  font-size: 0.9rem;
   flex:3;
   padding-left:20%;
 `;
