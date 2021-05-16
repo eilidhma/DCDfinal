@@ -181,9 +181,6 @@ const Info = () => {
                 src1={hover1 ? "planet-earthdark.svg" : "planet-earth.svg"}
                 src2={hover2 ? "dumbbelldark.svg" : "dumbbell.svg"}
                 src3={hover3 ? "bee-icondark.svg" : "bee-icon.svg"}
-                onHover1={Nav1}
-                onHover2={Nav2}
-                onHover3={Nav3}
                 onClick1={Sust}
                 onClick2={Well}
                 onClick3={Bees}

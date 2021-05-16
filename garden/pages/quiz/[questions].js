@@ -113,19 +113,6 @@ export default function Quiz(){
   }, [router.query])
 
   const HandleClick = (text) =>{
-    if(buttontexts.option1 === text){
-      setButtonState(1)
-      setBorderState(1)
-    }
-    if(buttontexts.option2 === text){
-      setButtonState(2)
-      setBorderState(2)
-    }
-    if(buttontexts.option3 === text){
-      setButtonState(3)
-      setBorderState(3)
-    }
-
     if(questions === "question1"){
       choices.name = NameInput
       sessionStorage.setItem("name", JSON.stringify(choices.name))
@@ -139,8 +126,21 @@ export default function Quiz(){
       sessionStorage.setItem("location", JSON.stringify(choices.location))
     }
     if(questions === "question4"){
+      if(buttontexts.option1 === text){
+        setButtonState(1)
+        setBorderState(1)
+      }
+      if(buttontexts.option2 === text){
+        setButtonState(2)
+        setBorderState(2)
+      }
+      if(buttontexts.option3 === text){
+        setButtonState(3)
+        setBorderState(3)
+      }
       choices.type = text
       sessionStorage.setItem("type", JSON.stringify(choices.type))
+      sessionStorage.setItem("choices", JSON.stringify(choices));
     }
   }
 
@@ -154,14 +154,19 @@ export default function Quiz(){
     }
     if(questions === "question3"){
       router.push("/quiz/question4")
-      setEnd(true)
-      setQuiz(false)
+    }
+    if(questions === "question4"){
+      
+      setTimeout(() => { 
+        router.push('/loading')
+      }, 1000)
+      
     }
   }
 
   const HandleEnd = () => {
-    sessionStorage.setItem("choices", JSON.stringify(choices))
-    router.push("/loading")
+    // sessionStorage.setItem("choices", JSON.stringify(choices))
+    // router.push("/loading")
   }
 
   const getData = (val) => {
@@ -216,24 +221,24 @@ export default function Quiz(){
                 {questions !== "question1" && <QuestionButton
                   className="questbutton"
                   text={buttontexts.option1} 
-                  onClick={()=>{setButtonState(1),setBorderState(1),setNext(true),Results(),HandleClick(buttontexts.option1)}}
+                  onClick={()=>{HandleChange(),HandleClick(buttontexts.option1)}}
                   background = {buttonstate === 1 ? "#00000033" : "#FFFFFF33"}
                   borderColor = {borderstate === 1 ? "#00000022" : "#FFFFFF"}/>}
                 {questions !== "question1" && <QuestionButton
                   className="questbutton"
                   text={buttontexts.option2} 
-                  onClick={()=>{setButtonState(2),setBorderState(2),setNext(true),Results(),HandleClick(buttontexts.option2)}}
+                  onClick={()=>{HandleChange(),HandleClick(buttontexts.option2)}}
                   background = {buttonstate === 2 ? "#00000033" : "#FFFFFF33"}
                   borderColor = {borderstate === 2 ? "#00000022" : "#FFFFFF"}/>}
                 {questions === "question2" && <QuestionButton 
                   className="questbutton"
                   text={buttontexts.option3} 
-                  onClick={()=>{setButtonState(3),setBorderState(3),setNext(true),Results(),HandleClick(buttontexts.option3)}}
+                  onClick={()=>{HandleChange(),HandleClick(buttontexts.option3)}}
                   background = {buttonstate === 3 ? "#00000033" : "#FFFFFF33"}
                   borderColor = {borderstate === 3 ? "#00000022" : "#FFFFFF"}/>}
               </div>
-              {quiz === true && nextstate === true && <MainButton text="Next Question" onClick={HandleChange}/>}
-              {resultsstate === true && end === true && <MainButton text="Results" onClick={HandleEnd}/>}
+              {quiz === true && questions === "question1" && nextstate === true && <MainButton text="Next Question" onClick={HandleChange}/>}
+              {/* {resultsstate === true && end === true && <MainButton text="Results" onClick={HandleEnd}/>} */}
             </div>
           </div>
         </div>

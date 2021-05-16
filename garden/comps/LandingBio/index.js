@@ -8,7 +8,7 @@ const Cont = styled.div`
   text-align:center;
   flex-direction:column;
   justify-content:center;
-  font-size:1rem;
+  font-size:0.8rem;
   padding-left:40px;
   padding-right:40px;
 `;

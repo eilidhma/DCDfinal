@@ -30,10 +30,9 @@ const QuestionButton = ({
   background="#FFFFFF33",
   color="white",
   borderColor="#FFFFFF",
-  onClick=()=>{},
-  onHover=()=>{}
+  onClick=()=>{}
   }) => {
-    return <Button onHover={onHover} onClick={onClick} color={color} background={background} borderColor={borderColor}>{text}</Button>
+    return <Button onClick={onClick} color={color} background={background} borderColor={borderColor}>{text}</Button>
 }
 
 export default QuestionButton;

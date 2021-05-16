@@ -29,9 +29,8 @@ const Back = ({
   background = "#FFFFFF33",
   color = "white",
   onClick = () => {},
-  onHover = () => {}
 }) => {
-  return <Button onHover={onHover} onClick={onClick} color={color} background={background}>{text}</Button>
+  return <Button onClick={onClick} color={color} background={background}>{text}</Button>
 }
 
 export default Back;

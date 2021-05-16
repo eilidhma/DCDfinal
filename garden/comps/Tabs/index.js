@@ -70,28 +70,25 @@ color2="white",
 color3="white",
 onClick1=()=>{},
 onClick2=()=>{},
-onClick3=()=>{},
-onHover1=()=>{},
-onHover2=()=>{},
-onHover3=()=>{}
+onClick3=()=>{}
 }) => {
 
   return <Cont>
     <Tab onClick={onClick1} borderColor={borderColor1} color={color1} background={background1}>
       <ImgCont>
-        <Img onHover={onHover1} src={src1}></Img>
+        <Img src={src1}></Img>
       </ImgCont>
       <Title>Sustainability</Title>
     </Tab>
     <Tab onClick={onClick2} borderColor={borderColor2} color={color2} background={background2}>
     <ImgCont>
-        <Img onHover={onHover2} src={src2}></Img>
+        <Img src={src2}></Img>
       </ImgCont>
       <Title>Wellness</Title>
     </Tab>
     <Tab onClick={onClick3} borderColor={borderColor3} color={color3} background={background3}>
     <ImgCont>
-        <Img onHover={onHover3} src={src3}></Img>
+        <Img src={src3}></Img>
       </ImgCont>
       <Title>Bees</Title>
     </Tab>
