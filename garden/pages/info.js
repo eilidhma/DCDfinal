@@ -122,6 +122,8 @@ const Info = () => {
     setBee(false)
     setCan(true)
     setGrow(false)
+    setHappy(false)
+    setSad(true)
   }
 
   const Well = () => {
@@ -131,6 +133,8 @@ const Info = () => {
     setBee(false)
     setCan(true)
     setGrow(false)
+    setHappy(false)
+    setSad(true)
   }
 
   const Bees = () => {
@@ -140,6 +144,8 @@ const Info = () => {
     setBee(false)
     setCan(true)
     setGrow(false)
+    setHappy(false)
+    setSad(true)
   }
 
   const HandleStraw = () => {
@@ -223,8 +229,10 @@ const Info = () => {
             {/* START OF Directory */}
 
             {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
-            {mainstate === 0 && <HandsPlanet />}
-            {mainstate === 0 && <div className="directory">
+            {mainstate === 0 && <div data-aos="fade" className="handsPlanet">
+              <HandsPlanet />
+            </div> }
+            {mainstate === 0 && <div data-aos="fade" className="directory">
               <div className="ButtonCont">
                 <ButtonUI text="1. Sustainability" onClick={Sust} />
                 {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
@@ -245,12 +253,12 @@ const Info = () => {
             {/* START OF SUSTAINABILITY */}
             {mainstate === 1 && <div className="infoContent">
 
-              <Ecology />
-              <Description text="How does gardening help the environment?" />
-              <SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket." />
-              <Description text="Control what goes on and in what you grow" />
-              <SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides." />
-              <div className="cart">
+              <div data-aos="fade"><Ecology /></div>
+              <div data-aos="fade"><Description text="How does gardening help the environment?" /></div>
+              <div data-aos="slide-left"><SmallDescription text="Growing your food organically (without pesticides and herbicides) will help the earth by preventing air and water pollution. It will also reduce the use of fossil fuels that comes from the transport of fresh produce from all around the world to your supermarket." /></div>
+              <div data-aos="fade"><Description text="1: Control what goes on and in what you grow" /></div>
+              <div data-aos="slide-right"><SmallDescription text="Supermarket fruits and vegetables contain less nutrients than they used to. But one thing they aren’t lacking on is pesticides." /></div>
+              <div data-aos="fade" className="cart">
                 <div className="groceries">
                   <Groceries
                     left={strawberrystate ? 80 : 0}
@@ -267,31 +275,30 @@ const Info = () => {
                     top={cucumberstate ? 290 : 0}
                     onClick={HandleCuc} />
                 </div>
-                {strawfact === false && celeryfact === false && cucumberfact === false && <Description text="Learn about these grocery items by clicking to add them to your cart" />}
-                {strawfact === true && <Description text="Strawberries may contain up to 40 different pesticides" />}
-                {celeryfact === true && <Description text="Celery may contain more than 60 different pesticides" />}
-                {cucumberfact === true && <Description text="Cucumber skin may contain more than 80 different pesticides" />}
+                {strawfact === false && celeryfact === false && cucumberfact === false && <SmallDescription text="Learn about these grocery items by clicking to add them to your cart!" />}
+                {strawfact === true && <SmallDescription text="Strawberries may contain up to 40 different pesticides" />}
+                {celeryfact === true && <SmallDescription text="Celery may contain more than 60 different pesticides" />}
+                {cucumberfact === true && <SmallDescription text="Cucumber skin may contain more than 80 different pesticides" />}
                 <Cart />
               </div>
 
-            <Description text="Prevent more food waste by gardening at home"/>
-            <SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/>
-            <Description text="This means, daily:"/>
-            <VegSlider onClick={HandleVeg}
+            <div data-aos="fade"><Description text="2: Prevent more food waste by gardening at home"/></div>
+            <div data-aos="slide-left"><SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/></div>
+            <div data-aos="fade"><Description text="This means, daily:"/></div>
+            <div data-aos="fade"><VegSlider onClick={HandleVeg}
               number={vegnumber}
               text={vegfact}
               src={vegimg}
-            />
+            /></div>
 
-            <Description text="are thrown out..."/>
+            <div data-aos="fade"><Description text="are thrown out..."/></div>
             <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
-            <LargeTitles text="And what about food packaging?"/>
-            <Description text="Consider this..."/>
-            <Description text="(Click the plastic wrap and packaging)"/>
+            <div data-aos="fade"><Description text="3: Reduce your use of food packaging"/></div>
+            <div data-aos="fade"><SmallDescription text="Consider this..."/></div>
+            <div data-aos="fade"><SmallDescription text="(Click the plastic wrap and packaging)"/></div>
             <Wrap 
-            src = {wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
-            onClick={HandleWrap}
-
+              src = {wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
+              onClick={HandleWrap}
             />
             <Herbs
               opacity={herbsstate ? 1 : 0}
@@ -308,24 +315,26 @@ const Info = () => {
           {/* START OF WELLNESS */}
           {mainstate === 2 && <div className="infoContent">
 
-            <Description text="Gardening improves mental health" />
-            <Brain />
-            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." />
-            <Description text="Feeling of accomplishment" />
-            <div className="garden-girl">
-              <GardeningGirl 
-              opacity={happy ? "1" : "0"}/>
-
-              <GardGirlSad onClick={Sad} 
-              opacity={sad ? "1" : "0"}/>
-              
+            <div data-aos="fade"><Description text="1: Gardening improves mental health" /></div>
+            <div data-aos="fade"><Brain /></div>
+            <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." /></div>
+            <Description text="2: Feeling of accomplishment" />
+            <div data-aos="fade" className="garden-girl">
+              <div className="garden-girl-cont">
+                <GardeningGirl 
+                opacity={happy ? "1" : "0"}/>
+              </div>
+              <div className="garden-girl-cont">
+                <GardGirlSad onClick={Sad} 
+                opacity={sad ? "1" : "0"}/>
+              </div>
             </div>
-            <SmallDescription text="Click the little girl to give her a plant and make her happy!"/>
-            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." />
-            <Description text="Physical activity" />
-            <Watercan />
-            <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." />
-            <div className="BlankBox">
+            <div data-aos="fade"><SmallDescription text="Click the little girl to give her a plant and make her happy!"/></div>
+            <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." /></div>
+            <div data-aos="fade"><Description text="3: Physical activity" /></div>
+            <div data-aos="fade"><Watercan /></div>
+            <div data-aos="slide-left"><SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." /></div>
+            <div data-aos="fade" className="BlankBox">
               <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
               <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
               <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
@@ -337,14 +346,14 @@ const Info = () => {
             {mainstate === 3 && <div className="infoContent">
 
 
-              <Bee />
-              <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." />
-              <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. " />
+              <div data-aos="fade"><Bee /></div>
+              <div data-aos="fade"><Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." /></div>
+              <div data-aos="slide-left"><SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. " /></div>
 
-              <LargeTitles text="How YOU can help:" />
-              <Description text="1: By growing plants! No garden is too small to help our favourite pollinators. One of the best plants to incorporate into your garden to support bees is Echinacea, aka cone flower" />
-              <SmallDescription text="Click the watering can to make the flowers grow!" />
-              <div className="watering">
+              <div data-aos="fade"><Description text="How YOU can help:" /></div>
+              <div data-aos="fade"><Description text="1: By growing plants! No garden is too small to help our favourite pollinators. One of the best plants to incorporate into your garden to support bees is Echinacea, aka cone flower" /></div>
+              <div data-aos="slide-right"><SmallDescription text="Click the watering can to make the flowers grow!" /></div>
+              <div data-aos="fade" className="watering">
                 <PestBee
                   width="10%"
                   left="60"
@@ -362,9 +371,9 @@ const Info = () => {
                 />
               </div>
 
-              <Description text="2: When gardening, don't use harsh pesticides. Opt for natural alternatives instead, which can include certain varieties of plants" />
-              <SmallDescription text="Click the pesticide bottle to remove!" />
-              <div className="pesticide">
+              <div data-aos="fade"><Description text="2: When gardening, don't use harsh pesticides. Opt for natural alternatives instead, which can include certain varieties of plants" /></div>
+              <div data-aos="slide-left"><SmallDescription text="Click the pesticide bottle to remove!" /></div>
+              <div data-aos="fade" className="pesticide">
                 <PestBee
                   left={bee ? "30" : "0"}
                   top="30"
@@ -383,7 +392,7 @@ const Info = () => {
 
                 <PestCan className="can" src="pesticide.png" width="30%" onClick={Can}
                   opacity={can ? "1" : "0"} />
-                <img src="tulip.svg" width="100%" />
+                <img data-aos="fade" src="tulip.svg" width="100%" />
               </div>
 
 
@@ -394,9 +403,8 @@ const Info = () => {
 
             {/*Start of quiz intro*/}
             {mainstate === 3 && <div className="infoContent">
-              <Description text="Now that you've learned more about gardening, it’s time to find out what plants are best for you!" />
-              <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." />
-              <MainButton text="Let's Start the Quiz!" onClick={() => router.push('/quiz/question1')} />
+              <div data-aos="fade"><Description text="Now that you've learned more about gardening, it’s time to find out what plants are best for you!" /></div>
+              <div data-aos="fade"><SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." /></div>
 
             </div>}
 
@@ -404,6 +412,7 @@ const Info = () => {
               {mainstate === 1 && <MainButton onClick={Well} text={<>Wellness Benefits<VscArrowRight /></>} />}
               {mainstate === 2 && <MainButton onClick={Sust} text={<><VscArrowLeft />Sustainability</>} />}
               {mainstate === 2 && <MainButton onClick={Bees} text={<>Saving the Bees<VscArrowRight /></>} />}
+              {mainstate === 3 && <MainButton text="Start the Quiz!" onClick={() => router.push('/quiz/question1')} />}
               {mainstate === 3 && <MainButton onClick={Well} text={<><VscArrowLeft />Wellness Benefits</>} />}
             </div>
 

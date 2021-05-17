@@ -6,16 +6,20 @@ import Description from '../comps/DescriptiveText';
 import SmallDescription from '../comps/SmallDescriptive';
 import PlantDetailsLarge from '../comps/PlantDetailsLarge';
 import Watering from '../comps/Watering';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '../comps/Logo';
 import Clouds from '../comps/Clouds';
 import Menu from '../comps/HambMenu';
 import MainButton from '../comps/MainButton';
 import Earth from '../comps/Earth';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Home() {
-  
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    }, []);
   
     const Results = () => {
 
@@ -84,20 +88,25 @@ export default function Home() {
           <Menu/>
           <div className="content">
   
-            <LargeTitles text="Congratulations!"/>
-            <Description text="You've started on your plant growing journey."/>
-            <SmallDescription text="This means that you are helping in three different ways."/>
-            <div className="BlankBox">
+            <div data-aos="fade" ><LargeTitles text="Congratulations!"/></div>
+            <div data-aos="fade" ><Description text="You've started on your plant growing journey."/></div>
+            <div data-aos="fade" ><SmallDescription text="This means that you are helping in three different ways."/></div>
+            <div data-AOS="fade" className="BlankBox">
               <PlantDetailsLarge src="planet-earth.svg" text="You are more sustainable by not producing food waste." />
               <PlantDetailsLarge src="dumbbell.svg" text="You are healthier, both physically and mentally." />
               <PlantDetailsLarge src="bee-icon.svg" text="You are helping with the mission to save the bees." />
             </div>
-            <Earth/>
-            <Description text="Thank you for using Garden, and don't forget to water your new plants!"/>
+            <div className="endGlobe" data-aos="fade" ><Earth/></div>
+            <div data-aos="fade"><Description text="Thank you for using Garden, and don't forget to water your new plants!"/></div>
             {/* add water animation/interaction? */}
-            <MainButton text="Go home" onClick={()=>router.push('/') }/>
-            <MainButton text="Retake quiz" onClick={()=>router.push('/quiz/question1') }/>
-            <MainButton text="View results again" onClick={Results}/>
+            <div className="endNav">
+              <MainButton text="Go home" onClick={()=>router.push('/') }/>
+              <MainButton text="Retake quiz" onClick={()=>router.push('/quiz/question1') }/>
+              <MainButton text="View results again" onClick={Results}/>
+            </div>
+            
+            
+            
           </div>
           
           
