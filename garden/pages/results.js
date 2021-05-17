@@ -45,6 +45,8 @@ const Results = () => {
 
       <MainImg src="watermark.png" width="40%" />
 
+        {/* saving this for future */}
+
       {/* {suggestions === "one" && cards.map((value, index) => {
                         return (
 
