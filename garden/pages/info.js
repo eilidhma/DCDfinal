@@ -313,13 +313,15 @@ const Info = () => {
             <Brain />
             <Description text="Gardening improves mental health" />
             <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind" />
-            <div className="gardening-girl">
-              <GardeningGirl opacity={happy ? "1" : "0"}/>
+            <div className="garden-girl">
+              <GardeningGirl 
+              opacity={happy ? "1" : "0"}/>
 
               <GardGirlSad onClick={Sad} 
               opacity={sad ? "1" : "0"}/>
               
             </div>
+            <SmallDescription text="Click the little girl to give her a plant!"/>
             <Description text="Feeling of accomplishment" />
             <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year." />
             <Watercan />
