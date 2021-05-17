@@ -870,11 +870,28 @@ button:hover{
   transform-box: fill-box;
   transform-origin: bottom;
 }
-#gardening-girl{
+#gardening-girl, #gardening-girl-sad{
   animation: girl-moving 8s ease-in-out infinite;
   transform-box: fill-box;
   transform-origin: bottom;
   overflow: visible;
+}
+#gardening-girl{
+  transition: opacity 0.5s;
+  transition-delay: 0.2s;
+}
+#gardening-girl-sad{
+  transition: opacity 0.5s;
+  margin-top: -27vh;
+}
+.garden-girl {
+  margin-top: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width:70vw;
 }
 
 @keyframes hair-left{
@@ -912,7 +929,7 @@ button:hover{
 }
 @keyframes plant-move{
   0%{
-      transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
   }
   50%{
       transform: rotateZ(1deg);
