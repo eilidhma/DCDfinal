@@ -23,7 +23,7 @@ const Img = styled.img`
 const MainImg = ({
 src="../../logo-white.png",
 width=40,
-maxWidth=100,
+maxWidth="200px",
 opacity=1
 }) => {
   return <ImgCont opacity={opacity} width={width} maxWidth={maxWidth}>
