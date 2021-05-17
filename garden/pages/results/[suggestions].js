@@ -939,7 +939,7 @@ export default function Results() {
                             sun = "Prefers full sun"
                             water = "Keep moist"
                             opacity={plant3 ? 1 : 0}
-                            onClickClose={oneClose3}
+                            onClickClose={Close3}
                             zindex={plant3 ? 5 : 0}
                             />
                     </div>}
