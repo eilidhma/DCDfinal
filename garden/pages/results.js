@@ -45,7 +45,7 @@ const Results = () => {
 
       <MainImg src="watermark.png" width="40%" />
 
-      {suggestions === "one" && cards.map((value, index) => {
+      {/* {suggestions === "one" && cards.map((value, index) => {
                         return (
 
                             cardstate === true && <Options
@@ -284,7 +284,7 @@ const Results = () => {
 
                             />
                         )
-                    })}
+                    })} */}
 
       <LargeTitles text="*Name*, Garden recommends" />
       <Flip />
