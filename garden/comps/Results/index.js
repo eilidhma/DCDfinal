@@ -151,7 +151,6 @@ const Options = ({
 
   var height = 290, text = "Learn more"
   if (open) {
-<<<<<<< HEAD
     height = 550;
     text = "Hide";
   }
