@@ -96,7 +96,7 @@ export default function Home() {
               <PlantDetailsLarge src="dumbbell.svg" text="You are healthier, both physically and mentally." />
               <PlantDetailsLarge src="bee-icon.svg" text="You are helping with the mission to save the bees." />
             </div>
-            <div className="endGlobe" data-aos="fade" ><Earth/></div>
+            <div className="endGlobe"><Earth/></div>
             <div data-aos="fade"><Description text="Thank you for using Garden, and don't forget to water your new plants!"/></div>
             {/* add water animation/interaction? */}
             <div className="endNav">
