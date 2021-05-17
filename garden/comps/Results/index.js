@@ -10,13 +10,13 @@ const Cont = styled.div`
   flex-direction:column;
   align-items:center;
   height: ${props => props.height}px;
-  width:5em;
-  min-width: 450px;
+  width:70%;
+  min-width: 210px;
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
-  padding:20px;
-  margin:30px;
+  padding:10px;
+  margin:50px;
   overflow:hidden;
   transition: height 0.5s;
 `;
@@ -45,9 +45,9 @@ const Img = styled.img`
   display:flex;
   object-fit:cover;
   height:50%;
-  padding:20px;
-  border: 4px solid white;
-  border-radius:15px;
+  padding:15px;
+  top: 10px;
+  position:relative;
 `;
 
 const Points = styled.div`
@@ -67,7 +67,7 @@ const Title = styled.h4`
 const Item = styled.p`
   color:white;
   font-family: 'Montserrat', sans-serif;
-  font-size:16px;
+  font-size:0.9rem;
   text-align:left;
   line-height: 1px;
 `;
@@ -113,9 +113,9 @@ const BeeBadge = styled.div`
   border-radius:50%;
   background-color: white;
   position: relative;
-  top:60px;
+  top:65px;
   z-index:2;
-  left: 89%;
+  left: 81%;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 
@@ -136,7 +136,7 @@ const Options = ({
 }) => {
   const [open, setOpen] = useState(false);
 
-  var height = 300, text = "Learn more"
+  var height = 290, text = "Learn more"
   if (open) {
     height = 600;
     text = "Hide";
@@ -149,10 +149,10 @@ const Options = ({
         <ImgCont><Img src={src} /></ImgCont>
         <Points>
           <Title>{title}</Title>
-          <Item><strong>Climate:</strong> {climate}</Item>
-          <Item><strong>Good in:</strong> {goodIn}</Item>
-          <Item><strong>Category:</strong> {category}</Item>
-          <Item><strong>Maintenance:</strong> {maintenance}</Item>
+          <Item><strong>Climate: </strong>{climate}</Item>
+          <Item><strong>Good in: </strong>{goodIn}</Item>
+          <Item><strong>Category: </strong>{category}</Item>
+          <Item><strong>Maintenance: </strong> {maintenance}</Item>
         </Points>
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>
