@@ -21,6 +21,8 @@ const MenuItems = styled.div`
     overflow:hidden;
     transition:max-width 0.5s, max-height 0.5s;
     position:absolute;
+    border-radius:15px;
+    background-color:rgba(67,128,40,0.85);
 `;
 
 
