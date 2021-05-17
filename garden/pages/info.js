@@ -22,6 +22,7 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import GardGirlSad from '../comps/GardeningGirlSad';
 import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
@@ -65,6 +66,8 @@ const Info = () => {
   const [can, setCan] = useState(true)
   const [grow, setGrow] = useState(false)
   const [rotate, setRotate] = useState(false)
+  const [happy, setHappy] = useState(false)
+  const [sad, setSad] = useState(true)
 
 
   const Nav1 = () => {
@@ -172,6 +175,11 @@ const Info = () => {
     setRotate(false)
   }
 
+  const Sad = () => {
+    setHappy(true)
+    setSad(false)
+  }
+
 
   return (
 
@@ -232,8 +240,6 @@ const Info = () => {
             </div>}
 
 
-
-
             {/* END OF Directory */}
 
             {/* START OF SUSTAINABILITY */}
@@ -268,6 +274,64 @@ const Info = () => {
                 <Cart />
               </div>
 
+            <Description text="Prevent more food waste by gardening at home"/>
+            <SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/>
+            <Description text="This means, daily:"/>
+            <VegSlider onClick={HandleVeg}
+              number={vegnumber}
+              text={vegfact}
+              src={vegimg}
+            />
+
+            <Description text="are thrown out..."/>
+            <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
+            <LargeTitles text="And what about food packaging?"/>
+            <Description text="Consider this..."/>
+            <Description text="(Click the plastic wrap and packaging)"/>
+            <Wrap 
+            src = {wrapstate ? "wrap_open.png" : "wrap_closed.png"}
+            onClick={HandleWrap}
+
+            />
+            <Herbs
+              opacity={herbsstate ? 1 : 0}
+              rotate={herbsstate ? 0 : -20}
+              left={herbsstate ? 0 : -250}
+              onClick={HandleHerbs}
+            />
+            
+          </div>}
+
+
+          {/* END OF SUSTAINABILITY */}
+
+          {/* START OF WELLNESS */}
+          {mainstate === 2 && <div className="infoContent">
+
+            <Description text="Gardening improves mental health" />
+            <Brain />
+            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." />
+            <Description text="Feeling of accomplishment" />
+            <div className="garden-girl">
+              <GardeningGirl 
+              opacity={happy ? "1" : "0"}/>
+
+              <GardGirlSad onClick={Sad} 
+              opacity={sad ? "1" : "0"}/>
+              
+            </div>
+            <SmallDescription text="Click the little girl to give her a plant and make her happy!"/>
+            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." />
+            <Description text="Physical activity" />
+            <Watercan />
+            <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." />
+            <div className="BlankBox">
+              <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
+            </div>
+          </div>}
+          {/* END OF WELLNESS */}
 
               <Description text="Prevent more food waste by gardening at home" />
               <SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month." />
@@ -316,6 +380,7 @@ const Info = () => {
 
             {/* START OF BEES */}
             {mainstate === 3 && <div className="infoContent">
+
 
               <Bee />
               <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." />
@@ -378,7 +443,7 @@ const Info = () => {
 
             {/*Start of quiz intro*/}
             {mainstate === 3 && <div className="infoContent">
-              <Description text="Now, it’s time to find out what plants are best for you!" />
+              <Description text="Now that you've learned more about gardening, it’s time to find out what plants are best for you!" />
               <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." />
               <MainButton text="Let's Start the Quiz!" onClick={() => router.push('/quiz/question1')} />
 

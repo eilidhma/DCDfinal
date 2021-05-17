@@ -908,11 +908,28 @@ button:focus, input:focus { outline: none; }
   transform-box: fill-box;
   transform-origin: bottom;
 }
-#gardening-girl{
+#gardening-girl, #gardening-girl-sad{
   animation: girl-moving 8s ease-in-out infinite;
   transform-box: fill-box;
   transform-origin: bottom;
   overflow: visible;
+}
+#gardening-girl{
+  transition: opacity 0.5s;
+  transition-delay: 0.2s;
+}
+#gardening-girl-sad{
+  transition: opacity 0.5s;
+  margin-top: -27vh;
+}
+.garden-girl {
+  margin-top: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width:70vw;
 }
 
 @keyframes hair-left{
@@ -950,7 +967,7 @@ button:focus, input:focus { outline: none; }
 }
 @keyframes plant-move{
   0%{
-      transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
   }
   50%{
       transform: rotateZ(1deg);
@@ -1102,6 +1119,30 @@ button:focus, input:focus { outline: none; }
   }
   50%{
       transform: scale(1 ,1);
+  }
+}
+/* earth animation */
+#earth{
+  background:url(../public/world-map-color.png);
+  background-size: cover;
+  width:250px;
+  height:250px;
+  margin-top:25px;
+  border: 0px solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 
+  -8px -8px 15px rgba(0, 46, 80, 0.75) inset, 
+  2px 2px 25px rgba(0, 46, 80, 0.75) inset, 
+  -25px -25px 25px rgba(0, 46, 80, 0.75) inset, 
+  25px 25px 45px rgba(0, 46, 80, 0.75) inset;
+  animation: earth-moving 10s linear infinite;
+}
+@keyframes earth-moving{
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: 69% 0;
   }
 }
 /* other animations */
