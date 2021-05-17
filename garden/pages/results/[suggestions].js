@@ -571,16 +571,28 @@ export default function Results() {
         setDim(true)
         setClose1(false)
         setPlant1(true)
+        setClose2(true)
+        setPlant2(false)
+        setClose3(true)
+        setPlant3(false)
     }
     const Expand2 = () => {
         setDim(true)
         setClose2(false)
         setPlant2(true)
+        setClose1(true)
+        setPlant1(false)
+        setClose3(true)
+        setPlant3(false)
     }
     const Expand3 = () => {
         setDim(true)
         setClose3(false)
         setPlant3(true)
+        setClose1(true)
+        setPlant1(false)
+        setClose2(true)
+        setPlant2(false)
     }
 
     const Close1 = () => {
