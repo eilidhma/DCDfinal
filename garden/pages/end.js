@@ -10,6 +10,7 @@ import Logo from '../comps/Logo';
 import Clouds from '../comps/Clouds';
 import Menu from '../comps/HambMenu';
 import MainButton from '../comps/MainButton';
+import Earth from '../comps/Earth';
 
 
 export default function Home() {
@@ -83,9 +84,10 @@ export default function Home() {
           <div className="content">
   
             <LargeTitles text="Congratulations!"/>
-            <Description text="You've started on your plant growing journey"/>
-            <MainImg src="happyglobe.png"/>
-            <Description text="Thanks for using garden, and don't forget to water your plants!"/>
+            <Description text="You've started on your plant growing journey."/>
+            <Earth/>
+            <Description text="Thank you for using Garden, and don't forget to water your new plants!"/>
+            {/* add water animation/interaction? */}
             <MainButton text="Go home" onClick={()=>router.push('/') }/>
             <MainButton text="Retake quiz" onClick={()=>router.push('/quiz/question1') }/>
             <MainButton text="View results again" onClick={Results}/>
