@@ -9,6 +9,8 @@ const Cont = styled.div`
   flex-direction:row;
   justify-content:center;
   align-items:flex-start;
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 
 const Tab = styled.button`
@@ -31,6 +33,8 @@ const Tab = styled.button`
   text-align:center;
   color:${props=>props.color};
   padding:2px;
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 
 const ImgCont = styled.div`
@@ -39,19 +43,24 @@ const ImgCont = styled.div`
   justify-content: center;
   object-fit:cover;
   width:8vw;
-  
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 const Img = styled.img`
   display:flex;
   object-fit:cover;
   width:100%;
-  max-width:50px;
+  max-width:30px;
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 
 const Title = styled.h3`
   font-size:0.7rem;
   margin:0;
   color:${props=>props.color};
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 
 
@@ -70,10 +79,11 @@ color2="white",
 color3="white",
 onClick1=()=>{},
 onClick2=()=>{},
-onClick3=()=>{}
+onClick3=()=>{},
+opacity=1
 }) => {
 
-  return <Cont>
+  return <Cont opacity={opacity}>
     <Tab onClick={onClick1} borderColor={borderColor1} color={color1} background={background1}>
       <ImgCont>
         <Img src={src1}></Img>
