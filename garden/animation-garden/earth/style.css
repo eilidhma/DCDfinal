@@ -1,0 +1,25 @@
+body{
+    background-color:#c4c4c4;
+}
+#earth{
+    background:url(../../public/world-map-color.png);
+    background-size: cover;
+    width:200px;
+    height:200px;
+    border: 0px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), 
+    -8px -8px 15px rgba(0, 46, 80, 0.9) inset, 
+    2px 2px 25px rgba(0, 46, 80, 0.9) inset, 
+    -25px -25px 25px rgba(0, 46, 80, 0.75) inset, 
+    25px 25px 45px rgba(0, 46, 80, 0.75) inset;
+    animation: earth-moving 10s linear infinite;
+}
+@keyframes earth-moving{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 69% 0;
+    }
+}

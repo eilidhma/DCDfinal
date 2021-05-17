@@ -1083,6 +1083,30 @@ button:hover{
       transform: scale(1 ,1);
   }
 }
+/* earth animation */
+#earth{
+  background:url(../public/world-map-color.png);
+  background-size: cover;
+  width:250px;
+  height:250px;
+  margin-top:25px;
+  border: 0px solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 
+  -8px -8px 15px rgba(0, 46, 80, 0.75) inset, 
+  2px 2px 25px rgba(0, 46, 80, 0.75) inset, 
+  -25px -25px 25px rgba(0, 46, 80, 0.75) inset, 
+  25px 25px 45px rgba(0, 46, 80, 0.75) inset;
+  animation: earth-moving 10s linear infinite;
+}
+@keyframes earth-moving{
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: 69% 0;
+  }
+}
 /* other animations */
 .cart {
   display:flex;
