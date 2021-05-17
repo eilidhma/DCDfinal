@@ -200,7 +200,7 @@ const Info = () => {
           <div className="infoContent">
 
             {/* START OF REUSABLE */}
-            {mainstate !== 0 && <div>
+            <div >
               <Tabs
                 src1={hover1 ? "planet-earthdark.svg" : "planet-earth.svg"}
                 src2={hover2 ? "dumbbelldark.svg" : "dumbbell.svg"}
@@ -217,8 +217,9 @@ const Info = () => {
                 borderColor1={mainstate === 1 ? "#00000022" : "#FFFFFF"}
                 borderColor2={mainstate === 2 ? "#00000022" : "#FFFFFF"}
                 borderColor3={mainstate === 3 ? "#00000022" : "#FFFFFF"}
+                opacity={mainstate === 0 ? 0 : 1}
               />
-            </div>}
+            </div>
 
 
             <LargeTitles text={titlestate} />
@@ -232,7 +233,7 @@ const Info = () => {
             {mainstate === 0 && <div data-aos="fade" className="handsPlanet">
               <HandsPlanet />
             </div> }
-            {mainstate === 0 && <div data-aos="fade" className="directory">
+            {mainstate === 0 && <div className="directory">
               <div className="ButtonCont">
                 <ButtonUI text="1. Sustainability" onClick={Sust} />
                 {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
