@@ -7,7 +7,7 @@ const Input = styled.input`
   align-items:center;
   width:100%;
   background:${props=>props.background};
-  border:6px solid #FFFFFF;
+  border:2px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;

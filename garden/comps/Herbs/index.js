@@ -8,11 +8,14 @@ const Cont = styled.div`
   justify-content: center;
   object-fit:cover;
   width:40%;
+  min-width:200px;
+  margin-bottom:20px;
 `;
 const Img = styled.img`
   display:flex;
   object-fit:cover;
   width:50%;
+  min-width:150px;
   z-index:2;
   transform: rotate(${props=>props.rotate}deg);
   transition: transform 1s ease;
@@ -21,7 +24,7 @@ const Img = styled.img`
 const Words = styled.p`
 display:flex;
 font-family: 'Montserrat', sans-serif;
-font-size:20px;
+font-size:1rem;
 color:white;
 font-weight:600;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

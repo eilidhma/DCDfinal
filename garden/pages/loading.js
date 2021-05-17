@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import StatusBar from '../comps/StatusBar'
-import MedTitles from '../comps/MediumTitles'
+import LargeTitles from '../comps/LargeTitles'
 import React, {useState,useEffect} from 'react';
 import Loading from '../comps/LoadingPage';
 import Clouds from '../comps/Clouds'
@@ -81,17 +81,19 @@ export default function Quiz() {
   const router = useRouter()
 
   return (
-  
+  <div className="garden">
+  <div className="background"><Clouds /></div>
   <div className="app">
     <div className="main">
     <div className="content">
       <div className="loading">
         <StatusBar percent="100%" width="100"/>
-        <MedTitles text="Calculating your results..."/>
+        <LargeTitles text="Calculating your results..."/>
         <Loading />
       </div>
     </div>
     </div>
+  </div>
   </div>
   )
 }

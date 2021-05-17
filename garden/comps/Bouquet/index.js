@@ -5,12 +5,13 @@ const Cont = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
+max-width:140px;
 `;
 
 
 const Bouquet = () => {
     return <Cont>
-        <svg preserveAspectRatio="slice" width="70%" height="100%" id="bouquet" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="30vw" height="100%" id="bouquet" viewBox="0 0 444 531" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="bouquet 1">
             <g id="rose-top">
             <g id="stem_1">

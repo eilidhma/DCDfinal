@@ -1,4 +1,5 @@
 import LargeTitles from '../comps/LargeTitles';
+import MedTitles from '../comps/MediumTitles';
 import MainImg from '../comps/MainImg';
 import ButtonUI from '../comps/MainButton'
 import { useRouter } from 'next/router';
@@ -21,6 +22,7 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import GardGirlSad from '../comps/GardeningGirlSad';
 import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
@@ -64,6 +66,8 @@ const Info = () => {
   const [can, setCan] = useState(true)
   const [grow, setGrow] = useState(false)
   const [rotate, setRotate] = useState(false)
+  const [happy, setHappy] = useState(false)
+  const [sad, setSad] = useState(true)
 
 
   const Nav1 = () => {
@@ -115,18 +119,27 @@ const Info = () => {
     setMainState(1)
     setTitle(titles.sust)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const Well = () => {
     setMainState(2)
     setTitle(titles.well)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const Bees = () => {
     setMainState(3)
     setTitle(titles.bees)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const HandleStraw = () => {
@@ -162,6 +175,11 @@ const Info = () => {
     setRotate(false)
   }
 
+  const Sad = () => {
+    setHappy(true)
+    setSad(false)
+  }
+
 
   return (
 
@@ -181,9 +199,6 @@ const Info = () => {
                 src1={hover1 ? "planet-earthdark.svg" : "planet-earth.svg"}
                 src2={hover2 ? "dumbbelldark.svg" : "dumbbell.svg"}
                 src3={hover3 ? "bee-icondark.svg" : "bee-icon.svg"}
-                onHover1={Nav1}
-                onHover2={Nav2}
-                onHover3={Nav3}
                 onClick1={Sust}
                 onClick2={Well}
                 onClick3={Bees}
@@ -225,8 +240,6 @@ const Info = () => {
             </div>}
 
 
-
-
             {/* END OF Directory */}
 
             {/* START OF SUSTAINABILITY */}
@@ -261,69 +274,72 @@ const Info = () => {
                 <Cart />
               </div>
 
+            <Description text="Prevent more food waste by gardening at home"/>
+            <SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/>
+            <Description text="This means, daily:"/>
+            <VegSlider onClick={HandleVeg}
+              number={vegnumber}
+              text={vegfact}
+              src={vegimg}
+            />
 
-              <Description text="Prevent more food waste by gardening at home" />
-              <SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month." />
-              <Description text="This means, daily:" />
-              <VegSlider onClick={HandleVeg}
-                number={vegnumber}
-                text={vegfact}
-                src={vegimg}
-              />
+            <Description text="are thrown out..."/>
+            <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
+            <LargeTitles text="And what about food packaging?"/>
+            <Description text="Consider this..."/>
+            <Description text="(Click the plastic wrap and packaging)"/>
+            <Wrap 
+            src = {wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
+            onClick={HandleWrap}
 
-              <Description text="are thrown out..." />
-              <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients." /></div>
-              <MainImg src="garbage.png" width="20%" />
-              <LargeTitles text="And what about food packaging?" />
-              <Description text="Consider this..." />
-              <Description text="(Click the plastic wrap and packaging)" />
-              <Wrap
-                src={wrapstate ? "wrap_open.png" : "wrap_closed.png"}
-                onClick={HandleWrap}
-
-              />
-              <Herbs
-                opacity={herbsstate ? 1 : 0}
-                rotate={herbsstate ? 0 : -20}
-                left={herbsstate ? 0 : -250}
-                onClick={HandleHerbs}
-              />
-              <Description text="Other ways that you can help:" />
-              <div className="BlankBox">
-                <PlantDetailsLarge src="globeicon.png" text="Reduce the use of gasoline-power yard tools" />
-                <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
-                <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency" />
-              </div>
-            </div>}
+            />
+            <Herbs
+              opacity={herbsstate ? 1 : 0}
+              rotate={herbsstate ? 0 : -20}
+              left={herbsstate ? 0 : -250}
+              onClick={HandleHerbs}
+            />
+            
+          </div>}
 
 
-            {/* END OF SUSTAINABILITY */}
+          {/* END OF SUSTAINABILITY */}
 
-            {/* START OF WELLNESS */}
-            {mainstate === 2 && <div className="infoContent">
+          {/* START OF WELLNESS */}
+          {mainstate === 2 && <div className="infoContent">
 
-              <Brain />
-              <Description text="Gardening improves mental health" />
-              <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind" />
-              <GardeningGirl />
-              <Description text="Feeling of accomplishment" />
-              <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year." />
-              <Watercan />
-              <Description text="Physical activity" />
-              <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." />
-            </div>}
-            {/* END OF WELLNESS */}
+            <Description text="Gardening improves mental health" />
+            <Brain />
+            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." />
+            <Description text="Feeling of accomplishment" />
+            <div className="garden-girl">
+              <GardeningGirl 
+              opacity={happy ? "1" : "0"}/>
+
+              <GardGirlSad onClick={Sad} 
+              opacity={sad ? "1" : "0"}/>
+              
+            </div>
+            <SmallDescription text="Click the little girl to give her a plant and make her happy!"/>
+            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." />
+            <Description text="Physical activity" />
+            <Watercan />
+            <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." />
+            <div className="BlankBox">
+              <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
+            </div>
+          </div>}
+          {/* END OF WELLNESS */}
 
             {/* START OF BEES */}
             {mainstate === 3 && <div className="infoContent">
 
+
               <Bee />
               <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." />
               <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. " />
-              {/* <div className="BlankBox">
-              <PlantDetailsLarge src="flowericon.png" text="40% of global food production relies on pollination recieved from bees" />
-              <PlantDetailsLarge src="flowericon.png" text="Bees also provide opportunities for income diversity with low start-up costs through diverse products and services; this includes collecting honey, pollen, beeswax, bee venom and royal jelly, as well as pollination services and more!" />
-            </div> */}
 
               <LargeTitles text="How YOU can help:" />
               <Description text="1: By growing plants! No garden is too small to help our favourite pollinators. One of the best plants to incorporate into your garden to support bees is Echinacea, aka cone flower" />
@@ -332,7 +348,7 @@ const Info = () => {
                 <PestBee
                   width="10%"
                   left="60"
-                  top={grow ? "20" : "0"}
+                  top={grow ? "30" : "0"}
                   opacity={grow ? "1" : "0"}
                   transitionDelay="2"
                 />
@@ -378,10 +394,9 @@ const Info = () => {
 
             {/*Start of quiz intro*/}
             {mainstate === 3 && <div className="infoContent">
-              <Description text="Now, it’s time to find out what plants are best for you!" />
+              <Description text="Now that you've learned more about gardening, it’s time to find out what plants are best for you!" />
               <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." />
-              <MainImg src="veggarden.png" />
-              <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')} />
+              <MainButton text="Let's Start the Quiz!" onClick={() => router.push('/quiz/question1')} />
 
             </div>}
 

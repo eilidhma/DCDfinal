@@ -16,6 +16,7 @@ const CartImg = styled.img`
   display:flex;
   object-fit:cover;
   width:50%;
+  min-width:250px;
   z-index:2;
 `;
 

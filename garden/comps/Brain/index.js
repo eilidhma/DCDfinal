@@ -13,21 +13,21 @@ const Brain = () => {
             <g id="brain-anim 1">
             <g id="Brain anim">
             <g id="lines">
-            <path id="Vector" d="M280.6 3.5V108.2" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_2" d="M166.4 30.6L211.8 125" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_3" d="M65.6 88.3L147.5 153.6" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_4" d="M18.6 188.3L120.7 211.6" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="30 30"/>
-            <path id="Vector_5" d="M4.09998 310.9L88.2 291.7" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_6" d="M73.8 412.1L155.7 346.8" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="30 30"/>
-            <path id="Vector_7" d="M153.3 435.4L196.8 368.4" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="30 30"/>
-            <path id="Vector_8" d="M393.5 463L357.6 388.5" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_9" d="M471.2 402.1L389.3 336.8" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="30 30"/>
-            <path id="Vector_10" d="M521.8 339.2L427.2 302.5" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_11" d="M521.8 193.7L437.8 212.9" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="25 25"/>
-            <path id="Vector_12" d="M451.7 115.4L402 155" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="19.47 19.47"/>
-            <path id="Vector_13" d="M386.9 28L341.5 122.4" stroke="#98CDD4" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="30 30"/>
+            <path id="Vector" d="M280.6 3.5V108.2" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_2" d="M166.4 30.6L211.8 125" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_3" d="M65.6 88.3L147.5 153.6" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_4" d="M18.6 188.3L120.7 211.6" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="30 30"/>
+            <path id="Vector_5" d="M4.09998 310.9L88.2 291.7" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_6" d="M73.8 412.1L155.7 346.8" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="30 30"/>
+            <path id="Vector_7" d="M153.3 435.4L196.8 368.4" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="30 30"/>
+            <path id="Vector_8" d="M393.5 463L357.6 388.5" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_9" d="M471.2 402.1L389.3 336.8" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="30 30"/>
+            <path id="Vector_10" d="M521.8 339.2L427.2 302.5" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_11" d="M521.8 193.7L437.8 212.9" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="25 25"/>
+            <path id="Vector_12" d="M451.7 115.4L402 155" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="19.47 19.47"/>
+            <path id="Vector_13" d="M386.9 28L341.5 122.4" stroke="#98CDD4" strokeWidth="7" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="30 30"/>
             </g>
-            <path id="Shadow" d="M262.3 467.2C317.142 467.2 361.6 460.081 361.6 451.3C361.6 442.519 317.142 435.4 262.3 435.4C207.458 435.4 163 442.519 163 451.3C163 460.081 207.458 467.2 262.3 467.2Z" fill="#EEEEEE" fill-opacity="0.5"/>
+            <path id="Shadow" d="M262.3 467.2C317.142 467.2 361.6 460.081 361.6 451.3C361.6 442.519 317.142 435.4 262.3 435.4C207.458 435.4 163 442.519 163 451.3C163 460.081 207.458 467.2 262.3 467.2Z" fill="#EEEEEE" fillOpacity="0.5"/>
             <g id="Legs">
             <path id="Vector_14" d="M224.4 345.4C224.5 346.1 224.6 347.3 224.6 347.9C224.7 351.8 224.4 355.7 224 359.5C223.7 364.9 223 370.2 223.4 375.6C223.6 378.7 224.6 381.7 224.9 384.8C225.7 389.3 226.5 393.8 227.3 398.4C228.2 402.4 228.6 406.4 229.4 410.4C231.1 419.8 232.6 429.2 234.4 438.6C234.4 439.1 234.9 439.6 234.2 440.3C229.8 437.5 224.9 436.3 219.7 437C214.7 437.6 211.2 439.7 207.5 443.8C206.2 445.4 205.1 447.3 204.2 449.3C202.6 453.1 202.7 456.9 208.3 457C211.3 457.3 214.2 457.3 217.2 457C225.6 456 233.9 454 242.1 451.9C244.4 451.3 245 450.3 244.6 448.2C244 444.3 243.7 435.9 243.7 435.5C243.3 432.3 243.2 429.4 242.8 426.3C240.7 410.4 238.9 394.5 236.8 378.7C236.5 376.2 236.6 373.6 237 371.1C238.5 361.7 240.4 352.3 242 342.9C242.1 342.4 243 339.5 243.1 339.2C237.4 341.8 231 345.8 224.4 345.4Z" fill="#D14845"/>
             <path id="Vector_15" d="M292.9 344.2C292.8 348.7 291.5 369 291 372.6C291.2 377 292.3 381.3 292.9 385.6C294.2 394.1 296 402.5 297.4 411C298.2 415.7 299.1 420.4 299.9 425.1C300.3 428 301.1 430.8 301.4 433.8C301.8 435.7 302.4 437.6 302.1 439.6C300.6 439.8 299.6 439.2 298.6 438.7C295 436.8 291 436.7 287.2 437.1C283.8 437.5 282.2 438.1 278.3 441.1C274.6 444.9 274.3 445.8 272.9 448.6C270.3 453.9 271 455.7 276.7 457.1C280.1 457.8 282.2 457.4 284.9 457.1C290.5 456.7 296 455.5 301.5 454.2C304.6 453.5 307.6 452.6 310.6 451.8C312.1 451.4 312.6 450.9 312.5 449C312.3 444.8 312 438.6 311.7 432.9C311.5 429.9 309.6 417 309.2 413.6C307.9 404.1 306.7 394.7 305.6 385.2C305.2 381.5 304 377.8 304.5 374.1C305.7 365.7 308.4 353.8 310 345.5C303.6 345.5 297.9 343.7 292.8 340.9C292.8 341.5 292.9 343.7 292.9 344.2Z" fill="#D14845"/>

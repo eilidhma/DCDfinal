@@ -12,6 +12,8 @@ max-width:500px;
 position:absolute;
 bottom:0;
 padding-top:5vh;
+opacity:${props=>props.opacity};
+transition:opacity 0.5s;
 `;
 
 const RowCont= styled.div`
@@ -25,6 +27,8 @@ object-fit:cover;
 position:relative;
 top:10vh;
 z-index:2;
+opacity:${props=>props.opacity};
+transition:opacity 0.5s;
 `;
 
 const ImgCont = styled.div`
@@ -35,12 +39,18 @@ const ImgCont = styled.div`
   width:31vw;
   max-width:500px;
   object-fit:cover;
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
+  z-index:2;
 `;
 
 const Img = styled.img`
   display:flex;
   width:100%;
   object-fit:cover;
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
+  z-index:2;
 `;
 
 const Dirt = styled.div`
@@ -52,6 +62,8 @@ const Dirt = styled.div`
   align-items:center;
   position:relative;
   background: linear-gradient(180deg, #8A583C 0%, #4F2B16 113.94%);
+  opacity:${props=>props.opacity};
+  transition:opacity 0.5s;
 `;
 
 const Garden = ({
@@ -61,16 +73,17 @@ src3="../../logo-white.png",
 onClick1=()=>{},
 onClick2=()=>{},
 onClick3=()=>{},
+opacity=1
 }) => {
-  return <Cont>
-    <RowCont>
-      <ImgCont>
-        <Img onClick={onClick1} src={src1}></Img>
-        <Img onClick={onClick2} src={src2}></Img>
-        <Img onClick={onClick3} src={src3}></Img>
+  return <Cont opacity={opacity}>
+    <RowCont opacity={opacity}>
+      <ImgCont opacity={opacity}>
+        <Img opacity={opacity} onClick={onClick1} src={src1}></Img>
+        <Img opacity={opacity} onClick={onClick2} src={src2}></Img>
+        <Img opacity={opacity} onClick={onClick3} src={src3}></Img>
       </ImgCont>
     </RowCont>
-    <Dirt></Dirt>
+    <Dirt opacity={opacity}></Dirt>
   </Cont>
     
 }

@@ -13,14 +13,15 @@ const Cont = styled.h3`
   color:#FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin:30px;
+  opacity:${props=>props.opacity}
 `;
 
 
 const Description = ({
 text = "Placeholder",
-
+opacity=1
 }) => {
-  return <Cont>
+  return <Cont opacity={opacity}>
     {text}
   </Cont>
 }

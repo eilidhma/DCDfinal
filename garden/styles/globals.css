@@ -146,12 +146,15 @@ button:hover{
   align-items: center;
 }
 
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
+
+  button:hover{
+    color:#000000;
+    border-color:#000000;
+  }
 
 }
 
-@media only screen and (max-width: 600px) {
-} */
 
 .infoNav {
   display: flex;
@@ -231,6 +234,7 @@ button:hover{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .navContent {
@@ -243,12 +247,38 @@ button:hover{
   padding-bottom: 20px;
 }
 
+.titleCont {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100px;
+}
+
 .questionCont {
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width:70%;
+  position:relative;
+  padding-top: 40px;
+}
+
+.quizGraphic {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.backButton {
+  display: flex;
+  justify-content: left;
+  width:100%;
+  padding-left: 30%;
 }
 
 @keyframes gradient {
@@ -290,10 +320,6 @@ span {
 
 button:focus, input:focus { outline: none; }
 
-button:hover{
-  color:#000000;
-  border-color:#000000;
-}
 
 
 .BeeBadge{
@@ -322,6 +348,18 @@ button:hover{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width:80vw;
+}
+
+.optionsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:fixed;
+  width: 100vw;
+  height:20vh;
+  top:7%;
+  z-index:4;
 }
 
 .ButtonCont{
@@ -870,11 +908,28 @@ button:hover{
   transform-box: fill-box;
   transform-origin: bottom;
 }
-#gardening-girl{
+#gardening-girl, #gardening-girl-sad{
   animation: girl-moving 8s ease-in-out infinite;
   transform-box: fill-box;
   transform-origin: bottom;
   overflow: visible;
+}
+#gardening-girl{
+  transition: opacity 0.5s;
+  transition-delay: 0.2s;
+}
+#gardening-girl-sad{
+  transition: opacity 0.5s;
+  margin-top: -27vh;
+}
+.garden-girl {
+  margin-top: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width:70vw;
 }
 
 @keyframes hair-left{
@@ -912,7 +967,7 @@ button:hover{
 }
 @keyframes plant-move{
   0%{
-      transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
   }
   50%{
       transform: rotateZ(1deg);
@@ -1064,6 +1119,30 @@ button:hover{
   }
   50%{
       transform: scale(1 ,1);
+  }
+}
+/* earth animation */
+#earth{
+  background:url(../public/world-map-color.png);
+  background-size: cover;
+  width:250px;
+  height:250px;
+  margin-top:25px;
+  border: 0px solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 
+  -8px -8px 15px rgba(0, 46, 80, 0.75) inset, 
+  2px 2px 25px rgba(0, 46, 80, 0.75) inset, 
+  -25px -25px 25px rgba(0, 46, 80, 0.75) inset, 
+  25px 25px 45px rgba(0, 46, 80, 0.75) inset;
+  animation: earth-moving 10s linear infinite;
+}
+@keyframes earth-moving{
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: 69% 0;
   }
 }
 /* other animations */

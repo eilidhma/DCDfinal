@@ -9,16 +9,17 @@ const Cont = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  height: ${props => props.height}px;
+  height:${props => props.height}px;
+  opacity:${props => props.opacity};
   width:70%;
-  min-width: 210px;
+  // min-width: 210px;
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
   padding:10px;
   margin:50px;
   overflow:hidden;
-  transition: height 0.5s;
+  transition:height 0.5s, opacity 0.5s;
 `;
 
 const DescriptionCont = styled.div`
@@ -30,6 +31,7 @@ const DescriptionCont = styled.div`
   width:100%;
   height: 250px;
   padding-bottom: 10px;
+  opacity=${props => props.opacity}
 `;
 
 const ImgCont = styled.div`
@@ -37,17 +39,19 @@ const ImgCont = styled.div`
   justify-content:center;
   align-items:center;
   flex-basis:1;
-  width:100%;
-  height:100%;
+  width:50%;
+  height:50%;
+  opacity=${props => props.opacity}
 `;
 
 const Img = styled.img`
   display:flex;
   object-fit:cover;
-  height:50%;
+  height:100%;
   padding:15px;
   top: 10px;
   position:relative;
+  opacity=${props => props.opacity}
 `;
 
 const Points = styled.div`
@@ -56,11 +60,13 @@ const Points = styled.div`
   width:100%;
   flex-basis:2;
   text-align:left;
+  opacity=${props => props.opacity}
 `;
 
 const Title = styled.h4`
   color:white;
   font-size:24px;
+  opacity=${props => props.opacity}
   line-height:0;
 `;
 
@@ -70,6 +76,7 @@ const Item = styled.p`
   font-size:0.9rem;
   text-align:left;
   line-height: 1px;
+  opacity=${props => props.opacity}
 `;
 
 const Button = styled.button`
@@ -79,7 +86,7 @@ const Button = styled.button`
   align-items:center;
   width:300px;
   background:#FFFFFF33;
-  border:4px solid #FFFFFF;
+  border:3px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;
@@ -90,17 +97,42 @@ const Button = styled.button`
   text-align:center;
   color:white;
   margin: 0px 0px 20px 0px;
+  opacity=${props => props.opacity}
 `;
 
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
+  opacity=${props => props.opacity}
 `;
 
 
+const CloseCont = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+  opacity:${props => props.opacity};
+  position:relative;
+  top:10px;
+  left:10px;
+  position:absolute;
+  z-index:5;
+`;
+
+const Close = styled.img`
+  display:flex;
+  width:100%;
+  opacity:${props => props.opacity};
+`;
+
 
 const Options = ({
+  onClickClose = () => { },
   title = "English Lavender",
   src = "lavendar.png",
   climate = " arid",
@@ -112,12 +144,14 @@ const Options = ({
   // sunIcon = "../../public/sun.png",
   water = "Water every ",
   fact = "Fun fact!",
-
+  opacity = 0,
+  zindex = "1"
 }) => {
   const [open, setOpen] = useState(false);
 
   var height = 290, text = "Learn more"
   if (open) {
+<<<<<<< HEAD
     height = 550;
     text = "Hide";
   }
@@ -143,6 +177,7 @@ const Options = ({
     </DetailsCont>
 
   </Cont>
+
 }
 
 export default Options;

@@ -10,7 +10,7 @@ const Button = styled.button`
   align-items:center;
   width:100%;
   background:${props => props.background};
-  border:5px solid #FFFFFF;
+  border:3px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;
@@ -21,7 +21,8 @@ const Button = styled.button`
   align-items:center;
   text-align:center;
   color:${props => props.color};
-  margin:20px;
+  margin:10px;
+  opacity:${props=>props.opacity}
 `;
 
 
@@ -30,9 +31,9 @@ const MainButton = ({
   background = "#FFFFFF33",
   color = "white",
   onClick = () => {},
-  onHover = () => {}
+  opacity=1
 }) => {
-  return <Button onHover={onHover} onClick={onClick} color={color} background={background}>{text}</Button>
+  return <Button opacity={opacity} onClick={onClick} color={color} background={background}>{text}</Button>
 }
 
 export default MainButton;
