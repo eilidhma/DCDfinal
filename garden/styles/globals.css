@@ -1137,6 +1137,12 @@ button:focus, input:focus { outline: none; }
   25px 25px 45px rgba(0, 46, 80, 0.75) inset;
   animation: earth-moving 10s linear infinite;
 }
+#happyglobe{
+  background:url(../public/happyglobe.png);
+  background-size: cover;
+  width:250px;
+  height:250px;
+}
 @keyframes earth-moving{
   0%{
       background-position: 0 0;

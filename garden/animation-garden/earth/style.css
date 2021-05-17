@@ -4,8 +4,8 @@ body{
 #earth{
     background:url(../../public/world-map-color.png);
     background-size: cover;
-    width:200px;
-    height:200px;
+    width:250px;
+    height:250px;
     border: 0px solid black;
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), 
