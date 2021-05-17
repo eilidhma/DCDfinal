@@ -310,9 +310,10 @@ const Info = () => {
           {/* START OF WELLNESS */}
           {mainstate === 2 && <div className="infoContent">
 
-            <Brain />
             <Description text="Gardening improves mental health" />
-            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind" />
+            <Brain />
+            <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." />
+            <Description text="Feeling of accomplishment" />
             <div className="garden-girl">
               <GardeningGirl 
               opacity={happy ? "1" : "0"}/>
@@ -321,12 +322,16 @@ const Info = () => {
               opacity={sad ? "1" : "0"}/>
               
             </div>
-            <SmallDescription text="Click the little girl to give her a plant!"/>
-            <Description text="Feeling of accomplishment" />
-            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year." />
-            <Watercan />
+            <SmallDescription text="Click the little girl to give her a plant and make her happy!"/>
+            <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." />
             <Description text="Physical activity" />
+            <Watercan />
             <SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." />
+            <div className="BlankBox">
+              <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
+              <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
+            </div>
           </div>}
           {/* END OF WELLNESS */}
 
