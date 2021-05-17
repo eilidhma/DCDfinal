@@ -19,15 +19,17 @@ const Title = styled.h1`
   text-align:center;
   color:#FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family:'Montserrat', sans-serif;
+  opacity:${props=>props.opacity};
 `;
 
 const LargeTitles = ({
-text = "Placeholder"
+text = "Placeholder",
+opacity=1
 }) => {
   return <TitleCont>
-    <Title>{text}</Title>
+    <Title opacity={opacity}>{text}</Title>
   </TitleCont>
 }
 

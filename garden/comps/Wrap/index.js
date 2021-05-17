@@ -8,6 +8,7 @@ const Cont = styled.div`
   justify-content: center;
   object-fit:cover;
   width:40%;
+  min-width:350px;
 `;
 const Img = styled.img`
   display:flex;

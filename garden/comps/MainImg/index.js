@@ -8,7 +8,8 @@ const ImgCont = styled.div`
   align-items:center;
   flex-direction:column;
   width:${props=>props.width};
-  max-width:300px;
+  height:${props=>props.height};
+  max-width:${props=>props.maxWidth};
   object-fit:cover;
 `;
 
@@ -22,9 +23,10 @@ const Img = styled.img`
 const MainImg = ({
 src="../../logo-white.png",
 width=40,
+maxWidth=100,
 opacity=1
 }) => {
-  return <ImgCont opacity={opacity} width={width}>
+  return <ImgCont opacity={opacity} width={width} maxWidth={maxWidth}>
     <Img src={src}/>
   </ImgCont>
 }

@@ -391,8 +391,8 @@ export default function ResultsTEST() {
   }
 
   if (results === "sedum") {
-    title = "Sedum",
-      climate = "arid"
+    title = "Sedum"
+    climate = "arid"
     goodIn = "pots/garden"
     category = "flowers"
     maintenance = "low"
@@ -439,7 +439,7 @@ export default function ResultsTEST() {
     fact = "A favourite amung hummingbirds!"
     bee = true
     sun = "Can tolerate any level of sun but will thrive in full sun",
-      water = "When top half of soil is fully dry"
+    water = "When top half of soil is fully dry"
   }
 
   if (results === "purslane") {

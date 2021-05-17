@@ -12,7 +12,7 @@ const Cont = styled.div`
 const Bee = () => {
     return <Cont>
         <svg width="100%" id="bee" viewBox="0 0 476 431" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="bee-anim 1" clip-path="url(#clip0)">
+            <g id="bee-anim 1" clipPath="url(#clip0)">
             <g id="bee">
             <g id="wing-right">
             <path id="Vector" d="M289.955 133.185C311.166 93.2985 302.785 47.3638 271.237 30.5872C239.688 13.8107 196.919 32.5452 175.708 72.4318C154.498 112.319 162.878 158.253 194.427 175.03C225.975 191.806 268.745 173.072 289.955 133.185Z" fill="#D8D8D8"/>
