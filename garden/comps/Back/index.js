@@ -24,6 +24,7 @@ const Button = styled.button`
   position:relative;
   top:${props => props.top};
   left:${props => props.left};
+  opacity:${props=>props.opacity};
 `;
 
 
@@ -33,9 +34,10 @@ const Back = ({
   color = "white",
   onClick = () => {},
   top="-45px",
-  left="30"
+  left="30",
+  opacity=1
 }) => {
-  return <Button top={top} left={left} onClick={onClick} color={color} background={background}>{text}</Button>
+  return <Button opacity={opacity} top={top} left={left} onClick={onClick} color={color} background={background}>{text}</Button>
 }
 
 export default Back;
