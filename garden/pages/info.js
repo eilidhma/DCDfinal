@@ -1,4 +1,5 @@
 import LargeTitles from '../comps/LargeTitles';
+import MedTitles from '../comps/MediumTitles';
 import MainImg from '../comps/MainImg';
 import ButtonUI from '../comps/MainButton'
 import { useRouter } from 'next/router';
@@ -115,18 +116,27 @@ const Info = () => {
     setMainState(1)
     setTitle(titles.sust)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const Well = () => {
     setMainState(2)
     setTitle(titles.well)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const Bees = () => {
     setMainState(3)
     setTitle(titles.bees)
     window.scrollTo(0, 0);
+    setBee(false)
+    setCan(true)
+    setGrow(false)
   }
 
   const HandleStraw = () => {
@@ -269,13 +279,11 @@ const Info = () => {
               />
 
               <Description text="are thrown out..." />
-              <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients." /></div>
-              <MainImg src="garbage.png" width="20%" />
-              <LargeTitles text="And what about food packaging?" />
-              <Description text="Consider this..." />
-              <Description text="(Click the plastic wrap and packaging)" />
+              <div><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients." /></div>
+              <Description text="And what about food packaging?" />
+              <SmallDescription text="(Click the plastic wrap and packaging to find out)" />
               <Wrap
-                src={wrapstate ? "wrap_open.png" : "wrap_closed.png"}
+                src={wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
                 onClick={HandleWrap}
 
               />
@@ -285,12 +293,7 @@ const Info = () => {
                 left={herbsstate ? 0 : -250}
                 onClick={HandleHerbs}
               />
-              <Description text="Other ways that you can help:" />
-              <div className="BlankBox">
-                <PlantDetailsLarge src="globeicon.png" text="Reduce the use of gasoline-power yard tools" />
-                <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
-                <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency" />
-              </div>
+              
             </div>}
 
 
@@ -329,7 +332,7 @@ const Info = () => {
                 <PestBee
                   width="10%"
                   left="60"
-                  top={grow ? "20" : "0"}
+                  top={grow ? "30" : "0"}
                   opacity={grow ? "1" : "0"}
                   transitionDelay="2"
                 />
@@ -377,8 +380,7 @@ const Info = () => {
             {mainstate === 3 && <div className="infoContent">
               <Description text="Now, it’s time to find out what plants are best for you!" />
               <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." />
-              <MainImg src="veggarden.png" />
-              <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')} />
+              <MainButton text="Let's Start the Quiz!" onClick={() => router.push('/quiz/question1')} />
 
             </div>}
 

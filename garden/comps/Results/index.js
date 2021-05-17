@@ -9,16 +9,17 @@ const Cont = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  height: ${props => props.height}px;
+  height:${props => props.height}px;
+  opacity:${props => props.opacity};
   width:70%;
-  min-width: 210px;
+  // min-width: 210px;
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
   padding:10px;
   margin:50px;
   overflow:hidden;
-  transition: height 0.5s;
+  transition:height 0.5s, opacity 0.5s;
 `;
 
 const DescriptionCont = styled.div`
@@ -30,6 +31,7 @@ const DescriptionCont = styled.div`
   width:100%;
   height: 250px;
   padding-bottom: 10px;
+  opacity=${props=>props.opacity}
 `;
 
 const ImgCont = styled.div`
@@ -37,17 +39,19 @@ const ImgCont = styled.div`
   justify-content:center;
   align-items:center;
   flex-basis:1;
-  width:100%;
-  height:100%;
+  width:50%;
+  height:50%;
+  opacity=${props=>props.opacity}
 `;
 
 const Img = styled.img`
   display:flex;
   object-fit:cover;
-  height:50%;
+  height:100%;
   padding:15px;
   top: 10px;
   position:relative;
+  opacity=${props=>props.opacity}
 `;
 
 const Points = styled.div`
@@ -56,11 +60,13 @@ const Points = styled.div`
   width:100%;
   flex-basis:2;
   text-align:left;
+  opacity=${props=>props.opacity}
 `;
 
 const Title = styled.h4`
   color:white;
   font-size:24px;
+  opacity=${props=>props.opacity}
   line-height:0;
 `;
 
@@ -70,6 +76,7 @@ const Item = styled.p`
   font-size:0.9rem;
   text-align:left;
   line-height: 1px;
+  opacity=${props=>props.opacity}
 `;
 
 const Button = styled.button`
@@ -79,7 +86,7 @@ const Button = styled.button`
   align-items:center;
   width:300px;
   background:#FFFFFF33;
-  border:4px solid #FFFFFF;
+  border:3px solid #FFFFFF;
   border-radius:15px;
   font-family:Montserrat;
   font-style:normal;
@@ -90,37 +97,64 @@ const Button = styled.button`
   text-align:center;
   color:white;
   margin: 0px 0px 20px 0px;
+  opacity=${props=>props.opacity}
 `;
 
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
+  opacity=${props=>props.opacity}
 `;
 
 const BeeImg = styled.img`
-  
+opacity=${props=>props.opacity}
 `;
 
 const BeeCont = styled.div`
   // so bee badge doesn't get cut off from overflow hidden :)
+  opacity=${props=>props.opacity}
+`;
+
+const CloseCont = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+  opacity:${props=>props.opacity};
+  position:relative;
+  top:10px;
+  left:10px;
+  position:absolute;
+  z-index:5;
+`;
+
+const Close = styled.img`
+  display:flex;
+  width:100%;
+  opacity:${props=>props.opacity};
 `;
 
 const BeeBadge = styled.div`
-  display: flex;
+  display:flex;
   width:50px;
   height:50px;
   border-radius:50%;
   background-color: white;
-  position: relative;
+  position:relative;
   top:65px;
   z-index:2;
   left: 81%;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
+  opacity:${props=>props.opacity};
 `;
 
 
 const Options = ({
+  onClickClose=()=>{},
   title = "English Lavender",
   src = "lavendar.png",
   climate = " arid",
@@ -132,21 +166,25 @@ const Options = ({
   // sunIcon = "../../public/sun.png",
   water = "Water every ",
   fact = "Fun fact!",
-
+  opacity=0,
+  zindex="1"
 }) => {
   const [open, setOpen] = useState(false);
 
   var height = 290, text = "Learn more"
   if (open) {
-    height = 600;
+    height = 520;
     text = "Hide";
   }
 
   return <BeeCont>
-    <BeeBadge><BeeImg src='../bee.png' className="BeeBadge" /></BeeBadge>
-    <Cont height={height}>
+    <BeeBadge opacity={opacity}><BeeImg opacity={opacity} src='../bee.png' className="BeeBadge" /></BeeBadge>
+    <Cont zindex={zindex} opacity={opacity} height={height}>
+    <CloseCont onClick={onClickClose}  opacity={opacity}>
+      <Close opacity={opacity} src="../close.svg"></Close>
+    </CloseCont>
       <DescriptionCont>
-        <ImgCont><Img src={src} /></ImgCont>
+        <ImgCont><Img opacity={opacity} src={src} /></ImgCont>
         <Points>
           <Title>{title}</Title>
           <Item><strong>Climate: </strong>{climate}</Item>
@@ -157,9 +195,9 @@ const Options = ({
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>
       <DetailsCont>
-        <PlantDetailsLarge src='../sun.png' text={sun} />
-        <PlantDetailsLarge src='../water.png' text={water} />
-        <PlantDetailsLarge src='../globe.png' text={fact} />
+        <PlantDetailsLarge src='../sun.svg' text={sun} />
+        <PlantDetailsLarge src='../water.svg' text={water} />
+        <PlantDetailsLarge src='../globe.svg' text={fact} />
       </DetailsCont>
 
     </Cont>

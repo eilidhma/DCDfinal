@@ -5,7 +5,7 @@ const Cont = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-width:65vw;
+width:40vw;
 max-width:200px;
 `;
 

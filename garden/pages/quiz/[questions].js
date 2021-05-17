@@ -15,6 +15,7 @@ import {BsCircleFill} from 'react-icons/bs';
 import Clouds from '../../comps/Clouds';
 import Logo from '../../comps/Logo'
 import Menu from '../../comps/HambMenu'
+import Back from '../../comps/Back';
 
 var choices = {
   name:null,
@@ -156,11 +157,7 @@ export default function Quiz(){
       router.push("/quiz/question4")
     }
     if(questions === "question4"){
-      
-      setTimeout(() => { 
-        router.push('/loading')
-      }, 1000)
-      
+      router.push('/loading')
     }
   }
 
@@ -186,6 +183,21 @@ export default function Quiz(){
     }
   }
 
+  const HandleBack = () => {
+    if(questions === "question1"){
+      router.push("/info")
+    }
+    if(questions === "question2"){
+      router.push("/quiz/question1")
+    }
+    if(questions === "question3"){
+      router.push("/quiz/question2")
+    }
+    if(questions === "question4"){
+      router.push("/quiz/question3")
+    }
+  }
+
   
 
   return (
@@ -195,27 +207,35 @@ export default function Quiz(){
         <div className="main">
           <div className="quiz">
             <StatusBar percent={percent} width={width}/>
+            <div className="backButton">
+              <Back onClick={HandleBack}/>
+            </div>
             <div className="content">
-              <MedTitles text={title}/>
-              {questions !== "question1" && <div>{graphic}</div>}
-              {questions === "question2" && <div>
-                <div className="legendCont">
-                  <div className="legend">
-                    <span><BsCircleFill fill="#FF6C6C"/></span>
-                    <span className="legendTitles">Temperate</span>
+              <div className="titleCont">
+                <Question text={Q}/>
+              </div>
+              {/* <MedTitles marginTop="0px" text={title}/> */}
+              {questions !== "question1" && <div className="quizGraphic">
+                {graphic}
+                  {questions === "question2" && <div>
+                  <div className="legendCont">
+                    <div className="legend">
+                      <span><BsCircleFill fill="#FF6C6C"/></span>
+                      <span className="legendTitles">Temperate</span>
+                    </div>
+                    <div className="legend">
+                      <span><BsCircleFill fill="#FFE266"/></span>
+                      <span className="legendTitles">Tropical</span>
+                    </div>
+                    <div className="legend">
+                      <span><BsCircleFill fill="#367A17"/></span>
+                      <span className="legendTitles">Arid</span>
+                    </div>
                   </div>
-                  <div className="legend">
-                    <span><BsCircleFill fill="#FFE266"/></span>
-                    <span className="legendTitles">Tropical</span>
-                  </div>
-                  <div className="legend">
-                    <span><BsCircleFill fill="#367A17"/></span>
-                    <span className="legendTitles">Arid</span>
-                  </div>
-                </div>
+                </div>}
+              
                 
               </div>}
-              <Question text={Q}/>
               <div className="questionCont">
                 {questions === "question1" && <NameInput onKeyUp={Next} onChange={getData}/>}
                 {questions !== "question1" && <QuestionButton
