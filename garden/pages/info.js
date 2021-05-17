@@ -21,6 +21,7 @@ import MenuText from '../comps/MenuText';
 import Clouds from '../comps/Clouds';
 import Watercan from '../comps/Watercan';
 import GardeningGirl from '../comps/GardeningGirl';
+import GardGirlSad from '../comps/GardeningGirlSad';
 import Bee from '../comps/Bee';
 import Cart from '../comps/ShoppingCart';
 import Groceries from '../comps/Groceries';
@@ -64,6 +65,8 @@ const Info = () => {
   const [can, setCan] = useState(true)
   const [grow, setGrow] = useState(false)
   const [rotate, setRotate] = useState(false)
+  const [happy, setHappy] = useState(false)
+  const [sad, setSad] = useState(true)
 
 
   const Nav1 = () => {
@@ -160,6 +163,11 @@ const Info = () => {
 
   const Rotate = () => {
     setRotate(false)
+  }
+
+  const Sad = () => {
+    setHappy(true)
+    setSad(false)
   }
 
 
@@ -305,7 +313,13 @@ const Info = () => {
             <Brain />
             <Description text="Gardening improves mental health" />
             <SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind" />
-            <GardeningGirl />
+            <div className="gardening-girl">
+              <GardeningGirl opacity={happy ? "1" : "0"}/>
+
+              <GardGirlSad onClick={Sad} 
+              opacity={sad ? "1" : "0"}/>
+              
+            </div>
             <Description text="Feeling of accomplishment" />
             <SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year." />
             <Watercan />

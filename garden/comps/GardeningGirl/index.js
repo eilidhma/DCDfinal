@@ -8,9 +8,12 @@ align-items:center;
 max-width:200px;
 `;
 
-const GardeningGirl = () => {
-    return <Cont>
-        <svg id="gardening-girl" width="60%" height="100%" viewBox="0 0 251 486" fill="none" xmlns="http://www.w3.org/2000/svg">
+const GardeningGirl = ({
+    onClick=()=>{},
+    opacity=1
+}) => {
+    return <Cont onClick={onClick}>
+        <svg opacity={opacity} id="gardening-girl" width="60%" height="100%" viewBox="0 0 251 486" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="gardening-girl">
             <g id="girl">
             <g id="bandana-back">

@@ -870,11 +870,18 @@ button:hover{
   transform-box: fill-box;
   transform-origin: bottom;
 }
-#gardening-girl{
+#gardening-girl, #gardening-girl-sad{
   animation: girl-moving 8s ease-in-out infinite;
   transform-box: fill-box;
   transform-origin: bottom;
   overflow: visible;
+}
+#gardening-girl{
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+}
+#gardening-girl-sad{
+  transition: opacity 0.5s;
 }
 
 @keyframes hair-left{
