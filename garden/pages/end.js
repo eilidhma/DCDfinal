@@ -4,6 +4,7 @@ import MainImg from '../comps/MainImg'
 import { useRouter } from 'next/router';
 import Description from '../comps/DescriptiveText';
 import SmallDescription from '../comps/SmallDescriptive';
+import PlantDetailsLarge from '../comps/PlantDetailsLarge';
 import Watering from '../comps/Watering';
 import { useState } from 'react';
 import Logo from '../comps/Logo';
@@ -85,6 +86,12 @@ export default function Home() {
   
             <LargeTitles text="Congratulations!"/>
             <Description text="You've started on your plant growing journey."/>
+            <SmallDescription text="This means that you are helping in three different ways."/>
+            <div className="BlankBox">
+              <PlantDetailsLarge src="planet-earth.svg" text="You are more sustainable by not producing food waste." />
+              <PlantDetailsLarge src="dumbbell.svg" text="You are healthier, both physically and mentally." />
+              <PlantDetailsLarge src="bee-icon.svg" text="You are helping with the mission to save the bees." />
+            </div>
             <Earth/>
             <Description text="Thank you for using Garden, and don't forget to water your new plants!"/>
             {/* add water animation/interaction? */}

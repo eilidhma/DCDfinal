@@ -1089,6 +1089,7 @@ button:hover{
   background-size: cover;
   width:250px;
   height:250px;
+  margin-top:25px;
   border: 0px solid black;
   border-radius: 50%;
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 

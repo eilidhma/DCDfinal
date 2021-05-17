@@ -6,7 +6,7 @@ const Cont = styled.div`
     justify-content:center;
     align-items:center;
     width:60vw;
-    max-width:250px;
+    max-width:300px;
 `;
 
 const Earth = () => {
