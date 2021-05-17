@@ -278,7 +278,6 @@ const Info = () => {
 
             <Description text="are thrown out..."/>
             <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
-            <MainImg src="garbage.png" width="20%"/>
             <LargeTitles text="And what about food packaging?"/>
             <Description text="Consider this..."/>
             <Description text="(Click the plastic wrap and packaging)"/>
@@ -293,12 +292,7 @@ const Info = () => {
               left={herbsstate ? 0 : -250}
               onClick={HandleHerbs}
             />
-            <Description text="Other ways that you can help:" />
-            <div className="BlankBox">
-              <PlantDetailsLarge src="globeicon.png" text="Reduce the use of gasoline-power yard tools" />
-              <PlantDetailsLarge src="globeicon.png" text="Reduce water consumption" />
-              <PlantDetailsLarge src="globeicon.png" text="Improve your energy efficiency" />
-            </div>
+            
           </div>}
 
 
@@ -334,7 +328,7 @@ const Info = () => {
 
           {/* START OF BEES */}
           {mainstate === 3 && <div className="infoContent">
-            
+
               <Bee />
               <Description text="By creating a bee-friendly garden, you can do your part to help save our important bees." />
               <SmallDescription text="Since 2010, the United States has suffered a loss of 40% of its local honeybees. Native bee species are dying off too, with many of them categorized as either endangered or significantly declining. " />
@@ -396,7 +390,7 @@ const Info = () => {
 
             {/*Start of quiz intro*/}
             {mainstate === 3 && <div className="infoContent">
-              <Description text="Now, it’s time to find out what plants are best for you!" />
+              <Description text="Now that you've learned more about gardening, it’s time to find out what plants are best for you!" />
               <SmallDescription text="Through a brief questionnaire, Garden will be able to find perfect recommendations for plants that you can grow at home based on your climate, interest, and resources." />
               <MainImg src="veggarden.png" />
               <MainButton text="Let's Start!" onClick={() => router.push('/quiz/question1')} />
