@@ -232,7 +232,7 @@ const Info = () => {
             {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
             {mainstate === 0 && <div data-aos="fade" className="handsPlanet">
               <HandsPlanet />
-            </div> }
+            </div>}
             {mainstate === 0 && <div className="directory">
               <div className="ButtonCont">
                 <ButtonUI text="1. Sustainability" onClick={Sust} />
@@ -283,65 +283,65 @@ const Info = () => {
                 <Cart />
               </div>
 
-            <div data-aos="fade"><Description text="2: Prevent more food waste by gardening at home"/></div>
-            <div data-aos="slide-left"><SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month."/></div>
-            <div data-aos="fade"><Description text="This means, daily:"/></div>
-            <div data-aos="fade"><VegSlider onClick={HandleVeg}
-              number={vegnumber}
-              text={vegfact}
-              src={vegimg}
-            /></div>
+              <div data-aos="fade"><Description text="2: Prevent more food waste by gardening at home" /></div>
+              <div data-aos="slide-left"><SmallDescription text="Organic waste is the 2nd highest component of landfills in the US. It is estimated that a whopping 30% of the food supply is wasted. This means about 20 pounds per person per month." /></div>
+              <div data-aos="fade"><Description text="This means, daily:" /></div>
+              <div data-aos="fade"><VegSlider onClick={HandleVeg}
+                number={vegnumber}
+                text={vegfact}
+                src={vegimg}
+              /></div>
 
-            <div data-aos="fade"><Description text="are thrown out..."/></div>
-            <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients."/></div>
-            <div data-aos="fade"><Description text="3: Reduce your use of food packaging"/></div>
-            <div data-aos="fade"><SmallDescription text="Consider this..."/></div>
-            <div data-aos="fade"><SmallDescription text="(Click the plastic wrap and packaging)"/></div>
-            <Wrap 
-              src = {wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
-              onClick={HandleWrap}
-            />
-            <Herbs
-              opacity={herbsstate ? 1 : 0}
-              rotate={herbsstate ? 0 : -20}
-              left={herbsstate ? 0 : -250}
-              onClick={HandleHerbs}
-            />
-            
-          </div>}
+              <div data-aos="fade"><Description text="are thrown out..." /></div>
+              <div data-aos="fade"><SmallDescription text="Food scraps or trimmings that aren’t consumed can be added to the compost bin, which can then be returned to the garden for its good nutrients." /></div>
+              <div data-aos="fade"><Description text="3: Reduce your use of food packaging" /></div>
+              <div data-aos="fade"><SmallDescription text="Consider this..." /></div>
+              <div data-aos="fade"><SmallDescription text="(Click the plastic wrap and packaging)" /></div>
+              <Wrap
+                src={wrapstate ? "wrap_open.svg" : "wrap_closed.svg"}
+                onClick={HandleWrap}
+              />
+              <Herbs
+                opacity={herbsstate ? 1 : 0}
+                rotate={herbsstate ? 0 : -20}
+                left={herbsstate ? 0 : -250}
+                onClick={HandleHerbs}
+              />
+
+            </div>}
 
 
-          {/* END OF SUSTAINABILITY */}
+            {/* END OF SUSTAINABILITY */}
 
-          {/* START OF WELLNESS */}
-          {mainstate === 2 && <div className="infoContent">
+            {/* START OF WELLNESS */}
+            {mainstate === 2 && <div className="infoContent">
 
-            <div data-aos="fade"><Description text="1: Gardening improves mental health" /></div>
-            <div data-aos="fade"><Brain /></div>
-            <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." /></div>
-            <Description text="2: Feeling of accomplishment" />
-            <div data-aos="fade" className="garden-girl">
-              <div className="garden-girl-cont">
-                <GardeningGirl 
-                opacity={happy ? "1" : "0"}/>
+              <div data-aos="fade"><Description text="1: Gardening improves mental health" /></div>
+              <div data-aos="fade"><Brain /></div>
+              <div data-aos="slide-left"><SmallDescription text="Gardening can help reduce symptoms of depression and anxiety. It gives you a chance to focus on something and put your mind to work with a goal and a task in mind." /></div>
+              <Description text="2: Feeling of accomplishment" />
+              <div data-aos="fade" className="garden-girl">
+                <div className="garden-girl-cont">
+                  <GardeningGirl
+                    opacity={happy ? "1" : "0"} />
+                </div>
+                <div className="garden-girl-cont">
+                  <GardGirlSad onClick={Sad}
+                    opacity={sad ? "1" : "0"} />
+                </div>
               </div>
-              <div className="garden-girl-cont">
-                <GardGirlSad onClick={Sad} 
-                opacity={sad ? "1" : "0"}/>
+              <div data-aos="fade"><SmallDescription text="Click the little girl to give her a plant and make her happy!" /></div>
+              <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." /></div>
+              <div data-aos="fade"><Description text="3: Physical activity" /></div>
+              <div data-aos="fade"><Watercan /></div>
+              <div data-aos="slide-left"><SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." /></div>
+              <div data-aos="fade" className="BlankBox">
+                <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
+                <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
+                <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
               </div>
-            </div>
-            <div data-aos="fade"><SmallDescription text="Click the little girl to give her a plant and make her happy!"/></div>
-            <div data-aos="slide-right"><SmallDescription text="The sense of pride and accomplishment that comes from eating that first tomato or snap pea from your backyard will amaze you. It doesn’t just have to be that first ever crop either – that feeling often extends year after year for everything that you are growing." /></div>
-            <div data-aos="fade"><Description text="3: Physical activity" /></div>
-            <div data-aos="fade"><Watercan /></div>
-            <div data-aos="slide-left"><SmallDescription text="When you take the time to prepare, plant, weed, water, and harvest your own garden, you are getting sunshine, fresh air, and physical activity. All that digging, planting and weeding burns calories and strengthens your heart." /></div>
-            <div data-aos="fade" className="BlankBox">
-              <PlantDetailsLarge src="drop.png" text="Heavy yard work (landscaping and hauling dirt) = 400-600 calories per hour" />
-              <PlantDetailsLarge src="drop.png" text="Gardening (planting and pulling weeds) = 200-400 calories per hour" />
-              <PlantDetailsLarge src="drop.png" text="Mowing the lawn = 250-350 calories per hour" />
-            </div>
-          </div>}
-          {/* END OF WELLNESS */}
+            </div>}
+            {/* END OF WELLNESS */}
 
             {/* START OF BEES */}
             {mainstate === 3 && <div className="infoContent">
