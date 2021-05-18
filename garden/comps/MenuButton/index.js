@@ -14,13 +14,14 @@ const Button = styled.button`
   font-family:Montserrat;
   font-style:normal;
   font-weight:bold;
-  font-size:18px;
+  font-size:1rem;
   display:flex;
   align-items:center;
   text-align:center;
   color:${props=>props.color};
-  padding:10px;
+  padding:5px;
   margin:10px;
+  top:50%;
 `;
 
 

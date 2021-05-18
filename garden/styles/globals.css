@@ -246,6 +246,12 @@ button:hover{
   overflow: hidden;
 }
 
+.Nav {
+  position:absolute;
+  top:5px;
+  right:5px;
+}
+
 .navContent {
   display:flex;
   flex-direction: column;

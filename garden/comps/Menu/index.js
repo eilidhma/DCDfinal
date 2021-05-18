@@ -5,47 +5,66 @@ import React, {useState} from 'react';
 import {Router, useRouter} from 'next/router'
 
 const Cont = styled.div`
-    position: absolute;
-    left:5px;
-    top:5px;
-    z-index:5;
+    display:flex;
+    flex-direction:column;
+    width:100vw
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:25vw;
+    right:${props=>props.right}%;
+    transition:right 0.5s;
+    opacity:${props=>props.opacity};
 `;
-const MenuIcon = styled.div`
-    color:${props=>props.color};
-`;
+
 const MenuItems = styled.div`
     display:flex;
     flex-direction:column;
-    max-width:${props=>props.width};
-    max-height:${props=>props.height};
-    overflow:hidden;
-    transition:max-width 0.5s, max-height 0.5s;
-    position:absolute;
     border-radius:15px;
-    background-color:rgba(67,128,40,0.85);
+    width:80vw;
+`;
+
+const Button = styled.button`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+  background:#FFFFFF33;
+  border:2px solid #FFF;
+  border-radius:15px;
+  font-family:Montserrat;
+  font-style:normal;
+  font-weight:bold;
+  font-size:1rem;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:5px;
+  margin:10px;
+  top:50%;
 `;
 
 
 
-const Menu = ({
+const Nav = ({
     router = useRouter(),
     color="#FFF",
     onClick1=()=>{router.push('/')},
     onClick2=()=>{router.push('/info')},
     onClick3=()=>{router.push('/quiz/question1')},
+    right=-100,
+    opacity=1
 
 }) => {
     
-    return <Cont>
-        <MenuIcon color={color} onClick={()=>setOpen(!open)}>
-            <GiHamburgerMenu size={40}/>
-        </MenuIcon>
-        <MenuItems width={width} height={height}>
-            <MenuButton onClick={onClick1} text="Home"></MenuButton>
-            <MenuButton onClick={onClick2} text="Learn"></MenuButton>
-            <MenuButton onClick={onClick3} text="Quiz"></MenuButton>
+    return <Cont opacity={opacity} right={right}>
+        <MenuItems>
+            <Button onClick={onClick1} text="Home">Home</Button>
+            <Button onClick={onClick2} text="Learn">Learn</Button>
+            <Button onClick={onClick3} text="Quiz">Quiz</Button>
         </MenuItems>
     </Cont>
 }
 
-export default Menu;
+export default Nav;

@@ -14,6 +14,9 @@ import MainButton from '../comps/MainButton';
 import Earth from '../comps/Earth';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Nav from '../comps/Menu'
+import {AiOutlineClose} from 'react-icons/ai';
+import {HiMenu} from 'react-icons/hi'
 
 
 export default function Home() {
@@ -68,6 +71,14 @@ export default function Home() {
     }
 
 
+  const [menuopen, setMenuOpen] = useState(false)
+
+  const OpenMenu = () => {
+    setMenuOpen(!menuopen)
+  }
+  const CloseMenu = () => {
+    setMenuOpen(!menuopen)
+  }
   const [opacitysmallstate, setOpacitySmall] = useState(false)
   const [opacitybigstate, setOpacityBig] = useState(false)
   const [waterstate, setWater] = useState(0)
@@ -86,7 +97,14 @@ export default function Home() {
       <div className="app">
         <div className="main">
           <Menu/>
-          <div className="content">
+          {menuopen === false && <div className="Nav">
+            <HiMenu onClick={OpenMenu} color="white" size={40}/>
+          </div>}
+          {menuopen === true && <div className="Nav">
+            <AiOutlineClose onClick={CloseMenu} color="white" size={40}/>
+          </div>}
+          <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
+          {menuopen === false && <div className="content">
   
             <div data-aos="fade" ><LargeTitles text="Congratulations!"/></div>
             <div data-aos="fade" ><Description text="You've started on your plant growing journey."/></div>
@@ -107,7 +125,7 @@ export default function Home() {
             
             
             
-          </div>
+          </div>}
           
           
         </div>

@@ -32,6 +32,9 @@ import HandsPlanet from '../comps/HandsPlanet';
 import Watering from '../comps/Watering';
 import Back from '../comps/Back';
 import Tabs from '../comps/Tabs';
+import Nav from '../comps/Menu'
+import {AiOutlineClose} from 'react-icons/ai';
+import {HiMenu} from 'react-icons/hi'
 
 
 
@@ -69,6 +72,14 @@ const Info = () => {
   const [happy, setHappy] = useState(false)
   const [sad, setSad] = useState(true)
 
+  const [menuopen, setMenuOpen] = useState(false)
+
+  const OpenMenu = () => {
+    setMenuOpen(!menuopen)
+  }
+  const CloseMenu = () => {
+    setMenuOpen(!menuopen)
+  }
 
   const Nav1 = () => {
     setNav1Hover(true)
@@ -196,8 +207,14 @@ const Info = () => {
         <div className="infoMain">
 
           <Menu />
-
-          <div className="infoContent">
+          {menuopen === false && <div className="Nav">
+            <HiMenu onClick={OpenMenu} color="white" size={40}/>
+          </div>}
+          {menuopen === true && <div className="Nav">
+            <AiOutlineClose onClick={CloseMenu} color="white" size={40}/>
+          </div>}
+          <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
+          {menuopen === false && <div className="infoContent">
 
             {/* START OF REUSABLE */}
             <div >
@@ -418,7 +435,7 @@ const Info = () => {
             </div>
 
 
-          </div>
+          </div>}
         </div>
       </div>
     </div>
