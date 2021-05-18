@@ -6,7 +6,7 @@ const Button = styled.button`
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  width:100%;
+  width:70vw;
   background:${props=>props.background};
   border-width:2px;
   border-style:solid;

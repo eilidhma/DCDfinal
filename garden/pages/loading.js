@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
-import StatusBar from '../comps/StatusBar'
-import LargeTitles from '../comps/LargeTitles'
+import StatusBar from '../comps/StatusBar';
+import LargeTitles from '../comps/LargeTitles';
 import React, {useState,useEffect} from 'react';
 import Loading from '../comps/LoadingPage';
-import Clouds from '../comps/Clouds'
+import Clouds from '../comps/Clouds';
+import Back from '../comps/Back';
 
 
 export default function Quiz() {
@@ -87,7 +88,10 @@ export default function Quiz() {
     <div className="main">
     <div className="content">
       <div className="loading">
-        <StatusBar percent="100%" width="100"/>
+      <div className="quizWrap"><StatusBar percent="100%" width="100"/></div>
+        <div className="backButton">
+              <Back opacity="0"/>
+            </div>
         <LargeTitles text="Calculating your results..."/>
         <Loading />
       </div>

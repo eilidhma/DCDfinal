@@ -11,8 +11,9 @@ const Cont = styled.div`
   align-items:center;
   height:${props => props.height}px;
   opacity:${props => props.opacity};
-  width:80%;
+  width:30em;
   min-width: 250px;
+  max-width: 400px;
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
@@ -120,14 +121,14 @@ const CloseCont = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  width:50px;
-  height:50px;
+  width:35px;
+  height:35px;
   border-radius:50%;
   object-fit:cover;
   opacity:${props => props.opacity};
   position:relative;
   top:10px;
-  left:10px;
+  right:10px;
   position:absolute;
   z-index:5;
 `;
