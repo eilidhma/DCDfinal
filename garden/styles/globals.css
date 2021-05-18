@@ -101,11 +101,11 @@ button:hover{
   width: 90vw;
   height: 100vh;
   z-index: 4;
-  /* padding-bottom:5%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  
 }
 
 .infoContent {
@@ -161,6 +161,15 @@ button:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.endNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:90vw;
+  padding-bottom: 5%;
 }
 
 .back{
@@ -234,7 +243,7 @@ button:hover{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .navContent {
@@ -242,7 +251,7 @@ button:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:80vw;
+  width:90vw;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -274,11 +283,25 @@ button:hover{
   height: 200px;
 }
 
+.quizWrap {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
 .backButton {
   display: flex;
   justify-content: left;
   width:100%;
   padding-left: 30%;
+}
+
+.endGlobe{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes gradient {
@@ -351,6 +374,16 @@ button:focus, input:focus { outline: none; }
   width:80vw;
 }
 
+.handsPlanet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 200px;
+  object-fit: cover;
+}
+
 .optionsCard {
   display: flex;
   flex-direction: column;
@@ -368,12 +401,12 @@ button:focus, input:focus { outline: none; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding-top: 10px; 
 }
 .directory{
   display: flex;
   flex-direction: column;
-  width:70vw;
+  width:90vw;
 }
 
 /* .video-responsive {
@@ -920,7 +953,7 @@ button:focus, input:focus { outline: none; }
 }
 #gardening-girl-sad{
   transition: opacity 0.5s;
-  margin-top: -27vh;
+  /* margin-top: -37vh; */
 }
 .garden-girl {
   margin-top: 0%;
@@ -930,6 +963,11 @@ button:focus, input:focus { outline: none; }
   flex-direction: column;
   overflow: hidden;
   width:70vw;
+  height:35vh;
+}
+
+.garden-girl-cont {
+  position:absolute;
 }
 
 @keyframes hair-left{
@@ -1127,7 +1165,7 @@ button:focus, input:focus { outline: none; }
   background-size: cover;
   width:250px;
   height:250px;
-  margin-top:25px;
+  margin-top:40px;
   border: 0px solid black;
   border-radius: 50%;
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5), 

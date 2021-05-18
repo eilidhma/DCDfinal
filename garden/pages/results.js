@@ -8,46 +8,44 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../comps/Logo';
 
-import Flip from '../comps/Flip';
-
 const Results = () => {
-  useEffect(() => {
-    AOS.init({});
-  }, []);
-  useEffect(() => {
-    if (process.browser) {
-      var choices = sessionStorage.getItem("choices");
-      var obj = JSON.parse(Results)
-      var key = obj.climate + obj.maintenance + obj.location + obj.type
-      console.log(choices)
+    useEffect(() => {
+        AOS.init({});
+    }, []);
+    useEffect(() => {
+        if (process.browser) {
+            var choices = sessionStorage.getItem("choices");
+            var obj = JSON.parse(Results)
+            var key = obj.climate + obj.maintenance + obj.location + obj.type
+            console.log(choices)
 
-      if (obj.climate === "Temperate" && obj.maintenance === "Low maintenance" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs") {
-        setTitle()
-        setSrc()
-        setClimate()
-        setGoodIn()
-        setCategory()
-        setMaintenance()
-        setSun()
-        setWater()
-        setFact()
-      }
-    }
+            if (obj.climate === "Temperate" && obj.maintenance === "Low maintenance" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs") {
+                setTitle()
+                setSrc()
+                setClimate()
+                setGoodIn()
+                setCategory()
+                setMaintenance()
+                setSun()
+                setWater()
+                setFact()
+            }
+        }
 
-  })
+    })
 
 
-  const router = useRouter()
+    const router = useRouter()
 
-  return (
-    <div className="results">
-      <Logo />
+    return (
+        <div className="results">
+            <Logo />
 
-      <MainImg src="watermark.png" width="40%" />
+            <MainImg src="watermark.png" width="40%" />
 
-        {/* saving this for future */}
+            {/* saving this for future */}
 
-      {/* {suggestions === "one" && cards.map((value, index) => {
+            {/* {suggestions === "one" && cards.map((value, index) => {
                         return (
 
                             cardstate === true && <Options
@@ -288,15 +286,15 @@ const Results = () => {
                         )
                     })} */}
 
-      <LargeTitles text="*Name*, Garden recommends" />
-      <Flip />
-      <Options />
-      <Options />
-      <Options />
+            <LargeTitles text="*Name*, Garden recommends" />
+           
+            <Options />
+            <Options />
+            <Options />
 
-      <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
-    </div>
-  )
+            <div className="resultsButton" data-aos="fade-in" data-aos-duration="4000" onClick={() => router.push('/end')}><MainButton text="Finish" /></div>
+        </div>
+    )
 }
 
 export default Results

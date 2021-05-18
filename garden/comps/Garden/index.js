@@ -51,6 +51,7 @@ const Img = styled.img`
   opacity:${props=>props.opacity};
   transition:opacity 0.5s;
   z-index:2;
+  max-width:200px;
 `;
 
 const Dirt = styled.div`

@@ -5,13 +5,13 @@ const Cont = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-width:40vw;
+width:45vw;
 max-width:200px;
 `;
 
 const HandsPlanet = () => {
     return <Cont>
-        <svg width="40vw" id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="hands-planet" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="hands-planet 1" clipPath="url(#clip0)">
             <g id="hands-planet">
             <g id="rays">

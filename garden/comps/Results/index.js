@@ -11,8 +11,9 @@ const Cont = styled.div`
   align-items:center;
   height:${props => props.height}px;
   opacity:${props => props.opacity};
-  width:70%;
-  // min-width: 210px;
+  width:30em;
+  min-width: 250px;
+  max-width: 400px;
   border-radius:15px;
   border:3px solid white;
   background-color:rgba(255,255,255,0.1);
@@ -31,7 +32,7 @@ const DescriptionCont = styled.div`
   width:100%;
   height: 250px;
   padding-bottom: 10px;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const ImgCont = styled.div`
@@ -41,7 +42,7 @@ const ImgCont = styled.div`
   flex-basis:1;
   width:50%;
   height:50%;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const Img = styled.img`
@@ -51,7 +52,7 @@ const Img = styled.img`
   padding:15px;
   top: 10px;
   position:relative;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const Points = styled.div`
@@ -60,13 +61,13 @@ const Points = styled.div`
   width:100%;
   flex-basis:2;
   text-align:left;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const Title = styled.h4`
   color:white;
   font-size:24px;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
   line-height:0;
 `;
 
@@ -76,7 +77,7 @@ const Item = styled.p`
   font-size:0.9rem;
   text-align:left;
   line-height: 1px;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const Button = styled.button`
@@ -97,37 +98,37 @@ const Button = styled.button`
   text-align:center;
   color:white;
   margin: 0px 0px 20px 0px;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const BeeImg = styled.img`
-opacity=${props=>props.opacity}
+opacity=${props => props.opacity}
 `;
 
-const BeeCont = styled.div`
+const MainCont = styled.div`
   // so bee badge doesn't get cut off from overflow hidden :)
-  opacity=${props=>props.opacity}
+  opacity=${props => props.opacity}
 `;
 
 const CloseCont = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  width:50px;
-  height:50px;
+  width:35px;
+  height:35px;
   border-radius:50%;
   object-fit:cover;
-  opacity:${props=>props.opacity};
+  opacity:${props => props.opacity};
   position:relative;
   top:10px;
-  left:10px;
+  right:10px;
   position:absolute;
   z-index:5;
 `;
@@ -135,7 +136,7 @@ const CloseCont = styled.div`
 const Close = styled.img`
   display:flex;
   width:100%;
-  opacity:${props=>props.opacity};
+  opacity:${props => props.opacity};
 `;
 
 const BeeBadge = styled.div`
@@ -149,12 +150,12 @@ const BeeBadge = styled.div`
   z-index:2;
   left: 81%;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
-  opacity:${props=>props.opacity};
+  opacity:${props => props.opacity};
 `;
 
 
 const Options = ({
-  onClickClose=()=>{},
+  onClickClose = () => { },
   title = "English Lavender",
   src = "lavendar.png",
   climate = " arid",
@@ -166,8 +167,8 @@ const Options = ({
   // sunIcon = "../../public/sun.png",
   water = "Water every ",
   fact = "Fun fact!",
-  opacity=0,
-  zindex="1"
+  opacity = 0,
+  zindex = "1"
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -177,12 +178,11 @@ const Options = ({
     text = "Hide";
   }
 
-  return <BeeCont>
-    <BeeBadge opacity={opacity}><BeeImg opacity={opacity} src='../bee.png' className="BeeBadge" /></BeeBadge>
+  return <MainCont>
     <Cont zindex={zindex} opacity={opacity} height={height}>
-    <CloseCont onClick={onClickClose}  opacity={opacity}>
-      <Close opacity={opacity} src="../close.svg"></Close>
-    </CloseCont>
+      <CloseCont onClick={onClickClose} opacity={opacity}>
+        <Close opacity={opacity} src="../close.svg"></Close>
+      </CloseCont>
       <DescriptionCont>
         <ImgCont><Img opacity={opacity} src={src} /></ImgCont>
         <Points>
@@ -201,7 +201,7 @@ const Options = ({
       </DetailsCont>
 
     </Cont>
-  </BeeCont>
+  </MainCont>
 }
 
 export default Options;

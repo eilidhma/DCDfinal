@@ -30,6 +30,7 @@ const Bar = styled.div`
   border-radius:15px;
   border:none;
   background-color:white;
+  transition: width 0.5s;
 `;
 
 const Percent = styled.p`

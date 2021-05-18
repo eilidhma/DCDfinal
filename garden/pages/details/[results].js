@@ -14,6 +14,7 @@ import Clouds from '../../comps/Clouds';
 import Garden from '../../comps/Garden';
 import Description from '../../comps/DescriptiveText';
 import Back from '../../comps/Back';
+import BeeInfo from '../../comps/BeeInfo';
 
 //wanna make this state change ideally
 
@@ -110,11 +111,11 @@ export default function ResultsTEST() {
     goodIn = "pots/planters"
     category = "flowers"
     maintenance = "high"
-    src = "../coneflower.svg"
+    src = "../coneflower.png"
     fact = "Produce chemicals to prevent growth in competing plants!"
     bee = true
     sun = "Needs full to partial sun"
-    water = "Drought tolerant! But will thrive with the occasional water"
+    water = "Drought tolerant! Thrives with occasional water"
   }
 
   if (results === "witchhazel") {
@@ -243,7 +244,7 @@ export default function ResultsTEST() {
     src = "../anthurium.png"
     fact = "Symbolizes hospitality!"
     bee = false
-    sun = "Prefers partial sun, can survive low light"
+    sun = "Prefers partial sun, survives low light"
     water = "Once a week, mist occasionally"
   }
 
@@ -439,7 +440,7 @@ export default function ResultsTEST() {
     fact = "A favourite amung hummingbirds!"
     bee = true
     sun = "Can tolerate any level of sun but will thrive in full sun",
-    water = "When top half of soil is fully dry"
+      water = "When top half of soil is fully dry"
   }
 
   if (results === "purslane") {
@@ -662,6 +663,7 @@ export default function ResultsTEST() {
       <div className="main">
         <Menu />
         <div className="content">
+          <BeeInfo />
           <Back onClick={Close} text="Close" />
           <Options
 
