@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 
+const BeeCont = styled.div`
+    position: relative;
+    left: 12%;
+`;
 
 const BeeImg = styled.img`
   
-`;
-
-const BeeCont = styled.div`
-  // so bee badge doesn't get cut off from overflow hidden :)
 `;
 
 const BeeBadge = styled.div`
@@ -23,7 +23,7 @@ const BeeBadge = styled.div`
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 
-const BeeInfo = styled.div`
+const BeeText = styled.div`
   width:10%;
   min-width: 120px;
   border-radius:15px;
@@ -33,7 +33,7 @@ const BeeInfo = styled.div`
   color:white;
   text-align:center;
   position:relative;
-  left: 73%;
+  left: 50%;
   top: 55px;
   visibility: visible;
   `;
@@ -49,7 +49,7 @@ const BeeInfo = ({
     }
 
     return <BeeCont>
-        <BeeInfo className="beeInfo"><p>I support pollination!</p></BeeInfo>
+        {/* <BeeText className="beeInfo"><p>I support pollination!</p></BeeText> */}
         <BeeBadge><BeeImg src='../bee.png' className="BeeBadge" onClick={() => setBee(!bee)} /></BeeBadge>
     </BeeCont>
 }
