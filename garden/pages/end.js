@@ -23,6 +23,7 @@ import Seed from '../comps/Seed';
 import Leaves from '../comps/Leaves';
 
 
+
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
