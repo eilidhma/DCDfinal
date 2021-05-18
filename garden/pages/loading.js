@@ -25,62 +25,62 @@ export default function Quiz() {
         if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/one')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Temperate" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/two')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Temperate" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/three')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Temperate" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/four')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Tropical" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/five')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Tropical" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/six')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Tropical" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/seven')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Tropical" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/eight')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Arid" && obj.location === "Pots / Planters" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/nine')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Arid" && obj.location === "Pots / Planters" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/ten')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Arid" && obj.location === "In the ground / garden" && obj.type === "Flowers / Houseplants"){
           setTimeout(() => { 
               router.push('/results/eleven')
-            }, 1000)
+            }, 2000)
         }
         if(obj.climate === "Arid" && obj.location === "In the ground / garden" && obj.type === "Vegetables / Fruits / Herbs"){
           setTimeout(() => { 
               router.push('/results/twelve')
-            }, 1000)
+            }, 2000)
         }
     }
 },[])
@@ -103,8 +103,10 @@ export default function Quiz() {
         <LargeTitles text="Calculating your results..."/>
 
         </div>
-            
+        <div data-aos="fade" className="loadingTitle">
+          
         <Loading />
+        </div>    
       </div>
     </div>
     </div>
