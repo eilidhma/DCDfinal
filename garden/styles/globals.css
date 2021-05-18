@@ -13,8 +13,6 @@ body {
   width: 100vw;
   cursor: url("../public/leaf.png"), auto;
 }
-/* need to add this into the code for the clouds animation
-*/
 
 
 button:hover{
