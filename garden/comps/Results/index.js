@@ -46,6 +46,8 @@ const ImgCont = styled.div`
   flex-basis:1;
   width:50%;
   height:50%;
+  max-height: 387px;
+  max-width: 387px;
   opacity=${props => props.opacity};
   object-fit:cover;
   transition: opacity 0.5s;
@@ -152,7 +154,7 @@ const BeeImg = styled.img`
   width:80%;
   opacity:${props => props.opacity};
   transition: opacity 0.5s;
-  display:${props=>props.display};
+  display:${props => props.display};
 `;
 
 const MainCont = styled.div`
@@ -202,14 +204,14 @@ const BeeBadge = styled.div`
   padding:1px;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
   transition: opacity 0.5s;
-  display:${props=>props.display};
+  display:${props => props.display};
 `;
 
 const BeeFriendly = styled.p`
   display:flex;
   justify-content:center;
   align-items:center;
-  visibility:${props=>props.visibility};
+  visibility:${props => props.visibility};
   position:absolute;
   font-family:Montserrat;
   font-style:normal;
@@ -222,8 +224,8 @@ const BeeFriendly = styled.p`
 
 
 const Options = ({
-  onClickClose = () => {},
-  onClickBee = () => {},
+  onClickClose = () => { },
+  onClickBee = () => { },
   title = "English Lavender",
   src = "lavendar.png",
   climate = " arid",
@@ -237,8 +239,8 @@ const Options = ({
   fact = "Fun fact!",
   opacity = 0,
   zindex = "1",
-  visibility="visible",
-  display="flex"
+  visibility = "visible",
+  display = "flex"
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -255,7 +257,7 @@ const Options = ({
       </CloseCont>
       <BeeFriendly opacity={opacity} visibility={visibility}>Bees love me!</BeeFriendly>
       <BeeBadge opacity={opacity} display={display}>
-        <BeeImg  opacity={opacity} display={display} onClick={onClickBee} src="../bee.png"></BeeImg>
+        <BeeImg opacity={opacity} display={display} onClick={onClickBee} src="../bee.png"></BeeImg>
       </BeeBadge>
       <DescriptionCont opacity={opacity}>
         <ImgCont><Img opacity={opacity} src={src} /></ImgCont>
