@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import React, { useState } from 'react';
 
 const BeeCont = styled.div`
-    position: relative;
-    right: 16em;
-
+  position:relative;
 `;
 
 const BeeImg = styled.img`
@@ -20,9 +18,9 @@ const BeeBadge = styled.div`
   border-radius:50%;
   background-color: white;
   position: relative;
-  top:65px;
+  top:110px;
+  left:-9em;
   z-index:2;
-  left: 81%;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 

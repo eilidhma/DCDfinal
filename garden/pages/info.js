@@ -375,7 +375,7 @@ const Info = () => {
                 <PestBee
                   width="10%"
                   left="60"
-                  top={grow ? "30" : "0"}
+                  top={grow ? "20" : "0"}
                   opacity={grow ? "1" : "0"}
                   transitionDelay="2"
                 />
@@ -394,17 +394,17 @@ const Info = () => {
               <div data-aos="fade" className="pesticide">
                 <PestBee
                   left={bee ? "30" : "0"}
-                  top="30"
+                  top="20"
                   opacity={bee ? "1" : "0"}
                 />
                 <PestBee
                   left={bee ? "60" : "30"}
-                  top="30"
+                  top="20"
                   opacity={bee ? "1" : "0"}
                 />
                 <PestBee
                   left={bee ? "30" : "60"}
-                  top="30"
+                  top="20"
                   opacity={bee ? "1" : "0"}
                 />
 

@@ -23,7 +23,7 @@ const TextContent = styled.h3`
   display:flex;
   font-weight:400;
   color:#FFF;
-  margin-top:-20px;
+  margin-top:-15px;
 `;
 
 

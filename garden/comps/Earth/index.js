@@ -11,7 +11,9 @@ const Cont = styled.div`
 
 const Earth = () => {
     return <Cont>
-        <div id="earth"></div>
+        <div id="earth">
+            <div id="happyglobe"></div>
+        </div>
     </Cont>
 }
 
