@@ -512,6 +512,9 @@ export default function Results() {
     const [close2, setClose2] = useState(true)
     const [close3, setClose3] = useState(true)
 
+    const [bee, setBee] = useState(false);
+
+
 
     useEffect(() => {
         AOS.init({});
@@ -568,6 +571,11 @@ export default function Results() {
         cards = AridGroundProduce;
     }
 
+    if (bee) {
+        var beeInfo = document.getElementsByClassName("beeInfo");
+        beeInfo.style.visibility = "hidden";
+    }
+
     const Expand1 = () => {
         setDim(true)
         setClose1(false)
@@ -612,6 +620,9 @@ export default function Results() {
         setPlant3(false)
     }
 
+    // const Pollination = () => {
+    //     setBee(true)
+    // }
 
 
     useEffect(() => {
@@ -1077,7 +1088,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "four" && close1 === false && <div className="optionsCard">
-
+                        <BeeInfo />
                         <Options
                             title="Carrot"
                             climate="temperate"
