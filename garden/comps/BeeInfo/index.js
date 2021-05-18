@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 
 const BeeCont = styled.div`
     position: relative;
-    left: 12%;
+    right: 16em;
+
 `;
 
 const BeeImg = styled.img`
-  
+object-fit:cover;
+margin: 8%;
+
 `;
 
 const BeeBadge = styled.div`
@@ -41,17 +44,13 @@ const BeeText = styled.div`
 const BeeInfo = ({
 
 }) => {
-    const [bee, setBee] = useState(false);
+  const [bee, setBee] = useState(false);
 
-    if (bee) {
-        var beeInfo = document.getElementsByClassName("beeInfo");
-        beeInfo.style.visibility = "hidden";
-    }
 
-    return <BeeCont>
-        {/* <BeeText className="beeInfo"><p>I support pollination!</p></BeeText> */}
-        <BeeBadge><BeeImg src='../bee.png' className="BeeBadge" onClick={() => setBee(!bee)} /></BeeBadge>
-    </BeeCont>
+  return <BeeCont>
+    {/* <BeeText className="beeInfo"><p>I support pollination!</p></BeeText> */}
+    <BeeBadge><BeeImg src='../beefriend.png' /></BeeBadge>
+  </BeeCont>
 }
 
 export default BeeInfo;
