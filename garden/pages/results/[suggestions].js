@@ -512,7 +512,6 @@ export default function Results() {
     const [close2, setClose2] = useState(true)
     const [close3, setClose3] = useState(true)
 
-    const [bee, setBee] = useState(false);
 
 
 
@@ -620,19 +619,6 @@ export default function Results() {
         setDim(false)
         setClose3(true)
         setPlant3(false)
-    }
-
-    const Pollination = () => {
-        setBee(!bee)
-        var beeInfo = document.getElementsByClassName("beeInfo");
-        if (bee) {
-            beeInfo.style.visibility = "hidden";
-        }
-        if (!bee) {
-            beeInfo.style.visibility = "visible";
-
-        }
-
     }
 
 
