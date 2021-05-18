@@ -627,7 +627,6 @@ export default function Results() {
             console.log(obj.climate)
             console.log(obj.location)
             console.log(obj.type)
-            // console.log(nameobj)
             setName(nameobj + ", here's what you should plant!")
 
         }
@@ -644,7 +643,7 @@ export default function Results() {
                     <LargeTitles opacity={dim ? 0.2 : 1} text={name} />
                     <Description opacity={dim ? 0 : 1} text="Click each plant for details and care instructions!" />
 
-                    {suggestions === "one" && cards.map((value, index) => {
+                    {/* {suggestions === "one" && cards.map((value, index) => {
                         return (
 
                             cardstate === true && <Options
@@ -883,7 +882,7 @@ export default function Results() {
 
                             />
                         )
-                    })}
+                    })} */}
                     {suggestions === "one" && <Garden
                         src1="../blackberryR.svg"
                         src2="../raspberryR.svg"
