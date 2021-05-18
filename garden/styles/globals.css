@@ -372,6 +372,11 @@ button:focus, input:focus { outline: none; }
   
 }
 
+.loadingTitle {
+  display:flex;
+  width:80vw;
+}
+
 .handsPlanet {
   display: flex;
   flex-direction: column;

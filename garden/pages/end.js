@@ -18,6 +18,8 @@ import {AiOutlineClose} from 'react-icons/ai';
 import {HiMenu} from 'react-icons/hi'
 import Open from '../comps/OpenIcon'
 import Close from '../comps/CloseIcon'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Home() {
