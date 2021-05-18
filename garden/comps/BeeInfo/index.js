@@ -9,7 +9,7 @@ const BeeCont = styled.div`
 
 const BeeImg = styled.img`
 object-fit:cover;
-width: 100%:
+margin: 8%;
 
 `;
 
