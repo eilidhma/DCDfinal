@@ -287,7 +287,7 @@ const Results = () => {
                     })} */}
 
             <LargeTitles text="*Name*, Garden recommends" />
-            <Flip />
+           
             <Options />
             <Options />
             <Options />
