@@ -242,25 +242,28 @@ const Info = () => {
             {/* END OF REUSABLE */}
 
             {/* START OF Directory */}
+            {mainstate === 0 && <div className="mainDirectory">
+              <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />
+              <div data-aos="fade" className="handsPlanet">
+                <HandsPlanet />
+              </div>
+              <div className="directory">
+                <div className="ButtonCont">
+                  <ButtonUI text="1. Sustainability" onClick={Sust} />
+                  {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
+                </div>
+                <div className="ButtonCont">
+                  <ButtonUI text="2. Health & Wellness" onClick={Well} />
+                  {/* <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" /> */}
+                </div>
+                <div className="ButtonCont">
+                  <ButtonUI text="3. Saving the Bees" onClick={Bees} />
+                  {/* <MenuText text="All about bees- why do we need them, and how can we help support them" /> */}
+                </div>
+              </div>
 
-            {mainstate === 0 && <Description text="Take a moment to learn. Read up on three benefits of gardening at home!" />}
-            {mainstate === 0 && <div data-aos="fade" className="handsPlanet">
-              <HandsPlanet />
             </div>}
-            {mainstate === 0 && <div className="directory">
-              <div className="ButtonCont">
-                <ButtonUI text="1. Sustainability" onClick={Sust} />
-                {/* <MenuText text="Why is gardening at home so good for the environment? Giving you the scoop on pesticides, food waste, and more!" /> */}
-              </div>
-              <div className="ButtonCont">
-                <ButtonUI text="2. Health & Wellness" onClick={Well} />
-                {/* <MenuText text="Let's talk about YOU! How can gardening benefit your mental, and physical wellbeing?" /> */}
-              </div>
-              <div className="ButtonCont">
-                <ButtonUI text="3. Saving the Bees" onClick={Bees} />
-                {/* <MenuText text="All about bees- why do we need them, and how can we help support them" /> */}
-              </div>
-            </div>}
+            
 
 
             {/* END OF Directory */}
@@ -423,13 +426,13 @@ const Info = () => {
 
             </div>}
 
-            <div className="navContent">
+            {(mainstate === 1 || mainstate === 2 || mainstate === 3) && <div className="navContent">
               {mainstate === 1 && <MainButton onClick={Well} text={<>Wellness Benefits<VscArrowRight /></>} />}
               {mainstate === 2 && <MainButton onClick={Sust} text={<><VscArrowLeft />Sustainability</>} />}
               {mainstate === 2 && <MainButton onClick={Bees} text={<>Saving the Bees<VscArrowRight /></>} />}
               {mainstate === 3 && <MainButton onClick={Well} text={<><VscArrowLeft />Wellness Benefits</>} />}
               {mainstate === 3 && <MainButton text="Start the Quiz!" onClick={() => router.push('/quiz/question1')} />}
-            </div>
+            </div>}
 
 
           </InfoWrap>
