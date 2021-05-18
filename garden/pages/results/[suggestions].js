@@ -2,11 +2,11 @@ import { useRouter } from 'next/router';
 import React, { useDebugValue, useEffect, useState } from 'react';
 //for garden
 import MainButton from '../../comps/MainButton';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import LargeTitles from '../../comps/LargeTitles';
 import MainImg from '../../comps/MainImg';
 import Options from '../../comps/Results';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 //for test
 import Menu from '../../comps/HambMenu';
 import Logo from '../../comps/Logo';
@@ -372,7 +372,7 @@ const AridPotsProduce = [
 
 const AridPotsFlowers = [
     {
-        title: "Sedum", //NEED
+        title: "Sedum", 
         climate: "arid",
         goodIn: "pots/garden",
         category: "flowers",
@@ -514,8 +514,10 @@ export default function Results() {
 
 
     useEffect(() => {
-        AOS.init({});
+    AOS.init({ duration: 2000 });
     }, []);
+
+    
     const router = useRouter();
     const { suggestions } = router.query;
 
@@ -638,7 +640,7 @@ export default function Results() {
 
                 <Menu />
 
-                <div className="content">
+                <div data-aos="fade" className="content">
                     <LargeTitles opacity={dim ? 0.2 : 1} text={name} />
                     <Description opacity={dim ? 0 : 1} text="Click each plant for details and care instructions!" />
 

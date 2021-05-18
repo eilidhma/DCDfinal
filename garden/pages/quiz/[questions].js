@@ -16,6 +16,9 @@ import Clouds from '../../comps/Clouds';
 import Logo from '../../comps/Logo'
 import Menu from '../../comps/HambMenu'
 import Back from '../../comps/Back';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 var choices = {
   name:null,
@@ -197,6 +200,9 @@ export default function Quiz(){
       router.push("/quiz/question3")
     }
   }
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
   
 
@@ -206,16 +212,16 @@ export default function Quiz(){
       <div className="app">
         <div className="main">
           <div className="quiz">
-            <StatusBar percent={percent} width={width}/>
-            <div className="backButton">
+            <div data-aos="fade" className="quizWrap"><StatusBar percent={percent} width={width}/></div>
+            <div data-aos="fade" className="backButton">
               <Back onClick={HandleBack}/>
             </div>
             <div className="content">
-              <div className="titleCont">
+              <div data-aos="fade" className="titleCont">
                 <Question text={Q}/>
               </div>
-              {/* <MedTitles marginTop="0px" text={title}/> */}
-              {questions !== "question1" && <div className="quizGraphic">
+              
+              {questions !== "question1" && <div data-aos="fade" className="quizGraphic">
                 {graphic}
                   {questions === "question2" && <div>
                   <div className="legendCont">
@@ -237,7 +243,7 @@ export default function Quiz(){
                 
               </div>}
               <div className="questionCont">
-                {questions === "question1" && <NameInput onKeyUp={Next} onChange={getData}/>}
+                {questions === "question1" && <div data-aos="fade" className="quizWrap"><NameInput onKeyUp={Next} onChange={getData}/></div>}
                 {questions !== "question1" && <QuestionButton
                   className="questbutton"
                   text={buttontexts.option1} 

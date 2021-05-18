@@ -5,7 +5,7 @@ const Input = styled.input`
   display:flex;
   justify-content:center;
   align-items:center;
-  width:100%;
+  width:70%;
   background:${props=>props.background};
   border:2px solid #FFFFFF;
   border-radius:15px;
@@ -18,7 +18,8 @@ const Input = styled.input`
   align-items:center;
   text-align:center;
   color:${props=>props.color};
-  margin:20px;
+  margin-top:20px;
+  margin-bottom:20px;
 `;
 
 

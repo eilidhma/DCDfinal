@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Clouds from '../comps/Clouds';
 import Menu from '../comps/HambMenu'
 import Logo from '../comps/Logo'
+import MainButton from '../comps/MainButton'
 
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
 
             <MainImg src="logo-white.png" width="40vw" />
             <MenuText text="With Garden, you will learn more about some benefits that growing plants offer for our planet, the bees and yourself. Then, you will go through a short questionnaire where we will recommend 3 plants for you to grow based on your individual needs!" />
-            <ButtonUI text="Start" routeTo="/info" onClick={() => router.push('/info')} />
+            <MainButton text="Start" routeTo="/info" onClick={() => router.push('/info')} />
             
             <LandingInfo titleText="Creators:" bodyText="Eilidh, Zoë, and Alex" />
           </div>
