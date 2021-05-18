@@ -21,6 +21,7 @@ import Close from '../comps/CloseIcon';
 import Soil from '../comps/Soil';
 import Seed from '../comps/Seed';
 import Leaves from '../comps/Leaves';
+import InfoWrap from '../comps/InfoWrap';
 
 
 
@@ -103,14 +104,14 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="garden">
-      <div className="background"><Clouds/></div>
-      <div className="app">
-        <div className="main">
+    <div className="infoWrap">
+      <div className="infoBackground"><Clouds/></div>
+      <div className="infoApp">
+        <div className="infoMain">
           {menuopen === false && <Open onClick={OpenMenu} color="white"/>}
           {menuopen === true && <Close onClick={CloseMenu} color="white"/>}
           <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
-          {menuopen === false && <div className="content">
+          <InfoWrap opacity={menuopen ? 0 : 1} className="infoContent">
   
             <div data-aos="fade" ><LargeTitles text="Congratulations!"/></div>
             <div data-aos="fade" ><Description text="You can now start your plant growing journey."/></div>
@@ -147,7 +148,7 @@ export default function Home() {
             
             
             
-          </div>}
+          </InfoWrap>
           
           
         </div>
