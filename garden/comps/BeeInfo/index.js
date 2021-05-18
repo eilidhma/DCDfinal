@@ -46,14 +46,10 @@ const BeeInfo = ({
 }) => {
   const [bee, setBee] = useState(false);
 
-  if (bee) {
-    var beeInfo = document.getElementsByClassName("beeInfo");
-    beeInfo.style.visibility = "hidden";
-  }
 
   return <BeeCont>
     {/* <BeeText className="beeInfo"><p>I support pollination!</p></BeeText> */}
-    <BeeBadge><BeeImg src='../beefriend.png' className="BeeBadge" onClick={() => setBee(!bee)} /></BeeBadge>
+    <BeeBadge><BeeImg src='../beefriend.png' /></BeeBadge>
   </BeeCont>
 }
 
