@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="seed-plant-cont">
           <Seed onClick={Grow}
-            top={seed ? "0" : "60"}
+            top={seed ? "-20" : "60"}
             opacity={seed ? "1" : "0"} />
         </div>
       </div>

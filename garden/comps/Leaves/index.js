@@ -7,6 +7,7 @@ justify-content:center;
 align-items:center;
 width:45vw;
 max-width:250px;
+margin-top:-145px;
 `;
 
 const Leaves = ({
