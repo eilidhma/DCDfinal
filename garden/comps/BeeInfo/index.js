@@ -18,8 +18,8 @@ const BeeBadge = styled.div`
   border-radius:50%;
   background-color: white;
   position: relative;
-  top:75px;
-  left:-12em;
+  top:110px;
+  left:-9em;
   z-index:2;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
