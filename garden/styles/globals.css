@@ -372,6 +372,7 @@ button:focus, input:focus { outline: none; }
 
 .loadingTitle {
   display:flex;
+  justify-content: center;
   width:80vw;
 }
 
