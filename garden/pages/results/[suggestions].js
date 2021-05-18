@@ -583,11 +583,6 @@ export default function Results() {
         cards = AridGroundProduce;
     }
 
-    if (bee) {
-        var beeInfo = document.getElementsByClassName("beeInfo");
-        beeInfo.style.visibility = "hidden";
-    }
-
     const Expand1 = () => {
         setDim(true)
         setClose1(false)
