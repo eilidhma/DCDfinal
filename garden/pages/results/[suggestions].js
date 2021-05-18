@@ -13,7 +13,6 @@ import Logo from '../../comps/Logo';
 import Clouds from '../../comps/Clouds';
 import Garden from '../../comps/Garden';
 import Description from '../../comps/DescriptiveText';
-import BeeInfo from '../../comps/BeeInfo';
 import Nav from '../../comps/Menu'
 import {AiOutlineClose} from 'react-icons/ai';
 import {HiMenu} from 'react-icons/hi'
@@ -524,6 +523,7 @@ export default function Results() {
     const [close1, setClose1] = useState(true)
     const [close2, setClose2] = useState(true)
     const [close3, setClose3] = useState(true)
+    const [bee, setBee] = useState(false)
 
 
 
@@ -617,16 +617,23 @@ export default function Results() {
         setDim(false)
         setClose1(true)
         setPlant1(false)
+        setBee(false)
     }
     const Close2 = () => {
         setDim(false)
         setClose2(true)
         setPlant2(false)
+        setBee(false)
     }
     const Close3 = () => {
         setDim(false)
         setClose3(true)
         setPlant3(false)
+        setBee(false)
+    }
+
+    const HandleBee = () =>{
+        setBee(!bee)
     }
 
 
@@ -655,7 +662,7 @@ export default function Results() {
                 {menuopen === true && <Close onClick={CloseMenu} color="white"/>}
                 <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
                 {menuopen === false && <div data-aos="fade" className="content">
-                    <LargeTitles opacity={dim ? 0.2 : 1} text={name} />
+                    <LargeTitles opacity={dim ? 0 : 1} text={name} />
                     <Description opacity={dim ? 0 : 1} text="Click each plant for details and care instructions!" />
 
                     {suggestions === "one" && <Garden
@@ -667,8 +674,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "one" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "one" && close1 === false && <div data-aos="fade" className="optionsCard">
+                    
                         <Options
                             title="Blackberries"
                             climate="temperate"
@@ -682,10 +689,13 @@ export default function Results() {
                             water="Keep moist"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : 0} />
+                            zindex={plant1 ? 5 : 0} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
+                            />
                     </div>}
-                    {suggestions === "one" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "one" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Raspberries"
                             climate="temperate"
@@ -700,10 +710,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : 0}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "one" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "one" && close3 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Blueberries"
                             climate="temperate"
@@ -718,6 +730,8 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : 0}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
                     {suggestions === "two" && <Garden
@@ -729,8 +743,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "two" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "two" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Milkweed"
                             climate="temperate"
@@ -744,10 +758,12 @@ export default function Results() {
                             water='When top inch of soil is dry'
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "two" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "two" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Daisies"
                             climate="temperate"
@@ -762,10 +778,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "two" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "two" && close3 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Coneflowers"
                             climate="temperate"
@@ -780,6 +798,8 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
                     {suggestions === "three" && <Garden
@@ -791,8 +811,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "three" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "three" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Witch Hazel"
                             climate="temperate"
@@ -806,10 +826,12 @@ export default function Results() {
                             water="Can survive on rainfall alone!"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "three" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "three" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Lungwort"
                             climate="temperate"
@@ -824,9 +846,11 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "three" && close3 === false && <div className="optionsCard">
+                    {suggestions === "three" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Sunflower"
                             climate="temperate"
@@ -841,6 +865,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "four" && <Garden
@@ -852,8 +879,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "four" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "four" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Carrot"
                             climate="temperate"
@@ -867,9 +894,11 @@ export default function Results() {
                             water="Throughly water once a week"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "four" && close2 === false && <div className="optionsCard">
+                    {suggestions === "four" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Wheat"
                             climate="temperate"
@@ -884,9 +913,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "four" && close3 === false && <div className="optionsCard">
+                    {suggestions === "four" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Sweet corn"
                             climate="temperate"
@@ -901,6 +933,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "five" && <Garden
@@ -912,7 +947,7 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "five" && close1 === false && <div className="optionsCard">
+                    {suggestions === "five" && close1 === false && <div data-aos="fade" className="optionsCard">
 
                         <Options
                             title="Bok Choy"
@@ -927,9 +962,12 @@ export default function Results() {
                             water="Once a week and keep soil moist"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden" />
                     </div>}
-                    {suggestions === "five" && close2 === false && <div className="optionsCard">
+                    {suggestions === "five" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Eggplant"
                             climate="tropical"
@@ -944,9 +982,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "five" && close3 === false && <div className="optionsCard">
+                    {suggestions === "five" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Rice"
                             climate="tropical"
@@ -961,6 +1002,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "six" && <Garden
@@ -972,7 +1016,7 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "six" && close1 === false && <div className="optionsCard">
+                    {suggestions === "six" && close1 === false && <div data-aos="fade" className="optionsCard">
 
                         <Options
                             title="Anthurium"
@@ -987,10 +1031,13 @@ export default function Results() {
                             water="Once a week, mist occasionally"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"/>
                     </div>}
-                    {suggestions === "six" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "six" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Cannabis"
                             climate="tropical"
@@ -1005,10 +1052,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "six" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "six" && close3 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Hibiscus"
                             climate="tropical"
@@ -1023,6 +1072,8 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
                     {suggestions === "seven" && <Garden
@@ -1034,7 +1085,7 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "seven" && close1 === false && <div className="optionsCard">
+                    {suggestions === "seven" && close1 === false && <div data-aos="fade" className="optionsCard">
 
                         <Options
                             title="Chinese Cabbage"
@@ -1049,9 +1100,12 @@ export default function Results() {
                             water="Once a week and keep soil moist"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"/>
                     </div>}
-                    {suggestions === "seven" && close2 === false && <div className="optionsCard">
+                    {suggestions === "seven" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Pumpkin"
                             climate="tropical"
@@ -1066,9 +1120,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "seven" && close3 === false && <div className="optionsCard">
+                    {suggestions === "seven" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Banana Tree"
                             climate="tropical"
@@ -1083,6 +1140,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "eight" && <Garden
@@ -1094,8 +1154,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "eight" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "eight" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Cosmos"
                             climate="tropical"
@@ -1109,9 +1169,11 @@ export default function Results() {
                             water="Let soil dry before watering"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "eight" && close2 === false && <div className="optionsCard">
+                    {suggestions === "eight" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Chrysanthemum"
                             climate="tropical"
@@ -1126,9 +1188,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "eight" && close3 === false && <div className="optionsCard">
+                    {suggestions === "eight" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Angels Trumpet"
                             climate="tropical"
@@ -1143,6 +1208,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "nine" && <Garden
@@ -1154,7 +1222,7 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "nine" && close1 === false && <div className="optionsCard">
+                    {suggestions === "nine" && close1 === false && <div data-aos="fade" className="optionsCard">
 
                         <Options
                             title="Green Beans"
@@ -1169,9 +1237,12 @@ export default function Results() {
                             water="Give a half inch of water daily"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"/>
                     </div>}
-                    {suggestions === "nine" && close2 === false && <div className="optionsCard">
+                    {suggestions === "nine" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Tomato"
                             climate="arid"
@@ -1186,9 +1257,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "nine" && close3 === false && <div className="optionsCard">
+                    {suggestions === "nine" && close3 === false && <div data-aos="fade" className="optionsCard">
 
                         <Options
                             title="Basil"
@@ -1204,6 +1278,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     {suggestions === "ten" && <Garden
@@ -1215,8 +1292,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "ten" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "ten" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Sedum"
                             climate="arid"
@@ -1230,10 +1307,12 @@ export default function Results() {
                             water="Drought tolerant! Water when soil is fully dry"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "ten" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "ten" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="English Lavender"
                             climate="arid"
@@ -1248,10 +1327,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "ten" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "ten" && close3 === false && <div data-aos="fade" className="optionsCard">
+                       
                         <Options
                             title="Yucca"
                             climate="arid"
@@ -1266,6 +1347,8 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
                     {suggestions === "eleven" && <Garden
@@ -1277,8 +1360,8 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "eleven" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "eleven" && close1 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Firecracker Plant"
                             climate="arid"
@@ -1292,10 +1375,12 @@ export default function Results() {
                             water="When top half of soil is fully dry"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}/>
                     </div>}
-                    {suggestions === "eleven" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "eleven" && close2 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Purslane"
                             climate="arid"
@@ -1310,10 +1395,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
-                    {suggestions === "eleven" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+                    {suggestions === "eleven" && close3 === false && <div data-aos="fade" className="optionsCard">
+                        
                         <Options
                             title="Phlox"
                             climate="arid"
@@ -1328,6 +1415,8 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            visibility={bee ? "visible" : "hidden"}
                         />
                     </div>}
                     {suggestions === "twelve" && <Garden
@@ -1339,7 +1428,7 @@ export default function Results() {
                         onClick3={Expand3}
                         opacity={dim ? 0.2 : 1}
                     />}
-                    {suggestions === "twelve" && close1 === false && <div className="optionsCard">
+                    {suggestions === "twelve" && close1 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Agave"
                             climate="arid"
@@ -1353,9 +1442,12 @@ export default function Results() {
                             water="Drought tolerant! Water 2-3 times per month"
                             opacity={plant1 ? 1 : 0}
                             onClickClose={Close1}
-                            zindex={plant1 ? 5 : -1} />
+                            zindex={plant1 ? 5 : -1} 
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"/>
                     </div>}
-                    {suggestions === "twelve" && close2 === false && <div className="optionsCard">
+                    {suggestions === "twelve" && close2 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Prickly Pear"
                             climate="arid"
@@ -1370,9 +1462,12 @@ export default function Results() {
                             opacity={plant2 ? 1 : 0}
                             onClickClose={Close2}
                             zindex={plant2 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
-                    {suggestions === "twelve" && close3 === false && <div className="optionsCard">
+                    {suggestions === "twelve" && close3 === false && <div data-aos="fade" className="optionsCard">
                         <Options
                             title="Pomegranate"
                             climate="arid"
@@ -1387,6 +1482,9 @@ export default function Results() {
                             opacity={plant3 ? 1 : 0}
                             onClickClose={Close3}
                             zindex={plant3 ? 5 : -1}
+                            onClickBee={HandleBee}
+                            display="none"
+                            visibility="hidden"
                         />
                     </div>}
                     <div className="finish" onClick={() => router.push('/end')}><MainButton opacity={dim ? 0 : 1} text="Finish" /></div>

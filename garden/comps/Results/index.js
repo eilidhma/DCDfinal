@@ -36,6 +36,7 @@ const DescriptionCont = styled.div`
   padding-bottom: 10px;
   opacity=${props => props.opacity};
   flex-basis:1;
+  transition: opacity 0.5s;
 `;
 
 const ImgCont = styled.div`
@@ -47,6 +48,7 @@ const ImgCont = styled.div`
   height:50%;
   opacity=${props => props.opacity};
   object-fit:cover;
+  transition: opacity 0.5s;
 `;
 
 const Img = styled.img`
@@ -57,6 +59,7 @@ const Img = styled.img`
   top: 10px;
   position:relative;
   opacity=${props => props.opacity};
+  transition: opacity 0.5s;
 `;
 
 const Points = styled.div`
@@ -66,6 +69,7 @@ const Points = styled.div`
   flex-basis:2;
   text-align:left;
   opacity=${props => props.opacity};
+  transition: opacity 0.5s;
 `;
 
 const Title = styled.h4`
@@ -73,6 +77,7 @@ const Title = styled.h4`
   font-size:24px;
   opacity=${props => props.opacity};
   line-height:0;
+  transition: opacity 0.5s;
 `;
 
 const ItemCont = styled.div`
@@ -81,6 +86,7 @@ const ItemCont = styled.div`
   align-items:center;
   opacity=${props => props.opacity};
   width:100%;
+  transition: opacity 0.5s;
 `;
 
 const Item = styled.p`
@@ -94,6 +100,7 @@ const Item = styled.p`
   opacity=${props => props.opacity};
   width:50%;
   margin-right:8px;
+  transition: opacity 0.5s;
 `;
 
 const BoldItem = styled.p`
@@ -106,6 +113,7 @@ const BoldItem = styled.p`
   margin-right:1px; 
   opacity=${props => props.opacity};
   width:50%;
+  transition: opacity 0.5s;
 `;
 
 const Button = styled.button`
@@ -127,6 +135,7 @@ const Button = styled.button`
   color:white;
   margin: 0px 0px 20px 0px;
   opacity=${props => props.opacity};
+  transition: opacity 0.5s;
 `;
 
 const DetailsCont = styled.div`
@@ -135,15 +144,21 @@ const DetailsCont = styled.div`
   position:relative;
   opacity=${props => props.opacity};
   flex-basis:2;
+  transition: opacity 0.5s;
 `;
 
 const BeeImg = styled.img`
-opacity=${props => props.opacity};
+  display:flex;
+  width:80%;
+  opacity:${props => props.opacity};
+  transition: opacity 0.5s;
+  display:${props=>props.display};
 `;
 
 const MainCont = styled.div`
   // so bee badge doesn't get cut off from overflow hidden :)
   opacity=${props => props.opacity};
+  transition: opacity 0.5s;
 `;
 
 const CloseCont = styled.div`
@@ -160,31 +175,55 @@ const CloseCont = styled.div`
   right:10px;
   position:absolute;
   z-index:5;
+  transition: opacity 0.5s;
 `;
 
 const Close = styled.img`
   display:flex;
   width:100%;
   opacity:${props => props.opacity};
+  transition: opacity 0.5s;
 `;
 
 const BeeBadge = styled.div`
-  display:flex;
-  width:50px;
-  height:50px;
+  justify-content:center;
+  align-items:center;
+  width:40px;
+  height:40px;
   border-radius:50%;
-  background-color: white;
-  position:relative;
-  top:65px;
-  z-index:2;
-  left: 81%;
-  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
+  object-fit:cover;
   opacity:${props => props.opacity};
+  position:relative;
+  top:10px;
+  left:10px;
+  position:absolute;
+  z-index:5;
+  background-color:white;
+  padding:1px;
+  box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
+  transition: opacity 0.5s;
+  display:${props=>props.display};
+`;
+
+const BeeFriendly = styled.p`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  visibility:${props=>props.visibility};
+  position:absolute;
+  font-family:Montserrat;
+  font-style:normal;
+  font-weight:bold;
+  font-size:1rem;
+  color:white;
+  left:15%;
+  transition: opacity 0.5s;
 `;
 
 
 const Options = ({
-  onClickClose = () => { },
+  onClickClose = () => {},
+  onClickBee = () => {},
   title = "English Lavender",
   src = "lavendar.png",
   climate = " arid",
@@ -197,7 +236,9 @@ const Options = ({
   water = "Water every ",
   fact = "Fun fact!",
   opacity = 0,
-  zindex = "1"
+  zindex = "1",
+  visibility="visible",
+  display="flex"
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -212,6 +253,10 @@ const Options = ({
       <CloseCont onClick={onClickClose} opacity={opacity}>
         <Close opacity={opacity} src="../close.svg"></Close>
       </CloseCont>
+      <BeeFriendly opacity={opacity} visibility={visibility}>Bees love me!</BeeFriendly>
+      <BeeBadge opacity={opacity} display={display}>
+        <BeeImg  opacity={opacity} display={display} onClick={onClickBee} src="../bee.png"></BeeImg>
+      </BeeBadge>
       <DescriptionCont opacity={opacity}>
         <ImgCont><Img opacity={opacity} src={src} /></ImgCont>
         <Points opacity={opacity}>
