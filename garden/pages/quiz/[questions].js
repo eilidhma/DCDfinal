@@ -20,6 +20,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
+
 var choices = {
   name:null,
   climate:null,
