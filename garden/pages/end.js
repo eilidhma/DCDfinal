@@ -21,6 +21,9 @@ import Close from '../comps/CloseIcon';
 import Soil from '../comps/Soil';
 import Seed from '../comps/Seed';
 import Leaves from '../comps/Leaves';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 export default function Home() {

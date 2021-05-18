@@ -5,9 +5,16 @@ import React, {useState,useEffect} from 'react';
 import Loading from '../comps/LoadingPage';
 import Clouds from '../comps/Clouds';
 import Back from '../comps/Back';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Quiz() {
+
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    }, []);
 
   useEffect(()=>{
     if(process.browser){
@@ -90,9 +97,13 @@ export default function Quiz() {
       <div className="loading">
       <div className="quizWrap"><StatusBar percent="100%" width="100"/></div>
         <div className="backButton">
-              <Back opacity="0"/>
-            </div>
+          <Back opacity="0"/>
+        </div>
+        <div data-aos="fade" className="loadingTitle">
         <LargeTitles text="Calculating your results..."/>
+
+        </div>
+            
         <Loading />
       </div>
     </div>
