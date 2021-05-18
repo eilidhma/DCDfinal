@@ -32,6 +32,12 @@ import HandsPlanet from '../comps/HandsPlanet';
 import Watering from '../comps/Watering';
 import Back from '../comps/Back';
 import Tabs from '../comps/Tabs';
+import Nav from '../comps/Menu';
+import {AiOutlineClose} from 'react-icons/ai';
+import {HiMenu} from 'react-icons/hi';
+import Open from '../comps/OpenIcon';
+import Close from '../comps/CloseIcon';
+import InfoWrap from '../comps/InfoWrap';
 
 
 
@@ -69,6 +75,14 @@ const Info = () => {
   const [happy, setHappy] = useState(false)
   const [sad, setSad] = useState(true)
 
+  const [menuopen, setMenuOpen] = useState(false)
+
+  const OpenMenu = () => {
+    setMenuOpen(!menuopen)
+  }
+  const CloseMenu = () => {
+    setMenuOpen(!menuopen)
+  }
 
   const Nav1 = () => {
     setNav1Hover(true)
@@ -194,10 +208,10 @@ const Info = () => {
       <div className="infoBackground"><Clouds /></div>
       <div className="infoApp">
         <div className="infoMain">
-
-          <Menu />
-
-          <div className="infoContent">
+          {menuopen === false && <Open onClick={OpenMenu} color="white"/>}
+          {menuopen === true && <Close onClick={CloseMenu} color="white"/>}
+          <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
+          <InfoWrap opacity={menuopen ? 0 : 1} className="infoContent">
 
             {/* START OF REUSABLE */}
             <div >
@@ -413,12 +427,12 @@ const Info = () => {
               {mainstate === 1 && <MainButton onClick={Well} text={<>Wellness Benefits<VscArrowRight /></>} />}
               {mainstate === 2 && <MainButton onClick={Sust} text={<><VscArrowLeft />Sustainability</>} />}
               {mainstate === 2 && <MainButton onClick={Bees} text={<>Saving the Bees<VscArrowRight /></>} />}
-              {mainstate === 3 && <MainButton text="Start the Quiz!" onClick={() => router.push('/quiz/question1')} />}
               {mainstate === 3 && <MainButton onClick={Well} text={<><VscArrowLeft />Wellness Benefits</>} />}
+              {mainstate === 3 && <MainButton text="Start the Quiz!" onClick={() => router.push('/quiz/question1')} />}
             </div>
 
 
-          </div>
+          </InfoWrap>
         </div>
       </div>
     </div>
