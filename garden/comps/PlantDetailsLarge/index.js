@@ -7,8 +7,8 @@ const Cont = styled.div`
   flex-direction:row;
   justify-content:space-between;
   align-items:center;
-  padding-right:10%;
-  padding-left:10%;
+  padding-right:5%;
+  padding-left:5%;
   margin:5px;
 `;
 
@@ -18,7 +18,7 @@ const TextContent = styled.h3`
   color:#FFF;
   font-size: 0.9rem;
   flex:3;
-  padding-left:20%;
+  padding-left:5%;
 `;
 
 const IconCont = styled.div`
@@ -39,7 +39,7 @@ const Icon = styled.img`
 const PlantDetailsLarge = ({
   text = "placeholder",
   src = "../public/sun.png",
-  width = 30
+  width = 40
 
 }) => {
   return <Cont>
