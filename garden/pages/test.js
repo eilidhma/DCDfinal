@@ -1,25 +1,40 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import StatusBar from '../comps/StatusBar'
-import MedTitles from '../comps/MediumTitles'
 
-import Clock from '../comps/Clock'
-import VegSlider from '../comps/VegSlider'
-import Menu from '../comps/HambMenu'
+import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
-import Tabs from '../comps/Tabs'
+import Soil from '../comps/Soil';
+import Seed from '../comps/Seed';
+import Leaves from '../comps/Leaves';
 
 
 
 export default function Home() {
+  const [leaves, setLeaves] = useState(false)
+  const [seed, setSeed] = useState(true)
+
+  const Grow = () => {
+    setLeaves(true)
+    setSeed(false)
+  }
+
   return (
-    <div>
-      <Tabs/>
-      <StatusBar percent="25%" width="30%"/>
-      <MedTitles text="Calculating your results.." />
-      <Clock />
-      <Menu color="black"/>
-      <VegSlider/>
+    <div className="content">
+      <div data-aos="fade" className="seed-plant">
+        <div className="seed-plant-cont">
+          <Leaves
+            opacity={leaves ? "1" : "0"} />
+        </div>
+        <div className="seed-plant-cont">
+          <Soil></Soil>
+        </div>
+        <div className="seed-plant-cont">
+          <Seed onClick={Grow}
+            top={seed ? "0" : "60"}
+            opacity={seed ? "1" : "0"} />
+        </div>
+      </div>
     </div>
+    
   )
 }

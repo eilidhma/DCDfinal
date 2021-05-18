@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const Cont = styled.div`
@@ -6,12 +6,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 width:45vw;
-max-width:200px;
+max-width:250px;
 `;
 
-const Leaves = () => {
+const Leaves = ({
+    opacity=1
+}) => {
     return <Cont>
-        <svg id="leaves" width="508" height="279" viewBox="0 0 508 279" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg opacity={opacity} id="leaves" width="508" height="279" viewBox="0 0 508 279" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="leaves">
             <g id="leaves-rays">
             <path id="Vector" d="M251.6 278.5L0.300003 251.8C1.3 242.7 2.8 233.5 4.7 224.5L251.7 278.3C251.6 278.4 251.6 278.5 251.6 278.5Z" fill="url(#paint0_linear)"/>
@@ -68,7 +70,7 @@ const Leaves = () => {
                 </g>
                 <path id="Vector_28" d="M249.5 263.8C241.1 235.5 239.6 216.2 247.3 191.5C255 166.8 262.6 147.1 256.2 133C250.5 123.5 246.6 120.6 246.6 120.6C233.7 109.5 226.5 94.7001 226.1 75.4001C225.8 57.8001 220.7 40.0001 217.1 31.2001C212.6 20.4001 206.2 9.80007 203.2 6.20007C207.3 9.20007 216.9 25.1001 218.9 31.2001C220.9 37.3001 228.4 55.4 228.9 75.3C229.3 93.5 239.1 111 248.6 118C248.6 118 252.2 120.6 259.3 129.7C266.7 139.5 260.7 172.3 254.6 187.2C248.5 202.1 247.6 227.8 258.5 261.6C260.6 266.6 251.9 271.9 249.5 263.8Z" fill="url(#paint14_linear)"/>
                 </g>
-            <g id="right-leaf">
+            <g id="leaf-right">
                 <g id="Group_6">
                 <g id="Group_7">
                 <path id="Vector_29" d="M286.2 150.3C298.7 146.3 314.8 156 339.1 133.1C363.5 110.1 370 68.5001 369.1 59.1001C368.2 49.7001 366.1 41.0001 365.4 39.7001C366.4 44.6001 355.6 68.6001 347.2 84.0001C340.5 99.4001 326.4 118.5 295.2 144.7C290.1 148.9 286.2 150.3 286.2 150.3Z" fill="#6CA842"/>
@@ -108,7 +110,7 @@ const Leaves = () => {
                 </g>
                 <path id="Vector_44" d="M253 182.7C257.5 172.3 275.4 154.9 287.1 147.6C298.8 140.3 327.5 113.2 335.9 101.8C350.7 81.7 364.3 51.2 364.7 44.1C364.4 51.2 347.5 90 337.2 103.7C323.8 121.5 302.3 142.7 288.9 150.9C273.5 160.3 251 191.9 249.5 197.9C248 203.8 253 182.7 253 182.7Z" fill="url(#paint15_linear)"/>
                 </g>
-            <g id="left-leaf">
+            <g id="leaf-left">
                 <g id="Group_11">
                 <g id="Group_12">
                 <path id="Vector_45" d="M234.1 203C222.6 199.3 195.6 225 169.9 194.3C155.8 177.6 164.2 155.8 143.8 147.9C164.8 148.3 195.6 162.8 209.1 175.6C222.6 188.4 234.1 203 234.1 203Z" fill="#6CA842"/>
@@ -152,29 +154,29 @@ const Leaves = () => {
             </g>
             <defs>
             <linearGradient id="paint0_linear" x1="243.541" y1="276.84" x2="8.14519" y2="239.08" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
-            <stop offset="0.4789" stop-color="#FFDE17"/>
-            <stop offset="0.9226" stop-color="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.0765174" stopColor="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.4789" stopColor="#FFDE17"/>
+            <stop offset="0.9226" stopColor="#FFDE17" stop-opacity="0"/>
             </linearGradient>
             <linearGradient id="paint1_linear" x1="263.434" y1="276.878" x2="498.252" y2="238.453" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
-            <stop offset="0.4789" stop-color="#FFDE17"/>
-            <stop offset="0.9226" stop-color="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.0765174" stopColor="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.4789" stopColor="#FFDE17"/>
+            <stop offset="0.9226" stopColor="#FFDE17" stop-opacity="0"/>
             </linearGradient>
             <linearGradient id="paint2_linear" x1="264.008" y1="274.638" x2="483.432" y2="186.843" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
-            <stop offset="0.4789" stop-color="#FFDE17"/>
-            <stop offset="0.9226" stop-color="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.0765174" stopColor="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.4789" stopColor="#FFDE17"/>
+            <stop offset="0.9226" stopColor="#FFDE17" stop-opacity="0"/>
             </linearGradient>
             <linearGradient id="paint3_linear" x1="245.036" y1="275.701" x2="23.9268" y2="187.661" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
-            <stop offset="0.4789" stop-color="#FFDE17"/>
-            <stop offset="0.9226" stop-color="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.0765174" stopColor="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.4789" stopColor="#FFDE17"/>
+            <stop offset="0.9226" stopColor="#FFDE17" stop-opacity="0"/>
             </linearGradient>
             <linearGradient id="paint4_linear" x1="261.557" y1="273.618" x2="459.497" y2="138.737" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
-            <stop offset="0.4789" stop-color="#FFDE17"/>
-            <stop offset="0.9226" stop-color="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.0765174" stopColor="#FFDE17" stop-opacity="0"/>
+            <stop offset="0.4789" stopColor="#FFDE17"/>
+            <stop offset="0.9226" stopColor="#FFDE17" stop-opacity="0"/>
             </linearGradient>
             <linearGradient id="paint5_linear" x1="246.291" y1="273.105" x2="48.1095" y2="139.746" gradientUnits="userSpaceOnUse">
             <stop offset="0.0765174" stop-color="#FFDE17" stop-opacity="0"/>
