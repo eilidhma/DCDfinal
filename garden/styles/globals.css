@@ -1180,7 +1180,7 @@ button:focus, input:focus { outline: none; }
   width:250px;
   height:170px;
 }
-.seed-plant{
+.seed-plant {
   margin-top: 0%;
   display:flex;
   justify-content: center;
@@ -1193,12 +1193,17 @@ button:focus, input:focus { outline: none; }
 .seed-plant-cont {
   position:absolute;
 }
+.seed-plant-main{
+  position:relative;
+  width:70vw;
+  height:35vh;
+}
 #leaves{
-  transition: opacity 0.5s;
-  transition-delay: 0.2s;
+  transition: opacity 2s;
+  transition-delay: 1.5s;
 }
 #seed{
-  transition: opacity 0.5s;
+  transition: opacity 1.5s;
 }
 #leaves-rays{
   animation: scale-leaves-rays 7s linear infinite;

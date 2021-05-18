@@ -17,7 +17,10 @@ import Nav from '../comps/Menu'
 import {AiOutlineClose} from 'react-icons/ai';
 import {HiMenu} from 'react-icons/hi'
 import Open from '../comps/OpenIcon'
-import Close from '../comps/CloseIcon'
+import Close from '../comps/CloseIcon';
+import Soil from '../comps/Soil';
+import Seed from '../comps/Seed';
+import Leaves from '../comps/Leaves';
 
 
 export default function Home() {
@@ -83,11 +86,17 @@ export default function Home() {
   const [opacitysmallstate, setOpacitySmall] = useState(false)
   const [opacitybigstate, setOpacityBig] = useState(false)
   const [waterstate, setWater] = useState(0)
+  const [leaves, setLeaves] = useState(false)
+  const [seed, setSeed] = useState(true)
 
   const HandleWater = () =>{
     setWater(-40)
     setOpacitySmall(!opacitysmallstate)
     setOpacityBig(!opacitybigstate)
+  }
+  const Grow = () => {
+    setLeaves(true)
+    setSeed(false)
   }
 
   const router = useRouter()
@@ -103,16 +112,32 @@ export default function Home() {
           {menuopen === false && <div className="content">
   
             <div data-aos="fade" ><LargeTitles text="Congratulations!"/></div>
-            <div data-aos="fade" ><Description text="You've started on your plant growing journey."/></div>
-            <div data-aos="fade" ><SmallDescription text="This means that you are helping in three different ways."/></div>
+            <div data-aos="fade" ><Description text="You can now start your plant growing journey."/></div>
+            <div data-aos="fade" ><SmallDescription text="As a prize, here's your first seed to plant. You can plant the seed by clicking on it."/></div>
+            <div className="seed-plant-main">
+            <div data-aos="fade" className="seed-plant">
+              <div className="seed-plant-cont">
+                <Leaves
+                  opacity={leaves ? "1" : "0"} />
+              </div>
+              <div className="seed-plant-cont">
+                <Soil></Soil>
+              </div>
+              <div className="seed-plant-cont">
+                <Seed onClick={Grow}
+                  top={seed ? "-120" : "0"}
+                  opacity={seed ? "1" : "0"} />
+              </div>
+            </div>
+            </div>
+            <div data-aos="fade" ><SmallDescription text="With your new plants, it means that you are helping in three different ways:"/></div>
             <div data-aos="fade" className="BlankBox">
               <PlantDetailsLarge src="planet-earth.svg" text="You are more sustainable by not producing food waste." />
               <PlantDetailsLarge src="dumbbell.svg" text="You are healthier, both physically and mentally." />
               <PlantDetailsLarge src="bee-icon.svg" text="You are helping with the mission to save the bees." />
             </div>
             <div className="endGlobe"><Earth/></div>
-            <div data-aos="fade"><Description text="Thank you for using Garden, and don't forget to water your new plants!"/></div>
-            {/* add water animation/interaction? */}
+            <Description text="Thank you for using Garden, and don't forget to water your new plants!"/>
             <div className="endNav">
               <MainButton text="Go home" onClick={()=>router.push('/') }/>
               <MainButton text="Retake quiz" onClick={()=>router.push('/quiz/question1') }/>

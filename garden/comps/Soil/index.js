@@ -7,7 +7,7 @@ justify-content:center;
 align-items:center;
 width:45vw;
 max-width:250px;
-margin-top:280px;
+margin-top:140px;
 `;
 
 const Soil = () => {
