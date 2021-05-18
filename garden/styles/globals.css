@@ -13,8 +13,6 @@ body {
   width: 100vw;
   cursor: url("../public/leaf.png"), auto;
 }
-/* need to add this into the code for the clouds animation
-*/
 
 
 button:hover{
@@ -1173,12 +1171,88 @@ button:focus, input:focus { outline: none; }
   25px 25px 45px rgba(0, 46, 80, 0.75) inset;
   animation: earth-moving 10s linear infinite;
 }
+#happyglobe{
+  background:url(../public/happyglobe.png);
+  background-size: cover;
+  width:250px;
+  height:250px;
+}
 @keyframes earth-moving{
   0%{
       background-position: 0 0;
   }
   100%{
       background-position: 69% 0;
+  }
+}
+/* end page interaction animation */
+#soil{
+  background:url(../public/soil.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:250px;
+  height:170px;
+}
+.seed-plant {
+  margin-top: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width:70vw;
+  height:35vh;
+}
+.seed-plant-cont {
+  position:absolute;
+}
+.seed-plant-main{
+  position:relative;
+  width:70vw;
+  height:35vh;
+}
+#leaves{
+  transition: opacity 2s;
+  transition-delay: 1.5s;
+}
+#seed{
+  transition: opacity 1.5s;
+}
+#leaves-rays{
+  animation: scale-leaves-rays 7s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+#leaves-plant{
+  animation: swing-leaves 5s ease-in-out infinite;
+  transform-origin: bottom;
+}
+@keyframes scale-leaves-rays{
+  0%{
+      transform: scale(1);
+  }
+  25%{
+      transform: scale(1.25);
+  }
+  50%{
+      transform: scale(1);
+  }
+  75%{
+      transform: scale(0.75);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+@keyframes swing-leaves{
+  0%{
+      transform: rotateZ(-1deg);
+  }
+  50%{
+      transform: rotateZ(1deg);
+  }
+  100%{
+      transform: rotateZ(-1deg);
   }
 }
 /* other animations */
