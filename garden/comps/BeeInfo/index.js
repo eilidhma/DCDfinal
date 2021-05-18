@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import React, { useState } from 'react';
 
 const BeeCont = styled.div`
-  position:relative;
+    position: relative;
+
 `;
 
 const BeeImg = styled.img`
@@ -19,8 +20,8 @@ const BeeBadge = styled.div`
   background-color: white;
   position: relative;
   top:75px;
-  left:-12em;
   z-index:2;
+  left: -12em;
   box-shadow: 0 4px 4px 0 rgba(000,000,000,0.50);
 `;
 
