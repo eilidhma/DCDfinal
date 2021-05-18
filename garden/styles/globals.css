@@ -1173,8 +1173,35 @@ button:focus, input:focus { outline: none; }
   }
 }
 /* end page interaction animation */
+#soil{
+  background:url(../public/soil.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:250px;
+  height:170px;
+}
+.seed-plant{
+  margin-top: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width:70vw;
+  height:35vh;
+}
+.seed-plant-cont {
+  position:absolute;
+}
+#leaves{
+  transition: opacity 0.5s;
+  transition-delay: 0.2s;
+}
+#seed{
+  transition: opacity 0.5s;
+}
 #leaves-rays{
-  animation: scale-leaves-rays 5s linear infinite;
+  animation: scale-leaves-rays 7s linear infinite;
   transform-box: fill-box;
   transform-origin: bottom;
 }
@@ -1187,13 +1214,13 @@ button:focus, input:focus { outline: none; }
       transform: scale(1);
   }
   25%{
-      transform: scale(1.15);
+      transform: scale(1.25);
   }
   50%{
       transform: scale(1);
   }
   75%{
-      transform: scale(0.8);
+      transform: scale(0.75);
   }
   100%{
       transform: scale(1);
