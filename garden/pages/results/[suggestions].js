@@ -892,7 +892,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "one" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Blackberries"
                             climate="temperate"
@@ -909,7 +909,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : 0} />
                     </div>}
                     {suggestions === "one" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Raspberries"
                             climate="temperate"
@@ -927,7 +927,7 @@ export default function Results() {
                         />
                     </div>}
                     {suggestions === "one" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Blueberries"
                             climate="temperate"
@@ -954,7 +954,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "two" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Milkweed"
                             climate="temperate"
@@ -971,7 +971,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : -1} />
                     </div>}
                     {suggestions === "two" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Daisies"
                             climate="temperate"
@@ -989,7 +989,7 @@ export default function Results() {
                         />
                     </div>}
                     {suggestions === "two" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Coneflowers"
                             climate="temperate"
@@ -1016,7 +1016,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "three" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Witch Hazel"
                             climate="temperate"
@@ -1033,7 +1033,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : -1} />
                     </div>}
                     {suggestions === "three" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Lungwort"
                             climate="temperate"
@@ -1077,7 +1077,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "four" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Carrot"
                             climate="temperate"
@@ -1214,7 +1214,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : -1} />
                     </div>}
                     {suggestions === "six" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Cannabis"
                             climate="tropical"
@@ -1232,7 +1232,7 @@ export default function Results() {
                         />
                     </div>}
                     {suggestions === "six" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Hibiscus"
                             climate="tropical"
@@ -1319,7 +1319,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "eight" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Cosmos"
                             climate="tropical"
@@ -1440,7 +1440,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "ten" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Sedum"
                             climate="arid"
@@ -1457,7 +1457,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : -1} />
                     </div>}
                     {suggestions === "ten" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="English Lavender"
                             climate="arid"
@@ -1475,7 +1475,7 @@ export default function Results() {
                         />
                     </div>}
                     {suggestions === "ten" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Yucca"
                             climate="arid"
@@ -1502,7 +1502,7 @@ export default function Results() {
                         opacity={dim ? 0.2 : 1}
                     />}
                     {suggestions === "eleven" && close1 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Firecracker Plant"
                             climate="arid"
@@ -1519,7 +1519,7 @@ export default function Results() {
                             zindex={plant1 ? 5 : -1} />
                     </div>}
                     {suggestions === "eleven" && close2 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Purslane"
                             climate="arid"
@@ -1537,7 +1537,7 @@ export default function Results() {
                         />
                     </div>}
                     {suggestions === "eleven" && close3 === false && <div className="optionsCard">
-                        <BeeInfo />
+
                         <Options
                             title="Phlox"
                             climate="arid"
