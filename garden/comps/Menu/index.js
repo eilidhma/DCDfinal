@@ -10,11 +10,12 @@ const Cont = styled.div`
     width:100vw
     justify-content:center;
     align-items:center;
-    position:absolute;
+    position:fixed;
     top:25vw;
     right:${props=>props.right}%;
     transition:right 0.5s;
     opacity:${props=>props.opacity};
+    z-index:5;
 `;
 
 const MenuItems = styled.div`
@@ -25,25 +26,24 @@ const MenuItems = styled.div`
 `;
 
 const Button = styled.button`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  
-  background:#FFFFFF33;
-  border:2px solid #FFF;
-  border-radius:15px;
-  font-family:Montserrat;
-  font-style:normal;
-  font-weight:bold;
-  font-size:1rem;
-  display:flex;
-  align-items:center;
-  text-align:center;
-  color:white;
-  padding:5px;
-  margin:10px;
-  top:50%;
-`;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FFFFFF33;
+    border:2px solid #FFF;
+    border-radius:15px;
+    font-family:Montserrat;
+    font-style:normal;
+    font-weight:bold;
+    font-size:1rem;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:5px;
+    margin:10px;
+    top:50%;
+  `;
 
 
 

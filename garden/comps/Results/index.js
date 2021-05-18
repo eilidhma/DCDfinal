@@ -6,13 +6,14 @@ import { CgBee } from 'react-icons/cg';
 
 const Cont = styled.div`
   position:relative;
+  top:0vh;
   display:flex;
   flex-direction:column;
   align-items:center;
   height:${props => props.height}px;
   opacity:${props => props.opacity};
-  width:30em;
-  min-width: 250px;
+  width:40vw;
+  min-width: 330px;
   max-width: 400px;
   border-radius:15px;
   border:3px solid white;
@@ -21,6 +22,7 @@ const Cont = styled.div`
   margin:50px;
   overflow:hidden;
   transition:height 0.5s, opacity 0.5s;
+  
 `;
 
 const DescriptionCont = styled.div`
@@ -32,7 +34,8 @@ const DescriptionCont = styled.div`
   width:100%;
   height: 250px;
   padding-bottom: 10px;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
+  flex-basis:1;
 `;
 
 const ImgCont = styled.div`
@@ -42,7 +45,8 @@ const ImgCont = styled.div`
   flex-basis:1;
   width:50%;
   height:50%;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
+  object-fit:cover;
 `;
 
 const Img = styled.img`
@@ -52,7 +56,7 @@ const Img = styled.img`
   padding:15px;
   top: 10px;
   position:relative;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
 `;
 
 const Points = styled.div`
@@ -61,23 +65,47 @@ const Points = styled.div`
   width:100%;
   flex-basis:2;
   text-align:left;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
 `;
 
 const Title = styled.h4`
   color:white;
   font-size:24px;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
   line-height:0;
 `;
 
+const ItemCont = styled.div`
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  opacity=${props => props.opacity};
+  width:100%;
+`;
+
 const Item = styled.p`
+  display:flex;
+  justify-content:flex-end;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size:0.9rem;
+  text-align:right;
+  line-height: 1px;
+  opacity=${props => props.opacity};
+  width:50%;
+  margin-right:8px;
+`;
+
+const BoldItem = styled.p`
   color:white;
   font-family: 'Montserrat', sans-serif;
   font-size:0.9rem;
   text-align:left;
   line-height: 1px;
-  opacity=${props => props.opacity}
+  font-weight:600;
+  margin-right:1px; 
+  opacity=${props => props.opacity};
+  width:50%;
 `;
 
 const Button = styled.button`
@@ -98,23 +126,24 @@ const Button = styled.button`
   text-align:center;
   color:white;
   margin: 0px 0px 20px 0px;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
 `;
 
 const DetailsCont = styled.div`
   display:flex;
   flex-direction:column;
   position:relative;
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
+  flex-basis:2;
 `;
 
 const BeeImg = styled.img`
-opacity=${props => props.opacity}
+opacity=${props => props.opacity};
 `;
 
 const MainCont = styled.div`
   // so bee badge doesn't get cut off from overflow hidden :)
-  opacity=${props => props.opacity}
+  opacity=${props => props.opacity};
 `;
 
 const CloseCont = styled.div`
@@ -178,19 +207,31 @@ const Options = ({
     text = "Hide";
   }
 
-  return <MainCont>
+  return <MainCont opacity={opacity}>
     <Cont zindex={zindex} opacity={opacity} height={height}>
       <CloseCont onClick={onClickClose} opacity={opacity}>
         <Close opacity={opacity} src="../close.svg"></Close>
       </CloseCont>
-      <DescriptionCont>
+      <DescriptionCont opacity={opacity}>
         <ImgCont><Img opacity={opacity} src={src} /></ImgCont>
-        <Points>
+        <Points opacity={opacity}>
           <Title>{title}</Title>
-          <Item><strong>Climate: </strong>{climate}</Item>
-          <Item><strong>Good in: </strong>{goodIn}</Item>
-          <Item><strong>Category: </strong>{category}</Item>
-          <Item><strong>Maintenance: </strong> {maintenance}</Item>
+          <ItemCont>
+            <BoldItem>Climate: </BoldItem>
+            <Item>{climate}</Item>
+          </ItemCont>
+          <ItemCont>
+            <BoldItem>Good In:</BoldItem>
+            <Item>{goodIn}</Item>
+          </ItemCont>
+          <ItemCont>
+            <BoldItem>Category: </BoldItem>
+            <Item>{category}</Item>
+          </ItemCont>
+          <ItemCont>
+            <BoldItem>Maintenance: </BoldItem>
+            <Item>{maintenance}</Item>
+          </ItemCont>
         </Points>
       </DescriptionCont>
       <Button onClick={() => setOpen(!open)}>{text}</Button>

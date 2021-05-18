@@ -13,6 +13,8 @@ import MainButton from '../comps/MainButton'
 import Nav from '../comps/Menu'
 import {AiOutlineClose} from 'react-icons/ai';
 import {HiMenu} from 'react-icons/hi'
+import Open from '../comps/OpenIcon';
+import Close from '../comps/CloseIcon';
 
 
 
@@ -34,12 +36,8 @@ export default function Home() {
       <div className="background"><Clouds /></div>
       <div className="app">
         <div className="main">
-          {menuopen === false && <div className="Nav">
-            <HiMenu onClick={OpenMenu} color="white" size={40}/>
-          </div>}
-          {menuopen === true && <div className="Nav">
-            <AiOutlineClose onClick={CloseMenu} color="white" size={40}/>
-          </div>}
+          {menuopen === false && <Open onClick={OpenMenu} color="white"/>}
+          {menuopen === true && <Close onClick={CloseMenu} color="white"/>}
           <Nav right={menuopen ? 10 : -100} opacity={menuopen ? 1 : 0}/>
           {menuopen === false && <div className="content">
             <LargeTitles text="Welcome to" />

@@ -33,7 +33,7 @@ button:hover{
 
 .infoBackground{
   width:100vw;
-  height:100%;
+  height:100vh;
   position: fixed;
   z-index: 0;
   box-sizing: border-box;
@@ -109,10 +109,9 @@ button:hover{
 }
 
 .infoContent {
-  width: 90vw;
+  width: 80vw;
   height: 100%;
   z-index: 4;
-  /* padding-bottom:5%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -249,7 +248,7 @@ button:hover{
 .Nav {
   position:absolute;
   top:5px;
-  right:5px;
+  right:12px;
 }
 
 .navContent {
@@ -372,14 +371,6 @@ button:focus, input:focus { outline: none; }
   
 }
 
-.infoContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width:80vw;
-}
-
 .handsPlanet {
   display: flex;
   flex-direction: column;
@@ -415,20 +406,6 @@ button:focus, input:focus { outline: none; }
   width:90vw;
 }
 
-/* .video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 /* clock animation */
 #hours {
